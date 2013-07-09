@@ -5,8 +5,7 @@ Unit contexts;
 { ----------------------------------------------------------------- }
 
 Interface
-uses sets,tricks,jdk15;
-
+uses sets,tricks;
 
 type
    context = record	
