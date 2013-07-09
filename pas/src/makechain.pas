@@ -3,25 +3,26 @@ program makechains; {computes all maximal chains}
 uses sets, contexts;
 
 const
-   MAXNOC = 3300; {Maximum number of concepts}
-   MAXNB  = 200;  {Maximum number of lower neighbors}
+   MAXNOC = 33000; {Maximum number of concepts}
+   MAXNB  = 2000;  {Maximum number of lower neighbors}
 
 type setvec =  array[1..MAXNOC] of menge;
 
 var
    Intent	     : setvec;
-   Lower	     : array[1..MAXNOC,0..MAXNB] of integer;
-   chain, branch     : array[1..MAXNOC] of integer;
-   i,j,k,l,noc,count : Integer;
+   Lower	     : array[1..MAXNOC,0..MAXNB] of int64;
+   chain, branch     : array[1..MAXNOC] of int64;
+   i,j,k,l,noc,count : int64;
    kk,ll	     : context;
    A,B		     : menge;
    neigh, up, ende   : boolean;
-   request	     : integer;
+   request	     : int64;
    name		     : string;
 
 begin
    ask_for_cxt(kk);
    write('Which chain? ');readln(request);
+   writeln;
    first_intent(A,kk);
    i := 0;
    repeat

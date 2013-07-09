@@ -4,20 +4,20 @@ uses sets,tricks,contexts;
 type
         LC=record
                 lcm:array[1..100] of menge;
-                lcn:integer;
+                lcn:int64;
                 sett:menge;     {union}
         end;
 
 type
         ints=record
                 m:array[1..100] of menge;     {intents}
-                nm:integer;                   {nr int}
+                nm:int64;                   {nr int}
                 lc:array[1..100] of LC;       {leastConc}
                 upn:array[1..100] of LC;        {up_neigh}
                 ex:array[1..100] of menge; {extents}
         end;
 
-procedure delete_ints(var v:ints;var k:integer)  ;
+procedure delete_ints(var v:ints;var k:int64)  ;
 procedure leastConcurent(var v:ints);
 procedure delete_LC(var v:LC;var x:menge) ;
 procedure load(var v:ints;var con:context);
@@ -28,7 +28,7 @@ procedure makeUpn(var v:ints;var k:context);
 Implementation
 
 procedure union_all(var l:LC);   {vector to set}
-var i:integer;
+var i:int64;
 begin
         for i:=1 to l.lcn do
         begin
@@ -36,8 +36,8 @@ begin
         end;
 end;
 
-{procedure delete_ints(var v:ints;var k:integer) ;
-var i:integer;
+{procedure delete_ints(var v:ints;var k:int64) ;
+var i:int64;
 begin
         for i:=k to v.nm-1 do
         begin
@@ -47,7 +47,7 @@ begin
 end;                              }
 
 procedure delete_LC(var v:LC;var x:menge) ;            {delete lc,remake vector}
-var i,j:integer;
+var i,j:int64;
 begin
 
         j:=1;
@@ -67,7 +67,7 @@ end;
 
 procedure load(var v:ints;var con:context);    {make intents}
 var
-i,j:integer;
+i,j:int64;
 ok:Boolean;
 a,b:menge;
 begin
@@ -93,7 +93,7 @@ end;
 
 procedure leastConcurent(var v:ints);
 var
-len,i,j,jj,k,copy:integer;
+len,i,j,jj,k,copy:int64;
 a:array[1..100] of menge;
 b:array[1..100] of menge;
 x:menge;
@@ -145,7 +145,7 @@ end;
 end;
 {procedure makeUpn(var v:ints;var k:context);
 var temp2,g,Gi,temp,up:menge;
-i,j,jj:integer;
+i,j,jj:int64;
 begin
         g:=[1..k.gnum];
 
@@ -188,7 +188,7 @@ begin
 end;      }
 procedure printContext(var v:ints);
 var
-i,j,jj:integer;
+i,j,jj:int64;
 begin
     for i:=1 to v.nm do
     begin

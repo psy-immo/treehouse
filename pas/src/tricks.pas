@@ -6,7 +6,7 @@ procedure add_suffix(var fname : string; suffix : string);
 Implementation
  
 procedure add_suffix(var fname : string; suffix : string);
-var ii	     : integer;
+var ii	     : int64;
 
 begin
    ii := 0;

@@ -9,7 +9,7 @@ uses sets,tricks;
 
 type
    context = record	
-		gnum, mnum	: integer;
+		gnum, mnum	: int64;
 		row,column	: array[1..setlimit] of menge;
 		name		: string[80];
 		columns_defined	: boolean;
@@ -34,7 +34,7 @@ function next_intent(var a : menge; var kk : context) : boolean;
 
 function next_extent(var a : menge; var kk : context) : boolean;
 
-procedure new_context(gzahl,mzahl : integer; var kk:context);
+procedure new_context(gzahl,mzahl : int64; var kk:context);
 
 procedure read_cxt(var kk : context; var filename:string);
 
@@ -42,26 +42,26 @@ procedure write_context(var kk : context; var filename : string);
 
 procedure ask_for_cxt(var kk : context);
 
-procedure make_incident(g,m : integer; var kk:context);
+procedure make_incident(g,m : int64; var kk:context);
 			       
-procedure make_nonincident(g,m : integer; var kk:context);
+procedure make_nonincident(g,m : int64; var kk:context);
 
-function incident(g,m : integer; var kk : context) : boolean;
+function incident(g,m : int64; var kk : context) : boolean;
 
 procedure complement_context(var kkout, kkin :  context);
 
 procedure copy_context(var kkout, kkin :  context);
 
-function number_of_concepts(var kk :  context): integer;
+function number_of_concepts(var kk :  context): int64;
 
-procedure flip_rows(var g,h : integer; var kk: context);
+procedure flip_rows(var g,h : int64; var kk: context);
 
-procedure flip_columns(var m,n : integer; var kk : context);
+procedure flip_columns(var m,n : int64; var kk : context);
 
 Implementation
 
 procedure make_extent(var a_out,b_in : menge; var kk:context);
-var ii :  integer;
+var ii :  int64;
 begin with kk do begin
    emptyset(a_out);
    for ii := 1 to gnum do
@@ -69,7 +69,7 @@ begin with kk do begin
 end;end; { make_extent }
 
 procedure make_columns(var kk :  context);
-var ii,jj :  integer;
+var ii,jj :  int64;
 begin with kk do begin
    for ii := 1 to mnum do
    begin
@@ -81,7 +81,7 @@ begin with kk do begin
 end;end; { make_columns }
 
 procedure close_extent(var a_out,a_in : menge; var kk:context);
-var ii  : integer;
+var ii  : int64;
 begin with kk do begin
    if not columns_defined then make_columns(kk);
    a_out := [1..kk.gnum];
@@ -90,7 +90,7 @@ begin with kk do begin
 end;end; { close_extent }
 
 procedure make_intent(var b_out,a_in : menge; var kk:context);
-var ii : integer;
+var ii : int64;
 begin with kk do begin
    b_out:=[1..kk.mnum];
    for ii := 1 to gnum do
@@ -98,7 +98,7 @@ begin with kk do begin
 end;end; { make_intent }
 
 procedure close_intent(var b_out,b_in : menge; var kk : context);
-var ii	   : integer;
+var ii	   : int64;
 begin with kk do begin
    b_out:=[1..kk.mnum];
    for ii := 1 to gnum do
@@ -120,9 +120,9 @@ begin with kk do begin
 end;end; { first_extent }
 
 function next_intent(var a : menge; var kk : context) : boolean;
-var ii	  : integer;
+var ii	  : int64;
    erfolg : boolean;
-   function probiere(var x: menge; pp : integer) : boolean;
+   function probiere(var x: menge; pp : int64) : boolean;
    var huelle,sgment : menge;
       ergebnis	      : boolean;
    begin with kk do begin
@@ -146,9 +146,9 @@ begin with kk do begin
 end;end; { next_intent }
 
 function next_extent(var a : menge; var kk : context) : boolean;
-var ii	  : integer;
+var ii	  : int64;
    erfolg : boolean;
-   function probiere(var x: menge; pp : integer) : boolean;
+   function probiere(var x: menge; pp : int64) : boolean;
    var huelle,sgment : menge;
       ergebnis	      : boolean;
    begin with kk do begin
@@ -171,8 +171,8 @@ begin with kk do begin
    next_extent:=erfolg;
 end;end; { next_extent }
 
-procedure new_context(gzahl,mzahl : integer; var kk:context);
-var ii : integer;
+procedure new_context(gzahl,mzahl : int64; var kk:context);
+var ii : int64;
 begin with kk do begin
    gnum := gzahl;
    mnum := mzahl;
@@ -182,7 +182,7 @@ end;end; { new_context }
 
 procedure read_cxt(var kk : context; var filename : string);
 var cxtfile : text;
-   i,j	    : integer;
+   i,j	    : int64;
    zeile    : string[setlimit];
 begin
    add_suffix(filename,'cxt');
@@ -212,7 +212,7 @@ end; { read_cxt }
 
 procedure write_context(var kk : context; var filename : string);
 var cxtfile : text;
-   gg,mm    : integer;
+   gg,mm    : int64;
 begin with kk do begin
    add_suffix(filename,'cxt');
    assign(cxtfile,filename);
@@ -243,25 +243,25 @@ begin
    read_cxt(kk,zeile);
 end; { ask_for_cxt }
 
-procedure make_incident(g,m : integer; var kk:context);
+procedure make_incident(g,m : int64; var kk:context);
 begin with kk do begin
    insert(m,row[g]);
    columns_defined:=false;
 end;end;
 
-procedure make_nonincident( g,m : integer; var kk:context);
+procedure make_nonincident( g,m : int64; var kk:context);
 begin with kk do begin
    remove(m,row[g]);
    columns_defined:=false;
 end;end;
 
-function incident(g,m : integer; var kk : context) : boolean;
+function incident(g,m : int64; var kk : context) : boolean;
 begin
    incident := m in kk.row[g];
 end; { incident }
 
 procedure complement_context(var kkout, kkin: context);
-var g :  integer;
+var g :  int64;
 begin
    new_context(kkin.gnum,kkin.mnum,kkout);
    for g := 1 to kkin.gnum do
@@ -270,15 +270,15 @@ end; { complement_context }
 
 procedure copy_context(var kkout, kkin :  context);
 { Legt eine Kopie von kkin in kkout an. }
-var g :  integer;
+var g :  int64;
 begin
    new_context(kkin.gnum, kkin.mnum, kkout);
    for g := 1 to kkin.gnum do
       copy_menge(kkout.row[g],kkin.row[g]);
 end; { copy_context }
 
-function number_of_concepts(var kk :  context): integer;
-var count : integer;
+function number_of_concepts(var kk :  context): int64;
+var count : int64;
    B	  : menge;
 begin
    first_intent(B,kk);
@@ -288,7 +288,7 @@ begin
    number_of_concepts := count;
 end; { number_of_concepts }
 
-procedure flip_rows(var g,h : integer; var kk: context);
+procedure flip_rows(var g,h : int64; var kk: context);
 var S :  menge;
 begin
    copy_menge(S,kk.row[g]);
@@ -296,9 +296,9 @@ begin
    copy_menge(kk.row[h],S);
 end; { flip_rows }
 
-procedure flip_columns(var m,n : integer; var kk : context);
+procedure flip_columns(var m,n : int64; var kk : context);
 var flag : boolean;
-       g : integer;
+       g : int64;
 begin
    for g:= 1 to kk.gnum do
    begin

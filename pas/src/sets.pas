@@ -8,25 +8,25 @@ procedure union(var out,a,b : menge);
 procedure intersect(var out,a,b : menge);
 procedure restrict(var a,b : menge);
 procedure difference(var m_out, m_from, m_in : menge);
-procedure complement(var m_out, m_in : menge; maxelt :integer);
+procedure complement(var m_out, m_in : menge; maxelt :int64);
 procedure fullset(var a	: menge);
 procedure emptyset(var a : menge);
 function is_empty(var a	: menge) : boolean;
 function subset(var a,b : menge) : boolean;
 function equal(var a,b : menge) : boolean;
 procedure copy_menge(var m_out,m_in : menge);
-procedure write_incidences(var a : menge; var setmax : integer);
-procedure writeln_incidences(var a : menge; var setmax : integer);
+procedure write_incidences(var a : menge; var setmax : int64);
+procedure writeln_incidences(var a : menge; var setmax : int64);
 procedure write_menge(var a : menge);
 procedure writeln_menge(var a : menge);
-procedure insert( e :integer; var a : menge);
-procedure remove( e : integer; var a:menge);
-procedure rtisegment(var xout,xin : menge; var ii : integer);
+procedure insert( e :int64; var a : menge);
+procedure remove( e : int64; var a:menge);
+procedure rtisegment(var xout,xin : menge; var ii : int64);
 
 Implementation
  
 procedure union(var out,a,b : menge);
-{var ii :  integer;}
+{var ii :  int64;}
 begin
       out := a + b;
 end; { union }
@@ -46,12 +46,12 @@ begin
    m_out := m_from - m_in;
 end;
 
-procedure complement(var m_out, m_in : menge; maxelt :integer);
+procedure complement(var m_out, m_in : menge; maxelt :int64);
 begin
    m_out := [1..maxelt] - m_in; 
 end; { complement }
 
-procedure rtisegment(var xout,xin : menge; var ii : integer);
+procedure rtisegment(var xout,xin : menge; var ii : int64);
 { Restrict to initial segment }
 begin
    xout := xin * [0..ii];
@@ -77,12 +77,12 @@ begin
    m_out:=m_in;
 end; { copy_menge }
 
-procedure insert(e : integer; var a:menge);
+procedure insert(e : int64; var a:menge);
 begin
    a:=a+[e..e];
 end; { insert }
 
-procedure remove(e : integer; var a:menge);
+procedure remove(e : int64; var a:menge);
 begin
    a:=a-[e..e];
 end; { remove }
@@ -97,21 +97,21 @@ begin
    equal := a=b;
 end; { equal }
 
-procedure write_incidences(var a : menge; var setmax : integer);
-var ii :  integer;
+procedure write_incidences(var a : menge; var setmax : int64);
+var ii :  int64;
 begin
    for ii:= 1 to setmax do
       if (ii in a) then write('x') else write('.');
 end; { write_incidences }
 
-procedure writeln_incidences(var a : menge; var setmax : integer);
+procedure writeln_incidences(var a : menge; var setmax : int64);
 begin
    write_incidences(a,setmax);
    writeln;
 end; { writeln_incidences }
 
 procedure write_menge(var a : menge);
-var ii	: integer;
+var ii	: int64;
    erst	: boolean;
 begin
    write('{');

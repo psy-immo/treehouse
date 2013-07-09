@@ -9,13 +9,13 @@ const
 
  var
     cset       : array[1..MAXCSET] of menge;
-    nextmax,S  : array[0..MAXCSET,1..MAXSEARCHDEPTH] of integer;
+    nextmax,S  : array[0..MAXCSET,1..MAXSEARCHDEPTH] of int64;
     G	       : array[0..MAXSEARCHDEPTH] of menge;
-    sol,finsol : array[0..MAXSEARCHDEPTH] of integer;
-    i,pri,prj  : integer;
-    ub,ncol,gp : integer;
-    depth,gnum : integer;
-    geg	       : integer;
+    sol,finsol : array[0..MAXSEARCHDEPTH] of int64;
+    i,pri,prj  : int64;
+    ub,ncol,gp : int64;
+    depth,gnum : int64;
+    geg	       : int64;
     A,B	       : menge;
     ruleout    : boolean;
     dataname   : string;
@@ -24,10 +24,11 @@ procedure readin; {reads the data from file}
 var
    datafile : text;
    str	    : string;
-   ii,jj    : integer;
+   ii,jj    : int64;
 begin
    write('Data file: ');
    readln(str);
+   writeln;
    add_suffix(str,'cxt');
    assign(datafile,str);
    reset(datafile);
@@ -54,7 +55,7 @@ begin
 end; { readin }
 
 procedure maxify; { Eliminates non-maximal rows }
-var ii, jj : integer;
+var ii, jj : int64;
 begin
    pri := 0;
    repeat
@@ -81,10 +82,10 @@ begin
    until nextmax[ii,depth] = 0;
 end; { maxify }
 
-function small_intent : integer;  
+function small_intent : int64;  
 var
-   freq	      : array[1..256] of integer;
-   ii,jj,c,mn : integer;
+   freq	      : array[1..256] of int64;
+   ii,jj,c,mn : int64;
    carrier    : menge;
 begin
    for ii := 1 to gnum do freq[ii] := 0;
@@ -128,7 +129,7 @@ begin
 end; { init }
 
 function fullcolumn: boolean;
-var jj,ij :  integer;
+var jj,ij :  int64;
 begin
    fullcolumn := false;
    jj := nextmax[0,depth];
@@ -156,7 +157,7 @@ begin
 end; { backtrack }
 
 procedure increment;
-var mm,predepth : integer;
+var mm,predepth : int64;
 begin
    write('u');
    mm := S[0,depth];
@@ -193,10 +194,11 @@ begin
    if ub <= MAXSEARCHDEPTH then
    begin
       write('Cover found of size ',ub,', consisting of object intents ');
+      writeln;
       for i := 1 to ub do
       begin
-	 write(finsol[i]);
-	 if i < ub then write(', ') else writeln('.');
+		writeln('#CHAIN ',finsol[i]);
+	 {if i < ub then write(', ') else writeln('.');}
       end;
       for i := 1 to ub do writeln_menge(cset[finsol[i]]);
    end;

@@ -3,30 +3,30 @@ program ferrers; { Computes maximal Ferrers relations inside the incidence }
 uses contexts, sets;
 
 const
-   MAXNOCONCEPTS = 5000;
-   MAXNEIGHBORS	 = 30;
-   MAXNOCHAINS	 = 50000;
+   MAXNOCONCEPTS = 50000;
+   MAXNEIGHBORS	 = 300;
+   MAXNOCHAINS	 = 500000;
    
 var
    cset		   : array[1..MAXNOCHAINS] of menge;
    cnam		   : array[1..MAXNOCHAINS] of string;
    cmax		   : array[1..MAXNOCHAINS] of boolean;
    tset		   : array[1..MAXNOCONCEPTS] of menge;
-   Lower	   : array[1..MAXNOCONCEPTS,0..MAXNEIGHBORS] of integer;
+   Lower	   : array[1..MAXNOCONCEPTS,0..MAXNEIGHBORS] of int64;
    kk		   : context;
    gdup,mdup	   : array[1..setlimit] of boolean;
-   gtight,mtight   : array[1..setlimit] of integer;
-   nconcept,ntight : integer;
-   ntc,c,d	   : integer;
+   gtight,mtight   : array[1..setlimit] of int64;
+   nconcept,ntight : int64;
+   ntc,c,d	   : int64;
    outfile	   : text;
 
 procedure make_tights;   {   Computes the tight incidences.  }
 var
    Up, Down	 : array[1..setlimit] of menge;
-   g,h,m,n	 : integer;
+   g,h,m,n	 : int64;
 
-   function is_tight(gg,mm : integer) : boolean;
-   var gh, mn : integer;
+   function is_tight(gg,mm : int64) : boolean;
+   var gh, mn : int64;
    begin      
       is_tight := incident(gg,mm,kk) and not (gdup[gg] or mdup[mm]);
       for gh := 1 to kk.gnum do
@@ -84,7 +84,7 @@ end; { make_tights }
 
 procedure tightsets;  { Computes tight incidences for each concept  }
 var A,B	: menge;
-   tc	: integer;
+   tc	: int64;
 begin
    nconcept := 1;
    first_intent(B,kk);
@@ -103,7 +103,7 @@ end; { tightsets }
 procedure diagram; {   Computes the neighborhood relation   }
 var
    lowintent   : array[1..MAXNEIGHBORS] of menge;
-   count,ii,jj : integer;
+   count,ii,jj : int64;
    A,B	       : menge;
    neigh       : boolean;
 begin
@@ -134,13 +134,13 @@ end; { diagram }
 
 procedure maxchains;
 var
-   chain,branch	: array[1..MAXNOCONCEPTS] of integer;
-   count, i	: integer;
+   chain,branch	: array[1..MAXNOCONCEPTS] of int64;
+   count, i	: int64;
    up,ende	: boolean;
 
    procedure register;
    var
-      jj	  : integer;
+      jj	  : int64;
       cname,dname : string;
       T		  : menge;
       alive	  : boolean;
@@ -218,6 +218,7 @@ begin
 	 if i = 0 then ende := true;
       end;
    end;
+   writeln;
    writeln('Number of maximal chains: ',count);
 end; { maxchains }
 
@@ -234,7 +235,7 @@ begin
    begin
       d := succ(d);
       write_incidences(cset[c],ntight);
-      writeln('  ',d:4,'  ',cnam[c]:6);
+      writeln(' #FERRERS ',d:4,' #MAKECHAIN ',cnam[c]:6);
    end;
    writeln(d,' maximal Ferrers relations found inside the incidence relation.');
    write('Output written to file ',kk.name+'chains.cxt ');
