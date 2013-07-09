@@ -1,5 +1,6 @@
 #!/bin/sh
-BINDIR=$(dirname $0)/bin
+BINDIR=$(dirname $0)/pas/bin
+PYDIR=$(dirname $0)/py
 CXT=${1%.cxt}
 echo $CXT | $BINDIR/ferrers > "$CXT-ferrers.txt"
 echo ${CXT}chains | $BINDIR/intentcover > "$CXT-intentcover.txt"
