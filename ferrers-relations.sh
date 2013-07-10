@@ -12,5 +12,7 @@ do
   echo "Ferrers chain $nbr a.k.a. maximal chain $cnbr" >> "$CXT-chains.txt"
   echo "${CXT}\n${cnbr}\n" | $BINDIR/makechain >> "$CXT-chains.txt"
   mv Ferrers.cxt "$CXT-ferrers-$nbr.cxt"
+  $PYDIR/inject-GM-cxt "$CXT.cxt" "$CXT-ferrers-$nbr.cxt"
 done
+
 
