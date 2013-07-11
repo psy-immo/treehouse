@@ -1,4 +1,16 @@
 #!/bin/sh
+#
+#
+#  This script computes a covering with maximal ferrers chains for a given
+#  cxt-file argument. (Well, the file name should end in .cxt :)
+#
+#
+#  USAGE: max-ferrers-chain-cover.sh data.cxt
+#
+#  OUTPUT: data-*.txt data-*.cxt
+#
+#
+
 BINDIR=$(dirname $0)/pas/bin
 PYDIR=$(dirname $0)/py
 CXT=${1%.cxt}
