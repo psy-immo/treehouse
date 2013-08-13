@@ -27,8 +27,6 @@ int main(void) {
 	FormalContext ctx;
 
 
-	puts("Creating\n");
-
 	ctx = newFormalContextFromFile("/home/immodeb/tmp/test.cxt");
 
 	writeFormalContext(ctx,"/tmp/test.cxt");

@@ -34,6 +34,11 @@ typedef int IncidenceCell;
 #define CHUNKSIZE 64
 
 /**
+ * size of chunks per bulk
+ */
+#define BULKSIZE 1024
+
+/**
  * maximal (initial) size of a line (getline will resize buffers if necessary)
  *   (including delimiter)
  */
@@ -356,3 +361,35 @@ void deleteConceptChunk(myFormalConceptIntentChunk** c)
 	*c = 0;
 }
 
+
+typedef struct sFormalConceptIntentBulkNode {
+	/**
+	 * number of attributes of the concept intents
+	 */
+	int attributes;
+	/**
+	 * number of chunks used
+	 */
+	int size;
+	/**
+	 * array to at most BULKSIZE chunks
+	 */
+	myFormalConceptIntentChunk* chunks;
+	/**
+	 * pointer to the next BulkNode, or 0
+	 */
+    struct sFormalConceptIntentBulkNode* next;
+} * FormalConceptIntentBulkList;
+
+typedef FormalConceptIntentBulkNode;
+
+FormalConceptIntentBulkList newConceptBulk(int attributes) {
+	FormalConceptIntentBulkList l;
+	l = malloc(sizeof(struct sFormalConceptIntentBulkNode));
+
+	l->attributes = attributes;
+	l->size = 0;
+	l->chunks = calloc(BULKSIZE,sizoef(myFormalConceptIntentChunk));
+	l->next = 0;
+	return l;
+}
