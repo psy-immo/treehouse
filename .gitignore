@@ -22,3 +22,4 @@ classes
 pom.xml
 .*
 *.policy.applet
+*.o
