@@ -16,11 +16,10 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <stdio.h>
 #include <stdlib.h>
 
 #include "fca.h"
-
-
 
 typedef int IncidenceCell;
 
@@ -30,45 +29,47 @@ typedef int IncidenceCell;
  * and an incidence relation which is represented by an objects×attributes-IncidenceCell matrix
  */
 
-typedef struct FormalContext
+typedef struct smyFormalContext
 {
 	int attributes, objects;
 	char** attributeNames;
 	char** objectNames;
 	IncidenceCell* incidenceRelation;
-} FormalContext;
+} myFormalContext;
 
-FormalContext* newFormalContext(int objects, int attributes)
+FormalContext newFormalContext(int objects, int attributes)
 {
-	FormalContext *ctx = malloc(sizeof(FormalContext));
+	myFormalContext *ctx = malloc(sizeof(myFormalContext));
 
 	ctx->attributes = attributes;
 	ctx->objects = objects;
 
-	ctx->attributeNames = malloc(sizeof(char*) * attributes);
-	ctx->objectNames = malloc(sizeof(char*) * objects);
+	ctx->attributeNames = calloc(attributes, sizeof(char*));
+	ctx->objectNames = calloc(objects, sizeof(char*));
 
 	for (int var = 0; var < attributes; ++var)
 	{
-		ctx->attributeNames[var] = calloc(sizeof(char));
+		ctx->attributeNames[var] = calloc(1, sizeof(char));
 	}
 
 	for (int var = 0; var < objects; ++var)
 	{
-		ctx->objectNames[var] = calloc(sizeof(char));
+		ctx->objectNames[var] = calloc(1, sizeof(char));
 	}
 
-	ctx->incidenceRelation = calloc(
-			sizeof(IncidenceCell) * objects * attributes);
+	ctx->incidenceRelation = calloc(objects * attributes,
+			sizeof(IncidenceCell));
 
-	return ctx;
+	return (FormalContext) ctx;
 }
 
-void deleteFormalContext(FormalContext** ctx)
+void deleteFormalContext(FormalContext* ctx)
 {
-	FormalContext *c;
+	myFormalContext *c;
 
-	c = *ctx;
+	c = (myFormalContext*) *ctx;
+
+	*ctx = 0;
 
 	for (int var = 0; var < c->attributes; ++var)
 	{
@@ -83,8 +84,5 @@ void deleteFormalContext(FormalContext** ctx)
 	free(c->objectNames);
 	free(c->attributeNames);
 	free(c->incidenceRelation);
-
 	free(c);
-
-	ctx = 0;
 }

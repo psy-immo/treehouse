@@ -24,13 +24,18 @@
 
 int main(void) {
 
-	FormalContext* ctx;
+	FormalContext ctx;
 
+
+	puts("Creating\n");
 
 	ctx = newFormalContext(1000,1000);
 
+	puts("Deleting\n");
 
 	deleteFormalContext(&ctx);
+
+	puts("Done\n");
 
 	return EXIT_SUCCESS;
 }

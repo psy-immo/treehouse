@@ -23,19 +23,19 @@
  * formal context struct
  */
 
-struct FormalContext;
-typedef struct FormalContext FormalContext;
+struct sFormalContext;
+typedef struct sFormalContext *FormalContext;
 
 /**
  * create a new formal context structure
  */
 
-FormalContext* newFormalContext(int objects, int attributes);
+FormalContext newFormalContext(int objects, int attributes);
 
 /**
  * delete a formal context structure
  */
 
-void deleteFormalContext(FormalContext** ctx);
+void deleteFormalContext(FormalContext* ctx);
 
 #endif /* FCA_H_ */
