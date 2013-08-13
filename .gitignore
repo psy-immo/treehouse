@@ -23,3 +23,5 @@ pom.xml
 .*
 *.policy.applet
 *.o
+*/Debug/*
+*/Release/*
