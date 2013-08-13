@@ -20,22 +20,16 @@
 #define FCA_H_
 
 /**
- * formal context struct
+ * abstract formal context object type used for interface purposes
  */
 
 struct sFormalContext;
 typedef struct sFormalContext *FormalContext;
 
-/**
- * create a new formal context structure
- */
 
 FormalContext newFormalContext(int objects, int attributes);
-
-/**
- * delete a formal context structure
- */
-
+FormalContext newFormalContextFromFile(const char* filename);
+void writeFormalContext(FormalContext ctx,const char* filename);
 void deleteFormalContext(FormalContext* ctx);
 
 #endif /* FCA_H_ */

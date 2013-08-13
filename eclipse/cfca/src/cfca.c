@@ -29,13 +29,11 @@ int main(void) {
 
 	puts("Creating\n");
 
-	ctx = newFormalContext(1000,1000);
+	ctx = newFormalContextFromFile("/home/immodeb/tmp/test.cxt");
 
-	puts("Deleting\n");
+	writeFormalContext(ctx,"/tmp/test.cxt");
 
 	deleteFormalContext(&ctx);
-
-	puts("Done\n");
 
 	return EXIT_SUCCESS;
 }
