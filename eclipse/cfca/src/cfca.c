@@ -16,29 +16,42 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "fca.h"
 #include "fca_private.h"
 
-int main(void) {
+int main(void)
+{
 
 	FormalContext ctx;
 
 	ctx = newFormalContextFromFile("/home/immo/tmp/test.cxt");
 
-	deleteFormalContext(&ctx);
+
 
 	puts("Internal testing....");
 
 	FormalConceptIntentBulkList l;
-	l = newConceptBulk(100);
+	l = newConceptBulkFromContext(ctx);
+
+	printf("Concepts: %d =? 209\n",countConceptsInBulk(l));
+
+
+	puts("=====");
+	FILE* status = fopen("/proc/self/status", "r");
+	char line[1000];
+	while (fgets(line, sizeof line, status) != NULL)
+	{
+		printf("%s", line);
+	}
+	fclose(status);
+	puts("=====");
+
+	deleteFormalContext(&ctx);
 
 	deleteConceptBulk(&l);
-
-	puts("done.");
 
 	return EXIT_SUCCESS;
 }

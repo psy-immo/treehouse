@@ -26,6 +26,7 @@
 #ifndef FCA_STRUCTS_H_
 #define FCA_STRUCTS_H_
 
+#include "fca.h"
 
 
 /**
@@ -83,7 +84,9 @@ typedef struct smyFormalConceptIntentChunk
 
 
 /**
- * a node of a single linked list of concept chunks
+ * a node of a single linked list of concept chunks.
+ * bulk nodes are filled chunk wise, but a bulk node may have non-empty
+ * successor nodes even if it is not entire full.
  */
 
 typedef struct sFormalConceptIntentBulkNode {

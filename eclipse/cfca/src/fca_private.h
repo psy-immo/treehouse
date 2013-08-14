@@ -28,9 +28,32 @@
 
 #include "fca_structs.h"
 
-myFormalConceptIntentChunk* newConceptChunk(int attributes);
-void deleteConceptChunk(myFormalConceptIntentChunk** c);
-FormalConceptIntentBulkList newConceptBulk(int attributes);
-void deleteConceptBulk(FormalConceptIntentBulkList* rootNode);
+myFormalConceptIntentChunk*
+newConceptChunk(int attributes);
+
+void
+deleteConceptChunk(myFormalConceptIntentChunk** c);
+
+FormalConceptIntentBulkList
+newConceptBulk(int attributes);
+
+FormalConceptIntentBulkList
+newConceptBulkFromContext(FormalContext ctx);
+
+void
+deleteConceptBulk(FormalConceptIntentBulkList* rootNode);
+
+int
+countConceptsInBulk(FormalConceptIntentBulkList root);
+
+FormalConceptIntentBulkList
+addConceptToBulk(FormalConceptIntentBulkList root, const IncidenceCell* intent);
+
+void
+closeIntent(FormalContext ctx, const IncidenceCell* input,
+		IncidenceCell* output);
+
+int
+intentCmp(int attributes, const IncidenceCell* minus, const IncidenceCell* plus);
 
 #endif /* FCA_PRIVATE_H_ */

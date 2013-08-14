@@ -28,7 +28,7 @@
 /**
  * type of the incidence relation matrix cells
  */
-typedef int IncidenceCell;
+typedef int8_t IncidenceCell;
 
 /**
  * abstract formal context object type used for interface purposes
@@ -37,8 +37,12 @@ typedef int IncidenceCell;
 struct sFormalContext;
 typedef struct sFormalContext *FormalContext;
 
+/**
+ * intent structure of a formal concept
+ */
+
 typedef struct sFormalIntent {
-	int attributes;
+	size_t attributes;
 	IncidenceCell* incidence;
 } FormalIntent;
 

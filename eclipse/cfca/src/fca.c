@@ -45,8 +45,13 @@ FormalContext newFormalContext(int objects, int attributes)
 	ctx->attributes = attributes;
 	ctx->objects = objects;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
 	ctx->attributeNames = calloc(attributes, sizeof(char*));
 	ctx->objectNames = calloc(objects, sizeof(char*));
+
+#pragma GCC diagnostic pop
 
 	for (int var = 0; var < attributes; ++var)
 	{
@@ -58,7 +63,12 @@ FormalContext newFormalContext(int objects, int attributes)
 		ctx->objectNames[var] = calloc(1, sizeof(char));
 	}
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
 	ctx->incidence = calloc(objects * attributes, sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
 
 	return (FormalContext) ctx;
 }
@@ -293,7 +303,12 @@ myFormalConceptIntentChunk* newConceptChunk(int attributes)
 	c->attributes = attributes;
 	c->size = 0;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
 	c->incidence = calloc(attributes * CHUNKSIZE, sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
 
 	return c;
 }
@@ -363,4 +378,269 @@ void deleteConceptBulk(FormalConceptIntentBulkList* rootNode)
 
 		l = next;
 	} while (l != 0);
+}
+
+/**
+ * use this for bulks that are filled in order
+ *
+ * @param root
+ * @return  number of concepts in bulk
+ */
+int countConceptsInBulk(FormalConceptIntentBulkList root)
+{
+	RETURN_ZERO_IF_ZERO(root);
+
+	int count = 0;
+
+	while (root != 0)
+	{
+		if (root->size > 0)
+		{
+			/**
+			 * count the full chunks
+			 */
+			count += CHUNKSIZE * (root->size - 1);
+			/**
+			 * and the last chunk
+			 */
+			count += root->chunks[root->size - 1]->size;
+		}
+		root = root->next;
+	}
+
+	return count;
+}
+
+/**
+ * copies the given intent to the bulk denoted by the root node.
+ *
+ *
+ * @param root    root node of the bulk
+ * @param intent  read-only pointer to an array of IncidenceCell[root->attributes]
+ *
+ * @return the node where the intent was added to the last chunk
+ */
+
+FormalConceptIntentBulkList addConceptToBulk(FormalConceptIntentBulkList root,
+		const IncidenceCell* intent)
+{
+	RETURN_ZERO_IF_ZERO(root);
+
+	do
+	{
+
+		if (root->size == 0)
+		{
+			root->chunks[0] = newConceptChunk(root->attributes);
+			root->size = 1;
+		}
+
+		int last_index;
+		last_index = root->size - 1;
+
+		if (root->chunks[last_index]->size == CHUNKSIZE)
+		{
+			if (root->size == BULKSIZE)
+			{
+				if (root->next == 0)
+				{
+					root->next = newConceptBulk(root->attributes);
+				}
+				root = root->next;
+				continue;
+			}
+			else
+			{
+				last_index = root->size++;
+				root->chunks[last_index] = newConceptChunk(root->attributes);
+			}
+		}
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+		memcpy(
+				&(CELL(root->chunks[last_index]->size, root->chunks[last_index],0)),
+				intent, sizeof(IncidenceCell) * root->attributes);
+
+#pragma GCC diagnostic pop
+
+		root->chunks[last_index]->size++;
+
+		break;
+
+	} while (1);
+
+	return root;
+}
+
+/**
+ * close an attribute set, i.e. add further attributes
+ *
+ * @param ctx    formal context
+ * @param input  the intent set that is to be closed
+ * @param output  the closure intent'' wrt. ctx
+ */
+
+void closeIntent(FormalContext ctx, const IncidenceCell* input,
+		IncidenceCell* output)
+{
+	myFormalContext* I;
+	I = (myFormalContext*) ctx;
+	for (int var = 0; var < I->attributes; ++var)
+	{
+		CROSS(output[var]);
+	}
+
+	for (int g = 0; g < I->objects; ++g)
+	{
+		int good;
+		good = 1;
+
+		for (int m = 0; m < I->attributes; ++m)
+		{
+			if (INCIDES(input[m]))
+				if (!gIm(g,I,m))
+				{
+					/**
+					 * some attribute is not present for this object -> next object
+					 */
+					good = 0;
+					break;
+				}
+		}
+		if (good)
+			/**
+			 * remove attributes that are not common among all objects that have the input
+			 * attributes
+			 */
+			for (int m = 0; m < I->attributes; ++m)
+			{
+				if (!gIm(g,I,m))
+				{
+					CLEAR(output[m]);
+				}
+			}
+	}
+}
+
+/**
+ * compare two intent vectors
+ *
+ * @param attributes   attribute count
+ * @param minus        "left" operand
+ * @param plus         "right" operand
+ * @return -1 if minus is bigger, 1 if plus is bigger,
+ *        0 if minus and plus is the same
+ */
+
+int intentCmp(int attributes, const IncidenceCell* minus,
+		const IncidenceCell* plus)
+{
+	for (int var = 0; var < attributes; ++var)
+	{
+		if (INCIDES(minus[var]))
+		{
+			if (!INCIDES((plus[var])))
+				return -1;
+		}
+		else if (INCIDES(plus[var]))
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
+/**
+ * creates a new formal concept intent chunk and fills it with the intents of all formal
+ * concepts in the concept lattice of ctx, using next closure algorithm
+ *
+ * @param ctx   formal context
+ * @return   concept intents
+ */
+FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
+{
+	RETURN_ZERO_IF_ZERO(ctx);
+
+	myFormalContext *c;
+	c = (myFormalContext*) ctx;
+
+	IncidenceCell *M;
+	IncidenceCell *Y;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+	M = calloc(c->attributes, sizeof(IncidenceCell));
+	Y = malloc(c->attributes * sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
+
+	FormalConceptIntentBulkList root;
+	FormalConceptIntentBulkList last;
+
+	root = newConceptBulk(c->attributes);
+	last = root;
+
+	/**
+	 * begin of nextClosure function iteration
+	 */
+	nextClosure:
+
+	for (int i = c->attributes - 1; i >= 0; --i)
+	{
+
+		if (!INCIDES(M[i]))
+		{
+			CROSS(M[i]);
+			closeIntent(ctx, M, Y);
+
+			int good;
+			good = 1;
+
+			for (int j = 0; j < i; ++j)
+			{
+				if (INCIDES(Y[j]))
+				{
+					if (!INCIDES((M[j])))
+					{
+
+						good = 0;
+						break;
+					}
+				}
+			}
+			if (good)
+			{
+				/**
+				 * we found the next intent
+				 */
+				last = addConceptToBulk(last, Y);
+
+				/**
+				 * continue with Y for M
+				 */
+
+				IncidenceCell *DELTA;
+				DELTA = M;
+				M = Y;
+				Y = DELTA;
+				/**
+				 * tail recursive call to nextClosure
+				 */
+				goto nextClosure;
+			}
+		}
+
+		CLEAR(M[i]);
+	}
+
+	/**
+	 * free up memory
+	 */
+
+	free(M);
+	free(Y);
+	return root;
 }
