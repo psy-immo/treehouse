@@ -1,5 +1,5 @@
 /**
- * cfca.c, (c) 2013, Immanuel Albrecht; Dresden University of
+ * fca_private.h, (c) 2013, Immanuel Albrecht; Dresden University of
  * Technology, Professur für die Psychologie des Lernen und Lehrens
  *
  * This program is free software: you can redistribute it and/or modify it under
@@ -16,29 +16,21 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/**
+ * @file
+ *
+ * this file contains forward declarations for fca related functions that are not
+ * part of the public interface
+ */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef FCA_PRIVATE_H_
+#define FCA_PRIVATE_H_
 
-#include "fca.h"
-#include "fca_private.h"
+#include "fca_structs.h"
 
-int main(void) {
+myFormalConceptIntentChunk* newConceptChunk(int attributes);
+void deleteConceptChunk(myFormalConceptIntentChunk** c);
+FormalConceptIntentBulkList newConceptBulk(int attributes);
+void deleteConceptBulk(FormalConceptIntentBulkList* rootNode);
 
-	FormalContext ctx;
-
-	ctx = newFormalContextFromFile("/home/immo/tmp/test.cxt");
-
-	deleteFormalContext(&ctx);
-
-	puts("Internal testing....");
-
-	FormalConceptIntentBulkList l;
-	l = newConceptBulk(100);
-
-	deleteConceptBulk(&l);
-
-	puts("done.");
-
-	return EXIT_SUCCESS;
-}
+#endif /* FCA_PRIVATE_H_ */

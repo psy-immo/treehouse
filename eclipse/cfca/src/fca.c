@@ -22,41 +22,13 @@
 
 #include "fca.h"
 #include "fca_macros.h"
+#include "fca_structs.h"
+#include "fca_private.h"
 
-/**
- * type of the incidence relation matrix cells
+/** @file
+ *  this file contains general formal context related operations and routines
+ *
  */
-typedef int IncidenceCell;
-
-/**
- * size of a chunk of concepts
- */
-#define CHUNKSIZE 64
-
-/**
- * size of chunks per bulk
- */
-#define BULKSIZE 1024
-
-/**
- * maximal (initial) size of a line (getline will resize buffers if necessary)
- *   (including delimiter)
- */
-#define INPUTBUFFERSIZE (1024)
-
-/**
- * each formal context has a finite number of objects and attributes,
- * which may have names (though we do not require them to be unique or given),
- * and an incidence relation which is represented by an objects×attributes-IncidenceCell matrix
- */
-
-typedef struct smyFormalContext
-{
-	int attributes, objects;
-	char** attributeNames;
-	char** objectNames;
-	IncidenceCell* incidence;
-} myFormalContext;
 
 /**
  * create a new formal context
@@ -195,11 +167,13 @@ FormalContext newFormalContextFromFile(const char* filename)
 				if ((line[var] == 'x') || (line[var] == 'X')
 						|| (line[var] == '1'))
 				{
-					CROSS( CELL (i, ctx, var));
+					CROSS(CELL (i, ctx, var));
 				}
 			}
 
-		} else {
+		}
+		else
+		{
 			/**
 			 * we read all data
 			 */
@@ -243,7 +217,7 @@ void writeFormalContext(FormalContext ctx, const char* filename)
 	c = (myFormalContext*) ctx;
 
 	fputs("", file);
-	fprintf(file,"B\n\n%d\n%d\n\n", c->objects, c->attributes);
+	fprintf(file, "B\n\n%d\n%d\n\n", c->objects, c->attributes);
 
 	for (int var = 0; var < c->objects; ++var)
 	{
@@ -262,11 +236,11 @@ void writeFormalContext(FormalContext ctx, const char* filename)
 		for (int m = 0; m < c->attributes; ++m)
 		{
 			if ( gIm(g, c, m))
-				fputs("X",file);
+				fputs("X", file);
 			else
-				fputs(".",file);
+				fputs(".", file);
 		}
-		fputs("\n",file);
+		fputs("\n", file);
 	}
 
 	fclose(file);
@@ -306,26 +280,6 @@ void deleteFormalContext(FormalContext* ctx)
 }
 
 /**
- * A chunk of at most CHUNKSIZE formal concept intents
- */
-
-typedef struct smyFormalConceptIntentChunk
-{
-	/**
-	 * number of attributes
-	 */
-	int attributes;
-	/**
-	 * how many formal concepts are in this chunk
-	 */
-	int size;
-	/**
-	 * the intents of the concepts
-	 */
-	IncidenceCell* incidence;
-} myFormalConceptIntentChunk;
-
-/**
  * create a new formal concept chunk
  *
  * @param attributes  number of attributes of the hosting formal context
@@ -361,35 +315,52 @@ void deleteConceptChunk(myFormalConceptIntentChunk** c)
 	*c = 0;
 }
 
+/**
+ * creates a new formal concept intent bulk list
+ *
+ * @param attributes  number of attributes of the concept intents
+ * @return new formal concept intent bulk list's first node
+ */
 
-typedef struct sFormalConceptIntentBulkNode {
-	/**
-	 * number of attributes of the concept intents
-	 */
-	int attributes;
-	/**
-	 * number of chunks used
-	 */
-	int size;
-	/**
-	 * array to at most BULKSIZE chunks
-	 */
-	myFormalConceptIntentChunk* chunks;
-	/**
-	 * pointer to the next BulkNode, or 0
-	 */
-    struct sFormalConceptIntentBulkNode* next;
-} * FormalConceptIntentBulkList;
-
-typedef FormalConceptIntentBulkNode;
-
-FormalConceptIntentBulkList newConceptBulk(int attributes) {
+FormalConceptIntentBulkList newConceptBulk(int attributes)
+{
 	FormalConceptIntentBulkList l;
 	l = malloc(sizeof(struct sFormalConceptIntentBulkNode));
 
 	l->attributes = attributes;
 	l->size = 0;
-	l->chunks = calloc(BULKSIZE,sizoef(myFormalConceptIntentChunk));
+	l->chunks = calloc(BULKSIZE, sizeof(myFormalConceptIntentChunk*));
 	l->next = 0;
 	return l;
+}
+
+/**
+ * deletes the entire bulk list
+ * @param rootNode   pointer to the first node
+ */
+
+void deleteConceptBulk(FormalConceptIntentBulkList* rootNode)
+{
+	RETURN_IF_ZERO(rootNode);
+	RETURN_IF_ZERO(*rootNode);
+
+	FormalConceptIntentBulkList l;
+	l = *rootNode;
+	*rootNode = 0;
+
+	do
+	{
+		for (int var = 0; var < l->size; ++var)
+		{
+			deleteConceptChunk(&(l->chunks[var]));
+		}
+
+		FormalConceptIntentBulkList next;
+		next = l->next;
+
+		free(l->chunks);
+		free(l);
+
+		l = next;
+	} while (l != 0);
 }

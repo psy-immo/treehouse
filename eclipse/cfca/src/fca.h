@@ -16,8 +16,19 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/** @file
+ *
+ * this file contains the public interface to the formal context analysis code
+ *
+ */
+
 #ifndef FCA_H_
 #define FCA_H_
+
+/**
+ * type of the incidence relation matrix cells
+ */
+typedef int IncidenceCell;
 
 /**
  * abstract formal context object type used for interface purposes
@@ -26,6 +37,10 @@
 struct sFormalContext;
 typedef struct sFormalContext *FormalContext;
 
+typedef struct sFormalIntent {
+	int attributes;
+	IncidenceCell* incidence;
+} FormalIntent;
 
 FormalContext newFormalContext(int objects, int attributes);
 FormalContext newFormalContextFromFile(const char* filename);
