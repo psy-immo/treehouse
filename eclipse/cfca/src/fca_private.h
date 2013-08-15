@@ -41,6 +41,10 @@ FormalConceptIntentBulkList
 newConceptBulkFromContext(FormalContext ctx);
 
 void
+writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root,
+		const char* filename);
+
+void
 deleteConceptBulk(FormalConceptIntentBulkList* rootNode);
 
 int

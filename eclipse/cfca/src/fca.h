@@ -47,7 +47,9 @@ typedef struct sFormalIntent {
 } FormalIntent;
 
 FormalContext newFormalContext(int objects, int attributes);
+FormalContext newFormalContextFromRandom(int objects, int attributes, float p);
 FormalContext newFormalContextFromFile(const char* filename);
+
 void writeFormalContext(FormalContext ctx,const char* filename);
 void deleteFormalContext(FormalContext* ctx);
 

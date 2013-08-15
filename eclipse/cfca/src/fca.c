@@ -108,6 +108,9 @@ FormalContext newFormalContextFromFile(const char* filename)
 	int objects;
 	int attributes;
 
+	attributes = 0;
+	objects = 0;
+
 	myFormalContext *ctx;
 	ctx = 0;
 
@@ -226,7 +229,6 @@ void writeFormalContext(FormalContext ctx, const char* filename)
 	myFormalContext *c;
 	c = (myFormalContext*) ctx;
 
-	fputs("", file);
 	fprintf(file, "B\n\n%d\n%d\n\n", c->objects, c->attributes);
 
 	for (int var = 0; var < c->objects; ++var)
@@ -572,16 +574,26 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsign-conversion"
 
-	M = calloc(c->attributes, sizeof(IncidenceCell));
-	Y = malloc(c->attributes * sizeof(IncidenceCell));
+	Y = calloc(c->attributes, sizeof(IncidenceCell));
+	M = malloc(c->attributes * sizeof(IncidenceCell));
 
 #pragma GCC diagnostic pop
+
+	/**
+	 * calculate the bottom intent of the concept lattice, i.e. {}''
+	 */
+	closeIntent(ctx, Y, M);
 
 	FormalConceptIntentBulkList root;
 	FormalConceptIntentBulkList last;
 
 	root = newConceptBulk(c->attributes);
-	last = root;
+
+	/**
+	 * add the bottom element of the concept lattice (a concept lattice is never empty)
+	 */
+
+	last = addConceptToBulk(root, M);
 
 	/**
 	 * begin of nextClosure function iteration
@@ -627,7 +639,7 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 				M = Y;
 				Y = DELTA;
 				/**
-				 * tail recursive call to nextClosure
+				 * do the nextClosure
 				 */
 				goto nextClosure;
 			}
@@ -643,4 +655,118 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 	free(M);
 	free(Y);
 	return root;
+}
+
+/**
+ * write a list of concept intents into a .cxt file
+ *
+ * @param ctx    formal context (or 0, is used for attribute names)
+ * @param root   the first node of the formal concept intent bulk
+ * @param filename   output file name (.cxt)
+ */
+
+void writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root,
+		const char* filename)
+{
+	RETURN_IF_ZERO(root);
+
+	myFormalContext* c;
+
+	if (ctx != 0)
+	{
+		c = (myFormalContext*) ctx;
+
+		WARN_IF_UNEQUAL_DO(c->attributes, root->attributes, c = 0);
+	}
+	else
+	{
+		c = 0;
+	}
+
+	RETURN_IF_ZERO(filename);
+
+	FILE* file;
+	file = fopen(filename, "w");
+
+	RETURN_IF_ZERO(file);
+
+	int objects;
+	objects = countConceptsInBulk(root);
+
+	fprintf(file, "B\n\n%d\n%d\n\n", objects, root->attributes);
+
+	for (int var = 0; var < objects; ++var)
+	{
+		fprintf(file, "C%8d\n", (var + 1));
+	}
+
+	if (c != 0)
+	{
+		for (int var = 0; var < c->attributes; ++var)
+		{
+			fputs(c->attributeNames[var], file);
+			fputs("\n", file);
+		}
+	}
+	else
+	{
+		for (int var = 0; var < root->attributes; ++var)
+		{
+			fprintf(file, "m%8d\n", (var + 1));
+		}
+	}
+
+	for (; root != 0; root = root->next)
+	{
+		for (int chunk = 0; chunk < root->size; ++chunk)
+		{
+			for (int g = 0; g < root->chunks[chunk]->size; ++g)
+			{
+				for (int m = 0; m < root->attributes; ++m)
+				{
+					if ( gIm(g, root->chunks[chunk], m))
+						fputs("X", file);
+					else
+						fputs(".", file);
+				}
+				fputs("\n", file);
+			}
+		}
+	}
+
+	fclose(file);
+
+}
+
+/**
+ * create a new formal context with random incidence relation
+ *
+ * @param objects
+ * @param attributes
+ * @param p  probability of a cross
+ * @return  context
+ */
+
+FormalContext newFormalContextFromRandom(int objects, int attributes, float p)
+{
+	FormalContext ctx;
+	ctx = newFormalContext(objects, attributes);
+
+	myFormalContext *c;
+
+	c = (myFormalContext*) ctx;
+
+	for (int g = 0; g < c->objects; ++g)
+	{
+		for (int m = 0; m < c->attributes; ++m)
+		{
+			float x;
+			x = (float) random() / (float) RAND_MAX;
+			if (x >= p)
+			{
+				CROSS(CELL(g,c,m));
+			}
+		}
+	}
+	return ctx;
 }

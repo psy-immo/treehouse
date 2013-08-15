@@ -18,28 +18,52 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "fca.h"
 #include "fca_private.h"
 
+/**
+ * this is the main testing routine for purposes of testing the formal concept analysis
+ * implementation for errors
+ *
+ * @return
+ */
+
 int main(void)
 {
 
+	/**
+	 * initialize pseudo random number generator
+	 */
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+
+	srandom(time(0));
+
+#pragma GCC diagnostic pop
+
+	/**
+	 * start tests
+	 */
+
 	FormalContext ctx;
 
-	ctx = newFormalContextFromFile("/home/immo/tmp/test.cxt");
+	ctx = newFormalContextFromRandom(40,40,0.3f);
 
-
+	writeFormalContext(ctx,"/home/immo/tmp/test.cxt");
 
 	puts("Internal testing....");
 
 	FormalConceptIntentBulkList l;
 	l = newConceptBulkFromContext(ctx);
 
-	printf("Concepts: %d =? 209\n",countConceptsInBulk(l));
+	printf("Concepts: %d\n", countConceptsInBulk(l));
 
+	writeConceptsToFile(ctx,l,"/home/immo/tmp/test_cs.cxt");
 
-	puts("=====");
+	/*puts("=====");
 	FILE* status = fopen("/proc/self/status", "r");
 	char line[1000];
 	while (fgets(line, sizeof line, status) != NULL)
@@ -47,7 +71,7 @@ int main(void)
 		printf("%s", line);
 	}
 	fclose(status);
-	puts("=====");
+	puts("=====");*/
 
 	deleteFormalContext(&ctx);
 
