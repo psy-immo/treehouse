@@ -56,12 +56,10 @@ int main(void)
 
 	puts("Internal testing....");
 
-	FormalConceptIntentBulkList l;
-	l = newConceptBulkFromContext(ctx);
 
-	printf("Concepts: %d\n", countConceptsInBulk(l));
 
-	writeConceptsToFile(ctx,l,"/home/immo/tmp/test_cs.cxt");
+	printf("Concepts: %d\n", countContextConcepts(ctx));
+
 
 	/*puts("=====");
 	FILE* status = fopen("/proc/self/status", "r");
@@ -75,7 +73,6 @@ int main(void)
 
 	deleteFormalContext(&ctx);
 
-	deleteConceptBulk(&l);
 
 	return EXIT_SUCCESS;
 }

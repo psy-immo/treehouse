@@ -41,16 +41,28 @@ typedef struct sFormalContext *FormalContext;
  * intent structure of a formal concept
  */
 
-typedef struct sFormalIntent {
+typedef struct sFormalIntent
+{
 	size_t attributes;
 	IncidenceCell* incidence;
 } FormalIntent;
 
-FormalContext newFormalContext(int objects, int attributes);
-FormalContext newFormalContextFromRandom(int objects, int attributes, float p);
-FormalContext newFormalContextFromFile(const char* filename);
+FormalContext
+newFormalContext(int objects, int attributes);
 
-void writeFormalContext(FormalContext ctx,const char* filename);
-void deleteFormalContext(FormalContext* ctx);
+FormalContext
+newFormalContextFromRandom(int objects, int attributes, float p);
+
+FormalContext
+newFormalContextFromFile(const char* filename);
+
+int
+countContextConcepts(FormalContext ctx);
+
+void
+writeFormalContext(FormalContext ctx, const char* filename);
+
+void
+deleteFormalContext(FormalContext* ctx);
 
 #endif /* FCA_H_ */
