@@ -481,12 +481,61 @@ FormalConceptIntentBulkList addConceptToBulk(FormalConceptIntentBulkList root,
  *
  * @param ctx    formal context
  * @param input  the intent set that is to be closed
+ * @param outputIntent  the closure intent'' wrt. ctx
+ * @param outputObjects  the corresponding objects, i.e. intent' wrt. ctx
+ */
+
+void closeIntent2(FormalContext ctx, const IncidenceCell* input,
+		IncidenceCell* outputIntent, IncidenceCell* outputExtent)
+{
+	myFormalContext* I;
+	I = (myFormalContext*) ctx;
+
+	for (int g = 0; g < I->objects; ++g)
+	{
+		CROSS(outputExtent[g]);
+		for (int m = 0; m < I->attributes; ++m)
+		{
+			if (INCIDES(input[m]))
+				if (!gIm(g,I,m))
+				{
+					/**
+					 * some attribute is not present for this object -> next object
+					 */
+					CLEAR(outputExtent[g]);
+					break;
+				}
+		}
+	}
+
+	for (int m = 0; m < I->attributes; ++m)
+	{
+		CROSS(outputIntent[m]);
+		for (int g = 0; g < I->objects; ++g)
+		{
+			if (INCIDES(outputExtent[g]))
+				if (!gIm(g,I,m))
+				{
+					CLEAR(outputIntent[m]);
+					break;
+				}
+		}
+	}
+
+}
+
+/**
+ * close an attribute set, i.e. add further attributes
+ *
+ * @param ctx    formal context
+ * @param input  the intent set that is to be closed
  * @param output  the closure intent'' wrt. ctx
  */
 
 void closeIntent(FormalContext ctx, const IncidenceCell* input,
 		IncidenceCell* output)
 {
+
 	myFormalContext* I;
 	I = (myFormalContext*) ctx;
 	for (int var = 0; var < I->attributes; ++var)
@@ -771,6 +820,103 @@ FormalContext newFormalContextFromRandom(int objects, int attributes, float p)
 	return ctx;
 }
 
+/**
+ * counts the concepts in the concept lattice of ctx, using next closure algorithm
+ *
+ * @param ctx   formal context
+ * @return   number of concepts in context
+ */
+int countContextConcepts2(FormalContext ctx)
+{
+	RETURN_ZERO_IF_ZERO(ctx);
+
+	myFormalContext *c;
+	c = (myFormalContext*) ctx;
+
+	IncidenceCell *M;
+	IncidenceCell *Y;
+	IncidenceCell *extent;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+	Y = calloc(c->attributes, sizeof(IncidenceCell));
+	M = malloc(c->attributes * sizeof(IncidenceCell));
+	extent = malloc(c->objects * sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
+
+	/**
+	 * calculate the bottom intent of the concept lattice, i.e. {}''
+	 */
+	closeIntent2(ctx, Y, M, extent);
+
+	int count;
+
+	count = 1;
+
+	/**
+	 * begin of nextClosure function iteration
+	 */
+	nextClosure:
+
+	for (int i = c->attributes - 1; i >= 0; --i)
+	{
+
+		if (!INCIDES(M[i]))
+		{
+			CROSS(M[i]);
+			closeIntent2(ctx, M, Y, extent);
+
+			int good;
+			good = 1;
+
+			for (int j = 0; j < i; ++j)
+			{
+				if (INCIDES(Y[j]))
+				{
+					if (!INCIDES((M[j])))
+					{
+
+						good = 0;
+						break;
+					}
+				}
+			}
+			if (good)
+			{
+				/**
+				 * we found the next intent
+				 */
+				count++;
+
+				/**
+				 * continue with Y for M
+				 */
+
+				IncidenceCell *DELTA;
+				DELTA = M;
+				M = Y;
+				Y = DELTA;
+				/**
+				 * do the nextClosure
+				 */
+				goto nextClosure;
+			}
+		}
+
+		CLEAR(M[i]);
+	}
+
+	/**
+	 * free up memory
+	 */
+
+	free(M);
+	free(Y);
+	free(extent);
+	return count;
+}
 
 /**
  * counts the concepts in the concept lattice of ctx, using next closure algorithm
@@ -793,6 +939,7 @@ int countContextConcepts(FormalContext ctx)
 
 	Y = calloc(c->attributes, sizeof(IncidenceCell));
 	M = malloc(c->attributes * sizeof(IncidenceCell));
+
 
 #pragma GCC diagnostic pop
 
@@ -864,5 +1011,6 @@ int countContextConcepts(FormalContext ctx)
 
 	free(M);
 	free(Y);
+
 	return count;
 }

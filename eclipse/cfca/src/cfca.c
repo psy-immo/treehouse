@@ -50,15 +50,25 @@ int main(void)
 
 	FormalContext ctx;
 
-	ctx = newFormalContextFromRandom(40,40,0.3f);
+	ctx = newFormalContextFromRandom(100,40,0.3f);
 
 	writeFormalContext(ctx,"/home/immo/tmp/test.cxt");
 
 	puts("Internal testing....");
 
+	clock_t start, end;
 
 
+	start = clock();
 	printf("Concepts: %d\n", countContextConcepts(ctx));
+	end = clock();
+    printf("Time version 1: %d [%d-%d]\n", end-start,start,end);
+
+
+    start = clock();
+   	printf("Concepts: %d\n", countContextConcepts2(ctx));
+   	end = clock();
+    printf("Time version 2: %d [%d-%d]\n", end-start,start,end);
 
 
 	/*puts("=====");

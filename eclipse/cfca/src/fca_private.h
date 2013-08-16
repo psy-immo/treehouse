@@ -57,6 +57,17 @@ void
 closeIntent(FormalContext ctx, const IncidenceCell* input,
 		IncidenceCell* output);
 
+/**
+ * this one takes about 1.92 times the time of closeIntent
+ * @param ctx
+ * @param input
+ * @param outputIntent
+ * @param outputExtent
+ */
+void
+closeIntent2(FormalContext ctx, const IncidenceCell* input,
+		IncidenceCell* outputIntent,IncidenceCell* outputExtent);
+
 int
 intentCmp(int attributes, const IncidenceCell* minus, const IncidenceCell* plus);
 

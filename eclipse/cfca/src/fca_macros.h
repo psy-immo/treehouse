@@ -41,12 +41,15 @@
  * clears the mark
  */
 
-#define CLEAR(x) { (x) &= ~1; }
+#define CLEAR(x) { (x) = 0; }
+
+//#define CLEAR(x) { (x) &= ~1; }
 
 /**
  * sets the mark
  */
-#define CROSS(x) { (x) |= 1; }
+#define CROSS(x) { (x) = 1; }
+//#define CROSS(x) { (x) |= 1; }
 
 /**
  * results in the cell that encodes whether g incides with m
