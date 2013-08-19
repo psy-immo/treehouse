@@ -59,6 +59,24 @@ typedef struct smyFormalContext
 	IncidenceCell* incidence;
 } myFormalContext;
 
+/**
+ * each formal context has a finite number of objects and attributes,
+ * which may have names (though we do not require them to be unique or given),
+ * and an incidence relation which is represented by an objects×attributes-IncidenceCell matrix
+ *
+ * for the vector implementation, we have the variable width which codes the width of each object's
+ * IncidenceVector
+ */
+
+typedef struct smyFormalContextV
+{
+	unsigned int attributes, objects;
+	unsigned int width;
+	char** attributeNames;
+	char** objectNames;
+	IncidenceVector incidence;
+} myFormalContextV;
+
 
 /**
  * A chunk of at most CHUNKSIZE formal concept intents

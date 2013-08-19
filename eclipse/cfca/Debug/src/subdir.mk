@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/cfca.c \
-../src/fca.c 
+../src/fca.c \
+../src/fcaV.c 
 
 OBJS += \
 ./src/cfca.o \
-./src/fca.o 
+./src/fca.o \
+./src/fcaV.o 
 
 C_DEPS += \
 ./src/cfca.d \
-./src/fca.d 
+./src/fca.d \
+./src/fcaV.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -22,6 +22,7 @@
 
 #include "fca.h"
 #include "fca_private.h"
+#include "fca_macros.h"
 
 /**
  * this is the main testing routine for purposes of testing the formal concept analysis
@@ -44,25 +45,41 @@ int main(void)
 
 #pragma GCC diagnostic pop
 
+
 	/**
 	 * start tests
 	 */
 
 	FormalContext ctx;
 
-	ctx = newFormalContextFromRandom(100,40,0.3f);
+	ctx = newFormalContextFromRandom(40,40,0.3f);
 
 	writeFormalContext(ctx,"/home/immo/tmp/test.cxt");
 
-	puts("Internal testing....");
+	puts("Cloning V...");
+
+	FormalContextV ctxV;
+
+	ctxV = newFormalContextFromFileV("/home/immo/tmp/test.cxt");
+
+	writeFormalContextV(ctxV,"/home/immo/tmp/testV.cxt");
+
+	puts("Performance testing....");
 
 	clock_t start, end;
+
+
+	start = clock();
+	printf("Concepts: %d\n", countContextConceptsV(ctxV));
+	end = clock();
+    printf("Time version V1: %d [%d-%d]\n", end-start,start,end);
 
 
 	start = clock();
 	printf("Concepts: %d\n", countContextConcepts(ctx));
 	end = clock();
     printf("Time version 1: %d [%d-%d]\n", end-start,start,end);
+
 
 
     start = clock();
@@ -81,7 +98,10 @@ int main(void)
 	fclose(status);
 	puts("=====");*/
 
+    puts("Clean up...");
+
 	deleteFormalContext(&ctx);
+	deleteFormalContextV(&ctxV);
 
 
 	return EXIT_SUCCESS;

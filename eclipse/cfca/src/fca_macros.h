@@ -30,6 +30,49 @@
 
 #define WARN_IF_UNEQUAL_DO(x,y,d) {if (((x) != (y))) {fprintf(stderr, "WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n", #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}
 
+/**
+ * These macros are used for uint64_t bit-stream arrays
+ */
+
+#define OFFSET(x) ((unsigned)(x)>>6)
+#define BITNBR(x) (((unsigned)(x))&(63))
+#define WIDTH(x) ((((unsigned)(x))&(63))?((unsigned)(x)/64)+1:((unsigned)(x)/64))
+#define BITVALUE(x) ((1ULL<<BITNBR(x)))
+
+#define CRIMPVALUE(x) ((~(0ULL))<<(63-(BITNBR(x)))>>(63-BITNBR(x)))
+
+/**
+ * set the unused attribute bits to zero. (i.e. attributes == 100 -> width == 2, BITNBR(99) == 35
+ */
+#define MASKVECTOR(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))<<(63-BITNBR((x)-1))) ) >> (63-BITNBR((x)-1));  }}
+
+/**
+ * crosses the x-th attribute of an attribute vector
+ */
+#define CROSSV(v,x) { *((v)+OFFSET(x)) |= BITVALUE(x); }
+
+/**
+ * clears the x-th attribute of an attribute vector
+ */
+#define CLEARV(v,x) { *((v)+OFFSET(x)) &= ~ (BITVALUE(x)); }
+
+/**
+ * checks whether the x-th attribute of an attribute vector is crossed
+ */
+#define INCIDESV(v,x) (  ( *((v)+OFFSET(x)) >> BITNBR(x) ) & 1  )
+
+/**
+ * gives the attribute vector for a given object
+ */
+#define ROW(g,I) ((I)->incidence + ((I)->width * (g)))
+
+
+/**
+ * These macros are used for IncidenceCell array implementations of
+ * formal contexts. Such implementations are easier to debug, but
+ * take up far too much memory for big scale contexts
+ */
+
 
 /**
  * checks whether something incides by testing the 1-bit

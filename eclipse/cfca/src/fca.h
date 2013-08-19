@@ -25,10 +25,17 @@
 #ifndef FCA_H_
 #define FCA_H_
 
+#include <inttypes.h>
+
 /**
  * type of the incidence relation matrix cells
  */
 typedef int8_t IncidenceCell;
+
+/**
+ * type of compressed attribute vectors
+ */
+typedef uint64_t *IncidenceVector;
 
 /**
  * abstract formal context object type used for interface purposes
@@ -36,6 +43,10 @@ typedef int8_t IncidenceCell;
 
 struct sFormalContext;
 typedef struct sFormalContext *FormalContext;
+
+struct sFormalContextV;
+typedef struct sFormalContextV *FormalContextV;
+
 
 /**
  * intent structure of a formal concept
@@ -64,5 +75,21 @@ writeFormalContext(FormalContext ctx, const char* filename);
 
 void
 deleteFormalContext(FormalContext* ctx);
+
+/**
+ * routines for IncidenceVector formal contexts
+ */
+
+FormalContextV
+newFormalContextV(unsigned int objects, unsigned int attributes);
+
+void
+deleteFormalContextV(FormalContextV* ctx);
+
+void
+writeFormalContextV(FormalContextV ctx, const char* filename);
+
+FormalContextV
+newFormalContextFromFileV(const char* filename);
 
 #endif /* FCA_H_ */

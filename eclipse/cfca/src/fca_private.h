@@ -71,4 +71,11 @@ closeIntent2(FormalContext ctx, const IncidenceCell* input,
 int
 intentCmp(int attributes, const IncidenceCell* minus, const IncidenceCell* plus);
 
+/**
+ * and the vector versions
+ */
+
+void
+closeIntentV(FormalContextV ctx, const IncidenceVector input,
+		IncidenceVector output);
 #endif /* FCA_PRIVATE_H_ */
