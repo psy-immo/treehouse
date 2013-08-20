@@ -6,17 +6,20 @@
 C_SRCS += \
 ../src/cfca.c \
 ../src/fca.c \
-../src/fcaV.c 
+../src/fcaV.c \
+../src/fcaVnextClosureX.c 
 
 OBJS += \
 ./src/cfca.o \
 ./src/fca.o \
-./src/fcaV.o 
+./src/fcaV.o \
+./src/fcaVnextClosureX.o 
 
 C_DEPS += \
 ./src/cfca.d \
 ./src/fca.d \
-./src/fcaV.d 
+./src/fcaV.d \
+./src/fcaVnextClosureX.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -45,16 +45,15 @@ int main(void)
 
 #pragma GCC diagnostic pop
 
-
 	/**
 	 * start tests
 	 */
 
 	FormalContext ctx;
 
-	ctx = newFormalContextFromRandom(40,40,0.3f);
+	ctx = newFormalContextFromRandom(40, 40, 0.3f);
 
-	writeFormalContext(ctx,"/home/immo/tmp/test.cxt");
+	writeFormalContext(ctx, "/home/immo/tmp/test.cxt");
 
 	puts("Cloning V...");
 
@@ -62,14 +61,13 @@ int main(void)
 
 	ctxV = newFormalContextFromFileV("/home/immo/tmp/test.cxt");
 
-	writeFormalContextV(ctxV,"/home/immo/tmp/testV.cxt");
+	writeFormalContextV(ctxV, "/home/immo/tmp/testV.cxt");
 
 	puts("Performance testing....");
 
 	clock_t start, end;
 
 	FormalConceptIntentBulkListV conceptsV;
-
 
 	start = clock();
 
@@ -79,10 +77,21 @@ int main(void)
 
 	printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
 
-    printf("Time version V1: %d [%d-%d]\n", end-start,start,end);
+	printf("Time version V1: %d [%d-%d]\n", end - start, start, end);
+
+	deleteConceptBulkV(&conceptsV);
+
+	start = clock();
+
+	conceptsV = nextClosureVX(ctxV);
+
+	end = clock();
+
+	printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
+
+	printf("Time version VX: %d [%d-%d]\n", end - start, start, end);
 
 	FormalConceptIntentBulkList concepts;
-
 
 	start = clock();
 
@@ -92,36 +101,28 @@ int main(void)
 
 	printf("Concepts: %d\n", countConceptsInBulk(concepts));
 
-    printf("Time version 1: %d [%d-%d]\n", end-start,start,end);
+	printf("Time version 1: %d [%d-%d]\n", end - start, start, end);
 
-    writeConceptsToFile(ctx,concepts,"/home/immo/tmp/test1.cxt");
-    writeConceptsToFileV(ctxV,conceptsV,"/home/immo/tmp/test1V.cxt");
-
-
-
-    start = clock();
-   	printf("Concepts: %d\n", countContextConcepts2(ctx));
-   	end = clock();
-    printf("Time version 2: %d [%d-%d]\n", end-start,start,end);
+	writeConceptsToFile(ctx, concepts, "/home/immo/tmp/test1.cxt");
+	writeConceptsToFileV(ctxV, conceptsV, "/home/immo/tmp/test1V.cxt");
 
 
 	/*puts("=====");
-	FILE* status = fopen("/proc/self/status", "r");
-	char line[1000];
-	while (fgets(line, sizeof line, status) != NULL)
-	{
-		printf("%s", line);
-	}
-	fclose(status);
-	puts("=====");*/
+	 FILE* status = fopen("/proc/self/status", "r");
+	 char line[1000];
+	 while (fgets(line, sizeof line, status) != NULL)
+	 {
+	 printf("%s", line);
+	 }
+	 fclose(status);
+	 puts("=====");*/
 
-    puts("Clean up...");
+	puts("Clean up...");
 
-    deleteConceptBulkV(&conceptsV);
-    deleteConceptBulk(&concepts);
+	deleteConceptBulkV(&conceptsV);
+	deleteConceptBulk(&concepts);
 	deleteFormalContext(&ctx);
 	deleteFormalContextV(&ctxV);
-
 
 	return EXIT_SUCCESS;
 }

@@ -115,6 +115,15 @@ FormalConceptIntentBulkListV
 addConceptToBulkV(FormalConceptIntentBulkListV root,
 		const IncidenceVector intent);
 
+/**
+ * multi-threaded nextClosure
+ */
+
+FormalConceptIntentBulkListV nextClosureVX1(FormalContextV ctx,
+		const IncidenceVector start, const IncidenceVector stop);
+
+FormalConceptIntentBulkListV nextClosureVX(FormalContextV ctx);
+
 #endif
 
 #endif /* FCA_PRIVATE_H_ */

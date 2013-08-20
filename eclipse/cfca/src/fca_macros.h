@@ -32,6 +32,8 @@
 
 #ifndef NO_VECTORS
 
+//TODO FIX BITVALUES TO START WITH MOST SIGNIFICANT BIT as x==0 and GO TO LEAST
+
 /**
  * These macros are used for uint64_t bit-stream arrays
  */
@@ -39,7 +41,14 @@
 #define OFFSET(x) ((unsigned)(x)>>6)
 #define BITNBR(x) (((unsigned)(x))&(63))
 #define WIDTH(x) ((((unsigned)(x))&(63))?((unsigned)(x)/64)+1:((unsigned)(x)/64))
-#define BITVALUE(x) ((1ULL<<BITNBR(x)))
+
+#define BITVALUE(x) ((1ULL<<(63-BITNBR(x))))
+
+/**
+ * old version
+ */
+
+#define BITVALUEX(x) ((1ULL<<BITNBR(x)))
 
 /**
  * CRIMPVALUE(0) == 1
@@ -47,12 +56,24 @@
  * etc.
  */
 
-#define CRIMPVALUE(x) ((~(0ULL))<<(63-(BITNBR(x)))>>(63-BITNBR(x)))
+#define CRIMPVALUE(x) ((~(0ULL))>>(63-(BITNBR(x)))<<(63-BITNBR(x)))
+
+/**
+ * old version
+ */
+
+#define CRIMPVALUEX(x) ((~(0ULL))<<(63-(BITNBR(x)))>>(63-BITNBR(x)))
 
 /**
  * set the unused attribute bits to zero. (i.e. attributes == 100 -> width == 2, BITNBR(99) == 35
  */
 #define MASKVECTOR(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))<<(63-BITNBR((x)-1))) ) >> (63-BITNBR((x)-1));  }}
+
+/**
+ * old version
+ */
+
+#define MASKVECTORX(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))>>(63-BITNBR((x)-1))) ) << (63-BITNBR((x)-1));  }}
 
 /**
  * crosses the x-th attribute of an attribute vector
@@ -67,7 +88,13 @@
 /**
  * checks whether the x-th attribute of an attribute vector is crossed
  */
-#define INCIDESV(v,x) (  ( *((v)+OFFSET(x)) >> BITNBR(x) ) & 1  )
+#define INCIDESV(v,x) (  ( *((v)+OFFSET(x)) >> (63-BITNBR(x)) ) & 1  )
+
+
+/**
+ * old version
+ */
+#define INCIDESVX(v,x) (  ( *((v)+OFFSET(x)) >> BITNBR(x) ) & 1  )
 
 /**
  * gives the attribute vector for a given object

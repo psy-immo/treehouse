@@ -489,10 +489,10 @@ int intentCmpV(size_t attributes, const IncidenceVector minus,
 		l = minus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
 		r = plus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
 
-		if (l < r)
+		if (l > r)
 			return -1;
 
-		if (r < l)
+		if (r > l)
 			return 1;
 	}
 	/**
