@@ -20,6 +20,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define VECTORS_ONLY
+
 #include "fca.h"
 #include "fca_macros.h"
 #include "fca_structs.h"
@@ -270,7 +272,7 @@ void writeFormalContextV(FormalContextV ctx, const char* filename)
 	myFormalContextV *c;
 	c = (myFormalContextV*) ctx;
 
-	fprintf(file, "B\n\n%d\n%d\n\n", c->objects, c->attributes);
+	fprintf(file, "B\n\n%zu\n%zu\n\n", c->objects, c->attributes);
 
 	for (unsigned int var = 0; var < c->objects; ++var)
 	{
@@ -321,7 +323,6 @@ int countContextConceptsV(FormalContextV ctx)
 	Y = calloc(c->width, sizeof(uint64_t));
 	M = malloc(c->width * sizeof(uint64_t));
 
-
 #pragma GCC diagnostic pop
 
 	/**
@@ -338,13 +339,13 @@ int countContextConceptsV(FormalContextV ctx)
 	 */
 	nextClosure:
 
-	for (unsigned int i = c->attributes; i > 0; )
+	for (size_t i = c->attributes; i > 0;)
 	{
 		--i;
 
 		if (!INCIDESV(M,i))
 		{
-			CROSSV(M,i);
+			CROSSV(M, i);
 			closeIntentV(ctx, M, Y);
 
 			int good;
@@ -354,12 +355,14 @@ int countContextConceptsV(FormalContextV ctx)
 			{
 				if (Y[j] & (~(M[j])))
 				{
-						good = 0;
-						break;
+					good = 0;
+					break;
 				}
 			}
-			if (good) {
-				if (Y[OFFSET(i)]& (~M[OFFSET(i)])& CRIMPVALUE(i)) {
+			if (good)
+			{
+				if (Y[OFFSET(i)] & (~M[OFFSET(i)]) & CRIMPVALUE(i))
+				{
 					good = 0;
 				}
 			}
@@ -386,7 +389,7 @@ int countContextConceptsV(FormalContextV ctx)
 			}
 		}
 
-		CLEARV(M,i);
+		CLEARV(M, i);
 	}
 
 	/**
@@ -413,20 +416,21 @@ void closeIntentV(FormalContextV ctx, const IncidenceVector input,
 
 	myFormalContextV* I;
 	I = (myFormalContextV*) ctx;
-	for (unsigned int var = 0; var < I->width; ++var)
+	for (size_t var = 0; var < I->width; ++var)
 	{
 		output[var] = ~0ULL;
 	}
 
 	MASKVECTOR(output, I->attributes);
 
-	for (unsigned int g = 0; g < I->objects; ++g)
+	for (size_t g = 0; g < I->objects; ++g)
 	{
 		int good;
 		good = 1;
 
-		for (unsigned int i = 0; i < I->width; ++i) {
-			if ((input[i])&(~ (ROW(g,I)[i])))
+		for (size_t i = 0; i < I->width; ++i)
+		{
+			if ((input[i]) & (~(ROW(g,I)[i])))
 			{
 				/**
 				 * some attribute is not present for this object -> next object
@@ -443,11 +447,443 @@ void closeIntentV(FormalContextV ctx, const IncidenceVector input,
 			 * remove attributes that are not common among all objects that have the input
 			 * attributes
 			 */
-			for (unsigned int i = 0; i < I->width; ++i) {
-						output[i] &= ROW(g,I)[i];
+			for (size_t i = 0; i < I->width; ++i)
+			{
+				output[i] &= ROW(g,I)[i];
 			}
 		}
 	}
 }
 
+/**
+ * compare two intent vectors
+ *
+ * @param attributes   attribute count
+ * @param minus        "left" operand
+ * @param plus         "right" operand
+ * @return -1 if minus is bigger, 1 if plus is bigger,
+ *        0 if minus and plus is the same
+ */
+
+int intentCmpV(size_t attributes, const IncidenceVector minus,
+		const IncidenceVector plus)
+{
+	for (size_t var = 0; var < OFFSET(attributes); ++var)
+	{
+		if (minus[var] > plus[var])
+			return -1;
+		if (plus[var] > minus[var])
+			return 1;
+	}
+
+	if (BITNBR(attributes))
+	{
+		/**
+		 *  in this case, OFFSET(attributes) == OFFSET(attributes-1)
+		 *
+		 *  we only check the lower bits 0 through (attributes-1)
+		 *
+		 */
+		uint64_t l, r;
+
+		l = minus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
+		r = plus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
+
+		if (l < r)
+			return -1;
+
+		if (r < l)
+			return 1;
+	}
+	/**
+	 * ELSE: attributes has 64 as factor, so we have done all necessary comparisons in the first loop.
+	 */
+	return 0;
+}
+
+/**
+ * create a new formal concept chunk
+ *
+ * @param attributes  number of attributes of the hosting formal context
+ * @return  a new concept chunk object
+ */
+
+myFormalConceptIntentChunkV* newConceptChunkV(size_t attributes)
+{
+
+	myFormalConceptIntentChunkV *c;
+
+	c = malloc(sizeof(myFormalConceptIntentChunkV));
+
+	c->attributes = attributes;
+	c->width = WIDTH(attributes);
+	c->size = 0;
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+	c->incidence = calloc(c->width * CHUNKSIZEV, sizeof(uint64_t));
+
+#pragma GCC diagnostic pop
+
+	return c;
+}
+
+/**
+ * deletes a concept chunk object and sets its pointer to zero
+ *
+ * @param c   pointer to the concept chunk to be deleted
+ */
+
+void deleteConceptChunkV(myFormalConceptIntentChunkV** c)
+{
+	RETURN_IF_ZERO(c);
+	RETURN_IF_ZERO(*c);
+
+	free((*c)->incidence);
+
+	free(*c);
+	*c = 0;
+}
+
+/**
+ * creates a new formal concept intent bulk list
+ *
+ * @param attributes  number of attributes of the concept intents
+ * @return new formal concept intent bulk list's first node
+ */
+
+FormalConceptIntentBulkListV newConceptBulkV(size_t attributes)
+{
+	FormalConceptIntentBulkListV l;
+	l = malloc(sizeof(struct sFormalConceptIntentBulkNodeV));
+
+	l->attributes = attributes;
+	l->width = WIDTH(attributes);
+	l->size = 0;
+	l->chunks = calloc(BULKSIZEV, sizeof(myFormalConceptIntentChunkV*));
+	l->next = 0;
+	return l;
+}
+
+/**
+ * creates a new formal concept intent chunk and fills it with the intents of all formal
+ * concepts in the concept lattice of ctx, using next closure algorithm
+ *
+ * @param ctx   formal context
+ * @return   concept intents
+ */
+
+FormalConceptIntentBulkListV newConceptBulkFromContextV(FormalContextV ctx)
+{
+	RETURN_ZERO_IF_ZERO(ctx);
+
+	myFormalContextV *c;
+	c = (myFormalContextV*) ctx;
+
+	IncidenceVector M;
+	IncidenceVector Y;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+	Y = calloc(c->width, sizeof(uint64_t));
+	M = malloc(c->width * sizeof(uint64_t));
+
+#pragma GCC diagnostic pop
+
+	/**
+	 * calculate the bottom intent of the concept lattice, i.e. {}''
+	 */
+	closeIntentV(ctx, Y, M);
+
+	FormalConceptIntentBulkListV root;
+	FormalConceptIntentBulkListV last;
+
+
+
+	root = newConceptBulkV(c->attributes);
+
+
+	/**
+	 * add the bottom element of the concept lattice (a concept lattice is never empty)
+	 */
+
+	last = addConceptToBulkV(root, M);
+
+
+	/**
+	 * begin of nextClosure function iteration
+	 */
+	nextClosure:
+
+	for (size_t i = c->attributes; i > 0;)
+	{
+		--i;
+
+		if (!INCIDESV(M,i))
+		{
+			CROSSV(M, i);
+			closeIntentV(ctx, M, Y);
+
+			int good;
+			good = 1;
+
+			for (unsigned int j = 0; j < OFFSET(i); ++j)
+			{
+				if (Y[j] & (~(M[j])))
+				{
+					good = 0;
+					break;
+				}
+			}
+			if (good)
+			{
+				if (Y[OFFSET(i)] & (~M[OFFSET(i)]) & CRIMPVALUE(i))
+				{
+					good = 0;
+				}
+			}
+
+			if (good)
+			{
+
+				/**
+				 * we found the next intent
+				 */
+				last = addConceptToBulkV(last, Y);
+
+				/**
+				 * continue with Y for M
+				 */
+
+				IncidenceVector DELTA;
+				DELTA = M;
+				M = Y;
+				Y = DELTA;
+				/**
+				 * do the nextClosure
+				 */
+				goto nextClosure;
+			}
+		}
+
+		CLEARV(M, i);
+	}
+
+	/**
+	 * free up memory
+	 */
+
+	free(M);
+	free(Y);
+
+	return root;
+}
+
+/**
+ * write a list of concept intents into a .cxt file
+ *
+ * @param ctx    formal context (or 0, is used for attribute names)
+ * @param root   the first node of the formal concept intent bulk
+ * @param filename   output file name (.cxt)
+ */
+
+void writeConceptsToFileV(FormalContextV ctx, FormalConceptIntentBulkListV root,
+		const char* filename)
+{
+	RETURN_IF_ZERO(root);
+
+	myFormalContextV* c;
+
+	if (ctx != 0)
+	{
+		c = (myFormalContextV*) ctx;
+
+		WARN_IF_UNEQUAL_DO(c->attributes, root->attributes, c = 0);
+	}
+	else
+	{
+		c = 0;
+	}
+
+	RETURN_IF_ZERO(filename);
+
+	FILE* file;
+	file = fopen(filename, "w");
+
+	RETURN_IF_ZERO(file);
+
+	size_t objects;
+	objects = countConceptsInBulkV(root);
+
+	fprintf(file, "B\n\n%zu\n%zu\n\n", objects, root->attributes);
+
+	for (size_t var = 0; var < objects; ++var)
+	{
+		fprintf(file, "C%8zu\n", (var + 1));
+	}
+
+	if (c != 0)
+	{
+		for (size_t var = 0; var < c->attributes; ++var)
+		{
+			fputs(c->attributeNames[var], file);
+			fputs("\n", file);
+		}
+	}
+	else
+	{
+		for (size_t var = 0; var < root->attributes; ++var)
+		{
+			fprintf(file, "m%8zu\n", (var + 1));
+		}
+	}
+
+	for (; root != 0; root = root->next)
+	{
+		for (size_t chunk = 0; chunk < root->size; ++chunk)
+		{
+			for (size_t g = 0; g < root->chunks[chunk]->size; ++g)
+			{
+				for (size_t m = 0; m < root->attributes; ++m)
+				{
+					if (INCIDESV(ROW(g, root->chunks[chunk]), m))
+						fputs("X", file);
+					else
+						fputs(".", file);
+				}
+				fputs("\n", file);
+			}
+		}
+	}
+
+	fclose(file);
+}
+
+/**
+ * deletes the entire bulk list
+ * @param rootNode   pointer to the first node
+ */
+
+void deleteConceptBulkV(FormalConceptIntentBulkListV* rootNode)
+{
+	RETURN_IF_ZERO(rootNode);
+	RETURN_IF_ZERO(*rootNode);
+
+	FormalConceptIntentBulkListV l;
+	l = *rootNode;
+	*rootNode = 0;
+
+	do
+	{
+		for (size_t var = 0; var < l->size; ++var)
+		{
+			deleteConceptChunkV(&(l->chunks[var]));
+		}
+
+		FormalConceptIntentBulkListV next;
+		next = l->next;
+
+		free(l->chunks);
+		free(l);
+
+		l = next;
+	} while (l != 0);
+}
+
+/**
+ * use this for bulks that are filled in order
+ *
+ * @param root
+ * @return  number of concepts in bulk
+ */
+size_t countConceptsInBulkV(FormalConceptIntentBulkListV root)
+{
+	RETURN_ZERO_IF_ZERO(root);
+
+	size_t count = 0;
+
+	while (root != 0)
+	{
+		if (root->size > 0)
+		{
+			/**
+			 * count the full chunks
+			 */
+			count += CHUNKSIZEV * (root->size - 1);
+			/**
+			 * and the last chunk
+			 */
+			count += root->chunks[root->size - 1]->size;
+		}
+		root = root->next;
+	}
+
+	return count;
+}
+
+/**
+ * copies the given intent to the bulk denoted by the root node.
+ *
+ *
+ * @param root    root node of the bulk
+ * @param intent  read-only pointer to an array of IncidenceCell[root->attributes]
+ *
+ * @return the node where the intent was added to the last chunk
+ */
+
+FormalConceptIntentBulkListV addConceptToBulkV(
+		FormalConceptIntentBulkListV root, const IncidenceVector intent)
+{
+	RETURN_ZERO_IF_ZERO(root);
+
+
+	do
+	{
+
+		if (root->size == 0)
+		{
+			root->chunks[0] = newConceptChunkV(root->attributes);
+			root->size = 1;
+		}
+
+		size_t last_index;
+		last_index = root->size - 1;
+
+		if (root->chunks[last_index]->size == CHUNKSIZEV)
+		{
+			if (root->size == BULKSIZEV)
+			{
+				if (root->next == 0)
+				{
+					root->next = newConceptBulkV(root->attributes);
+				}
+				root = root->next;
+				continue;
+			}
+			else
+			{
+				last_index = root->size++;
+				root->chunks[last_index] = newConceptChunkV(root->attributes);
+			}
+		}
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+		memcpy( ROW(root->chunks[last_index]->size, root->chunks[last_index]),
+				intent, sizeof(uint64_t) * root->width);
+
+#pragma GCC diagnostic pop
+
+		root->chunks[last_index]->size++;
+
+		break;
+
+	} while (1);
+
+	return root;
+}
 

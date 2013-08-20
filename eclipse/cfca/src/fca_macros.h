@@ -30,6 +30,8 @@
 
 #define WARN_IF_UNEQUAL_DO(x,y,d) {if (((x) != (y))) {fprintf(stderr, "WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n", #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}
 
+#ifndef NO_VECTORS
+
 /**
  * These macros are used for uint64_t bit-stream arrays
  */
@@ -38,6 +40,12 @@
 #define BITNBR(x) (((unsigned)(x))&(63))
 #define WIDTH(x) ((((unsigned)(x))&(63))?((unsigned)(x)/64)+1:((unsigned)(x)/64))
 #define BITVALUE(x) ((1ULL<<BITNBR(x)))
+
+/**
+ * CRIMPVALUE(0) == 1
+ * CRIMPVALUE(1) == 3
+ * etc.
+ */
 
 #define CRIMPVALUE(x) ((~(0ULL))<<(63-(BITNBR(x)))>>(63-BITNBR(x)))
 
@@ -67,12 +75,15 @@
 #define ROW(g,I) ((I)->incidence + ((I)->width * (g)))
 
 
+#endif
+
 /**
  * These macros are used for IncidenceCell array implementations of
  * formal contexts. Such implementations are easier to debug, but
  * take up far too much memory for big scale contexts
  */
 
+#ifndef VECTORS_ONLY
 
 /**
  * checks whether something incides by testing the 1-bit
@@ -104,6 +115,8 @@
 #define CELL(g,I,m) ((I)->incidence[(I)->attributes * (g) + (m)])
 
 #define gIm(g,I,m) INCIDES(CELL( (g) , (I) , (m)))
+
+#endif
 
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))

@@ -68,17 +68,34 @@ int main(void)
 
 	clock_t start, end;
 
+	FormalConceptIntentBulkListV conceptsV;
+
 
 	start = clock();
-	printf("Concepts: %d\n", countContextConceptsV(ctxV));
+
+	conceptsV = newConceptBulkFromContextV(ctxV);
+
 	end = clock();
+
+	printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
+
     printf("Time version V1: %d [%d-%d]\n", end-start,start,end);
 
+	FormalConceptIntentBulkList concepts;
+
 
 	start = clock();
-	printf("Concepts: %d\n", countContextConcepts(ctx));
+
+	concepts = newConceptBulkFromContext(ctx);
+
 	end = clock();
+
+	printf("Concepts: %d\n", countConceptsInBulk(concepts));
+
     printf("Time version 1: %d [%d-%d]\n", end-start,start,end);
+
+    writeConceptsToFile(ctx,concepts,"/home/immo/tmp/test1.cxt");
+    writeConceptsToFileV(ctxV,conceptsV,"/home/immo/tmp/test1V.cxt");
 
 
 
@@ -100,6 +117,8 @@ int main(void)
 
     puts("Clean up...");
 
+    deleteConceptBulkV(&conceptsV);
+    deleteConceptBulk(&concepts);
 	deleteFormalContext(&ctx);
 	deleteFormalContextV(&ctxV);
 

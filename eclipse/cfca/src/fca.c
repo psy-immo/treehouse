@@ -20,6 +20,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define NO_VECTORS
+
 #include "fca.h"
 #include "fca_macros.h"
 #include "fca_structs.h"

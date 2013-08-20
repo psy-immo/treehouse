@@ -28,6 +28,8 @@
 
 #include "fca_structs.h"
 
+#ifndef VECTORS_ONLY
+
 myFormalConceptIntentChunk*
 newConceptChunk(int attributes);
 
@@ -66,16 +68,53 @@ closeIntent(FormalContext ctx, const IncidenceCell* input,
  */
 void
 closeIntent2(FormalContext ctx, const IncidenceCell* input,
-		IncidenceCell* outputIntent,IncidenceCell* outputExtent);
+		IncidenceCell* outputIntent, IncidenceCell* outputExtent);
 
 int
 intentCmp(int attributes, const IncidenceCell* minus, const IncidenceCell* plus);
+
+#endif
 
 /**
  * and the vector versions
  */
 
+#ifndef NO_VECTORS
+
 void
 closeIntentV(FormalContextV ctx, const IncidenceVector input,
 		IncidenceVector output);
+
+int
+intentCmpV(size_t attributes, const IncidenceVector minus,
+		const IncidenceVector plus);
+
+myFormalConceptIntentChunkV*
+newConceptChunkV(size_t attributes);
+
+void
+deleteConceptChunkV(myFormalConceptIntentChunkV** c);
+
+FormalConceptIntentBulkListV
+newConceptBulkV(size_t attributes);
+
+FormalConceptIntentBulkListV
+newConceptBulkFromContextV(FormalContextV ctx);
+
+void
+writeConceptsToFileV(FormalContextV ctx, FormalConceptIntentBulkListV root,
+		const char* filename);
+
+void
+deleteConceptBulkV(FormalConceptIntentBulkListV* rootNode);
+
+size_t
+countConceptsInBulkV(FormalConceptIntentBulkListV root);
+
+FormalConceptIntentBulkListV
+addConceptToBulkV(FormalConceptIntentBulkListV root,
+		const IncidenceVector intent);
+
+#endif
+
 #endif /* FCA_PRIVATE_H_ */

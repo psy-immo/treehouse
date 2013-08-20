@@ -44,6 +44,12 @@ typedef uint64_t *IncidenceVector;
 struct sFormalContext;
 typedef struct sFormalContext *FormalContext;
 
+/**
+ * abstract formal context object with incidence vectors type used
+ * for interface purposes
+ */
+
+
 struct sFormalContextV;
 typedef struct sFormalContextV *FormalContextV;
 
@@ -79,6 +85,27 @@ deleteFormalContext(FormalContext* ctx);
 /**
  * routines for IncidenceVector formal contexts
  */
+
+/**
+ * intent structure of a formal concept
+ */
+
+typedef struct sFormalIntentV
+{
+	/**
+	 * nbr of attributes in this vector
+	 */
+	size_t attributes;
+	/**
+	 * the width, i.e. floor of (attributes+63)/64
+	 */
+	size_t width;
+	/**
+	 * attribute vector
+	 */
+	IncidenceVector incidence;
+} FormalIntentV;
+
 
 FormalContextV
 newFormalContextV(unsigned int objects, unsigned int attributes);
