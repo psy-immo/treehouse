@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include src/fca/vector/subdir.mk
 -include src/fca/easy/subdir.mk
+-include src/fca/common/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

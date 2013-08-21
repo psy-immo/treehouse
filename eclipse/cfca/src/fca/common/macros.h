@@ -18,20 +18,28 @@
 #ifndef FCA__MACROS_H_
 #define FCA__MACROS_H_
 
+#include <stdio.h>
+
 
 /**
  * @def RETURN_IF_ZERO(x)
  * checks whether x == 0, and returns
  */
 
-#define RETURN_IF_ZERO(x) {if ((x == (void*)0)) {fprintf(stderr, "WARNING: ZERO pointer %s in %s [%s:%u]\n", #x, __FUNCTION__, __FILE__,__LINE__); return;}}
+#define RETURN_IF_ZERO(x) {if (((x) == (void*)0)) {fprintf(stderr, "WARNING: ZERO pointer %s in %s [%s:%u]\n", #x, __FUNCTION__, __FILE__,__LINE__); return;}}
 
 /**
  * @def RETURN_ZERO_IF_ZERO(x)
- * checks whether x == 0, and returns 0;
+ * checks whether x == (void*)0, and returns 0;
  */
 
-#define RETURN_ZERO_IF_ZERO(x) {if ((x == (void*)0)) {fprintf(stderr, "WARNING: ZERO pointer %s in %s [%s:%u]\n", #x, __FUNCTION__, __FILE__,__LINE__); return 0;}}
+#define RETURN_ZERO_IF_ZERO(x) {if (((x) == (void*)0)) {fprintf(stderr, "WARNING: ZERO pointer %s in %s [%s:%u]\n", #x, __FUNCTION__, __FILE__,__LINE__); return 0;}}
+
+/**
+ * @def RETURN_ZERO_IF_ZEROI(x)
+ * checks whether x == 0, and returns 0;
+ */
+#define RETURN_ZERO_IF_ZEROI(x) {if (((x) == 0)) {fprintf(stderr, "WARNING: ZERO %s in %s [%s:%u]\n", #x, __FUNCTION__, __FILE__,__LINE__); return 0;}}
 
 /**
  * @def WARN_IF_UNEQUAL_DO(x,y,d)

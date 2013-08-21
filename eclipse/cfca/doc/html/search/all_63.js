@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['c',['C',['../structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be',1,'sEtaFunction']]],
   ['callnextclosurevx1',['callNextClosureVX1',['../fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140',1,'fcaVnextClosureX.c']]],
   ['cell',['CELL',['../easy_2macros_8h.html#a6716296e0c0390116c559152e613eb17',1,'macros.h']]],
   ['cfca_2ec',['cfca.c',['../cfca_8c.html',1,'']]],
@@ -12,6 +13,7 @@ var searchData=
   ['closeintent2',['closeIntent2',['../safeguard_8h.html#a5ad3ab5730a8678eeec815bcd57cff3e',1,'closeIntent2():&#160;safeguard.h'],['../fca_8c.html#ac7782e7983ac6911f630994ee16eecbc',1,'closeIntent2(FormalContext restrict ctx, const IncidenceCell *restrict input, IncidenceCell *restrict outputIntent, IncidenceCell *restrict outputExtent):&#160;fca.c'],['../easy_2private_8h.html#ac7782e7983ac6911f630994ee16eecbc',1,'closeIntent2(FormalContext restrict ctx, const IncidenceCell *restrict input, IncidenceCell *restrict outputIntent, IncidenceCell *restrict outputExtent):&#160;fca.c']]],
   ['closeintentv',['closeIntentV',['../fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07',1,'closeIntentV(FormalContextV restrict ctx, const IncidenceVector restrict input, IncidenceVector restrict output):&#160;fcaV.c'],['../vector_2private_8h.html#aa30fbd99dd8ad4cee19d32d5debf9e07',1,'closeIntentV(FormalContextV restrict ctx, const IncidenceVector restrict input, IncidenceVector restrict output):&#160;fcaV.c']]],
   ['common_2eh',['common.h',['../common_8h.html',1,'']]],
+  ['constants',['constants',['../structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9',1,'sEtaFunction']]],
   ['countconceptsinbulk',['countConceptsInBulk',['../safeguard_8h.html#ad758c47181c35e4ea11d101f7ae31c3b',1,'countConceptsInBulk():&#160;safeguard.h'],['../fca_8c.html#a965bdc1065d581495114a764020c3c6b',1,'countConceptsInBulk(FormalConceptIntentBulkList root):&#160;fca.c'],['../easy_2private_8h.html#a965bdc1065d581495114a764020c3c6b',1,'countConceptsInBulk(FormalConceptIntentBulkList root):&#160;fca.c']]],
   ['countconceptsinbulkv',['countConceptsInBulkV',['../fcaV_8c.html#a7d53642e5953e35c86ef0425858d707e',1,'countConceptsInBulkV(FormalConceptIntentBulkListV root):&#160;fcaV.c'],['../vector_2private_8h.html#a7d53642e5953e35c86ef0425858d707e',1,'countConceptsInBulkV(FormalConceptIntentBulkListV root):&#160;fcaV.c']]],
   ['countcontextconcepts',['countContextConcepts',['../safeguard_8h.html#a3a6b552e60c8245e1eaebac1dca523a6',1,'countContextConcepts():&#160;safeguard.h'],['../fca_8c.html#aaf6da61c84352d127039536dd6e790b6',1,'countContextConcepts(FormalContext ctx):&#160;fca.c'],['../easy_8h.html#aaf6da61c84352d127039536dd6e790b6',1,'countContextConcepts(FormalContext ctx):&#160;fca.c']]],

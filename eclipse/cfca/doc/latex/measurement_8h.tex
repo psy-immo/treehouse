@@ -1,0 +1,163 @@
+\hypertarget{measurement_8h}{\section{src/fca/common/measurement.h \-File \-Reference}
+\label{measurement_8h}\index{src/fca/common/measurement.\-h@{src/fca/common/measurement.\-h}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+\-Include dependency graph for measurement.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{measurement_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{measurement_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsEtaFunction}{s\-Eta\-Function}
+\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\-Probability}
+\begin{DoxyCompactList}\small\item\em \hyperlink{measurement_8h}{measurement.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structsEtaFunction}{s\-Eta\-Function} $\ast$ \hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function}
+\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function} \hyperlink{measurement_8h_aa0f12091b86c478e159761719923bd9a}{new\-Eta\-Function} (size\-\_\-t types, size\-\_\-t measurements, size\-\_\-t constants)
+\begin{DoxyCompactList}\small\item\em \hyperlink{measurement_8c}{measurement.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+void \hyperlink{measurement_8h_a2905b59d4a364111890224a444fd6d30}{delete\-Eta\-Function} (\hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function} $\ast$eta)
+\begin{DoxyCompactList}\small\item\em deletes an \-Eta\-Function and sets the pointer to zero \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\index{measurement.\-h@{measurement.\-h}!\-Eta\-Function@{\-Eta\-Function}}
+\index{\-Eta\-Function@{\-Eta\-Function}!measurement.h@{measurement.\-h}}
+\subsubsection[{\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Eta\-Function} $\ast$ {\bf \-Eta\-Function}}}\label{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}
+
+
+this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case 
+
+\hypertarget{measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\index{measurement.\-h@{measurement.\-h}!\-Probability@{\-Probability}}
+\index{\-Probability@{\-Probability}!measurement.h@{measurement.\-h}}
+\subsubsection[{\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf \-Probability}}}\label{measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}
+
+
+\hyperlink{measurement_8h}{measurement.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. type for probabilities 
+
+\-Definition at line 28 of file measurement.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{measurement_8h_a2905b59d4a364111890224a444fd6d30}{\index{measurement.\-h@{measurement.\-h}!delete\-Eta\-Function@{delete\-Eta\-Function}}
+\index{delete\-Eta\-Function@{delete\-Eta\-Function}!measurement.h@{measurement.\-h}}
+\subsubsection[{delete\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Eta\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Eta\-Function} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_a2905b59d4a364111890224a444fd6d30}
+
+
+deletes an \-Eta\-Function and sets the pointer to zero 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em eta} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 55 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(eta);
+    RETURN_IF_ZERO(*eta);
+
+    free((*eta)->C);
+    free((*eta)->eta);
+    free(*eta);
+
+    *eta = 0;
+}
+\end{DoxyCode}
+\hypertarget{measurement_8h_aa0f12091b86c478e159761719923bd9a}{\index{measurement.\-h@{measurement.\-h}!new\-Eta\-Function@{new\-Eta\-Function}}
+\index{new\-Eta\-Function@{new\-Eta\-Function}!measurement.h@{measurement.\-h}}
+\subsubsection[{new\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eta\-Function} {\bf new\-Eta\-Function} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{types, }
+\item[{size\-\_\-t}]{measurements, }
+\item[{size\-\_\-t}]{constants}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_aa0f12091b86c478e159761719923bd9a}
+
+
+\hyperlink{measurement_8c}{measurement.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. creates a new \-Eta\-Function
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em types} & number of types, usually 2 \\
+\hline
+{\em measurements} & number of different measurements, \\
+\hline
+{\em constants} & number of different error constants, $<$= types$\ast$measurements are needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+a new structure 
+\end{DoxyReturn}
+
+
+\-Definition at line 31 of file measurement.\-c.
+
+
+
+\-References s\-Eta\-Function\-::\-C, s\-Eta\-Function\-::constants, s\-Eta\-Function\-::eta, s\-Eta\-Function\-::measurements, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and s\-Eta\-Function\-::types.
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(types);
+    RETURN_ZERO_IF_ZERO(measurements);
+    RETURN_ZERO_IF_ZERO(constants);
+
+    EtaFunction e;
+    e = malloc(sizeof(struct sEtaFunction));
+
+    e->types = types;
+    e->measurements = measurements;
+    e->constants = constants;
+
+    e->C = calloc(constants, sizeof(Probability));
+    e->eta = calloc(types * measurements, sizeof(size_t));
+
+    return e;
+}
+\end{DoxyCode}

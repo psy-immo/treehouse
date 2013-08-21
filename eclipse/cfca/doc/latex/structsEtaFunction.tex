@@ -1,0 +1,117 @@
+\hypertarget{structsEtaFunction}{\section{s\-Eta\-Function \-Struct \-Reference}
+\label{structsEtaFunction}\index{s\-Eta\-Function@{s\-Eta\-Function}}
+}
+
+
+this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case  
+
+
+
+
+{\ttfamily \#include $<$measurement.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{structsEtaFunction_a1fdf63f3a73e7fd663491e72421619f9}{constants}
+\begin{DoxyCompactList}\small\item\em the number of different probability constants \end{DoxyCompactList}\item 
+\hyperlink{measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\-Probability} $\ast$ \hyperlink{structsEtaFunction_a05c2f93c1148d5268d359d78540c10be}{\-C}
+\begin{DoxyCompactList}\small\item\em the constants array. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}{types}
+\begin{DoxyCompactList}\small\item\em the number of error types \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{structsEtaFunction_aa323ef11935cd1e8d6ef56405ab96cf8}{measurements}
+\begin{DoxyCompactList}\small\item\em the number of different measurements \end{DoxyCompactList}\item 
+size\-\_\-t $\ast$ \hyperlink{structsEtaFunction_a7585a59b1861523157055f8c8b0263e3}{eta}
+\begin{DoxyCompactList}\small\item\em the error constants, where the rows (t) are types, and the columns (m) are measurements, i.\-e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case 
+
+\-Definition at line 34 of file measurement.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structsEtaFunction_a05c2f93c1148d5268d359d78540c10be}{\index{s\-Eta\-Function@{s\-Eta\-Function}!\-C@{\-C}}
+\index{\-C@{\-C}!sEtaFunction@{s\-Eta\-Function}}
+\subsubsection[{\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Probability}$\ast$ {\bf s\-Eta\-Function\-::\-C}}}\label{structsEtaFunction_a05c2f93c1148d5268d359d78540c10be}
+
+
+the constants array. 
+
+
+
+\-Definition at line 44 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Eta\-Function().
+
+\hypertarget{structsEtaFunction_a1fdf63f3a73e7fd663491e72421619f9}{\index{s\-Eta\-Function@{s\-Eta\-Function}!constants@{constants}}
+\index{constants@{constants}!sEtaFunction@{s\-Eta\-Function}}
+\subsubsection[{constants}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Eta\-Function\-::constants}}}\label{structsEtaFunction_a1fdf63f3a73e7fd663491e72421619f9}
+
+
+the number of different probability constants 
+
+
+
+\-Definition at line 38 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Eta\-Function().
+
+\hypertarget{structsEtaFunction_a7585a59b1861523157055f8c8b0263e3}{\index{s\-Eta\-Function@{s\-Eta\-Function}!eta@{eta}}
+\index{eta@{eta}!sEtaFunction@{s\-Eta\-Function}}
+\subsubsection[{eta}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t$\ast$ {\bf s\-Eta\-Function\-::eta}}}\label{structsEtaFunction_a7585a59b1861523157055f8c8b0263e3}
+
+
+the error constants, where the rows (t) are types, and the columns (m) are measurements, i.\-e. 
+
+the error probability for type t error and measurement m is\-:
+
+\-C\mbox{[}eta\mbox{[}t$\ast$measurements + m\mbox{]}\mbox{]} 
+
+\-Definition at line 64 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Eta\-Function().
+
+\hypertarget{structsEtaFunction_aa323ef11935cd1e8d6ef56405ab96cf8}{\index{s\-Eta\-Function@{s\-Eta\-Function}!measurements@{measurements}}
+\index{measurements@{measurements}!sEtaFunction@{s\-Eta\-Function}}
+\subsubsection[{measurements}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Eta\-Function\-::measurements}}}\label{structsEtaFunction_aa323ef11935cd1e8d6ef56405ab96cf8}
+
+
+the number of different measurements 
+
+
+
+\-Definition at line 55 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Eta\-Function().
+
+\hypertarget{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}{\index{s\-Eta\-Function@{s\-Eta\-Function}!types@{types}}
+\index{types@{types}!sEtaFunction@{s\-Eta\-Function}}
+\subsubsection[{types}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Eta\-Function\-::types}}}\label{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}
+
+
+the number of error types 
+
+
+
+\-Definition at line 49 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Eta\-Function().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/fca/common/\hyperlink{measurement_8h}{measurement.\-h}\end{DoxyCompactItemize}

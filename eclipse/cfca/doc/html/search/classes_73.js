@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['setafunction',['sEtaFunction',['../structsEtaFunction.html',1,'']]],
   ['sformalconceptintentbulknode',['sFormalConceptIntentBulkNode',['../structsFormalConceptIntentBulkNode.html',1,'']]],
   ['sformalconceptintentbulknodev',['sFormalConceptIntentBulkNodeV',['../structsFormalConceptIntentBulkNodeV.html',1,'']]],
   ['sformalintent',['sFormalIntent',['../structsFormalIntent.html',1,'']]],

@@ -15,5 +15,6 @@ EXECUTABLES :=
 SUBDIRS := \
 src/fca/vector \
 src/fca/easy \
+src/fca/common \
 src \
 

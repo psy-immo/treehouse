@@ -21,6 +21,7 @@
 #define FCA__COMMON_H_
 
 #include "common/macros.h"
+#include "common/measurement.h"
 
 
 #endif /* COMMON_H_ */
