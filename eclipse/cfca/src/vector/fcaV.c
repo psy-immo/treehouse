@@ -20,12 +20,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define VECTORS_ONLY
 
-#include "fca.h"
-#include "fca_macros.h"
-#include "fca_structs.h"
-#include "fca_private.h"
+#include "../fca.h"
+#include "../fca_macros.h"
+#include "macros.h"
+#include "../fca_structs.h"
+#include "../fca_private.h"
 
 /** @file
  *  this file contains general formal context related operations and routines with

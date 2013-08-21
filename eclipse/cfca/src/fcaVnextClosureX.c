@@ -22,10 +22,9 @@
 #include <string.h>
 #include <pthread.h>
 
-#define VECTORS_ONLY
-
 #include "fca.h"
 #include "fca_macros.h"
+#include "vector/macros.h"
 #include "fca_structs.h"
 #include "fca_private.h"
 

@@ -24,6 +24,7 @@
 
 #include "fca.h"
 #include "fca_macros.h"
+#include "easy/macros.h"
 #include "fca_structs.h"
 #include "fca_private.h"
 
