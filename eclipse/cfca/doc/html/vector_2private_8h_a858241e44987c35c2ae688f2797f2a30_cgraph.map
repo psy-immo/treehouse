@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140" title="callNextClosureVX1" alt="" coords="167,31,305,60"/>
+<area shape="rect" id="node5" href="$fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="355,57,472,87"/>
+<area shape="rect" id="node7" href="$fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="719,5,849,35"/>
+<area shape="rect" id="node9" href="$fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="545,31,639,60"/>
+<area shape="rect" id="node11" href="$fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="521,84,663,113"/>
+<area shape="rect" id="node16" href="$fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="547,137,637,167"/>
+<area shape="rect" id="node13" href="$fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="713,84,855,113"/>
+</map>

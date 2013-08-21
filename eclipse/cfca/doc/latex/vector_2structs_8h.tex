@@ -1,0 +1,115 @@
+\hypertarget{vector_2structs_8h}{\section{src/vector/structs.h \-File \-Reference}
+\label{vector_2structs_8h}\index{src/vector/structs.\-h@{src/vector/structs.\-h}}
+}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_2structs_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsmyFormalContextV}{smy\-Formal\-Context\-V}
+\begin{DoxyCompactList}\small\item\em each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix \end{DoxyCompactList}\item 
+struct \hyperlink{structsmyFormalConceptIntentChunkV}{smy\-Formal\-Concept\-Intent\-Chunk\-V}
+\begin{DoxyCompactList}\small\item\em \-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V formal concept intent vectors. \end{DoxyCompactList}\item 
+struct \hyperlink{structsFormalConceptIntentBulkNodeV}{s\-Formal\-Concept\-Intent\-Bulk\-Node\-V}
+\begin{DoxyCompactList}\small\item\em a node of a single linked list of concept chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vector_2structs_8h_aac302242f1cae503941aea3e7c50521f}{\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V}~(1024)
+\begin{DoxyCompactList}\small\item\em \hyperlink{vector_2structs_8h}{vector/structs.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+\#define \hyperlink{vector_2structs_8h_a975f482c86513cd75103e7c11d386ee8}{\-B\-U\-L\-K\-S\-I\-Z\-E\-V}~(1024)
+\begin{DoxyCompactList}\small\item\em size of chunks per bulk (vector version) \end{DoxyCompactList}\item 
+\#define \hyperlink{vector_2structs_8h_a2129a125f29c4f6de8a39cc771176482}{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}~(1024)
+\begin{DoxyCompactList}\small\item\em maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsmyFormalContextV}{smy\-Formal\-Context\-V} \hyperlink{vector_2structs_8h_a84718211dcd64835d30f05465ddd2547}{my\-Formal\-Context\-V}
+\begin{DoxyCompactList}\small\item\em each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix \end{DoxyCompactList}\item 
+typedef struct \*
+\hyperlink{structsmyFormalConceptIntentChunkV}{smy\-Formal\-Concept\-Intent\-Chunk\-V} \hyperlink{vector_2structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V}
+\begin{DoxyCompactList}\small\item\em \-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V formal concept intent vectors. \end{DoxyCompactList}\item 
+typedef struct \*
+\hyperlink{structsFormalConceptIntentBulkNodeV}{s\-Formal\-Concept\-Intent\-Bulk\-Node\-V} $\ast$ \hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V}
+\begin{DoxyCompactList}\small\item\em a node of a single linked list of concept chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{vector_2structs_8h_a975f482c86513cd75103e7c11d386ee8}{\index{vector/structs.\-h@{vector/structs.\-h}!\-B\-U\-L\-K\-S\-I\-Z\-E\-V@{\-B\-U\-L\-K\-S\-I\-Z\-E\-V}}
+\index{\-B\-U\-L\-K\-S\-I\-Z\-E\-V@{\-B\-U\-L\-K\-S\-I\-Z\-E\-V}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{\-B\-U\-L\-K\-S\-I\-Z\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-L\-K\-S\-I\-Z\-E\-V}~(1024)}}\label{vector_2structs_8h_a975f482c86513cd75103e7c11d386ee8}
+
+
+size of chunks per bulk (vector version) 
+
+
+
+\-Definition at line 32 of file structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk\-V(), and new\-Concept\-Bulk\-V().
+
+\hypertarget{vector_2structs_8h_aac302242f1cae503941aea3e7c50521f}{\index{vector/structs.\-h@{vector/structs.\-h}!\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V@{\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V}}
+\index{\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V@{\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{\-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V}~(1024)}}\label{vector_2structs_8h_aac302242f1cae503941aea3e7c50521f}
+
+
+\hyperlink{vector_2structs_8h}{vector/structs.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
+size of a chunk of vector concepts 
+
+\-Definition at line 26 of file structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk\-V(), count\-Concepts\-In\-Bulk\-V(), and new\-Concept\-Chunk\-V().
+
+\hypertarget{vector_2structs_8h_a2129a125f29c4f6de8a39cc771176482}{\index{vector/structs.\-h@{vector/structs.\-h}!\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}}
+\index{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}~(1024)}}\label{vector_2structs_8h_a2129a125f29c4f6de8a39cc771176482}
+
+
+maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter) 
+
+
+
+\-Definition at line 40 of file structs.\-h.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\index{vector/structs.\-h@{vector/structs.\-h}!\-Formal\-Concept\-Intent\-Bulk\-List\-V@{\-Formal\-Concept\-Intent\-Bulk\-List\-V}}
+\index{\-Formal\-Concept\-Intent\-Bulk\-List\-V@{\-Formal\-Concept\-Intent\-Bulk\-List\-V}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{\-Formal\-Concept\-Intent\-Bulk\-List\-V}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node\-V}$\ast$  {\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V}}}\label{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}
+
+
+a node of a single linked list of concept chunks. 
+
+bulk nodes are filled chunk wise, but a bulk node may have non-\/empty successor nodes even if it is not entire full. \hypertarget{vector_2structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{\index{vector/structs.\-h@{vector/structs.\-h}!my\-Formal\-Concept\-Intent\-Chunk\-V@{my\-Formal\-Concept\-Intent\-Chunk\-V}}
+\index{my\-Formal\-Concept\-Intent\-Chunk\-V@{my\-Formal\-Concept\-Intent\-Chunk\-V}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{my\-Formal\-Concept\-Intent\-Chunk\-V}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf smy\-Formal\-Concept\-Intent\-Chunk\-V}  {\bf my\-Formal\-Concept\-Intent\-Chunk\-V}}}\label{vector_2structs_8h_abe3c190ec3375121cbfe3afff517b9b9}
+
+
+\-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V formal concept intent vectors. 
+
+\hypertarget{vector_2structs_8h_a84718211dcd64835d30f05465ddd2547}{\index{vector/structs.\-h@{vector/structs.\-h}!my\-Formal\-Context\-V@{my\-Formal\-Context\-V}}
+\index{my\-Formal\-Context\-V@{my\-Formal\-Context\-V}!vector/structs.h@{vector/structs.\-h}}
+\subsubsection[{my\-Formal\-Context\-V}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf smy\-Formal\-Context\-V}  {\bf my\-Formal\-Context\-V}}}\label{vector_2structs_8h_a84718211dcd64835d30f05465ddd2547}
+
+
+each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix 
+
+for the vector implementation, we have the variable width which codes the width of each object's \-Incidence\-Vector 

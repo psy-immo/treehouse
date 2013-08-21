@@ -16,8 +16,8 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MACROS_H_
-#define MACROS_H_
+#ifndef EASY_MACROS_H_
+#define EASY_MACROS_H_
 
 
 /** @file

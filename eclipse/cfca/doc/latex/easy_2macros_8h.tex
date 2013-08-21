@@ -1,0 +1,142 @@
+\hypertarget{easy_2macros_8h}{\section{src/easy/macros.h \-File \-Reference}
+\label{easy_2macros_8h}\index{src/easy/macros.\-h@{src/easy/macros.\-h}}
+}
+
+
+\hyperlink{easy_2macros_8h}{easy/macros.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens  
+
+
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{easy_2macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{easy_2macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\-I\-N\-C\-I\-D\-E\-S}(x)~(((x)\&1))
+\begin{DoxyCompactList}\small\item\em checks whether something incides by testing the 1-\/bit \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}{\-C\-L\-E\-A\-R}(x)~\{ (x) = 0; \}
+\begin{DoxyCompactList}\small\item\em clears the mark \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2macros_8h_add682bc16cfd313b57c9dc8400158bc0}{\-C\-R\-O\-S\-S}(x)~\{ (x) = 1; \}
+\begin{DoxyCompactList}\small\item\em sets the mark \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2macros_8h_a6716296e0c0390116c559152e613eb17}{\-C\-E\-L\-L}(g, \-I, m)~((\-I)-\/$>$incidence\mbox{[}(\-I)-\/$>$attributes $\ast$ (g) + (m)\mbox{]})
+\begin{DoxyCompactList}\small\item\em results in the cell that encodes whether g incides with m \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2macros_8h_ac504a61c4c85120715ba5d25a72148b1}{g\-Im}(g, \-I, m)~\hyperlink{easy_2macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\-I\-N\-C\-I\-D\-E\-S}(\hyperlink{easy_2macros_8h_a6716296e0c0390116c559152e613eb17}{\-C\-E\-L\-L}( (g) , (\-I) , (m)))
+\begin{DoxyCompactList}\small\item\em test whether g and m incides \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{easy_2macros_8h}{easy/macros.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. \-These macros are used for \-Incidence\-Cell array implementations of formal contexts. \-Such implementations are easier to debug, but take up far too much memory for big scale contexts 
+
+\-Definition in file \hyperlink{easy_2macros_8h_source}{macros.\-h}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{easy_2macros_8h_a6716296e0c0390116c559152e613eb17}{\index{easy/macros.\-h@{easy/macros.\-h}!\-C\-E\-L\-L@{\-C\-E\-L\-L}}
+\index{\-C\-E\-L\-L@{\-C\-E\-L\-L}!easy/macros.h@{easy/macros.\-h}}
+\subsubsection[{\-C\-E\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-E\-L\-L}(
+\begin{DoxyParamCaption}
+\item[{}]{g, }
+\item[{}]{\-I, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((\-I)-\/$>$incidence\mbox{[}(\-I)-\/$>$attributes $\ast$ (g) + (m)\mbox{]})}}\label{easy_2macros_8h_a6716296e0c0390116c559152e613eb17}
+
+
+results in the cell that encodes whether g incides with m 
+
+\-I may be a formal context, then g refers to the object number, or \-I may be a chunk of formal concepts, then g refers to the concept number. 
+
+\-Definition at line 61 of file macros.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-Random().
+
+\hypertarget{easy_2macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}{\index{easy/macros.\-h@{easy/macros.\-h}!\-C\-L\-E\-A\-R@{\-C\-L\-E\-A\-R}}
+\index{\-C\-L\-E\-A\-R@{\-C\-L\-E\-A\-R}!easy/macros.h@{easy/macros.\-h}}
+\subsubsection[{\-C\-L\-E\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-E\-A\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ (x) = 0; \}}}\label{easy_2macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}
+
+
+clears the mark 
+
+
+
+\-Definition at line 42 of file macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), and new\-Concept\-Bulk\-From\-Context().
+
+\hypertarget{easy_2macros_8h_add682bc16cfd313b57c9dc8400158bc0}{\index{easy/macros.\-h@{easy/macros.\-h}!\-C\-R\-O\-S\-S@{\-C\-R\-O\-S\-S}}
+\index{\-C\-R\-O\-S\-S@{\-C\-R\-O\-S\-S}!easy/macros.h@{easy/macros.\-h}}
+\subsubsection[{\-C\-R\-O\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-R\-O\-S\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ (x) = 1; \}}}\label{easy_2macros_8h_add682bc16cfd313b57c9dc8400158bc0}
+
+
+sets the mark 
+
+
+
+\-Definition at line 50 of file macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), new\-Concept\-Bulk\-From\-Context(), new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-Random().
+
+\hypertarget{easy_2macros_8h_ac504a61c4c85120715ba5d25a72148b1}{\index{easy/macros.\-h@{easy/macros.\-h}!g\-Im@{g\-Im}}
+\index{g\-Im@{g\-Im}!easy/macros.h@{easy/macros.\-h}}
+\subsubsection[{g\-Im}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf g\-Im}(
+\begin{DoxyParamCaption}
+\item[{}]{g, }
+\item[{}]{\-I, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~{\bf \-I\-N\-C\-I\-D\-E\-S}({\bf \-C\-E\-L\-L}( (g) , (\-I) , (m)))}}\label{easy_2macros_8h_ac504a61c4c85120715ba5d25a72148b1}
+
+
+test whether g and m incides 
+
+
+
+\-Definition at line 68 of file macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), write\-Concepts\-To\-File(), and write\-Formal\-Context().
+
+\hypertarget{easy_2macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\index{easy/macros.\-h@{easy/macros.\-h}!\-I\-N\-C\-I\-D\-E\-S@{\-I\-N\-C\-I\-D\-E\-S}}
+\index{\-I\-N\-C\-I\-D\-E\-S@{\-I\-N\-C\-I\-D\-E\-S}!easy/macros.h@{easy/macros.\-h}}
+\subsubsection[{\-I\-N\-C\-I\-D\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-C\-I\-D\-E\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(((x)\&1))}}\label{easy_2macros_8h_ad4734e82cfd82a52750c823e4a3f745a}
+
+
+checks whether something incides by testing the 1-\/bit 
+
+
+
+\-Definition at line 35 of file macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), intent\-Cmp(), and new\-Concept\-Bulk\-From\-Context().
+

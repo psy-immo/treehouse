@@ -24,8 +24,8 @@
 #include "../fca.h"
 #include "../fca_macros.h"
 #include "macros.h"
-#include "../fca_structs.h"
-#include "../fca_private.h"
+#include "structs.h"
+#include "private.h"
 
 /** @file
  *  this file contains general formal context related operations and routines with

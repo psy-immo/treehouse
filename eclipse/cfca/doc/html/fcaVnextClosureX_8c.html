@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>C formal concept analysis: src/fcaVnextClosureX.c File Reference</title>
+<title>C formal concept analysis library: src/vector/fcaVnextClosureX.c File Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C formal concept analysis
+   <div id="projectname">C formal concept analysis library
    
    </div>
    
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">src/fcaVnextClosureX.c File Reference</div>  </div>
+<div class="title">src/vector/fcaVnextClosureX.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -91,16 +91,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;pthread.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="fca_8h_source.html">fca.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="fca__macros_8h_source.html">fca_macros.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="fca__private_8h_source.html">fca_private.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="fca_8h_source.html">../fca.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="fca__macros_8h_source.html">../fca_macros.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="vector_2macros_8h_source.html">macros.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="vector_2structs_8h_source.html">structs.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="vector_2private_8h_source.html">private.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fcaVnextClosureX.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="fcaVnextClosureX_8c__incl.png" border="0" usemap="#src_2fcaVnextClosureX_8c" alt=""/></div>
-<map name="src_2fcaVnextClosureX_8c" id="src_2fcaVnextClosureX_8c">
-<area shape="rect" id="node11" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="456,237,507,267"/><area shape="rect" id="node15" href="fca__macros_8h.html" title="fca_macros.h" alt="" coords="300,83,402,112"/><area shape="rect" id="node18" href="fca__structs_8h.html" title="fca_structs.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="476,160,575,189"/><area shape="rect" id="node21" href="fca__private_8h.html" title="fca_private.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="527,83,623,112"/></map>
+<div class="center"><img src="fcaVnextClosureX_8c__incl.png" border="0" usemap="#src_2vector_2fcaVnextClosureX_8c" alt=""/></div>
+<map name="src_2vector_2fcaVnextClosureX_8c" id="src_2vector_2fcaVnextClosureX_8c">
+<area shape="rect" id="node11" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="365,83,427,112"/><area shape="rect" id="node15" href="fca__macros_8h.html" title="../fca_macros.h" alt="" coords="451,83,563,112"/><area shape="rect" id="node17" href="vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="587,83,661,112"/><area shape="rect" id="node19" href="vector_2structs_8h.html" title="structs.h" alt="" coords="699,160,771,189"/><area shape="rect" id="node21" href="vector_2private_8h.html" title="private.h" alt="" coords="736,83,808,112"/></map>
 </div>
 </div>
 <p><a href="fcaVnextClosureX_8c_source.html">Go to the source code of this file.</a></p>
@@ -110,20 +111,19 @@ Data Structures</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#af186226aa073237d4be9861b07795dea">VECTORS_ONLY</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="fcaVnextClosureX_8c.html" title="this file contains a multi-threading nextClosure implementation using the IncidenceVector implementat...">fcaVnextClosureX.c</a>, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens  <a href="#af186226aa073237d4be9861b07795dea"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#a68c72a16f9628758cc5a8d2210ccd674">intentCmp</a>&#160;&#160;&#160;!!ERROR!!</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="fcaVnextClosureX_8c.html" title="this file contains a multi-threading nextClosure implementation using the IncidenceVector implementat...">fcaVnextClosureX.c</a>, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens  <a href="#a68c72a16f9628758cc5a8d2210ccd674"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef struct <br class="typebreak"/>
 <a class="el" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="fca__structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279">nextClosureVX1</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> start, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> stop)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279">nextClosureVX1</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> start, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> stop)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset  <a href="#adcbb382ceada973214f6bbeca05cb279"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">callNextClosureVX1</a> (void *params)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="fca__structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30">nextClosureVX</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm  <a href="#a858241e44987c35c2ae688f2797f2a30"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30">nextClosureVX</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using a parallel next closure algorithm with up to 8 threads  <a href="#a858241e44987c35c2ae688f2797f2a30"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>this file contains a multi-threading nextClosure implementation using the IncidenceVector implementation </p>
@@ -135,22 +135,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define <a class="el" href="fca__private_8h.html#a3eff21bebd55849e1049f6d8b6c50a8b">intentCmp</a>&#160;&#160;&#160;!!ERROR!!</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00032">32</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af186226aa073237d4be9861b07795dea"></a><!-- doxytag: member="fcaVnextClosureX.c::VECTORS_ONLY" ref="af186226aa073237d4be9861b07795dea" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="fcaVnextClosureX_8c.html#af186226aa073237d4be9861b07795dea">VECTORS_ONLY</a></td>
+          <td class="memname">#define <a class="el" href="easy_2private_8h.html#a3eff21bebd55849e1049f6d8b6c50a8b">intentCmp</a>&#160;&#160;&#160;!!ERROR!!</td>
         </tr>
       </table>
 </div>
@@ -161,7 +146,7 @@ Functions</h2></td></tr>
 <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
 
-<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00025">25</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00031">31</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
 
 </div>
 </div>
@@ -195,16 +180,16 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00185">185</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00184">184</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
 
-<p>References <a class="el" href="fcaVnextClosureX_8c_source.html#l00180">snextClosureVX1Params::ctx</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00052">nextClosureVX1()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00179">snextClosureVX1Params::rVal</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00181">snextClosureVX1Params::start</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00182">snextClosureVX1Params::stop</a>.</p>
+<p>References <a class="el" href="fcaVnextClosureX_8c_source.html#l00179">snextClosureVX1Params::ctx</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00178">snextClosureVX1Params::rVal</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00180">snextClosureVX1Params::start</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00181">snextClosureVX1Params::stop</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00204">nextClosureVX()</a>.</p>
+<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00203">nextClosureVX()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structsnextClosureVX1Params.html">nextClosureVX1Params</a> p;
     p = (<a class="code" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a>) params;
 
-    p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a> = <a class="code" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(p-&gt;<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>);
+    p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a> = <a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(p-&gt;<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>);
 
     <span class="keywordflow">return</span> 0;
 }
@@ -214,7 +199,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140_cgraph.png" border="0" usemap="#fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140_cgraph" alt=""/></div>
 <map name="fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140_cgraph" id="fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140_cgraph">
-<area shape="rect" id="node3" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="195,84,312,113"/><area shape="rect" id="node5" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="361,57,503,87"/><area shape="rect" id="node7" href="fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="559,5,689,35"/><area shape="rect" id="node11" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="385,111,479,140"/><area shape="rect" id="node13" href="fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="387,164,477,193"/><area shape="rect" id="node9" href="fca__private_8h.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="553,59,695,88"/></map>
+<area shape="rect" id="node3" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="195,57,312,87"/><area shape="rect" id="node5" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="559,5,689,35"/><area shape="rect" id="node7" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="385,31,479,60"/><area shape="rect" id="node9" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="361,84,503,113"/><area shape="rect" id="node14" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="387,137,477,167"/><area shape="rect" id="node12" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="553,84,695,113"/></map>
 </div>
 </p>
 
@@ -225,7 +210,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="fca__structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> <a class="el" href="fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30">nextClosureVX</a> </td>
+          <td class="memname"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> <a class="el" href="vector_2private_8h.html#a858241e44987c35c2ae688f2797f2a30">nextClosureVX</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
@@ -235,21 +220,20 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm </p>
+<p>creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using a parallel next closure algorithm with up to 8 threads </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">N</td><td>number of threads </td></tr>
     <tr><td class="paramname">ctx</td><td>formal context </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>concept intents </dd></dl>
 
-<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00204">204</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00203">203</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::attributes</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00185">callNextClosureVX1()</a>, <a class="el" href="fca__macros_8h_source.html#l00125">CROSSV</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00180">snextClosureVX1Params::ctx</a>, <a class="el" href="fca__structs_8h_source.html#l00193">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00052">nextClosureVX1()</a>, <a class="el" href="fca__macros_8h_source.html#l00035">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00179">snextClosureVX1Params::rVal</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00181">snextClosureVX1Params::start</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00182">snextClosureVX1Params::stop</a>, and <a class="el" href="fca__structs_8h_source.html#l00079">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00184">callNextClosureVX1()</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00179">snextClosureVX1Params::ctx</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00178">snextClosureVX1Params::rVal</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00180">snextClosureVX1Params::start</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00181">snextClosureVX1Params::stop</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
@@ -268,44 +252,44 @@ Here is the call graph for this function:</div>
         N = 2;
 
     <span class="keywordflow">if</span> (N &lt; 2)
-        <span class="keywordflow">return</span> <a class="code" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(ctx, 0, 0);
+        <span class="keywordflow">return</span> <a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(ctx, 0, 0);
 
     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> bounds;
     bounds = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (N - 1), <span class="keyword">sizeof</span>(uint64_t));
 
     <span class="keywordflow">if</span> (N == 2)
     {
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 0);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 0);
     }
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 4)
     {
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 1); <span class="comment">//01</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 1); <span class="comment">//01</span>
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 0); <span class="comment">//10</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 0); <span class="comment">//10</span>
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1); <span class="comment">//11</span>
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 0);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1); <span class="comment">//11</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 0);
     }
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 8)
     {
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 2); <span class="comment">// 001</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 2); <span class="comment">// 001</span>
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 1); <span class="comment">//010</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 1); <span class="comment">//010</span>
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 2); <span class="comment">//011</span>
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 2); <span class="comment">//011</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1);
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 3, 0); <span class="comment">//100</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 3, 0); <span class="comment">//100</span>
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 0); <span class="comment">//101</span>
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 2);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 0); <span class="comment">//101</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 2);
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 1); <span class="comment">//110</span>
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 0);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 1); <span class="comment">//110</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 0);
 
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 0); <span class="comment">//111</span>
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 1);
-        <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 2);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 0); <span class="comment">//111</span>
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 1);
+        <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 2);
     }
 
 <span class="comment">//  for (int i = 0; i &lt; N - 1; ++i)</span>
@@ -380,7 +364,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30_cgraph.png" border="0" usemap="#fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30_cgraph" alt=""/></div>
 <map name="fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30_cgraph" id="fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30_cgraph">
-<area shape="rect" id="node3" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140" title="callNextClosureVX1" alt="" coords="167,57,305,87"/><area shape="rect" id="node5" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="355,84,472,113"/><area shape="rect" id="node7" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="521,57,663,87"/><area shape="rect" id="node9" href="fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="719,5,849,35"/><area shape="rect" id="node13" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="545,111,639,140"/><area shape="rect" id="node15" href="fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="547,164,637,193"/><area shape="rect" id="node11" href="fca__private_8h.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="713,59,855,88"/></map>
+<area shape="rect" id="node3" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140" title="callNextClosureVX1" alt="" coords="167,31,305,60"/><area shape="rect" id="node5" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="355,57,472,87"/><area shape="rect" id="node7" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="719,5,849,35"/><area shape="rect" id="node9" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="545,31,639,60"/><area shape="rect" id="node11" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="521,84,663,113"/><area shape="rect" id="node16" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="547,137,637,167"/><area shape="rect" id="node14" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="713,84,855,113"/></map>
 </div>
 </p>
 
@@ -391,7 +375,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="fca__structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> <a class="el" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279">nextClosureVX1</a> </td>
+          <td class="memname"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> <a class="el" href="vector_2private_8h.html#adcbb382ceada973214f6bbeca05cb279">nextClosureVX1</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
@@ -437,11 +421,11 @@ Here is the call graph for this function:</div>
 <p>do the nextClosure</p>
 <p>free up memory</p>
 
-<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00052">52</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">51</a> of file <a class="el" href="fcaVnextClosureX_8c_source.html">fcaVnextClosureX.c</a>.</p>
 
-<p>References <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00131">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00413">closeIntentV()</a>, <a class="el" href="fca__macros_8h_source.html#l00100">CRIMPVALUE</a>, <a class="el" href="fca__macros_8h_source.html#l00125">CROSSV</a>, <a class="el" href="fca__macros_8h_source.html#l00137">INCIDESV</a>, <a class="el" href="fcaV_8c_source.html#l00468">intentCmpV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="fca__macros_8h_source.html#l00056">OFFSET</a>, <a class="el" href="fca__macros_8h_source.html#l00035">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="fca__structs_8h_source.html#l00079">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00108">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00413">closeIntentV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="fcaV_8c_source.html#l00468">intentCmpV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00185">callNextClosureVX1()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00204">nextClosureVX()</a>.</p>
+<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00184">callNextClosureVX1()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00203">nextClosureVX()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
@@ -457,7 +441,7 @@ Here is the call graph for this function:</div>
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
 
-    root = <a class="code" href="fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
+    root = <a class="code" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
 
     <span class="keywordflow">if</span> (start)
     {
@@ -469,9 +453,9 @@ Here is the call graph for this function:</div>
     <span class="keywordflow">else</span>
     {
 
-        <a class="code" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
+        <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
 
-        last = <a class="code" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(root, M);
+        last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(root, M);
     }
 
     nextClosure:
@@ -480,15 +464,15 @@ Here is the call graph for this function:</div>
     {
         --i;
 
-        <span class="keywordflow">if</span> (!<a class="code" href="fca__macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
+        <span class="keywordflow">if</span> (!<a class="code" href="vector_2macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
         {
-            <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
-            <a class="code" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
+            <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
+            <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
 
             <span class="keywordtype">int</span> good;
             good = 1;
 
-            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i); ++j)
+            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i); ++j)
             {
                 <span class="keywordflow">if</span> (Y[j] &amp; (~(M[j])))
                 {
@@ -498,7 +482,7 @@ Here is the call graph for this function:</div>
             }
             <span class="keywordflow">if</span> (good)
             {
-                <span class="keywordflow">if</span> (Y[<a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)] &amp; (~M[<a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)]) &amp; <a class="code" href="fca__macros_8h.html#af742dc579c934e600fb6a954a4cde678" title="gives an 64-bit integer that has set the bits 0 through x.">CRIMPVALUE</a>(i))
+                <span class="keywordflow">if</span> (Y[<a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)] &amp; (~M[<a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)]) &amp; <a class="code" href="vector_2macros_8h.html#af742dc579c934e600fb6a954a4cde678" title="gives an 64-bit integer that has set the bits 0 through x.">CRIMPVALUE</a>(i))
                 {
                     good = 0;
                 }
@@ -508,13 +492,13 @@ Here is the call graph for this function:</div>
             {
                 <span class="keywordflow">if</span> (stop)
                 {
-                    <span class="keywordflow">if</span> (<a class="code" href="fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors">intentCmpV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, Y, stop) &lt; 0)
+                    <span class="keywordflow">if</span> (<a class="code" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors">intentCmpV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, Y, stop) &lt; 0)
                     {
                         <span class="keywordflow">goto</span> gracefulReturn;
                     }
                 }
 
-                last = <a class="code" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(last, Y);
+                last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(last, Y);
 
                 <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
                 DELTA = M;
@@ -524,7 +508,7 @@ Here is the call graph for this function:</div>
             }
         }
 
-        <a class="code" href="fca__macros_8h.html#a2e3ae6676ab924d72728a1b5d61ea297" title="clears the x-th attribute of an attribute vector">CLEARV</a>(M, i);
+        <a class="code" href="vector_2macros_8h.html#a2e3ae6676ab924d72728a1b5d61ea297" title="clears the x-th attribute of an attribute vector">CLEARV</a>(M, i);
     }
 
     gracefulReturn:
@@ -539,7 +523,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279_cgraph.png" border="0" usemap="#fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279_cgraph" alt=""/></div>
 <map name="fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279_cgraph" id="fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279_cgraph">
-<area shape="rect" id="node3" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="172,57,313,87"/><area shape="rect" id="node5" href="fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="369,5,500,35"/><area shape="rect" id="node9" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="196,111,289,140"/><area shape="rect" id="node11" href="fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="197,164,288,193"/><area shape="rect" id="node7" href="fca__private_8h.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="364,59,505,88"/></map>
+<area shape="rect" id="node3" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="172,57,313,87"/><area shape="rect" id="node5" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="369,5,500,35"/><area shape="rect" id="node9" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="196,111,289,140"/><area shape="rect" id="node11" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="197,164,288,193"/><area shape="rect" id="node7" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="364,59,505,88"/></map>
 </div>
 </p>
 
@@ -563,7 +547,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 13:11:44 for C formal concept analysis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 21 2013 13:46:18 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

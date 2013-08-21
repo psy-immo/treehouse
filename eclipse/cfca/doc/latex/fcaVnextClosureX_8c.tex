@@ -1,5 +1,5 @@
-\hypertarget{fcaVnextClosureX_8c}{\section{src/fca\-Vnext\-Closure\-X.c \-File \-Reference}
-\label{fcaVnextClosureX_8c}\index{src/fca\-Vnext\-Closure\-X.\-c@{src/fca\-Vnext\-Closure\-X.\-c}}
+\hypertarget{fcaVnextClosureX_8c}{\section{src/vector/fca\-Vnext\-Closure\-X.c \-File \-Reference}
+\label{fcaVnextClosureX_8c}\index{src/vector/fca\-Vnext\-Closure\-X.\-c@{src/vector/fca\-Vnext\-Closure\-X.\-c}}
 }
 
 
@@ -10,11 +10,13 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
 {\ttfamily \#include $<$string.\-h$>$}\*
 {\ttfamily \#include $<$pthread.\-h$>$}\*
-{\ttfamily \#include \char`\"{}fca.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-macros.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-structs.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-private.\-h\char`\"{}}\*
-\-Include dependency graph for fca\-Vnext\-Closure\-X.\-c\-:\nopagebreak
+{\ttfamily \#include \char`\"{}../fca.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}../fca\-\_\-macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}structs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}private.\-h\char`\"{}}\*
+\-Include dependency graph for fca\-Vnext\-Closure\-X.\-c\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,10 +31,8 @@ struct \hyperlink{structsnextClosureVX1Params}{snext\-Closure\-V\-X1\-Params}
 \subsection*{\-Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}
-\begin{DoxyCompactList}\small\item\em \hyperlink{fcaVnextClosureX_8c}{fca\-Vnext\-Closure\-X.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
 \#define \hyperlink{fcaVnextClosureX_8c_a68c72a16f9628758cc5a8d2210ccd674}{intent\-Cmp}~!!\-E\-R\-R\-O\-R!!
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{fcaVnextClosureX_8c}{fca\-Vnext\-Closure\-X.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,12 +42,12 @@ typedef struct \*
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279}{next\-Closure\-V\-X1} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} start, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} stop)
+\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279}{next\-Closure\-V\-X1} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} start, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} stop)
 \begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset \end{DoxyCompactList}\item 
 void $\ast$ \hyperlink{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140}{call\-Next\-Closure\-V\-X1} (void $\ast$params)
 \item 
-\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}{next\-Closure\-V\-X} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
-\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}{next\-Closure\-V\-X} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using a parallel next closure algorithm with up to 8 threads \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
@@ -63,13 +63,6 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 \subsubsection[{intent\-Cmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf intent\-Cmp}~!!\-E\-R\-R\-O\-R!!}}\label{fcaVnextClosureX_8c_a68c72a16f9628758cc5a8d2210ccd674}
 
 
-\-Definition at line 32 of file fca\-Vnext\-Closure\-X.\-c.
-
-\hypertarget{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}
-\index{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
-\subsubsection[{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}}\label{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}
-
-
 \hyperlink{fcaVnextClosureX_8c}{fca\-Vnext\-Closure\-X.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
 
 \-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
@@ -78,7 +71,7 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 
 \-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
 
-\-Definition at line 25 of file fca\-Vnext\-Closure\-X.\-c.
+\-Definition at line 31 of file fca\-Vnext\-Closure\-X.\-c.
 
 
 
@@ -98,7 +91,7 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 )}}\label{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140}
 
 
-\-Definition at line 185 of file fca\-Vnext\-Closure\-X.\-c.
+\-Definition at line 184 of file fca\-Vnext\-Closure\-X.\-c.
 
 
 
@@ -121,7 +114,8 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -139,12 +133,10 @@ this file contains a multi-\/threading next\-Closure implementation using the \-
 )}}\label{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}
 
 
-creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm 
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using a parallel next closure algorithm with up to 8 threads 
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em \-N} & number of threads \\
-\hline
 {\em ctx} & formal context \\
 \hline
 \end{DoxyParams}
@@ -153,7 +145,7 @@ concept intents
 \end{DoxyReturn}
 
 
-\-Definition at line 204 of file fca\-Vnext\-Closure\-X.\-c.
+\-Definition at line 203 of file fca\-Vnext\-Closure\-X.\-c.
 
 
 
@@ -293,7 +285,8 @@ concept intents
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -345,7 +338,7 @@ do the next\-Closure
 
 free up memory
 
-\-Definition at line 52 of file fca\-Vnext\-Closure\-X.\-c.
+\-Definition at line 51 of file fca\-Vnext\-Closure\-X.\-c.
 
 
 
@@ -451,7 +444,8 @@ free up memory
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

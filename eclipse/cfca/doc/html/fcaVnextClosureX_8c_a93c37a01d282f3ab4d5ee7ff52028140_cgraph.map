@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="195,84,312,113"/>
-<area shape="rect" id="node5" href="$fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="361,57,503,87"/>
-<area shape="rect" id="node7" href="$fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="559,5,689,35"/>
-<area shape="rect" id="node11" href="$fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="385,111,479,140"/>
-<area shape="rect" id="node13" href="$fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="387,164,477,193"/>
-<area shape="rect" id="node9" href="$fca__private_8h.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="553,59,695,88"/>
+<area shape="rect" id="node3" href="$fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="195,57,312,87"/>
+<area shape="rect" id="node5" href="$fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="559,5,689,35"/>
+<area shape="rect" id="node7" href="$fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="385,31,479,60"/>
+<area shape="rect" id="node9" href="$fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="361,84,503,113"/>
+<area shape="rect" id="node14" href="$fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="387,137,477,167"/>
+<area shape="rect" id="node12" href="$fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="553,84,695,113"/>
 </map>

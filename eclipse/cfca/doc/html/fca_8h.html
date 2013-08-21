@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>C formal concept analysis: src/fca.h File Reference</title>
+<title>C formal concept analysis library: src/fca.h File Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C formal concept analysis
+   <div id="projectname">C formal concept analysis library
    
    </div>
    
@@ -97,7 +97,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="fca_8h__dep__incl.png" border="0" usemap="#src_2fca_8hdep" alt=""/></div>
 <map name="src_2fca_8hdep" id="src_2fca_8hdep">
-<area shape="rect" id="node3" href="cfca_8c.html" title="src/cfca.c" alt="" coords="5,237,85,267"/><area shape="rect" id="node5" href="fca__structs_8h.html" title="fca_structs.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="229,83,349,112"/><area shape="rect" id="node10" href="fca_8c.html" title="this file contains general formal context related operations and routines" alt="" coords="109,237,181,267"/><area shape="rect" id="node12" href="fcaV_8c.html" title="this file contains general formal context related operations and routines with IncidenceVector implem..." alt="" coords="251,237,333,267"/><area shape="rect" id="node14" href="fcaVnextClosureX_8c.html" title="this file contains a multi&#45;threading nextClosure implementation using the IncidenceVector implementat..." alt="" coords="357,237,517,267"/><area shape="rect" id="node7" href="fca__private_8h.html" title="fca_private.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="183,160,300,189"/></map>
+<area shape="rect" id="node3" href="cfca_8c.html" title="src/cfca.c" alt="" coords="5,83,85,112"/><area shape="rect" id="node5" href="fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="109,83,213,112"/><area shape="rect" id="node7" href="fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="237,83,360,112"/><area shape="rect" id="node9" href="fcaVnextClosureX_8c.html" title="this file contains a multi&#45;threading nextClosure implementation using the IncidenceVector implementat..." alt="" coords="384,83,584,112"/></map>
 </div>
 </div>
 <p><a href="fca_8h_source.html">Go to the source code of this file.</a></p>
@@ -274,7 +274,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00930">930</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00172">CLEAR</a>, <a class="el" href="fca_8c_source.html#l00538">closeIntent()</a>, <a class="el" href="fca__macros_8h_source.html#l00180">CROSS</a>, <a class="el" href="fca__macros_8h_source.html#l00165">INCIDES</a>, and <a class="el" href="fca__macros_8h_source.html#l00035">RETURN_ZERO_IF_ZERO</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2macros_8h_source.html#l00042">CLEAR</a>, <a class="el" href="fca_8c_source.html#l00538">closeIntent()</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="easy_2macros_8h_source.html#l00035">INCIDES</a>, and <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
@@ -310,9 +310,9 @@ Functions</h2></td></tr>
     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = c-&gt;<a class="code" href="structsmyFormalContext.html#a4ae89e8f42fd7feab4db872cd8472b5e">attributes</a> - 1; i &gt;= 0; --i)
     {
 
-        <span class="keywordflow">if</span> (!<a class="code" href="fca__macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="These macros are used for IncidenceCell array implementations of formal contexts.">INCIDES</a>(M[i]))
+        <span class="keywordflow">if</span> (!<a class="code" href="easy_2macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="checks whether something incides by testing the 1-bit">INCIDES</a>(M[i]))
         {
-            <a class="code" href="fca__macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(M[i]);
+            <a class="code" href="easy_2macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(M[i]);
             <a class="code" href="fca_8c.html#ae932250c17890745228ddb08bb856e40" title="close an attribute set, i.e.">closeIntent</a>(ctx, M, Y);
 
             <span class="keywordtype">int</span> good;
@@ -320,9 +320,9 @@ Functions</h2></td></tr>
 
             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; i; ++j)
             {
-                <span class="keywordflow">if</span> (<a class="code" href="fca__macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="These macros are used for IncidenceCell array implementations of formal contexts.">INCIDES</a>(Y[j]))
+                <span class="keywordflow">if</span> (<a class="code" href="easy_2macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="checks whether something incides by testing the 1-bit">INCIDES</a>(Y[j]))
                 {
-                    <span class="keywordflow">if</span> (!<a class="code" href="fca__macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="These macros are used for IncidenceCell array implementations of formal contexts.">INCIDES</a>((M[j])))
+                    <span class="keywordflow">if</span> (!<a class="code" href="easy_2macros_8h.html#ad4734e82cfd82a52750c823e4a3f745a" title="checks whether something incides by testing the 1-bit">INCIDES</a>((M[j])))
                     {
 
                         good = 0;
@@ -352,7 +352,7 @@ Functions</h2></td></tr>
             }
         }
 
-        <a class="code" href="fca__macros_8h.html#ab0ba4dd6e237b96132c0a66be2fb3bc2" title="clears the mark">CLEAR</a>(M[i]);
+        <a class="code" href="easy_2macros_8h.html#ab0ba4dd6e237b96132c0a66be2fb3bc2" title="clears the mark">CLEAR</a>(M[i]);
     }
 
     <span class="comment">/*</span>
@@ -399,11 +399,11 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fca_8c_source.html#l00269">269</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
+<p>Definition at line <a class="el" href="fca_8c_source.html#l00268">268</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00059">smyFormalContext::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::attributes</a>, <a class="el" href="fca__structs_8h_source.html#l00061">smyFormalContext::incidence</a>, <a class="el" href="fca__structs_8h_source.html#l00060">smyFormalContext::objectNames</a>, <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00028">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00056">smyFormalContext::incidence</a>, <a class="el" href="easy_2structs_8h_source.html#l00055">smyFormalContext::objectNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*ctx);
@@ -457,9 +457,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="fcaV_8c_source.html#l00086">86</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00080">smyFormalContextV::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::attributes</a>, <a class="el" href="fca__structs_8h_source.html#l00082">smyFormalContextV::incidence</a>, <a class="el" href="fca__structs_8h_source.html#l00081">smyFormalContextV::objectNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00028">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00058">smyFormalContextV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*ctx);
@@ -523,11 +523,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>a new FormalContext object </dd></dl>
 
-<p>Definition at line <a class="el" href="fca_8c_source.html#l00043">43</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
+<p>Definition at line <a class="el" href="fca_8c_source.html#l00042">42</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00059">smyFormalContext::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::attributes</a>, <a class="el" href="fca__structs_8h_source.html#l00061">smyFormalContext::incidence</a>, <a class="el" href="fca__structs_8h_source.html#l00060">smyFormalContext::objectNames</a>, and <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::objects</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00056">smyFormalContext::incidence</a>, <a class="el" href="easy_2structs_8h_source.html#l00055">smyFormalContext::objectNames</a>, and <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::objects</a>.</p>
 
-<p>Referenced by <a class="el" href="fca_8c_source.html#l00085">newFormalContextFromFile()</a>, and <a class="el" href="fca_8c_source.html#l00802">newFormalContextFromRandom()</a>.</p>
+<p>Referenced by <a class="el" href="fca_8c_source.html#l00084">newFormalContextFromFile()</a>, and <a class="el" href="fca_8c_source.html#l00802">newFormalContextFromRandom()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a> *ctx = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a>));
 
@@ -588,14 +588,14 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the formal context that has been read from the given file </dd></dl>
 
-<p>Definition at line <a class="el" href="fca_8c_source.html#l00085">85</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
+<p>Definition at line <a class="el" href="fca_8c_source.html#l00084">84</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00059">smyFormalContext::attributeNames</a>, <a class="el" href="fca__macros_8h_source.html#l00191">CELL</a>, <a class="el" href="fca__macros_8h_source.html#l00180">CROSS</a>, <a class="el" href="fca__structs_8h_source.html#l00046">INPUTBUFFERSIZE</a>, <a class="el" href="fca__macros_8h_source.html#l00207">MIN</a>, <a class="el" href="fca_8c_source.html#l00043">newFormalContext()</a>, <a class="el" href="fca__structs_8h_source.html#l00060">smyFormalContext::objectNames</a>, and <a class="el" href="fca__macros_8h_source.html#l00035">RETURN_ZERO_IF_ZERO</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="easy_2structs_8h_source.html#l00042">INPUTBUFFERSIZE</a>, <a class="el" href="fca__macros_8h_source.html#l00049">MIN</a>, <a class="el" href="fca_8c_source.html#l00042">newFormalContext()</a>, <a class="el" href="easy_2structs_8h_source.html#l00055">smyFormalContext::objectNames</a>, and <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">char</span> *line;
     <span class="keywordtype">size_t</span> len;
 
-    len = (<a class="code" href="fca__structs_8h.html#a2129a125f29c4f6de8a39cc771176482" title="maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter)...">INPUTBUFFERSIZE</a>);
+    len = (<a class="code" href="easy_2structs_8h.html#a2129a125f29c4f6de8a39cc771176482" title="maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter)...">INPUTBUFFERSIZE</a>);
     line = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * len);
 
     FILE *file;
@@ -690,7 +690,7 @@ Here is the call graph for this function:</div>
                 <span class="keywordflow">if</span> ((line[var] == <span class="charliteral">&#39;x&#39;</span>) || (line[var] == <span class="charliteral">&#39;X&#39;</span>)
                         || (line[var] == <span class="charliteral">&#39;1&#39;</span>))
                 {
-                    <a class="code" href="fca__macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(<a class="code" href="fca__macros_8h.html#a6716296e0c0390116c559152e613eb17" title="results in the cell that encodes whether g incides with m">CELL</a> (i, ctx, var));
+                    <a class="code" href="easy_2macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(<a class="code" href="easy_2macros_8h.html#a6716296e0c0390116c559152e613eb17" title="results in the cell that encodes whether g incides with m">CELL</a> (i, ctx, var));
                 }
             }
 
@@ -760,14 +760,14 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="fcaV_8c_source.html#l00120">120</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00080">smyFormalContextV::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00177">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00125">CROSSV</a>, <a class="el" href="fca__structs_8h_source.html#l00046">INPUTBUFFERSIZE</a>, <a class="el" href="fca__macros_8h_source.html#l00207">MIN</a>, <a class="el" href="fcaV_8c_source.html#l00044">newFormalContextV()</a>, <a class="el" href="fca__structs_8h_source.html#l00081">smyFormalContextV::objectNames</a>, <a class="el" href="fca__macros_8h_source.html#l00035">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="fca__macros_8h_source.html#l00148">ROW</a>, and <a class="el" href="fca__structs_8h_source.html#l00181">sFormalConceptIntentBulkNodeV::width</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="easy_2structs_8h_source.html#l00042">INPUTBUFFERSIZE</a>, <a class="el" href="fca__macros_8h_source.html#l00049">MIN</a>, <a class="el" href="fcaV_8c_source.html#l00044">newFormalContextV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">char</span> *line;
     <span class="keywordtype">size_t</span> len;
 
-    len = (<a class="code" href="fca__structs_8h.html#a2129a125f29c4f6de8a39cc771176482" title="maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter)...">INPUTBUFFERSIZE</a>);
+    len = (<a class="code" href="easy_2structs_8h.html#a2129a125f29c4f6de8a39cc771176482" title="maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter)...">INPUTBUFFERSIZE</a>);
     line = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * len);
 
     FILE *file;
@@ -865,7 +865,7 @@ Here is the call graph for this function:</div>
                 <span class="keywordflow">if</span> ((line[var] == <span class="charliteral">&#39;x&#39;</span>) || (line[var] == <span class="charliteral">&#39;X&#39;</span>)
                         || (line[var] == <span class="charliteral">&#39;1&#39;</span>))
                 {
-                    <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(<a class="code" href="fca__macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(i, ctx), var);
+                    <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(<a class="code" href="vector_2macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(i, ctx), var);
                 }
             }
 
@@ -943,9 +943,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00802">802</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00191">CELL</a>, <a class="el" href="fca__macros_8h_source.html#l00180">CROSS</a>, <a class="el" href="fca_8c_source.html#l00043">newFormalContext()</a>, and <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::objects</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="fca_8c_source.html#l00042">newFormalContext()</a>, and <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::objects</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> ctx;
     ctx = <a class="code" href="fca_8c.html#a8cc0086fc3f45b783688b21105632456" title="create a new formal context">newFormalContext</a>(objects, attributes);
@@ -962,7 +962,7 @@ Here is the call graph for this function:</div>
             x = (float) random() / (float) RAND_MAX;
             <span class="keywordflow">if</span> (x &gt;= p)
             {
-                <a class="code" href="fca__macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(<a class="code" href="fca__macros_8h.html#a6716296e0c0390116c559152e613eb17" title="results in the cell that encodes whether g incides with m">CELL</a>(g,c,m));
+                <a class="code" href="easy_2macros_8h.html#add682bc16cfd313b57c9dc8400158bc0" title="sets the mark">CROSS</a>(<a class="code" href="easy_2macros_8h.html#a6716296e0c0390116c559152e613eb17" title="results in the cell that encodes whether g incides with m">CELL</a>(g,c,m));
             }
         }
     }
@@ -1017,7 +1017,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="fcaV_8c_source.html#l00044">44</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00080">smyFormalContextV::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::attributes</a>, <a class="el" href="fca__structs_8h_source.html#l00177">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="fca__structs_8h_source.html#l00082">smyFormalContextV::incidence</a>, <a class="el" href="fca__structs_8h_source.html#l00081">smyFormalContextV::objectNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::objects</a>, <a class="el" href="fca__macros_8h_source.html#l00069">WIDTH</a>, and <a class="el" href="fca__structs_8h_source.html#l00079">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00058">smyFormalContextV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="vector_2macros_8h_source.html#l00046">WIDTH</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
 
 <p>Referenced by <a class="el" href="fcaV_8c_source.html#l00120">newFormalContextFromFileV()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -1025,7 +1025,7 @@ Here is the call graph for this function:</div>
 
     ctx-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> = attributes;
     ctx-&gt;<a class="code" href="structsmyFormalContextV.html#a6870c7afe6748004c41c81bd5e1c65d2">objects</a> = objects;
-    ctx-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> = <a class="code" href="fca__macros_8h.html#a9978c9be0f4161638ec49b4eda697d42" title="determine the length of an 64-bit integer vector that can hold x bits">WIDTH</a>(attributes);
+    ctx-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> = <a class="code" href="vector_2macros_8h.html#a9978c9be0f4161638ec49b4eda697d42" title="determine the length of an 64-bit integer vector that can hold x bits">WIDTH</a>(attributes);
 
 <span class="preprocessor">#pragma GCC diagnostic push</span>
 <span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
@@ -1091,11 +1091,11 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fca_8c_source.html#l00221">221</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
+<p>Definition at line <a class="el" href="fca_8c_source.html#l00220">220</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00059">smyFormalContext::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00198">gIm</a>, <a class="el" href="fca__structs_8h_source.html#l00060">smyFormalContext::objectNames</a>, <a class="el" href="fca__structs_8h_source.html#l00058">smyFormalContext::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00028">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="easy_2structs_8h_source.html#l00055">smyFormalContext::objectNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
@@ -1126,7 +1126,7 @@ Here is the call graph for this function:</div>
     {
         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; c-&gt;<a class="code" href="structsmyFormalContext.html#a4ae89e8f42fd7feab4db872cd8472b5e">attributes</a>; ++m)
         {
-            <span class="keywordflow">if</span> ( <a class="code" href="fca__macros_8h.html#ac504a61c4c85120715ba5d25a72148b1" title="test whether g and m incides">gIm</a>(g, c, m))
+            <span class="keywordflow">if</span> ( <a class="code" href="easy_2macros_8h.html#ac504a61c4c85120715ba5d25a72148b1" title="test whether g and m incides">gIm</a>(g, c, m))
                 fputs(<span class="stringliteral">&quot;X&quot;</span>, file);
             <span class="keywordflow">else</span>
                 fputs(<span class="stringliteral">&quot;.&quot;</span>, file);
@@ -1175,9 +1175,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="fcaV_8c_source.html#l00262">262</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fca__structs_8h_source.html#l00080">smyFormalContextV::attributeNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::attributes</a>, <a class="el" href="fca__macros_8h_source.html#l00137">INCIDESV</a>, <a class="el" href="fca__structs_8h_source.html#l00081">smyFormalContextV::objectNames</a>, <a class="el" href="fca__structs_8h_source.html#l00078">smyFormalContextV::objects</a>, <a class="el" href="fca__macros_8h_source.html#l00028">RETURN_IF_ZERO</a>, and <a class="el" href="fca__macros_8h_source.html#l00148">ROW</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
     <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
@@ -1208,7 +1208,7 @@ Here is the call graph for this function:</div>
     {
         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0; m &lt; c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>; ++m)
         {
-            <span class="keywordflow">if</span> ( <a class="code" href="fca__macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(<a class="code" href="fca__macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(g, c), m))
+            <span class="keywordflow">if</span> ( <a class="code" href="vector_2macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(<a class="code" href="vector_2macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(g, c), m))
                 fputs(<span class="stringliteral">&quot;X&quot;</span>, file);
             <span class="keywordflow">else</span>
                 fputs(<span class="stringliteral">&quot;.&quot;</span>, file);
@@ -1239,7 +1239,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 13:11:44 for C formal concept analysis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 21 2013 13:46:18 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

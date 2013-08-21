@@ -1,30 +1,27 @@
-\hypertarget{fcaV_8c}{\section{src/fca\-V.c \-File \-Reference}
-\label{fcaV_8c}\index{src/fca\-V.\-c@{src/fca\-V.\-c}}
+\hypertarget{fcaV_8c}{\section{src/vector/fca\-V.c \-File \-Reference}
+\label{fcaV_8c}\index{src/vector/fca\-V.\-c@{src/vector/fca\-V.\-c}}
 }
 
 
-this file contains general formal context related operations and routines with \-Incidence\-Vector implementation  
+\hyperlink{fcaV_8c}{fca\-V.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens  
 
 
 {\ttfamily \#include $<$stdio.\-h$>$}\*
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
 {\ttfamily \#include $<$string.\-h$>$}\*
-{\ttfamily \#include \char`\"{}fca.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-macros.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-structs.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-private.\-h\char`\"{}}\*
-\-Include dependency graph for fca\-V.\-c\-:\nopagebreak
+{\ttfamily \#include \char`\"{}../fca.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}../fca\-\_\-macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}structs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}private.\-h\char`\"{}}\*
+\-Include dependency graph for fca\-V.\-c\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{fcaV_8c__incl}
 \end{center}
 \end{figure}
-\subsection*{\-Defines}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{fcaV_8c_af186226aa073237d4be9861b07795dea}{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}
-\begin{DoxyCompactList}\small\item\em \hyperlink{fcaV_8c}{fca\-V.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,46 +39,32 @@ void \hyperlink{fcaV_8c_adcfe1beba7f75ea7a6e4230916b6a65a}{close\-Intent\-V} (\h
 \begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
 int \hyperlink{fcaV_8c_a55d40e1b5169e4466d00cb930c67e0ef}{intent\-Cmp\-V} (size\-\_\-t attributes, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} minus, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} plus)
 \begin{DoxyCompactList}\small\item\em compare two intent vectors \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$ \hyperlink{fcaV_8c_ab5c9a71c810ad1eeeb5f8ff78d77d899}{new\-Concept\-Chunk\-V} (size\-\_\-t attributes)
+\hyperlink{vector_2structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$ \hyperlink{fcaV_8c_ab5c9a71c810ad1eeeb5f8ff78d77d899}{new\-Concept\-Chunk\-V} (size\-\_\-t attributes)
 \begin{DoxyCompactList}\small\item\em create a new formal concept chunk \end{DoxyCompactList}\item 
-void \hyperlink{fcaV_8c_afd9305761d657be7c21fb81e82d72a42}{delete\-Concept\-Chunk\-V} (\hyperlink{fca__structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$$\ast$c)
+void \hyperlink{fcaV_8c_afd9305761d657be7c21fb81e82d72a42}{delete\-Concept\-Chunk\-V} (\hyperlink{vector_2structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$$\ast$c)
 \begin{DoxyCompactList}\small\item\em deletes a concept chunk object and sets its pointer to zero \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_abda612c4305c29a37b6501e18d94ebc5}{new\-Concept\-Bulk\-V} (size\-\_\-t attributes)
+\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_abda612c4305c29a37b6501e18d94ebc5}{new\-Concept\-Bulk\-V} (size\-\_\-t attributes)
 \begin{DoxyCompactList}\small\item\em creates a new formal concept intent bulk list \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d}{new\-Concept\-Bulk\-From\-Context\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
+\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d}{new\-Concept\-Bulk\-From\-Context\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
 \begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\item 
-void \hyperlink{fcaV_8c_ac1443261c57cc1d3db9361c188cd9c96}{write\-Concepts\-To\-File\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, \hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const char $\ast$filename)
+void \hyperlink{fcaV_8c_ac1443261c57cc1d3db9361c188cd9c96}{write\-Concepts\-To\-File\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, \hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em write a list of concept intents into a .cxt file \end{DoxyCompactList}\item 
-void \hyperlink{fcaV_8c_aa2cf22779998982c65e3762c7e2c2c84}{delete\-Concept\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} $\ast$root\-Node)
+void \hyperlink{fcaV_8c_aa2cf22779998982c65e3762c7e2c2c84}{delete\-Concept\-Bulk\-V} (\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} $\ast$root\-Node)
 \begin{DoxyCompactList}\small\item\em deletes the entire bulk list \end{DoxyCompactList}\item 
-size\-\_\-t \hyperlink{fcaV_8c_a7d53642e5953e35c86ef0425858d707e}{count\-Concepts\-In\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root)
+size\-\_\-t \hyperlink{fcaV_8c_a7d53642e5953e35c86ef0425858d707e}{count\-Concepts\-In\-Bulk\-V} (\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root)
 \begin{DoxyCompactList}\small\item\em use this for bulks that are filled in order \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_aa6cc62f8dfd08ef795a932cd06e69b91}{add\-Concept\-To\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} intent)
+\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaV_8c_aa6cc62f8dfd08ef795a932cd06e69b91}{add\-Concept\-To\-Bulk\-V} (\hyperlink{vector_2structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} intent)
 \begin{DoxyCompactList}\small\item\em copies the given intent to the bulk denoted by the root node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
-this file contains general formal context related operations and routines with \-Incidence\-Vector implementation 
-
-\-Definition in file \hyperlink{fcaV_8c_source}{fca\-V.\-c}.
-
-
-
-\subsection{\-Define \-Documentation}
-\hypertarget{fcaV_8c_af186226aa073237d4be9861b07795dea}{\index{fca\-V.\-c@{fca\-V.\-c}!\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}
-\index{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}!fcaV.c@{fca\-V.\-c}}
-\subsubsection[{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}}\label{fcaV_8c_af186226aa073237d4be9861b07795dea}
-
-
-\hyperlink{fcaV_8c}{fca\-V.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
-
-\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+\hyperlink{fcaV_8c}{fca\-V.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
 
 \-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
 
-\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. this file contains general formal context related operations and routines with \-Incidence\-Vector implementation 
 
-\-Definition at line 23 of file fca\-V.\-c.
+\-Definition in file \hyperlink{fcaV_8c_source}{fca\-V.\-c}.
 
 
 
@@ -175,7 +158,8 @@ the node where the intent was added to the last chunk
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -196,6 +180,8 @@ the node where the intent was added to the last chunk
 
 
 close an attribute set, i.\-e. 
+
+\hyperlink{vector_2private_8h}{vector/private.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens
 
 add further attributes
 
@@ -428,7 +414,8 @@ free up memory
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -494,7 +481,8 @@ deletes the entire bulk list
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -624,7 +612,7 @@ compare two intent vectors
 \begin{DoxyReturn}{\-Returns}
 -\/1 if minus is bigger, 1 if plus is bigger, 0 if minus and plus is the same 
 \end{DoxyReturn}
-in this case, \hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T(attributes)} == \-O\-F\-F\-S\-E\-T(attributes-\/1)
+in this case, \hyperlink{vector_2macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T(attributes)} == \-O\-F\-F\-S\-E\-T(attributes-\/1)
 
 we only check the lower bits 0 through (attributes-\/1)
 
@@ -796,7 +784,8 @@ free up memory
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -875,7 +864,7 @@ a new concept chunk object
 
 
 
-\-References smy\-Formal\-Concept\-Intent\-Chunk\-V\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::incidence, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, \-W\-I\-D\-T\-H, and smy\-Formal\-Concept\-Intent\-Chunk\-V\-::width.
+\-References smy\-Formal\-Concept\-Intent\-Chunk\-V\-::attributes, \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::incidence, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, \-W\-I\-D\-T\-H, and smy\-Formal\-Concept\-Intent\-Chunk\-V\-::width.
 
 
 
@@ -933,7 +922,7 @@ free memory and return
 
 
 
-\-References smy\-Formal\-Context\-V\-::attribute\-Names, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, \-C\-R\-O\-S\-S\-V, \-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, \-M\-I\-N, new\-Formal\-Context\-V(), smy\-Formal\-Context\-V\-::object\-Names, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, \-R\-O\-W, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::width.
+\-References smy\-Formal\-Context\-V\-::attribute\-Names, \-C\-R\-O\-S\-S\-V, \-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, \-M\-I\-N, new\-Formal\-Context\-V(), smy\-Formal\-Context\-V\-::object\-Names, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and \-R\-O\-W.
 
 
 
@@ -1105,7 +1094,7 @@ a new \-Formal\-Context object
 
 
 
-\-References smy\-Formal\-Context\-V\-::attribute\-Names, smy\-Formal\-Context\-V\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, smy\-Formal\-Context\-V\-::incidence, smy\-Formal\-Context\-V\-::object\-Names, smy\-Formal\-Context\-V\-::objects, \-W\-I\-D\-T\-H, and smy\-Formal\-Context\-V\-::width.
+\-References smy\-Formal\-Context\-V\-::attribute\-Names, smy\-Formal\-Context\-V\-::attributes, smy\-Formal\-Context\-V\-::incidence, smy\-Formal\-Context\-V\-::object\-Names, smy\-Formal\-Context\-V\-::objects, \-W\-I\-D\-T\-H, and smy\-Formal\-Context\-V\-::width.
 
 
 
@@ -1256,7 +1245,8 @@ write a list of concept intents into a .cxt file
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

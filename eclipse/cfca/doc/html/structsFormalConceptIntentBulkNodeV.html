@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>C formal concept analysis: sFormalConceptIntentBulkNodeV Struct Reference</title>
+<title>C formal concept analysis library: sFormalConceptIntentBulkNodeV Struct Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C formal concept analysis
+   <div id="projectname">C formal concept analysis library
    
    </div>
    
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>a node of a single linked list of concept chunks.  
  <a href="structsFormalConceptIntentBulkNodeV.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="vector_2structs_8h_source.html">structs.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for sFormalConceptIntentBulkNodeV:</div>
 <div class="dyncontent">
@@ -103,7 +103,7 @@ Data Fields</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">width of each attribute vector  <a href="#ab6c271021365b30649e33b474862f5d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsFormalConceptIntentBulkNodeV.html#a516403c9da58b5bedbf72f0a037d5c4f">size</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">number of chunks used  <a href="#a516403c9da58b5bedbf72f0a037d5c4f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="fca__structs_8h.html#abe3c190ec3375121cbfe3afff517b9b9">myFormalConceptIntentChunkV</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsFormalConceptIntentBulkNodeV.html#a0e2dad46489f048d39181e59eb1c6039">chunks</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#abe3c190ec3375121cbfe3afff517b9b9">myFormalConceptIntentChunkV</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsFormalConceptIntentBulkNodeV.html#a0e2dad46489f048d39181e59eb1c6039">chunks</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">array to at most BULKSIZEV chunks  <a href="#a0e2dad46489f048d39181e59eb1c6039"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct <br class="typebreak"/>
 <a class="el" href="structsFormalConceptIntentBulkNodeV.html">sFormalConceptIntentBulkNodeV</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8">next</a></td></tr>
@@ -113,7 +113,7 @@ Data Fields</h2></td></tr>
 <div class="textblock"><p>a node of a single linked list of concept chunks. </p>
 <p>bulk nodes are filled chunk wise, but a bulk node may have non-empty successor nodes even if it is not entire full. </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00172">172</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00093">93</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 </div><hr/><h2>Field Documentation</h2>
 <a class="anchor" id="a0bcc56cc39eb49a954c136099d6e46e7"></a><!-- doxytag: member="sFormalConceptIntentBulkNodeV::attributes" ref="a0bcc56cc39eb49a954c136099d6e46e7" args="" -->
 <div class="memitem">
@@ -128,9 +128,9 @@ Data Fields</h2></td></tr>
 
 <p>number of attributes of the concept intents </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00177">177</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00098">98</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00511">newConceptChunkV()</a>, <a class="el" href="fcaV_8c_source.html#l00120">newFormalContextFromFileV()</a>, <a class="el" href="fcaV_8c_source.html#l00044">newFormalContextV()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
 
 </div>
 </div>
@@ -139,7 +139,7 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="fca__structs_8h.html#abe3c190ec3375121cbfe3afff517b9b9">myFormalConceptIntentChunkV</a>** <a class="el" href="structsFormalConceptIntentBulkNodeV.html#a0e2dad46489f048d39181e59eb1c6039">sFormalConceptIntentBulkNodeV::chunks</a></td>
+          <td class="memname"><a class="el" href="vector_2structs_8h.html#abe3c190ec3375121cbfe3afff517b9b9">myFormalConceptIntentChunkV</a>** <a class="el" href="structsFormalConceptIntentBulkNodeV.html#a0e2dad46489f048d39181e59eb1c6039">sFormalConceptIntentBulkNodeV::chunks</a></td>
         </tr>
       </table>
 </div>
@@ -147,7 +147,7 @@ Data Fields</h2></td></tr>
 
 <p>array to at most BULKSIZEV chunks </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00189">189</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00110">110</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 
 <p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00802">countConceptsInBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00770">deleteConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
 
@@ -166,9 +166,9 @@ Data Fields</h2></td></tr>
 
 <p>pointer to the next BulkNode, or 0 </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00193">193</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00114">114</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00802">countConceptsInBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00770">deleteConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00204">nextClosureVX()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00802">countConceptsInBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00770">deleteConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00203">nextClosureVX()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
 
 </div>
 </div>
@@ -185,7 +185,7 @@ Data Fields</h2></td></tr>
 
 <p>number of chunks used </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00185">185</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00106">106</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 
 <p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00802">countConceptsInBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00770">deleteConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
 
@@ -204,14 +204,14 @@ Data Fields</h2></td></tr>
 
 <p>width of each attribute vector </p>
 
-<p>Definition at line <a class="el" href="fca__structs_8h_source.html#l00181">181</a> of file <a class="el" href="fca__structs_8h_source.html">fca_structs.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_2structs_8h_source.html#l00102">102</a> of file <a class="el" href="vector_2structs_8h_source.html">structs.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, and <a class="el" href="fcaV_8c_source.html#l00120">newFormalContextFromFileV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, and <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/<a class="el" href="fca__structs_8h_source.html">fca_structs.h</a></li>
+<li>src/vector/<a class="el" href="vector_2structs_8h_source.html">structs.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -231,7 +231,7 @@ Data Fields</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 13:11:44 for C formal concept analysis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 21 2013 13:46:18 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

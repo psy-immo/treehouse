@@ -1,0 +1,118 @@
+\hypertarget{easy_2structs_8h}{\section{src/easy/structs.h \-File \-Reference}
+\label{easy_2structs_8h}\index{src/easy/structs.\-h@{src/easy/structs.\-h}}
+}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{easy_2structs_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsmyFormalContext}{smy\-Formal\-Context}
+\begin{DoxyCompactList}\small\item\em each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix \end{DoxyCompactList}\item 
+struct \hyperlink{structsmyFormalConceptIntentChunk}{smy\-Formal\-Concept\-Intent\-Chunk}
+\begin{DoxyCompactList}\small\item\em \-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E formal concept intents. \end{DoxyCompactList}\item 
+struct \hyperlink{structsFormalConceptIntentBulkNode}{s\-Formal\-Concept\-Intent\-Bulk\-Node}
+\begin{DoxyCompactList}\small\item\em a node of a single linked list of concept chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{easy_2structs_8h_a239bebe1697b474e6f84945e9fb9faee}{\-C\-H\-U\-N\-K\-S\-I\-Z\-E}~(64)
+\begin{DoxyCompactList}\small\item\em \hyperlink{easy_2structs_8h}{easy/structs.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2structs_8h_a9bd2a644fe274f91e81aae543b9901c6}{\-B\-U\-L\-K\-S\-I\-Z\-E}~(1024)
+\begin{DoxyCompactList}\small\item\em size of chunks per bulk \end{DoxyCompactList}\item 
+\#define \hyperlink{easy_2structs_8h_a2129a125f29c4f6de8a39cc771176482}{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}~(1024)
+\begin{DoxyCompactList}\small\item\em maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsmyFormalContext}{smy\-Formal\-Context} \hyperlink{easy_2structs_8h_a35fe69cf5a1b22acf807e7aa13a6d270}{my\-Formal\-Context}
+\begin{DoxyCompactList}\small\item\em each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix \end{DoxyCompactList}\item 
+typedef struct \*
+\hyperlink{structsmyFormalConceptIntentChunk}{smy\-Formal\-Concept\-Intent\-Chunk} \hyperlink{easy_2structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk}
+\begin{DoxyCompactList}\small\item\em \-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E formal concept intents. \end{DoxyCompactList}\item 
+typedef struct \*
+\hyperlink{structsFormalConceptIntentBulkNode}{s\-Formal\-Concept\-Intent\-Bulk\-Node} $\ast$ \hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List}
+\begin{DoxyCompactList}\small\item\em a node of a single linked list of concept chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{easy_2structs_8h_a9bd2a644fe274f91e81aae543b9901c6}{\index{easy/structs.\-h@{easy/structs.\-h}!\-B\-U\-L\-K\-S\-I\-Z\-E@{\-B\-U\-L\-K\-S\-I\-Z\-E}}
+\index{\-B\-U\-L\-K\-S\-I\-Z\-E@{\-B\-U\-L\-K\-S\-I\-Z\-E}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{\-B\-U\-L\-K\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-L\-K\-S\-I\-Z\-E}~(1024)}}\label{easy_2structs_8h_a9bd2a644fe274f91e81aae543b9901c6}
+
+
+size of chunks per bulk 
+
+
+
+\-Definition at line 35 of file structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), and new\-Concept\-Bulk().
+
+\hypertarget{easy_2structs_8h_a239bebe1697b474e6f84945e9fb9faee}{\index{easy/structs.\-h@{easy/structs.\-h}!\-C\-H\-U\-N\-K\-S\-I\-Z\-E@{\-C\-H\-U\-N\-K\-S\-I\-Z\-E}}
+\index{\-C\-H\-U\-N\-K\-S\-I\-Z\-E@{\-C\-H\-U\-N\-K\-S\-I\-Z\-E}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{\-C\-H\-U\-N\-K\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-U\-N\-K\-S\-I\-Z\-E}~(64)}}\label{easy_2structs_8h_a239bebe1697b474e6f84945e9fb9faee}
+
+
+\hyperlink{easy_2structs_8h}{easy/structs.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
+size of a chunk of concepts 
+
+\-Definition at line 27 of file structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), count\-Concepts\-In\-Bulk(), and new\-Concept\-Chunk().
+
+\hypertarget{easy_2structs_8h_a2129a125f29c4f6de8a39cc771176482}{\index{easy/structs.\-h@{easy/structs.\-h}!\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}}
+\index{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{\-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-P\-U\-T\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}~(1024)}}\label{easy_2structs_8h_a2129a125f29c4f6de8a39cc771176482}
+
+
+maximal (initial) size of a line (getline will resize buffers if necessary) (including delimiter) 
+
+
+
+\-Definition at line 42 of file structs.\-h.
+
+
+
+\-Referenced by new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-File\-V().
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\index{easy/structs.\-h@{easy/structs.\-h}!\-Formal\-Concept\-Intent\-Bulk\-List@{\-Formal\-Concept\-Intent\-Bulk\-List}}
+\index{\-Formal\-Concept\-Intent\-Bulk\-List@{\-Formal\-Concept\-Intent\-Bulk\-List}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{\-Formal\-Concept\-Intent\-Bulk\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node}$\ast$  {\bf \-Formal\-Concept\-Intent\-Bulk\-List}}}\label{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}
+
+
+a node of a single linked list of concept chunks. 
+
+bulk nodes are filled chunk wise, but a bulk node may have non-\/empty successor nodes even if it is not entire full. \hypertarget{easy_2structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{\index{easy/structs.\-h@{easy/structs.\-h}!my\-Formal\-Concept\-Intent\-Chunk@{my\-Formal\-Concept\-Intent\-Chunk}}
+\index{my\-Formal\-Concept\-Intent\-Chunk@{my\-Formal\-Concept\-Intent\-Chunk}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{my\-Formal\-Concept\-Intent\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf smy\-Formal\-Concept\-Intent\-Chunk}  {\bf my\-Formal\-Concept\-Intent\-Chunk}}}\label{easy_2structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}
+
+
+\-A chunk of at most \-C\-H\-U\-N\-K\-S\-I\-Z\-E formal concept intents. 
+
+\hypertarget{easy_2structs_8h_a35fe69cf5a1b22acf807e7aa13a6d270}{\index{easy/structs.\-h@{easy/structs.\-h}!my\-Formal\-Context@{my\-Formal\-Context}}
+\index{my\-Formal\-Context@{my\-Formal\-Context}!easy/structs.h@{easy/structs.\-h}}
+\subsubsection[{my\-Formal\-Context}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf smy\-Formal\-Context}  {\bf my\-Formal\-Context}}}\label{easy_2structs_8h_a35fe69cf5a1b22acf807e7aa13a6d270}
+
+
+each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix 
+

@@ -1,30 +1,27 @@
-\hypertarget{fca_8c}{\section{src/fca.c \-File \-Reference}
-\label{fca_8c}\index{src/fca.\-c@{src/fca.\-c}}
+\hypertarget{fca_8c}{\section{src/easy/fca.c \-File \-Reference}
+\label{fca_8c}\index{src/easy/fca.\-c@{src/easy/fca.\-c}}
 }
 
 
-this file contains general formal context related operations and routines  
+\hyperlink{fca_8c}{fca.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens  
 
 
 {\ttfamily \#include $<$stdio.\-h$>$}\*
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
 {\ttfamily \#include $<$string.\-h$>$}\*
-{\ttfamily \#include \char`\"{}fca.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-macros.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-structs.\-h\char`\"{}}\*
-{\ttfamily \#include \char`\"{}fca\-\_\-private.\-h\char`\"{}}\*
-\-Include dependency graph for fca.\-c\-:\nopagebreak
+{\ttfamily \#include \char`\"{}../fca.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}../fca\-\_\-macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}structs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}private.\-h\char`\"{}}\*
+\-Include dependency graph for fca.\-c\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{fca_8c__incl}
 \end{center}
 \end{figure}
-\subsection*{\-Defines}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{fca_8c_a298a2f48c7f87d682cdd10a65a6d1d8b}{\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S}
-\begin{DoxyCompactList}\small\item\em \hyperlink{fca_8c}{fca.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,17 +33,17 @@ void \hyperlink{fca_8c_a064800878bf96c6398d2f716609df081}{write\-Formal\-Context
 \begin{DoxyCompactList}\small\item\em save the context ctx at the given file location \end{DoxyCompactList}\item 
 void \hyperlink{fca_8c_a9835be78a56a9eaec5346a86562f10c3}{delete\-Formal\-Context} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} $\ast$ctx)
 \begin{DoxyCompactList}\small\item\em deletes the formal context $\ast$ctx, and sets the pointer to zero \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$ \hyperlink{fca_8c_a10016c73379236582a412ab83e159618}{new\-Concept\-Chunk} (int attributes)
+\hyperlink{easy_2structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$ \hyperlink{fca_8c_a10016c73379236582a412ab83e159618}{new\-Concept\-Chunk} (int attributes)
 \begin{DoxyCompactList}\small\item\em create a new formal concept chunk \end{DoxyCompactList}\item 
-void \hyperlink{fca_8c_ad13aa7f16480d11c9c89310cca51670b}{delete\-Concept\-Chunk} (\hyperlink{fca__structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$$\ast$c)
+void \hyperlink{fca_8c_ad13aa7f16480d11c9c89310cca51670b}{delete\-Concept\-Chunk} (\hyperlink{easy_2structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$$\ast$c)
 \begin{DoxyCompactList}\small\item\em deletes a concept chunk object and sets its pointer to zero \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_a709ef22f213a99f6a46ca8aa78328ece}{new\-Concept\-Bulk} (int attributes)
+\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_a709ef22f213a99f6a46ca8aa78328ece}{new\-Concept\-Bulk} (int attributes)
 \begin{DoxyCompactList}\small\item\em creates a new formal concept intent bulk list \end{DoxyCompactList}\item 
-void \hyperlink{fca_8c_acd989c02b03c2cc8bf2d477d2f5636e5}{delete\-Concept\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} $\ast$root\-Node)
+void \hyperlink{fca_8c_acd989c02b03c2cc8bf2d477d2f5636e5}{delete\-Concept\-Bulk} (\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} $\ast$root\-Node)
 \begin{DoxyCompactList}\small\item\em deletes the entire bulk list \end{DoxyCompactList}\item 
-int \hyperlink{fca_8c_a965bdc1065d581495114a764020c3c6b}{count\-Concepts\-In\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root)
+int \hyperlink{fca_8c_a965bdc1065d581495114a764020c3c6b}{count\-Concepts\-In\-Bulk} (\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root)
 \begin{DoxyCompactList}\small\item\em use this for bulks that are filled in order \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_ac9e73d5390011291b92740d99f186ab4}{add\-Concept\-To\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$intent)
+\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_ac9e73d5390011291b92740d99f186ab4}{add\-Concept\-To\-Bulk} (\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$intent)
 \begin{DoxyCompactList}\small\item\em copies the given intent to the bulk denoted by the root node. \end{DoxyCompactList}\item 
 void \hyperlink{fca_8c_a4596b3e7b389078cc2dab62448e0c58c}{close\-Intent2} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$input, \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$output\-Intent, \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$output\-Extent)
 \begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
@@ -54,9 +51,9 @@ void \hyperlink{fca_8c_ae932250c17890745228ddb08bb856e40}{close\-Intent} (\hyper
 \begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
 int \hyperlink{fca_8c_a3eff21bebd55849e1049f6d8b6c50a8b}{intent\-Cmp} (int attributes, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$minus, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$plus)
 \begin{DoxyCompactList}\small\item\em compare two intent vectors \end{DoxyCompactList}\item 
-\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_a629cb24ff7d30d56d803e1848ff0019d}{new\-Concept\-Bulk\-From\-Context} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx)
+\hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca_8c_a629cb24ff7d30d56d803e1848ff0019d}{new\-Concept\-Bulk\-From\-Context} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx)
 \begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\item 
-void \hyperlink{fca_8c_ac1a973138b558d99763bfa84d022d42d}{write\-Concepts\-To\-File} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, \hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const char $\ast$filename)
+void \hyperlink{fca_8c_ac1a973138b558d99763bfa84d022d42d}{write\-Concepts\-To\-File} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, \hyperlink{easy_2structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em write a list of concept intents into a .cxt file \end{DoxyCompactList}\item 
 \hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \hyperlink{fca_8c_ae3105d9c1d91e1816c8b7a83d3414790}{new\-Formal\-Context\-From\-Random} (int objects, int attributes, float p)
 \begin{DoxyCompactList}\small\item\em create a new formal context with random incidence relation \end{DoxyCompactList}\item 
@@ -67,27 +64,13 @@ int \hyperlink{fca_8c_aaf6da61c84352d127039536dd6e790b6}{count\-Context\-Concept
 
 
 \subsection{\-Detailed \-Description}
-this file contains general formal context related operations and routines 
-
-\-Definition in file \hyperlink{fca_8c_source}{fca.\-c}.
-
-
-
-\subsection{\-Define \-Documentation}
-\hypertarget{fca_8c_a298a2f48c7f87d682cdd10a65a6d1d8b}{\index{fca.\-c@{fca.\-c}!\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S@{\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S}}
-\index{\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S@{\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S}!fca.c@{fca.\-c}}
-\subsubsection[{\-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-O\-\_\-\-V\-E\-C\-T\-O\-R\-S}}}\label{fca_8c_a298a2f48c7f87d682cdd10a65a6d1d8b}
-
-
-\hyperlink{fca_8c}{fca.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
-
-\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+\hyperlink{fca_8c}{fca.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
 
 \-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
 
-\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. this file contains general formal context related operations and routines 
 
-\-Definition at line 23 of file fca.\-c.
+\-Definition in file \hyperlink{fca_8c_source}{fca.\-c}.
 
 
 
@@ -116,7 +99,7 @@ the node where the intent was added to the last chunk
 \end{DoxyReturn}
 
 
-\-Definition at line 428 of file fca.\-c.
+\-Definition at line 427 of file fca.\-c.
 
 
 
@@ -296,7 +279,7 @@ add further attributes, 1.\-92 times slower than close\-Intent
 \hline
 {\em output\-Intent} & the closure intent'' wrt. ctx \\
 \hline
-{\em output\-Objects} & the corresponding objects, i.\-e. intent' wrt. ctx \\
+{\em output\-Extent} & the corresponding objects, i.\-e. intent' wrt. ctx \\
 \hline
 \end{DoxyParams}
 
@@ -372,7 +355,7 @@ number of concepts in bulk
 \end{DoxyReturn}
 
 
-\-Definition at line 393 of file fca.\-c.
+\-Definition at line 392 of file fca.\-c.
 
 
 
@@ -687,7 +670,7 @@ deletes the entire bulk list
 \end{DoxyParams}
 
 
-\-Definition at line 361 of file fca.\-c.
+\-Definition at line 360 of file fca.\-c.
 
 
 
@@ -753,7 +736,7 @@ deletes a concept chunk object and sets its pointer to zero
 \end{DoxyParams}
 
 
-\-Definition at line 326 of file fca.\-c.
+\-Definition at line 325 of file fca.\-c.
 
 
 
@@ -793,7 +776,7 @@ deletes the formal context $\ast$ctx, and sets the pointer to zero
 \end{DoxyParams}
 
 
-\-Definition at line 269 of file fca.\-c.
+\-Definition at line 268 of file fca.\-c.
 
 
 
@@ -903,7 +886,7 @@ new formal concept intent bulk list's first node
 \end{DoxyReturn}
 
 
-\-Definition at line 344 of file fca.\-c.
+\-Definition at line 343 of file fca.\-c.
 
 
 
@@ -1077,6 +1060,8 @@ concept intents
 
 create a new formal concept chunk 
 
+\hyperlink{easy_2private_8h}{easy/private.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens
+
 
 \begin{DoxyParams}{\-Parameters}
 {\em attributes} & number of attributes of the hosting formal context \\
@@ -1087,7 +1072,7 @@ a new concept chunk object
 \end{DoxyReturn}
 
 
-\-Definition at line 303 of file fca.\-c.
+\-Definition at line 302 of file fca.\-c.
 
 
 
@@ -1139,7 +1124,7 @@ a new \-Formal\-Context object
 \end{DoxyReturn}
 
 
-\-Definition at line 43 of file fca.\-c.
+\-Definition at line 42 of file fca.\-c.
 
 
 
@@ -1206,7 +1191,7 @@ the formal context that has been read from the given file
 \end{DoxyReturn}
 
 
-\-Definition at line 85 of file fca.\-c.
+\-Definition at line 84 of file fca.\-c.
 
 
 
@@ -1566,7 +1551,7 @@ save the context ctx at the given file location
 \end{DoxyParams}
 
 
-\-Definition at line 221 of file fca.\-c.
+\-Definition at line 220 of file fca.\-c.
 
 
 

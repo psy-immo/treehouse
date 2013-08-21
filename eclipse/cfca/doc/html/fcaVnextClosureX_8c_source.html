@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>C formal concept analysis: src/fcaVnextClosureX.c Source File</title>
+<title>C formal concept analysis library: src/vector/fcaVnextClosureX.c Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C formal concept analysis
+   <div id="projectname">C formal concept analysis library
    
    </div>
    
@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">src/fcaVnextClosureX.c</div>  </div>
+<div class="title">src/vector/fcaVnextClosureX.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="fcaVnextClosureX_8c.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
@@ -85,252 +85,251 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;pthread.h&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="fcaVnextClosureX_8c.html#af186226aa073237d4be9861b07795dea">00025</a> <span class="preprocessor">#define VECTORS_ONLY</span>
-<a name="l00026"></a>00026 <span class="preprocessor"></span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d...">fca.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="fca__macros_8h.html">fca_macros.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="fca__structs_8h.html" title="fca_structs.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">fca_structs.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="fca__private_8h.html" title="fca_private.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">fca_private.h</a>&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="fcaVnextClosureX_8c.html#a68c72a16f9628758cc5a8d2210ccd674">00032</a> <span class="preprocessor">#define intentCmp !!ERROR!!</span>
-<a name="l00033"></a>00033 <span class="preprocessor"></span>
-<a name="l00052"></a><a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279">00052</a> <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx,
-<a name="l00053"></a>00053         <span class="keyword">const</span> <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> start, <span class="keyword">const</span> <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> stop)
-<a name="l00054"></a>00054 {
-<a name="l00055"></a>00055     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
-<a name="l00058"></a>00058     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> M;
-<a name="l00061"></a>00061     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> Y;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063     Y = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, <span class="keyword">sizeof</span>(uint64_t));
-<a name="l00064"></a>00064     M = malloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
-<a name="l00067"></a>00067     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069     root = <a class="code" href="fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071     <span class="keywordflow">if</span> (start)
-<a name="l00072"></a>00072     {
-<a name="l00073"></a>00073         memcpy(M, start, c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075         last = root;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077     }
-<a name="l00078"></a>00078     <span class="keywordflow">else</span>
-<a name="l00079"></a>00079     {
-<a name="l00080"></a>00080 
-<a name="l00084"></a>00084         <a class="code" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
-<a name="l00085"></a>00085 
-<a name="l00090"></a>00090         last = <a class="code" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(root, M);
-<a name="l00091"></a>00091     }
-<a name="l00092"></a>00092 
-<a name="l00096"></a>00096     nextClosure:
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>; i &gt; 0;)
-<a name="l00099"></a>00099     {
-<a name="l00100"></a>00100         --i;
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102         <span class="keywordflow">if</span> (!<a class="code" href="fca__macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
-<a name="l00103"></a>00103         {
-<a name="l00104"></a>00104             <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
-<a name="l00105"></a>00105             <a class="code" href="fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107             <span class="keywordtype">int</span> good;
-<a name="l00108"></a>00108             good = 1;
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110             <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i); ++j)
-<a name="l00111"></a>00111             {
-<a name="l00112"></a>00112                 <span class="keywordflow">if</span> (Y[j] &amp; (~(M[j])))
-<a name="l00113"></a>00113                 {
-<a name="l00114"></a>00114                     good = 0;
-<a name="l00115"></a>00115                     <span class="keywordflow">break</span>;
-<a name="l00116"></a>00116                 }
-<a name="l00117"></a>00117             }
-<a name="l00118"></a>00118             <span class="keywordflow">if</span> (good)
-<a name="l00119"></a>00119             {
-<a name="l00120"></a>00120                 <span class="keywordflow">if</span> (Y[<a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)] &amp; (~M[<a class="code" href="fca__macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)]) &amp; <a class="code" href="fca__macros_8h.html#af742dc579c934e600fb6a954a4cde678" title="gives an 64-bit integer that has set the bits 0 through x.">CRIMPVALUE</a>(i))
-<a name="l00121"></a>00121                 {
-<a name="l00122"></a>00122                     good = 0;
-<a name="l00123"></a>00123                 }
-<a name="l00124"></a>00124             }
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126             <span class="keywordflow">if</span> (good)
-<a name="l00127"></a>00127             {
-<a name="l00132"></a>00132                 <span class="keywordflow">if</span> (stop)
-<a name="l00133"></a>00133                 {
-<a name="l00134"></a>00134                     <span class="keywordflow">if</span> (<a class="code" href="fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors">intentCmpV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, Y, stop) &lt; 0)
-<a name="l00135"></a>00135                     {
-<a name="l00139"></a>00139                         <span class="keywordflow">goto</span> gracefulReturn;
-<a name="l00140"></a>00140                     }
-<a name="l00141"></a>00141                 }
-<a name="l00142"></a>00142 
-<a name="l00146"></a>00146                 last = <a class="code" href="fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(last, Y);
-<a name="l00147"></a>00147 
-<a name="l00152"></a>00152                 <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
-<a name="l00153"></a>00153                 DELTA = M;
-<a name="l00154"></a>00154                 M = Y;
-<a name="l00155"></a>00155                 Y = DELTA;
-<a name="l00159"></a>00159                 <span class="keywordflow">goto</span> nextClosure;
-<a name="l00160"></a>00160             }
-<a name="l00161"></a>00161         }
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163         <a class="code" href="fca__macros_8h.html#a2e3ae6676ab924d72728a1b5d61ea297" title="clears the x-th attribute of an attribute vector">CLEARV</a>(M, i);
-<a name="l00164"></a>00164     }
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166     gracefulReturn:
-<a name="l00171"></a>00171     free(M);
-<a name="l00172"></a>00172     free(Y);
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174     <span class="keywordflow">return</span> root;
-<a name="l00175"></a>00175 }
-<a name="l00176"></a>00176 
-<a name="l00177"></a><a class="code" href="structsnextClosureVX1Params.html">00177</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a>
-<a name="l00178"></a>00178 {
-<a name="l00179"></a><a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">00179</a>     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
-<a name="l00180"></a><a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">00180</a>     <a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>;
-<a name="l00181"></a><a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">00181</a>     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> <a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>;
-<a name="l00182"></a><a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">00182</a>     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> <a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>;
-<a name="l00183"></a>00183 }*<a class="code" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a>;
-<a name="l00184"></a>00184 
-<a name="l00185"></a><a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">00185</a> <span class="keywordtype">void</span>* <a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">callNextClosureVX1</a>(<span class="keywordtype">void</span> * params)
-<a name="l00186"></a>00186 {
-<a name="l00187"></a>00187     <a class="code" href="structsnextClosureVX1Params.html">nextClosureVX1Params</a> p;
-<a name="l00188"></a>00188     p = (<a class="code" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a>) params;
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190     p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a> = <a class="code" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(p-&gt;<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>);
-<a name="l00191"></a>00191 
-<a name="l00192"></a>00192     <span class="keywordflow">return</span> 0;
-<a name="l00193"></a>00193 }
-<a name="l00194"></a>00194 
-<a name="l00204"></a><a class="code" href="fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30">00204</a> <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="fca__private_8h.html#a858241e44987c35c2ae688f2797f2a30" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX</a>(<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)
-<a name="l00205"></a>00205 {
-<a name="l00206"></a>00206     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
-<a name="l00209"></a>00209     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211     <span class="keywordtype">size_t</span> N;
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213     N = 1;
-<a name="l00214"></a>00214 
-<a name="l00215"></a>00215     <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 3)
-<a name="l00216"></a>00216         N = 8;
-<a name="l00217"></a>00217     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 2)
-<a name="l00218"></a>00218         N = 4;
-<a name="l00219"></a>00219     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 1)
-<a name="l00220"></a>00220         N = 2;
-<a name="l00221"></a>00221 
-<a name="l00222"></a>00222     <span class="keywordflow">if</span> (N &lt; 2)
-<a name="l00223"></a>00223         <span class="keywordflow">return</span> <a class="code" href="fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(ctx, 0, 0);
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> bounds;
-<a name="l00226"></a>00226     bounds = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (N - 1), <span class="keyword">sizeof</span>(uint64_t));
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228     <span class="keywordflow">if</span> (N == 2)
-<a name="l00229"></a>00229     {
-<a name="l00230"></a>00230         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 0);
-<a name="l00231"></a>00231     }
-<a name="l00232"></a>00232     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 4)
-<a name="l00233"></a>00233     {
-<a name="l00234"></a>00234         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 1); <span class="comment">//01</span>
-<a name="l00235"></a>00235 
-<a name="l00236"></a>00236         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 0); <span class="comment">//10</span>
-<a name="l00237"></a>00237 
-<a name="l00238"></a>00238         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1); <span class="comment">//11</span>
-<a name="l00239"></a>00239         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 0);
-<a name="l00240"></a>00240     }
-<a name="l00241"></a>00241     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 8)
-<a name="l00242"></a>00242     {
-<a name="l00243"></a>00243         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 2); <span class="comment">// 001</span>
-<a name="l00244"></a>00244 
-<a name="l00245"></a>00245         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 1); <span class="comment">//010</span>
-<a name="l00246"></a>00246 
-<a name="l00247"></a>00247         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 2); <span class="comment">//011</span>
-<a name="l00248"></a>00248         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1);
-<a name="l00249"></a>00249 
-<a name="l00250"></a>00250         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 3, 0); <span class="comment">//100</span>
-<a name="l00251"></a>00251 
-<a name="l00252"></a>00252         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 0); <span class="comment">//101</span>
-<a name="l00253"></a>00253         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 2);
-<a name="l00254"></a>00254 
-<a name="l00255"></a>00255         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 1); <span class="comment">//110</span>
-<a name="l00256"></a>00256         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 0);
-<a name="l00257"></a>00257 
-<a name="l00258"></a>00258         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 0); <span class="comment">//111</span>
-<a name="l00259"></a>00259         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 1);
-<a name="l00260"></a>00260         <a class="code" href="fca__macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 2);
-<a name="l00261"></a>00261     }
-<a name="l00262"></a>00262 
-<a name="l00263"></a>00263 <span class="comment">//  for (int i = 0; i &lt; N - 1; ++i)</span>
-<a name="l00264"></a>00264 <span class="comment">//  {</span>
-<a name="l00265"></a>00265 <span class="comment">//      printf(&quot;BOUND %16llx\n&quot;, *(bounds + i * c-&gt;width)&amp;CRIMPVALUE(c-&gt;attributes-1));</span>
-<a name="l00266"></a>00266 <span class="comment">//      if (i &gt; 0)</span>
-<a name="l00267"></a>00267 <span class="comment">//          printf(&quot;CMP %d\n&quot;,</span>
-<a name="l00268"></a>00268 <span class="comment">//                  intentCmpV(c-&gt;attributes, bounds + (i - 1) * c-&gt;width,</span>
-<a name="l00269"></a>00269 <span class="comment">//                          bounds + i * c-&gt;width));</span>
-<a name="l00270"></a>00270 <span class="comment">//  }</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;../fca.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;../fca_macros.h&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy...">macros.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="vector_2structs_8h.html">structs.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="vector_2private_8h.html">private.h</a>&quot;</span>
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="fcaVnextClosureX_8c.html#a68c72a16f9628758cc5a8d2210ccd674">00031</a> <span class="preprocessor">#define intentCmp !!ERROR!!</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span>
+<a name="l00051"></a><a class="code" href="vector_2private_8h.html#adcbb382ceada973214f6bbeca05cb279">00051</a> <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx,
+<a name="l00052"></a>00052         <span class="keyword">const</span> <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> start, <span class="keyword">const</span> <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> stop)
+<a name="l00053"></a>00053 {
+<a name="l00054"></a>00054     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
+<a name="l00057"></a>00057     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> M;
+<a name="l00060"></a>00060     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> Y;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     Y = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, <span class="keyword">sizeof</span>(uint64_t));
+<a name="l00063"></a>00063     M = malloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
+<a name="l00066"></a>00066     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068     root = <a class="code" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070     <span class="keywordflow">if</span> (start)
+<a name="l00071"></a>00071     {
+<a name="l00072"></a>00072         memcpy(M, start, c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074         last = root;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076     }
+<a name="l00077"></a>00077     <span class="keywordflow">else</span>
+<a name="l00078"></a>00078     {
+<a name="l00079"></a>00079 
+<a name="l00083"></a>00083         <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
+<a name="l00084"></a>00084 
+<a name="l00089"></a>00089         last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(root, M);
+<a name="l00090"></a>00090     }
+<a name="l00091"></a>00091 
+<a name="l00095"></a>00095     nextClosure:
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>; i &gt; 0;)
+<a name="l00098"></a>00098     {
+<a name="l00099"></a>00099         --i;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101         <span class="keywordflow">if</span> (!<a class="code" href="vector_2macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
+<a name="l00102"></a>00102         {
+<a name="l00103"></a>00103             <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
+<a name="l00104"></a>00104             <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106             <span class="keywordtype">int</span> good;
+<a name="l00107"></a>00107             good = 1;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109             <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i); ++j)
+<a name="l00110"></a>00110             {
+<a name="l00111"></a>00111                 <span class="keywordflow">if</span> (Y[j] &amp; (~(M[j])))
+<a name="l00112"></a>00112                 {
+<a name="l00113"></a>00113                     good = 0;
+<a name="l00114"></a>00114                     <span class="keywordflow">break</span>;
+<a name="l00115"></a>00115                 }
+<a name="l00116"></a>00116             }
+<a name="l00117"></a>00117             <span class="keywordflow">if</span> (good)
+<a name="l00118"></a>00118             {
+<a name="l00119"></a>00119                 <span class="keywordflow">if</span> (Y[<a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)] &amp; (~M[<a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(i)]) &amp; <a class="code" href="vector_2macros_8h.html#af742dc579c934e600fb6a954a4cde678" title="gives an 64-bit integer that has set the bits 0 through x.">CRIMPVALUE</a>(i))
+<a name="l00120"></a>00120                 {
+<a name="l00121"></a>00121                     good = 0;
+<a name="l00122"></a>00122                 }
+<a name="l00123"></a>00123             }
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125             <span class="keywordflow">if</span> (good)
+<a name="l00126"></a>00126             {
+<a name="l00131"></a>00131                 <span class="keywordflow">if</span> (stop)
+<a name="l00132"></a>00132                 {
+<a name="l00133"></a>00133                     <span class="keywordflow">if</span> (<a class="code" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors">intentCmpV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, Y, stop) &lt; 0)
+<a name="l00134"></a>00134                     {
+<a name="l00138"></a>00138                         <span class="keywordflow">goto</span> gracefulReturn;
+<a name="l00139"></a>00139                     }
+<a name="l00140"></a>00140                 }
+<a name="l00141"></a>00141 
+<a name="l00145"></a>00145                 last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(last, Y);
+<a name="l00146"></a>00146 
+<a name="l00151"></a>00151                 <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
+<a name="l00152"></a>00152                 DELTA = M;
+<a name="l00153"></a>00153                 M = Y;
+<a name="l00154"></a>00154                 Y = DELTA;
+<a name="l00158"></a>00158                 <span class="keywordflow">goto</span> nextClosure;
+<a name="l00159"></a>00159             }
+<a name="l00160"></a>00160         }
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162         <a class="code" href="vector_2macros_8h.html#a2e3ae6676ab924d72728a1b5d61ea297" title="clears the x-th attribute of an attribute vector">CLEARV</a>(M, i);
+<a name="l00163"></a>00163     }
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165     gracefulReturn:
+<a name="l00170"></a>00170     free(M);
+<a name="l00171"></a>00171     free(Y);
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173     <span class="keywordflow">return</span> root;
+<a name="l00174"></a>00174 }
+<a name="l00175"></a>00175 
+<a name="l00176"></a><a class="code" href="structsnextClosureVX1Params.html">00176</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a>
+<a name="l00177"></a>00177 {
+<a name="l00178"></a><a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">00178</a>     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
+<a name="l00179"></a><a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">00179</a>     <a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>;
+<a name="l00180"></a><a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">00180</a>     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> <a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>;
+<a name="l00181"></a><a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">00181</a>     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> <a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>;
+<a name="l00182"></a>00182 }*<a class="code" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a>;
+<a name="l00183"></a>00183 
+<a name="l00184"></a><a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">00184</a> <span class="keywordtype">void</span>* <a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">callNextClosureVX1</a>(<span class="keywordtype">void</span> * params)
+<a name="l00185"></a>00185 {
+<a name="l00186"></a>00186     <a class="code" href="structsnextClosureVX1Params.html">nextClosureVX1Params</a> p;
+<a name="l00187"></a>00187     p = (<a class="code" href="fcaVnextClosureX_8c.html#a642c21f1fdfe45b4801b52956461901d">nextClosureVX1Params</a>) params;
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189     p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a> = <a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(p-&gt;<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a>, p-&gt;<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a>);
+<a name="l00190"></a>00190 
+<a name="l00191"></a>00191     <span class="keywordflow">return</span> 0;
+<a name="l00192"></a>00192 }
+<a name="l00193"></a>00193 
+<a name="l00203"></a><a class="code" href="vector_2private_8h.html#a858241e44987c35c2ae688f2797f2a30">00203</a> <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> <a class="code" href="fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX</a>(<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)
+<a name="l00204"></a>00204 {
+<a name="l00205"></a>00205     <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
+<a name="l00208"></a>00208     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210     <span class="keywordtype">size_t</span> N;
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212     N = 1;
+<a name="l00213"></a>00213 
+<a name="l00214"></a>00214     <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 3)
+<a name="l00215"></a>00215         N = 8;
+<a name="l00216"></a>00216     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 2)
+<a name="l00217"></a>00217         N = 4;
+<a name="l00218"></a>00218     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a> &gt;= 1)
+<a name="l00219"></a>00219         N = 2;
+<a name="l00220"></a>00220 
+<a name="l00221"></a>00221     <span class="keywordflow">if</span> (N &lt; 2)
+<a name="l00222"></a>00222         <span class="keywordflow">return</span> <a class="code" href="fcaVnextClosureX_8c.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the...">nextClosureVX1</a>(ctx, 0, 0);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224     <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> bounds;
+<a name="l00225"></a>00225     bounds = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (N - 1), <span class="keyword">sizeof</span>(uint64_t));
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227     <span class="keywordflow">if</span> (N == 2)
+<a name="l00228"></a>00228     {
+<a name="l00229"></a>00229         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 0);
+<a name="l00230"></a>00230     }
+<a name="l00231"></a>00231     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 4)
+<a name="l00232"></a>00232     {
+<a name="l00233"></a>00233         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 1); <span class="comment">//01</span>
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 0); <span class="comment">//10</span>
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1); <span class="comment">//11</span>
+<a name="l00238"></a>00238         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 0);
+<a name="l00239"></a>00239     }
+<a name="l00240"></a>00240     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 8)
+<a name="l00241"></a>00241     {
+<a name="l00242"></a>00242         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds, 2); <span class="comment">// 001</span>
+<a name="l00243"></a>00243 
+<a name="l00244"></a>00244         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, 1); <span class="comment">//010</span>
+<a name="l00245"></a>00245 
+<a name="l00246"></a>00246         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 2); <span class="comment">//011</span>
+<a name="l00247"></a>00247         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 2, 1);
+<a name="l00248"></a>00248 
+<a name="l00249"></a>00249         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 3, 0); <span class="comment">//100</span>
+<a name="l00250"></a>00250 
+<a name="l00251"></a>00251         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 0); <span class="comment">//101</span>
+<a name="l00252"></a>00252         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 4, 2);
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 1); <span class="comment">//110</span>
+<a name="l00255"></a>00255         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 5, 0);
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 0); <span class="comment">//111</span>
+<a name="l00258"></a>00258         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 1);
+<a name="l00259"></a>00259         <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * 6, 2);
+<a name="l00260"></a>00260     }
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262 <span class="comment">//  for (int i = 0; i &lt; N - 1; ++i)</span>
+<a name="l00263"></a>00263 <span class="comment">//  {</span>
+<a name="l00264"></a>00264 <span class="comment">//      printf(&quot;BOUND %16llx\n&quot;, *(bounds + i * c-&gt;width)&amp;CRIMPVALUE(c-&gt;attributes-1));</span>
+<a name="l00265"></a>00265 <span class="comment">//      if (i &gt; 0)</span>
+<a name="l00266"></a>00266 <span class="comment">//          printf(&quot;CMP %d\n&quot;,</span>
+<a name="l00267"></a>00267 <span class="comment">//                  intentCmpV(c-&gt;attributes, bounds + (i - 1) * c-&gt;width,</span>
+<a name="l00268"></a>00268 <span class="comment">//                          bounds + i * c-&gt;width));</span>
+<a name="l00269"></a>00269 <span class="comment">//  }</span>
+<a name="l00270"></a>00270 
 <a name="l00271"></a>00271 
-<a name="l00272"></a>00272 
-<a name="l00273"></a>00273     <a class="code" href="structsnextClosureVX1Params.html">nextClosureVX1Params</a> chunks;
-<a name="l00274"></a>00274     chunks = malloc(N * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a>));
-<a name="l00275"></a>00275 
-<a name="l00276"></a>00276     pthread_t *threads;
-<a name="l00277"></a>00277     threads = malloc(N * <span class="keyword">sizeof</span>(pthread_t));
-<a name="l00278"></a>00278 
-<a name="l00279"></a>00279     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
-<a name="l00280"></a>00280     {
-<a name="l00281"></a>00281         chunks[i].<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a> = ctx;
-<a name="l00282"></a>00282         <span class="keywordflow">if</span> (i &gt; 0)
-<a name="l00283"></a>00283             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a> = (bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (i - 1));
-<a name="l00284"></a>00284         <span class="keywordflow">else</span>
-<a name="l00285"></a>00285             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a> = 0;
-<a name="l00286"></a>00286 
-<a name="l00287"></a>00287         <span class="keywordflow">if</span> (i &lt; N - 1)
-<a name="l00288"></a>00288             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a> = (bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (i));
-<a name="l00289"></a>00289         <span class="keywordflow">else</span>
-<a name="l00290"></a>00290             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a> = 0;
-<a name="l00291"></a>00291     }
-<a name="l00292"></a>00292 
-<a name="l00293"></a>00293     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
-<a name="l00294"></a>00294     {
-<a name="l00295"></a>00295         pthread_create(&amp;threads[i], 0, <a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">callNextClosureVX1</a>, (<span class="keywordtype">void</span>*) &amp;chunks[i]);
-<a name="l00296"></a>00296     }
-<a name="l00297"></a>00297 
-<a name="l00298"></a>00298     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
-<a name="l00299"></a>00299     {
-<a name="l00300"></a>00300         pthread_join(threads[i], 0);
-<a name="l00301"></a>00301     }
-<a name="l00302"></a>00302 
-<a name="l00303"></a>00303 <span class="comment">//  for (size_t i = 0; i &lt; N; ++i)</span>
-<a name="l00304"></a>00304 <span class="comment">//  {</span>
-<a name="l00305"></a>00305 <span class="comment">//      printf(&quot;%zu thread: counts %zu\n&quot;, i,</span>
-<a name="l00306"></a>00306 <span class="comment">//              countConceptsInBulkV(chunks[i].rVal));</span>
-<a name="l00307"></a>00307 <span class="comment">//  }</span>
-<a name="l00308"></a>00308 
-<a name="l00309"></a>00309     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
-<a name="l00310"></a>00310     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
-<a name="l00311"></a>00311 
-<a name="l00312"></a>00312     root = chunks[0].<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
-<a name="l00313"></a>00313     last = root;
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> var = 1; var &lt; N; ++var)
-<a name="l00316"></a>00316     {
-<a name="l00317"></a>00317 
-<a name="l00318"></a>00318         <span class="keywordflow">while</span> (last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a>)
-<a name="l00319"></a>00319             last = last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a>;
-<a name="l00320"></a>00320 
-<a name="l00321"></a>00321         last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a> = chunks[var].<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
-<a name="l00322"></a>00322     }
-<a name="l00323"></a>00323 
-<a name="l00324"></a>00324     free(bounds);
-<a name="l00325"></a>00325     free(chunks);
-<a name="l00326"></a>00326 
-<a name="l00327"></a>00327     <span class="keywordflow">return</span> root;
-<a name="l00328"></a>00328 }
+<a name="l00272"></a>00272     <a class="code" href="structsnextClosureVX1Params.html">nextClosureVX1Params</a> chunks;
+<a name="l00273"></a>00273     chunks = malloc(N * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsnextClosureVX1Params.html">snextClosureVX1Params</a>));
+<a name="l00274"></a>00274 
+<a name="l00275"></a>00275     pthread_t *threads;
+<a name="l00276"></a>00276     threads = malloc(N * <span class="keyword">sizeof</span>(pthread_t));
+<a name="l00277"></a>00277 
+<a name="l00278"></a>00278     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
+<a name="l00279"></a>00279     {
+<a name="l00280"></a>00280         chunks[i].<a class="code" href="structsnextClosureVX1Params.html#af00ec23c26d8b4e217d29e5b949f285d">ctx</a> = ctx;
+<a name="l00281"></a>00281         <span class="keywordflow">if</span> (i &gt; 0)
+<a name="l00282"></a>00282             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a> = (bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (i - 1));
+<a name="l00283"></a>00283         <span class="keywordflow">else</span>
+<a name="l00284"></a>00284             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093">start</a> = 0;
+<a name="l00285"></a>00285 
+<a name="l00286"></a>00286         <span class="keywordflow">if</span> (i &lt; N - 1)
+<a name="l00287"></a>00287             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a> = (bounds + c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * (i));
+<a name="l00288"></a>00288         <span class="keywordflow">else</span>
+<a name="l00289"></a>00289             chunks[i].<a class="code" href="structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23">stop</a> = 0;
+<a name="l00290"></a>00290     }
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
+<a name="l00293"></a>00293     {
+<a name="l00294"></a>00294         pthread_create(&amp;threads[i], 0, <a class="code" href="fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140">callNextClosureVX1</a>, (<span class="keywordtype">void</span>*) &amp;chunks[i]);
+<a name="l00295"></a>00295     }
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; ++i)
+<a name="l00298"></a>00298     {
+<a name="l00299"></a>00299         pthread_join(threads[i], 0);
+<a name="l00300"></a>00300     }
+<a name="l00301"></a>00301 
+<a name="l00302"></a>00302 <span class="comment">//  for (size_t i = 0; i &lt; N; ++i)</span>
+<a name="l00303"></a>00303 <span class="comment">//  {</span>
+<a name="l00304"></a>00304 <span class="comment">//      printf(&quot;%zu thread: counts %zu\n&quot;, i,</span>
+<a name="l00305"></a>00305 <span class="comment">//              countConceptsInBulkV(chunks[i].rVal));</span>
+<a name="l00306"></a>00306 <span class="comment">//  }</span>
+<a name="l00307"></a>00307 
+<a name="l00308"></a>00308     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
+<a name="l00309"></a>00309     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
+<a name="l00310"></a>00310 
+<a name="l00311"></a>00311     root = chunks[0].<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
+<a name="l00312"></a>00312     last = root;
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> var = 1; var &lt; N; ++var)
+<a name="l00315"></a>00315     {
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317         <span class="keywordflow">while</span> (last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a>)
+<a name="l00318"></a>00318             last = last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a>;
+<a name="l00319"></a>00319 
+<a name="l00320"></a>00320         last-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#ac2cd46a8c3334e2d2fdbc6c203707ed8" title="pointer to the next BulkNode, or 0">next</a> = chunks[var].<a class="code" href="structsnextClosureVX1Params.html#a6cdec21a24ddae482ae521f8c560703a">rVal</a>;
+<a name="l00321"></a>00321     }
+<a name="l00322"></a>00322 
+<a name="l00323"></a>00323     free(bounds);
+<a name="l00324"></a>00324     free(chunks);
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326     <span class="keywordflow">return</span> root;
+<a name="l00327"></a>00327 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -349,7 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 13:11:44 for C formal concept analysis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 21 2013 13:46:18 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
