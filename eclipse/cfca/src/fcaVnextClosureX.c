@@ -1,5 +1,5 @@
 /**
- * fca.c, (c) 2013, Immanuel Albrecht; Dresden University of
+ * fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of
  * Technology, Professur für die Psychologie des Lernen und Lehrens
  *
  * This program is free software: you can redistribute it and/or modify it under
@@ -16,6 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,6 +28,8 @@
 #include "fca_macros.h"
 #include "fca_structs.h"
 #include "fca_private.h"
+
+#define intentCmp !!ERROR!!
 
 /** @file
  *  this file contains a multi-threading nextClosure implementation using the
@@ -53,14 +56,6 @@ FormalConceptIntentBulkListV nextClosureVX1(FormalContextV ctx,
 
 	myFormalContextV *c;
 	c = (myFormalContextV*) ctx;
-
-	if (start)
-		if (stop) {
-			if (intentCmpV(c->attributes, start, stop) > 0)
-			{
-				puts("start < stop");
-			}
-		}
 
 	IncidenceVector M;
 	IncidenceVector Y;
@@ -138,8 +133,9 @@ FormalConceptIntentBulkListV nextClosureVX1(FormalContextV ctx,
 				{
 					if (intentCmpV(c->attributes, Y, stop) < 0)
 					{
-						printf("%llu\n",CRIMPVALUE(c->attributes));
-						printf("%llu > %llu\n",*Y,*stop);
+						/**
+						 * the (pseudo)intent Y is bigger than stop
+						 */
 						goto gracefulReturn;
 					}
 				}
@@ -235,40 +231,44 @@ FormalConceptIntentBulkListV nextClosureVX(FormalContextV ctx)
 	}
 	else if (N == 4)
 	{
-		CROSSV(bounds, 0); //01
+		CROSSV(bounds, 1); //01
 
-		CROSSV(bounds + c->width, 1); //10
+		CROSSV(bounds + c->width, 0); //10
 
-		CROSSV(bounds + c->width * 2, 0); //11
-		CROSSV(bounds + c->width * 2, 1);
+		CROSSV(bounds + c->width * 2, 1); //11
+		CROSSV(bounds + c->width * 2, 0);
 	}
 	else if (N == 8)
 	{
-		CROSSV(bounds, 0); // 001
+		CROSSV(bounds, 2); // 001
 
 		CROSSV(bounds + c->width, 1); //010
 
-		CROSSV(bounds + c->width * 2, 0); //011
+		CROSSV(bounds + c->width * 2, 2); //011
 		CROSSV(bounds + c->width * 2, 1);
 
-		CROSSV(bounds + c->width * 3, 2); //100
+		CROSSV(bounds + c->width * 3, 0); //100
 
 		CROSSV(bounds + c->width * 4, 0); //101
 		CROSSV(bounds + c->width * 4, 2);
 
 		CROSSV(bounds + c->width * 5, 1); //110
-		CROSSV(bounds + c->width * 5, 2);
+		CROSSV(bounds + c->width * 5, 0);
 
 		CROSSV(bounds + c->width * 6, 0); //111
 		CROSSV(bounds + c->width * 6, 1);
 		CROSSV(bounds + c->width * 6, 2);
 	}
 
-	printf("%u\n", *bounds);
-	printf("%u\n", *(bounds + c->width));
+//	for (int i = 0; i < N - 1; ++i)
+//	{
+//		printf("BOUND %16llx\n", *(bounds + i * c->width)&CRIMPVALUE(c->attributes-1));
+//		if (i > 0)
+//			printf("CMP %d\n",
+//					intentCmpV(c->attributes, bounds + (i - 1) * c->width,
+//							bounds + i * c->width));
+//	}
 
-	if (intentCmpV(c->attributes, bounds, bounds + c->width) > 0)
-		puts("okay.");
 
 	nextClosureVX1Params chunks;
 	chunks = malloc(N * sizeof(struct snextClosureVX1Params));
@@ -300,11 +300,11 @@ FormalConceptIntentBulkListV nextClosureVX(FormalContextV ctx)
 		pthread_join(threads[i], 0);
 	}
 
-	for (size_t i = 0; i < N; ++i)
-	{
-		printf("%zu thread: counts %zu\n", i,
-				countConceptsInBulkV(chunks[i].rVal));
-	}
+//	for (size_t i = 0; i < N; ++i)
+//	{
+//		printf("%zu thread: counts %zu\n", i,
+//				countConceptsInBulkV(chunks[i].rVal));
+//	}
 
 	FormalConceptIntentBulkListV root;
 	FormalConceptIntentBulkListV last;

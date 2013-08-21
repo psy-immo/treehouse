@@ -32,8 +32,6 @@
 
 #ifndef NO_VECTORS
 
-//TODO FIX BITVALUES TO START WITH MOST SIGNIFICANT BIT as x==0 and GO TO LEAST
-
 /**
  * These macros are used for uint64_t bit-stream arrays
  */
@@ -67,13 +65,13 @@
 /**
  * set the unused attribute bits to zero. (i.e. attributes == 100 -> width == 2, BITNBR(99) == 35
  */
-#define MASKVECTOR(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))<<(63-BITNBR((x)-1))) ) >> (63-BITNBR((x)-1));  }}
+#define MASKVECTOR(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))>>(63-BITNBR((x)-1))) ) << (63-BITNBR((x)-1));  }}
 
 /**
  * old version
  */
+#define MASKVECTORX(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))<<(63-BITNBR((x)-1))) ) >> (63-BITNBR((x)-1));  }}
 
-#define MASKVECTORX(v,x) {if (BITNBR((x))) { *((v)+OFFSET((x)-1)) = ( (*((v)+OFFSET((x)-1))>>(63-BITNBR((x)-1))) ) << (63-BITNBR((x)-1));  }}
 
 /**
  * crosses the x-th attribute of an attribute vector

@@ -1,5 +1,5 @@
 /**
- * fca.c, (c) 2013, Immanuel Albrecht; Dresden University of
+ * fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of
  * Technology, Professur für die Psychologie des Lernen und Lehrens
  *
  * This program is free software: you can redistribute it and/or modify it under
