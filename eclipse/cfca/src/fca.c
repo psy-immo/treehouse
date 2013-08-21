@@ -119,7 +119,7 @@ FormalContext newFormalContextFromFile(const char* filename)
 	while ((read = getline(&line, &len, file)) != -1)
 	{
 
-		/**
+		/*
 		 * this should never happen, right?
 		 */
 		if (read == 0)
@@ -189,7 +189,7 @@ FormalContext newFormalContextFromFile(const char* filename)
 		}
 		else
 		{
-			/**
+			/*
 			 * we read all data
 			 */
 			break;
@@ -198,7 +198,7 @@ FormalContext newFormalContextFromFile(const char* filename)
 		line_nbr++;
 	}
 
-	/**
+	/*
 	 * free memory and return
 	 */
 
@@ -400,11 +400,11 @@ int countConceptsInBulk(FormalConceptIntentBulkList root)
 	{
 		if (root->size > 0)
 		{
-			/**
+			/*
 			 * count the full chunks
 			 */
 			count += CHUNKSIZE * (root->size - 1);
-			/**
+			/*
 			 * and the last chunk
 			 */
 			count += root->chunks[root->size - 1]->size;
@@ -479,7 +479,8 @@ FormalConceptIntentBulkList addConceptToBulk(FormalConceptIntentBulkList root,
 }
 
 /**
- * close an attribute set, i.e. add further attributes
+ * close an attribute set, i.e. add further attributes,
+ * 1.92 times slower than closeIntent
  *
  * @param ctx    formal context
  * @param input  the intent set that is to be closed
@@ -501,7 +502,7 @@ void closeIntent2(FormalContext ctx, const IncidenceCell* input,
 			if (INCIDES(input[m]))
 				if (!gIm(g,I,m))
 				{
-					/**
+					/*
 					 * some attribute is not present for this object -> next object
 					 */
 					CLEAR(outputExtent[g]);
@@ -555,7 +556,7 @@ void closeIntent(FormalContext ctx, const IncidenceCell* input,
 			if (INCIDES(input[m]))
 				if (!gIm(g,I,m))
 				{
-					/**
+					/*
 					 * some attribute is not present for this object -> next object
 					 */
 					good = 0;
@@ -563,7 +564,7 @@ void closeIntent(FormalContext ctx, const IncidenceCell* input,
 				}
 		}
 		if (good)
-			/**
+			/*
 			 * remove attributes that are not common among all objects that have the input
 			 * attributes
 			 */
@@ -630,7 +631,7 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 
 #pragma GCC diagnostic pop
 
-	/**
+	/*
 	 * calculate the bottom intent of the concept lattice, i.e. {}''
 	 */
 	closeIntent(ctx, Y, M);
@@ -640,13 +641,13 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 
 	root = newConceptBulk(c->attributes);
 
-	/**
+	/*
 	 * add the bottom element of the concept lattice (a concept lattice is never empty)
 	 */
 
 	last = addConceptToBulk(root, M);
 
-	/**
+	/*
 	 * begin of nextClosure function iteration
 	 */
 	nextClosure:
@@ -676,12 +677,12 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 			}
 			if (good)
 			{
-				/**
+				/*
 				 * we found the next intent
 				 */
 				last = addConceptToBulk(last, Y);
 
-				/**
+				/*
 				 * continue with Y for M
 				 */
 
@@ -689,7 +690,7 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 				DELTA = M;
 				M = Y;
 				Y = DELTA;
-				/**
+				/*
 				 * do the nextClosure
 				 */
 				goto nextClosure;
@@ -699,7 +700,7 @@ FormalConceptIntentBulkList newConceptBulkFromContext(FormalContext ctx)
 		CLEAR(M[i]);
 	}
 
-	/**
+	/*
 	 * free up memory
 	 */
 
@@ -848,7 +849,7 @@ int countContextConcepts2(FormalContext ctx)
 
 #pragma GCC diagnostic pop
 
-	/**
+	/*
 	 * calculate the bottom intent of the concept lattice, i.e. {}''
 	 */
 	closeIntent2(ctx, Y, M, extent);
@@ -857,7 +858,7 @@ int countContextConcepts2(FormalContext ctx)
 
 	count = 1;
 
-	/**
+	/*
 	 * begin of nextClosure function iteration
 	 */
 	nextClosure:
@@ -887,12 +888,12 @@ int countContextConcepts2(FormalContext ctx)
 			}
 			if (good)
 			{
-				/**
+				/*
 				 * we found the next intent
 				 */
 				count++;
 
-				/**
+				/*
 				 * continue with Y for M
 				 */
 
@@ -900,7 +901,7 @@ int countContextConcepts2(FormalContext ctx)
 				DELTA = M;
 				M = Y;
 				Y = DELTA;
-				/**
+				/*
 				 * do the nextClosure
 				 */
 				goto nextClosure;
@@ -910,7 +911,7 @@ int countContextConcepts2(FormalContext ctx)
 		CLEAR(M[i]);
 	}
 
-	/**
+	/*
 	 * free up memory
 	 */
 
@@ -945,7 +946,7 @@ int countContextConcepts(FormalContext ctx)
 
 #pragma GCC diagnostic pop
 
-	/**
+	/*
 	 * calculate the bottom intent of the concept lattice, i.e. {}''
 	 */
 	closeIntent(ctx, Y, M);
@@ -954,7 +955,7 @@ int countContextConcepts(FormalContext ctx)
 
 	count = 1;
 
-	/**
+	/*
 	 * begin of nextClosure function iteration
 	 */
 	nextClosure:
@@ -984,12 +985,12 @@ int countContextConcepts(FormalContext ctx)
 			}
 			if (good)
 			{
-				/**
+				/*
 				 * we found the next intent
 				 */
 				count++;
 
-				/**
+				/*
 				 * continue with Y for M
 				 */
 
@@ -997,7 +998,7 @@ int countContextConcepts(FormalContext ctx)
 				DELTA = M;
 				M = Y;
 				Y = DELTA;
-				/**
+				/*
 				 * do the nextClosure
 				 */
 				goto nextClosure;
@@ -1007,7 +1008,7 @@ int countContextConcepts(FormalContext ctx)
 		CLEAR(M[i]);
 	}
 
-	/**
+	/*
 	 * free up memory
 	 */
 

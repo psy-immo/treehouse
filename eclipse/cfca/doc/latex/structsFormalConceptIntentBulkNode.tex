@@ -1,0 +1,110 @@
+\hypertarget{structsFormalConceptIntentBulkNode}{\section{s\-Formal\-Concept\-Intent\-Bulk\-Node \-Struct \-Reference}
+\label{structsFormalConceptIntentBulkNode}\index{s\-Formal\-Concept\-Intent\-Bulk\-Node@{s\-Formal\-Concept\-Intent\-Bulk\-Node}}
+}
+
+
+a node of a single linked list of concept chunks.  
+
+
+
+
+{\ttfamily \#include $<$fca\-\_\-structs.\-h$>$}
+
+
+
+\-Collaboration diagram for s\-Formal\-Concept\-Intent\-Bulk\-Node\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{structsFormalConceptIntentBulkNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structsFormalConceptIntentBulkNode_a1fbfa6da3820560fef8549991a83e694}{attributes}
+\begin{DoxyCompactList}\small\item\em number of attributes of the concept intents \end{DoxyCompactList}\item 
+int \hyperlink{structsFormalConceptIntentBulkNode_afc96b660c7becf5517e4391846e0975f}{size}
+\begin{DoxyCompactList}\small\item\em number of chunks used \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$$\ast$ \hyperlink{structsFormalConceptIntentBulkNode_a581d8ff2f4deebf047730cfd5be1f754}{chunks}
+\begin{DoxyCompactList}\small\item\em array to at most \-B\-U\-L\-K\-S\-I\-Z\-E chunks \end{DoxyCompactList}\item 
+struct \*
+\hyperlink{structsFormalConceptIntentBulkNode}{s\-Formal\-Concept\-Intent\-Bulk\-Node} $\ast$ \hyperlink{structsFormalConceptIntentBulkNode_a1cff65c57653d96d207878be8614b383}{next}
+\begin{DoxyCompactList}\small\item\em pointer to the next \-Bulk\-Node, or 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+a node of a single linked list of concept chunks. 
+
+bulk nodes are filled chunk wise, but a bulk node may have non-\/empty successor nodes even if it is not entire full. 
+
+\-Definition at line 144 of file fca\-\_\-structs.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structsFormalConceptIntentBulkNode_a1fbfa6da3820560fef8549991a83e694}{\index{s\-Formal\-Concept\-Intent\-Bulk\-Node@{s\-Formal\-Concept\-Intent\-Bulk\-Node}!attributes@{attributes}}
+\index{attributes@{attributes}!sFormalConceptIntentBulkNode@{s\-Formal\-Concept\-Intent\-Bulk\-Node}}
+\subsubsection[{attributes}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node\-::attributes}}}\label{structsFormalConceptIntentBulkNode_a1fbfa6da3820560fef8549991a83e694}
+
+
+number of attributes of the concept intents 
+
+
+
+\-Definition at line 149 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), new\-Concept\-Bulk(), and write\-Concepts\-To\-File().
+
+\hypertarget{structsFormalConceptIntentBulkNode_a581d8ff2f4deebf047730cfd5be1f754}{\index{s\-Formal\-Concept\-Intent\-Bulk\-Node@{s\-Formal\-Concept\-Intent\-Bulk\-Node}!chunks@{chunks}}
+\index{chunks@{chunks}!sFormalConceptIntentBulkNode@{s\-Formal\-Concept\-Intent\-Bulk\-Node}}
+\subsubsection[{chunks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\-Formal\-Concept\-Intent\-Chunk}$\ast$$\ast$ {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks}}}\label{structsFormalConceptIntentBulkNode_a581d8ff2f4deebf047730cfd5be1f754}
+
+
+array to at most \-B\-U\-L\-K\-S\-I\-Z\-E chunks 
+
+
+
+\-Definition at line 157 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), count\-Concepts\-In\-Bulk(), delete\-Concept\-Bulk(), new\-Concept\-Bulk(), and write\-Concepts\-To\-File().
+
+\hypertarget{structsFormalConceptIntentBulkNode_a1cff65c57653d96d207878be8614b383}{\index{s\-Formal\-Concept\-Intent\-Bulk\-Node@{s\-Formal\-Concept\-Intent\-Bulk\-Node}!next@{next}}
+\index{next@{next}!sFormalConceptIntentBulkNode@{s\-Formal\-Concept\-Intent\-Bulk\-Node}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node}$\ast$ {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next}}}\label{structsFormalConceptIntentBulkNode_a1cff65c57653d96d207878be8614b383}
+
+
+pointer to the next \-Bulk\-Node, or 0 
+
+
+
+\-Definition at line 161 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), count\-Concepts\-In\-Bulk(), delete\-Concept\-Bulk(), new\-Concept\-Bulk(), and write\-Concepts\-To\-File().
+
+\hypertarget{structsFormalConceptIntentBulkNode_afc96b660c7becf5517e4391846e0975f}{\index{s\-Formal\-Concept\-Intent\-Bulk\-Node@{s\-Formal\-Concept\-Intent\-Bulk\-Node}!size@{size}}
+\index{size@{size}!sFormalConceptIntentBulkNode@{s\-Formal\-Concept\-Intent\-Bulk\-Node}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size}}}\label{structsFormalConceptIntentBulkNode_afc96b660c7becf5517e4391846e0975f}
+
+
+number of chunks used 
+
+
+
+\-Definition at line 153 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), count\-Concepts\-In\-Bulk(), delete\-Concept\-Bulk(), new\-Concept\-Bulk(), and write\-Concepts\-To\-File().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{fca__structs_8h}{fca\-\_\-structs.\-h}\end{DoxyCompactItemize}

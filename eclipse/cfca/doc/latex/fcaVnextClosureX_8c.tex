@@ -1,0 +1,462 @@
+\hypertarget{fcaVnextClosureX_8c}{\section{src/fca\-Vnext\-Closure\-X.c \-File \-Reference}
+\label{fcaVnextClosureX_8c}\index{src/fca\-Vnext\-Closure\-X.\-c@{src/fca\-Vnext\-Closure\-X.\-c}}
+}
+
+
+this file contains a multi-\/threading next\-Closure implementation using the \-Incidence\-Vector implementation  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$pthread.\-h$>$}\*
+{\ttfamily \#include \char`\"{}fca.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}fca\-\_\-macros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}fca\-\_\-structs.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}fca\-\_\-private.\-h\char`\"{}}\*
+\-Include dependency graph for fca\-Vnext\-Closure\-X.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcaVnextClosureX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsnextClosureVX1Params}{snext\-Closure\-V\-X1\-Params}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}
+\begin{DoxyCompactList}\small\item\em \hyperlink{fcaVnextClosureX_8c}{fca\-Vnext\-Closure\-X.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+\#define \hyperlink{fcaVnextClosureX_8c_a68c72a16f9628758cc5a8d2210ccd674}{intent\-Cmp}~!!\-E\-R\-R\-O\-R!!
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \*
+\hyperlink{structsnextClosureVX1Params}{snext\-Closure\-V\-X1\-Params} $\ast$ \hyperlink{fcaVnextClosureX_8c_a642c21f1fdfe45b4801b52956461901d}{next\-Closure\-V\-X1\-Params}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279}{next\-Closure\-V\-X1} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} start, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} stop)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140}{call\-Next\-Closure\-V\-X1} (void $\ast$params)
+\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}{next\-Closure\-V\-X} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+this file contains a multi-\/threading next\-Closure implementation using the \-Incidence\-Vector implementation 
+
+\-Definition in file \hyperlink{fcaVnextClosureX_8c_source}{fca\-Vnext\-Closure\-X.\-c}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{fcaVnextClosureX_8c_a68c72a16f9628758cc5a8d2210ccd674}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!intent\-Cmp@{intent\-Cmp}}
+\index{intent\-Cmp@{intent\-Cmp}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{intent\-Cmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf intent\-Cmp}~!!\-E\-R\-R\-O\-R!!}}\label{fcaVnextClosureX_8c_a68c72a16f9628758cc5a8d2210ccd674}
+
+
+\-Definition at line 32 of file fca\-Vnext\-Closure\-X.\-c.
+
+\hypertarget{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}
+\index{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y@{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{\-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-E\-C\-T\-O\-R\-S\-\_\-\-O\-N\-L\-Y}}}\label{fcaVnextClosureX_8c_af186226aa073237d4be9861b07795dea}
+
+
+\hyperlink{fcaVnextClosureX_8c}{fca\-Vnext\-Closure\-X.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition at line 25 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{fcaVnextClosureX_8c_a642c21f1fdfe45b4801b52956461901d}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!next\-Closure\-V\-X1\-Params@{next\-Closure\-V\-X1\-Params}}
+\index{next\-Closure\-V\-X1\-Params@{next\-Closure\-V\-X1\-Params}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{next\-Closure\-V\-X1\-Params}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf snext\-Closure\-V\-X1\-Params}$\ast$ {\bf next\-Closure\-V\-X1\-Params}}}\label{fcaVnextClosureX_8c_a642c21f1fdfe45b4801b52956461901d}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!call\-Next\-Closure\-V\-X1@{call\-Next\-Closure\-V\-X1}}
+\index{call\-Next\-Closure\-V\-X1@{call\-Next\-Closure\-V\-X1}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{call\-Next\-Closure\-V\-X1}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf call\-Next\-Closure\-V\-X1} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{params}
+\end{DoxyParamCaption}
+)}}\label{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140}
+
+
+\-Definition at line 185 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\-References snext\-Closure\-V\-X1\-Params\-::ctx, next\-Closure\-V\-X1(), snext\-Closure\-V\-X1\-Params\-::r\-Val, snext\-Closure\-V\-X1\-Params\-::start, and snext\-Closure\-V\-X1\-Params\-::stop.
+
+
+
+\-Referenced by next\-Closure\-V\-X().
+
+
+\begin{DoxyCode}
+{
+    nextClosureVX1Params p;
+    p = (nextClosureVX1Params) params;
+
+    p->rVal = nextClosureVX1(p->ctx, p->start, p->stop);
+
+    return 0;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcaVnextClosureX_8c_a93c37a01d282f3ab4d5ee7ff52028140_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!next\-Closure\-V\-X@{next\-Closure\-V\-X}}
+\index{next\-Closure\-V\-X@{next\-Closure\-V\-X}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{next\-Closure\-V\-X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf next\-Closure\-V\-X} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-N} & number of threads \\
+\hline
+{\em ctx} & formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents 
+\end{DoxyReturn}
+
+
+\-Definition at line 204 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\-References smy\-Formal\-Context\-V\-::attributes, call\-Next\-Closure\-V\-X1(), \-C\-R\-O\-S\-S\-V, snext\-Closure\-V\-X1\-Params\-::ctx, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, next\-Closure\-V\-X1(), \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, snext\-Closure\-V\-X1\-Params\-::r\-Val, snext\-Closure\-V\-X1\-Params\-::start, snext\-Closure\-V\-X1\-Params\-::stop, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContextV *c;
+    c = (myFormalContextV*) ctx;
+
+    size_t N;
+
+    N = 1;
+
+    if (c->attributes >= 3)
+        N = 8;
+    else if (c->attributes >= 2)
+        N = 4;
+    else if (c->attributes >= 1)
+        N = 2;
+
+    if (N < 2)
+        return nextClosureVX1(ctx, 0, 0);
+
+    IncidenceVector bounds;
+    bounds = calloc(c->width * (N - 1), sizeof(uint64_t));
+
+    if (N == 2)
+    {
+        CROSSV(bounds, 0);
+    }
+    else if (N == 4)
+    {
+        CROSSV(bounds, 1); //01
+
+        CROSSV(bounds + c->width, 0); //10
+
+        CROSSV(bounds + c->width * 2, 1); //11
+        CROSSV(bounds + c->width * 2, 0);
+    }
+    else if (N == 8)
+    {
+        CROSSV(bounds, 2); // 001
+
+        CROSSV(bounds + c->width, 1); //010
+
+        CROSSV(bounds + c->width * 2, 2); //011
+        CROSSV(bounds + c->width * 2, 1);
+
+        CROSSV(bounds + c->width * 3, 0); //100
+
+        CROSSV(bounds + c->width * 4, 0); //101
+        CROSSV(bounds + c->width * 4, 2);
+
+        CROSSV(bounds + c->width * 5, 1); //110
+        CROSSV(bounds + c->width * 5, 0);
+
+        CROSSV(bounds + c->width * 6, 0); //111
+        CROSSV(bounds + c->width * 6, 1);
+        CROSSV(bounds + c->width * 6, 2);
+    }
+
+//  for (int i = 0; i < N - 1; ++i)
+//  {
+//      printf("BOUND %16llx\n", *(bounds + i *
+       c->width)&CRIMPVALUE(c->attributes-1));
+//      if (i > 0)
+//          printf("CMP %d\n",
+//                  intentCmpV(c->attributes, bounds + (i - 1) * c->width,
+//                          bounds + i * c->width));
+//  }
+
+
+    nextClosureVX1Params chunks;
+    chunks = malloc(N * sizeof(struct snextClosureVX1Params));
+
+    pthread_t *threads;
+    threads = malloc(N * sizeof(pthread_t));
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        chunks[i].ctx = ctx;
+        if (i > 0)
+            chunks[i].start = (bounds + c->width * (i - 1));
+        else
+            chunks[i].start = 0;
+
+        if (i < N - 1)
+            chunks[i].stop = (bounds + c->width * (i));
+        else
+            chunks[i].stop = 0;
+    }
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        pthread_create(&threads[i], 0, callNextClosureVX1, (void*) &chunks[i]);
+    }
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        pthread_join(threads[i], 0);
+    }
+
+//  for (size_t i = 0; i < N; ++i)
+//  {
+//      printf("%zu thread: counts %zu\n", i,
+//              countConceptsInBulkV(chunks[i].rVal));
+//  }
+
+    FormalConceptIntentBulkListV root;
+    FormalConceptIntentBulkListV last;
+
+    root = chunks[0].rVal;
+    last = root;
+
+    for (size_t var = 1; var < N; ++var)
+    {
+
+        while (last->next)
+            last = last->next;
+
+        last->next = chunks[var].rVal;
+    }
+
+    free(bounds);
+    free(chunks);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcaVnextClosureX_8c_a858241e44987c35c2ae688f2797f2a30_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279}{\index{fca\-Vnext\-Closure\-X.\-c@{fca\-Vnext\-Closure\-X.\-c}!next\-Closure\-V\-X1@{next\-Closure\-V\-X1}}
+\index{next\-Closure\-V\-X1@{next\-Closure\-V\-X1}!fcaVnextClosureX.c@{fca\-Vnext\-Closure\-X.\-c}}
+\subsubsection[{next\-Closure\-V\-X1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf next\-Closure\-V\-X1} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx, }
+\item[{const {\bf \-Incidence\-Vector}}]{start, }
+\item[{const {\bf \-Incidence\-Vector}}]{stop}
+\end{DoxyParamCaption}
+)}}\label{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+{\em start} & first attribute vector (not included if it is a concept intent) if this is zero, start with \-M=\{\}, in this case, we add the bottom concept in case of \-M''==\{\} \\
+\hline
+{\em stop} & last attribute vector, or zero to continue until the end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents between (start, stop\mbox{]} 
+\end{DoxyReturn}
+calculate the bottom intent of the concept lattice, i.\-e. \{\}''
+
+add the bottom element of the concept lattice (a concept lattice is never empty)
+
+begin of next\-Closure function iteration
+
+check whether we are still in range
+
+the (pseudo)intent \-Y is bigger than stop
+
+we found the next intent
+
+continue with \-Y for \-M
+
+do the next\-Closure
+
+free up memory
+
+\-Definition at line 52 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\-References add\-Concept\-To\-Bulk\-V(), smy\-Formal\-Context\-V\-::attributes, \-C\-L\-E\-A\-R\-V, close\-Intent\-V(), \-C\-R\-I\-M\-P\-V\-A\-L\-U\-E, \-C\-R\-O\-S\-S\-V, \-I\-N\-C\-I\-D\-E\-S\-V, intent\-Cmp\-V(), new\-Concept\-Bulk\-V(), \-O\-F\-F\-S\-E\-T, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by call\-Next\-Closure\-V\-X1(), and next\-Closure\-V\-X().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContextV *c;
+    c = (myFormalContextV*) ctx;
+
+    IncidenceVector M;
+    IncidenceVector Y;
+
+    Y = calloc(c->width, sizeof(uint64_t));
+    M = malloc(c->width * sizeof(uint64_t));
+
+    FormalConceptIntentBulkListV root;
+    FormalConceptIntentBulkListV last;
+
+    root = newConceptBulkV(c->attributes);
+
+    if (start)
+    {
+        memcpy(M, start, c->width * sizeof(uint64_t));
+
+        last = root;
+
+    }
+    else
+    {
+
+        closeIntentV(ctx, Y, M);
+
+        last = addConceptToBulkV(root, M);
+    }
+
+    nextClosure:
+
+    for (size_t i = c->attributes; i > 0;)
+    {
+        --i;
+
+        if (!INCIDESV(M,i))
+        {
+            CROSSV(M, i);
+            closeIntentV(ctx, M, Y);
+
+            int good;
+            good = 1;
+
+            for (unsigned int j = 0; j < OFFSET(i); ++j)
+            {
+                if (Y[j] & (~(M[j])))
+                {
+                    good = 0;
+                    break;
+                }
+            }
+            if (good)
+            {
+                if (Y[OFFSET(i)] & (~M[OFFSET(i)]) & CRIMPVALUE(i))
+                {
+                    good = 0;
+                }
+            }
+
+            if (good)
+            {
+                if (stop)
+                {
+                    if (intentCmpV(c->attributes, Y, stop) < 0)
+                    {
+                        goto gracefulReturn;
+                    }
+                }
+
+                last = addConceptToBulkV(last, Y);
+
+                IncidenceVector DELTA;
+                DELTA = M;
+                M = Y;
+                Y = DELTA;
+                goto nextClosure;
+            }
+        }
+
+        CLEARV(M, i);
+    }
+
+    gracefulReturn:
+    free(M);
+    free(Y);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcaVnextClosureX_8c_adcbb382ceada973214f6bbeca05cb279_cgraph}
+\end{center}
+\end{figure}
+
+

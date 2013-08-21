@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks." alt="" coords="5,101,221,131"/>
+<area shape="rect" id="node5" href="$structsmyFormalConceptIntentChunkV.html" title="A chunk of at most CHUNKSIZEV formal concept intent vectors." alt="" coords="5,5,221,35"/>
+</map>

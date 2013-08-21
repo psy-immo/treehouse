@@ -1,0 +1,457 @@
+\hypertarget{fca__macros_8h}{\section{src/fca\-\_\-macros.h \-File \-Reference}
+\label{fca__macros_8h}\index{src/fca\-\_\-macros.\-h@{src/fca\-\_\-macros.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+\-Include dependency graph for fca\-\_\-macros.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{fca__macros_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fca__macros_8h_a740a16a7eb505fa8d595a191feed0941}{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(x)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return;\}\}
+\begin{DoxyCompactList}\small\item\em \hyperlink{fca__macros_8h}{fca\-\_\-macros.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(x)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return 0;\}\}
+\begin{DoxyCompactList}\small\item\em checks whether x == 0, and returns 0; \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(x, y, d)~\{if (((x) != (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}
+\begin{DoxyCompactList}\small\item\em if x!=y, prints a warning and calls the statement d \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}(x)~((unsigned)(x)$>$$>$6)
+\begin{DoxyCompactList}\small\item\em get the offset of the x-\/th bit in an 64-\/bit integer vector \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R}(x)~(((unsigned)(x))\&(63))
+\begin{DoxyCompactList}\small\item\em get the remainder of the x-\/th bit in an 64-\/bit integer vector, i.\-e. \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a9978c9be0f4161638ec49b4eda697d42}{\-W\-I\-D\-T\-H}(x)~((((unsigned)(x))\&(63))?((unsigned)(x)/64)+1\-:((unsigned)(x)/64))
+\begin{DoxyCompactList}\small\item\em determine the length of an 64-\/bit integer vector that can hold x bits \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a49be24608e8de0f8bfdf9f69c2a96784}{\-B\-I\-T\-V\-A\-L\-U\-E}(x)~((1\-U\-L\-L$<$$<$(63-\/\-B\-I\-T\-N\-B\-R(x))))
+\begin{DoxyCompactList}\small\item\em gives the bit-\/value of the x-\/th bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E}(x)~(($\sim$(0\-U\-L\-L))$>$$>$(63-\/(\-B\-I\-T\-N\-B\-R(x)))$<$$<$(63-\/\-B\-I\-T\-N\-B\-R(x)))
+\begin{DoxyCompactList}\small\item\em gives an 64-\/bit integer that has set the bits 0 through x. \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_aef2d7de0c2b6bb72a552503770da6cae}{\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R}(v, x)~\{if (\hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R}((x))) \{ $\ast$((v)+\hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}((x)-\/1)) = ( ($\ast$((v)+\hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}((x)-\/1))$>$$>$(63-\/\hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R}((x)-\/1))) ) $<$$<$ (63-\/\hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R}((x)-\/1));  \}\}
+\begin{DoxyCompactList}\small\item\em set the unused attribute bits to zero. \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_aad0e5eaea1cfebf54257dc40ea185ed4}{\-C\-R\-O\-S\-S\-V}(v, x)~\{ $\ast$((v)+\hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}(x)) $|$= \hyperlink{fca__macros_8h_a49be24608e8de0f8bfdf9f69c2a96784}{\-B\-I\-T\-V\-A\-L\-U\-E}(x); \}
+\begin{DoxyCompactList}\small\item\em crosses the x-\/th attribute of an attribute vector \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a2e3ae6676ab924d72728a1b5d61ea297}{\-C\-L\-E\-A\-R\-V}(v, x)~\{ $\ast$((v)+\hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}(x)) \&= $\sim$ (\hyperlink{fca__macros_8h_a49be24608e8de0f8bfdf9f69c2a96784}{\-B\-I\-T\-V\-A\-L\-U\-E}(x)); \}
+\begin{DoxyCompactList}\small\item\em clears the x-\/th attribute of an attribute vector \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_aee89242eec49a02707fd80427af50d23}{\-I\-N\-C\-I\-D\-E\-S\-V}(v, x)~(  ( $\ast$((v)+\hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T}(x)) $>$$>$ (63-\/\hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R}(x)) ) \& 1  )
+\begin{DoxyCompactList}\small\item\em checks whether the x-\/th attribute of an attribute vector is crossed \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a9726c8302995a7cfcb79221354ef69b3}{\-R\-O\-W}(g, \-I)~((\-I)-\/$>$incidence + ((\-I)-\/$>$width $\ast$ (g)))
+\begin{DoxyCompactList}\small\item\em gives the attribute vector for a given object \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\-I\-N\-C\-I\-D\-E\-S}(x)~(((x)\&1))
+\begin{DoxyCompactList}\small\item\em \-These macros are used for \-Incidence\-Cell array implementations of formal contexts. \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}{\-C\-L\-E\-A\-R}(x)~\{ (x) = 0; \}
+\begin{DoxyCompactList}\small\item\em clears the mark \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_add682bc16cfd313b57c9dc8400158bc0}{\-C\-R\-O\-S\-S}(x)~\{ (x) = 1; \}
+\begin{DoxyCompactList}\small\item\em sets the mark \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a6716296e0c0390116c559152e613eb17}{\-C\-E\-L\-L}(g, \-I, m)~((\-I)-\/$>$incidence\mbox{[}(\-I)-\/$>$attributes $\ast$ (g) + (m)\mbox{]})
+\begin{DoxyCompactList}\small\item\em results in the cell that encodes whether g incides with m \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_ac504a61c4c85120715ba5d25a72148b1}{g\-Im}(g, \-I, m)~\hyperlink{fca__macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\-I\-N\-C\-I\-D\-E\-S}(\hyperlink{fca__macros_8h_a6716296e0c0390116c559152e613eb17}{\-C\-E\-L\-L}( (g) , (\-I) , (m)))
+\begin{DoxyCompactList}\small\item\em test whether g and m incides \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\-M\-I\-N}(a, b)~(((a)$<$(b))?(a)\-:(b))
+\begin{DoxyCompactList}\small\item\em gives minimum \end{DoxyCompactList}\item 
+\#define \hyperlink{fca__macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{\-M\-A\-X}(a, b)~(((a)$>$(b))?(a)\-:(b))
+\begin{DoxyCompactList}\small\item\em gives maximum \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-B\-I\-T\-N\-B\-R@{\-B\-I\-T\-N\-B\-R}}
+\index{\-B\-I\-T\-N\-B\-R@{\-B\-I\-T\-N\-B\-R}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-B\-I\-T\-N\-B\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-I\-T\-N\-B\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(((unsigned)(x))\&(63))}}\label{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}
+
+
+get the remainder of the x-\/th bit in an 64-\/bit integer vector, i.\-e. 
+
+65=64+ {\itshape 1\/} 
+
+\-Definition at line 62 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by intent\-Cmp\-V().
+
+\hypertarget{fca__macros_8h_a49be24608e8de0f8bfdf9f69c2a96784}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-B\-I\-T\-V\-A\-L\-U\-E@{\-B\-I\-T\-V\-A\-L\-U\-E}}
+\index{\-B\-I\-T\-V\-A\-L\-U\-E@{\-B\-I\-T\-V\-A\-L\-U\-E}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-B\-I\-T\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-I\-T\-V\-A\-L\-U\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((1\-U\-L\-L$<$$<$(63-\/\-B\-I\-T\-N\-B\-R(x))))}}\label{fca__macros_8h_a49be24608e8de0f8bfdf9f69c2a96784}
+
+
+gives the bit-\/value of the x-\/th bit. 
+
+(\-Note that bit 0 is the most, and bit 63 is the least significant bit) 
+
+\-Definition at line 78 of file fca\-\_\-macros.\-h.
+
+\hypertarget{fca__macros_8h_a6716296e0c0390116c559152e613eb17}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-E\-L\-L@{\-C\-E\-L\-L}}
+\index{\-C\-E\-L\-L@{\-C\-E\-L\-L}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-E\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-E\-L\-L}(
+\begin{DoxyParamCaption}
+\item[{}]{g, }
+\item[{}]{\-I, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((\-I)-\/$>$incidence\mbox{[}(\-I)-\/$>$attributes $\ast$ (g) + (m)\mbox{]})}}\label{fca__macros_8h_a6716296e0c0390116c559152e613eb17}
+
+
+results in the cell that encodes whether g incides with m 
+
+\-I may be a formal context, then g refers to the object number, or \-I may be a chunk of formal concepts, then g refers to the concept number. 
+
+\-Definition at line 191 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-Random().
+
+\hypertarget{fca__macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-L\-E\-A\-R@{\-C\-L\-E\-A\-R}}
+\index{\-C\-L\-E\-A\-R@{\-C\-L\-E\-A\-R}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-L\-E\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-E\-A\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ (x) = 0; \}}}\label{fca__macros_8h_ab0ba4dd6e237b96132c0a66be2fb3bc2}
+
+
+clears the mark 
+
+
+
+\-Definition at line 172 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), and new\-Concept\-Bulk\-From\-Context().
+
+\hypertarget{fca__macros_8h_a2e3ae6676ab924d72728a1b5d61ea297}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-L\-E\-A\-R\-V@{\-C\-L\-E\-A\-R\-V}}
+\index{\-C\-L\-E\-A\-R\-V@{\-C\-L\-E\-A\-R\-V}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-L\-E\-A\-R\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-E\-A\-R\-V}(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ $\ast$((v)+{\bf \-O\-F\-F\-S\-E\-T}(x)) \&= $\sim$ ({\bf \-B\-I\-T\-V\-A\-L\-U\-E}(x)); \}}}\label{fca__macros_8h_a2e3ae6676ab924d72728a1b5d61ea297}
+
+
+clears the x-\/th attribute of an attribute vector 
+
+
+
+\-Definition at line 131 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+\hypertarget{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E@{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E}}
+\index{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E@{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-R\-I\-M\-P\-V\-A\-L\-U\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(($\sim$(0\-U\-L\-L))$>$$>$(63-\/(\-B\-I\-T\-N\-B\-R(x)))$<$$<$(63-\/\-B\-I\-T\-N\-B\-R(x)))}}\label{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}
+
+
+gives an 64-\/bit integer that has set the bits 0 through x. 
+
+\hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E(0)} == 0x8000000000000000 \hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E(1)} == 0xc000000000000000 \hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E(2)} == 0xe000000000000000 \hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E(3)} == 0xf000000000000000 \hyperlink{fca__macros_8h_af742dc579c934e600fb6a954a4cde678}{\-C\-R\-I\-M\-P\-V\-A\-L\-U\-E(4)} == 0xf800000000000000 etc. 
+
+\-Definition at line 100 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), intent\-Cmp\-V(), new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+\hypertarget{fca__macros_8h_add682bc16cfd313b57c9dc8400158bc0}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-R\-O\-S\-S@{\-C\-R\-O\-S\-S}}
+\index{\-C\-R\-O\-S\-S@{\-C\-R\-O\-S\-S}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-R\-O\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-R\-O\-S\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ (x) = 1; \}}}\label{fca__macros_8h_add682bc16cfd313b57c9dc8400158bc0}
+
+
+sets the mark 
+
+
+
+\-Definition at line 180 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), new\-Concept\-Bulk\-From\-Context(), new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-Random().
+
+\hypertarget{fca__macros_8h_aad0e5eaea1cfebf54257dc40ea185ed4}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-C\-R\-O\-S\-S\-V@{\-C\-R\-O\-S\-S\-V}}
+\index{\-C\-R\-O\-S\-S\-V@{\-C\-R\-O\-S\-S\-V}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-C\-R\-O\-S\-S\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-R\-O\-S\-S\-V}(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{ $\ast$((v)+{\bf \-O\-F\-F\-S\-E\-T}(x)) $|$= {\bf \-B\-I\-T\-V\-A\-L\-U\-E}(x); \}}}\label{fca__macros_8h_aad0e5eaea1cfebf54257dc40ea185ed4}
+
+
+crosses the x-\/th attribute of an attribute vector 
+
+
+
+\-Definition at line 125 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-From\-File\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
+
+\hypertarget{fca__macros_8h_ac504a61c4c85120715ba5d25a72148b1}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!g\-Im@{g\-Im}}
+\index{g\-Im@{g\-Im}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{g\-Im}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf g\-Im}(
+\begin{DoxyParamCaption}
+\item[{}]{g, }
+\item[{}]{\-I, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~{\bf \-I\-N\-C\-I\-D\-E\-S}({\bf \-C\-E\-L\-L}( (g) , (\-I) , (m)))}}\label{fca__macros_8h_ac504a61c4c85120715ba5d25a72148b1}
+
+
+test whether g and m incides 
+
+
+
+\-Definition at line 198 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), write\-Concepts\-To\-File(), and write\-Formal\-Context().
+
+\hypertarget{fca__macros_8h_ad4734e82cfd82a52750c823e4a3f745a}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-I\-N\-C\-I\-D\-E\-S@{\-I\-N\-C\-I\-D\-E\-S}}
+\index{\-I\-N\-C\-I\-D\-E\-S@{\-I\-N\-C\-I\-D\-E\-S}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-I\-N\-C\-I\-D\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-C\-I\-D\-E\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(((x)\&1))}}\label{fca__macros_8h_ad4734e82cfd82a52750c823e4a3f745a}
+
+
+\-These macros are used for \-Incidence\-Cell array implementations of formal contexts. 
+
+\-Such implementations are easier to debug, but take up far too much memory for big scale contexts
+
+checks whether something incides by testing the 1-\/bit 
+
+\-Definition at line 165 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by close\-Intent(), close\-Intent2(), count\-Context\-Concepts(), count\-Context\-Concepts2(), intent\-Cmp(), and new\-Concept\-Bulk\-From\-Context().
+
+\hypertarget{fca__macros_8h_aee89242eec49a02707fd80427af50d23}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-I\-N\-C\-I\-D\-E\-S\-V@{\-I\-N\-C\-I\-D\-E\-S\-V}}
+\index{\-I\-N\-C\-I\-D\-E\-S\-V@{\-I\-N\-C\-I\-D\-E\-S\-V}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-I\-N\-C\-I\-D\-E\-S\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-C\-I\-D\-E\-S\-V}(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(  ( $\ast$((v)+{\bf \-O\-F\-F\-S\-E\-T}(x)) $>$$>$ (63-\/{\bf \-B\-I\-T\-N\-B\-R}(x)) ) \& 1  )}}\label{fca__macros_8h_aee89242eec49a02707fd80427af50d23}
+
+
+checks whether the x-\/th attribute of an attribute vector is crossed 
+
+
+
+\-Definition at line 137 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context\-V(), next\-Closure\-V\-X1(), write\-Concepts\-To\-File\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{fca__macros_8h_aef2d7de0c2b6bb72a552503770da6cae}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R@{\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R}}
+\index{\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R@{\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-M\-A\-S\-K\-V\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-K\-V\-E\-C\-T\-O\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{if ({\bf \-B\-I\-T\-N\-B\-R}((x))) \{ $\ast$((v)+{\bf \-O\-F\-F\-S\-E\-T}((x)-\/1)) = ( ($\ast$((v)+{\bf \-O\-F\-F\-S\-E\-T}((x)-\/1))$>$$>$(63-\/{\bf \-B\-I\-T\-N\-B\-R}((x)-\/1))) ) $<$$<$ (63-\/{\bf \-B\-I\-T\-N\-B\-R}((x)-\/1));  \}\}}}\label{fca__macros_8h_aef2d7de0c2b6bb72a552503770da6cae}
+
+
+set the unused attribute bits to zero. 
+
+(i.\-e. attributes == 100 -\/$>$ width == 2, \hyperlink{fca__macros_8h_ada941e79b743a29c3b14ead69beacc73}{\-B\-I\-T\-N\-B\-R(99)} == 35) where v is a 64-\/bit integer vector, and x is the number used bits. 
+
+\-Definition at line 114 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by close\-Intent\-V().
+
+\hypertarget{fca__macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-M\-A\-X@{\-M\-A\-X}}
+\index{\-M\-A\-X@{\-M\-A\-X}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a)$>$(b))?(a)\-:(b))}}\label{fca__macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}
+
+
+gives maximum 
+
+
+
+\-Definition at line 214 of file fca\-\_\-macros.\-h.
+
+\hypertarget{fca__macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-M\-I\-N@{\-M\-I\-N}}
+\index{\-M\-I\-N@{\-M\-I\-N}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-I\-N}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a)$<$(b))?(a)\-:(b))}}\label{fca__macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}
+
+
+gives minimum 
+
+
+
+\-Definition at line 207 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-File\-V().
+
+\hypertarget{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-O\-F\-F\-S\-E\-T@{\-O\-F\-F\-S\-E\-T}}
+\index{\-O\-F\-F\-S\-E\-T@{\-O\-F\-F\-S\-E\-T}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-O\-F\-F\-S\-E\-T}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((unsigned)(x)$>$$>$6)}}\label{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}
+
+
+get the offset of the x-\/th bit in an 64-\/bit integer vector 
+
+
+
+\-Definition at line 56 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), intent\-Cmp\-V(), new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+\hypertarget{fca__macros_8h_a740a16a7eb505fa8d595a191feed0941}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
+\index{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return;\}\}}}\label{fca__macros_8h_a740a16a7eb505fa8d595a191feed0941}
+
+
+\hyperlink{fca__macros_8h}{fca\-\_\-macros.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
+checks whether x == 0, and returns 
+
+\-Definition at line 28 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by delete\-Concept\-Bulk(), delete\-Concept\-Bulk\-V(), delete\-Concept\-Chunk(), delete\-Concept\-Chunk\-V(), delete\-Formal\-Context(), delete\-Formal\-Context\-V(), write\-Concepts\-To\-File(), write\-Concepts\-To\-File\-V(), write\-Formal\-Context(), and write\-Formal\-Context\-V().
+
+\hypertarget{fca__macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
+\index{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return 0;\}\}}}\label{fca__macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}
+
+
+checks whether x == 0, and returns 0; 
+
+
+
+\-Definition at line 35 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), add\-Concept\-To\-Bulk\-V(), count\-Concepts\-In\-Bulk(), count\-Concepts\-In\-Bulk\-V(), count\-Context\-Concepts(), count\-Context\-Concepts2(), count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-From\-File(), new\-Formal\-Context\-From\-File\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
+
+\hypertarget{fca__macros_8h_a9726c8302995a7cfcb79221354ef69b3}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-R\-O\-W@{\-R\-O\-W}}
+\index{\-R\-O\-W@{\-R\-O\-W}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-R\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-O\-W}(
+\begin{DoxyParamCaption}
+\item[{}]{g, }
+\item[{}]{\-I}
+\end{DoxyParamCaption}
+)~((\-I)-\/$>$incidence + ((\-I)-\/$>$width $\ast$ (g)))}}\label{fca__macros_8h_a9726c8302995a7cfcb79221354ef69b3}
+
+
+gives the attribute vector for a given object 
+
+
+
+\-Definition at line 148 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk\-V(), close\-Intent\-V(), new\-Formal\-Context\-From\-File\-V(), write\-Concepts\-To\-File\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{fca__macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}}
+\index{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~\{if (((x) != (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}}}\label{fca__macros_8h_a8d200ab641cd359687ca7bbd465b219a}
+
+
+if x!=y, prints a warning and calls the statement d 
+
+
+
+\-Definition at line 42 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by write\-Concepts\-To\-File(), and write\-Concepts\-To\-File\-V().
+
+\hypertarget{fca__macros_8h_a9978c9be0f4161638ec49b4eda697d42}{\index{fca\-\_\-macros.\-h@{fca\-\_\-macros.\-h}!\-W\-I\-D\-T\-H@{\-W\-I\-D\-T\-H}}
+\index{\-W\-I\-D\-T\-H@{\-W\-I\-D\-T\-H}!fca_macros.h@{fca\-\_\-macros.\-h}}
+\subsubsection[{\-W\-I\-D\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-I\-D\-T\-H}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((((unsigned)(x))\&(63))?((unsigned)(x)/64)+1\-:((unsigned)(x)/64))}}\label{fca__macros_8h_a9978c9be0f4161638ec49b4eda697d42}
+
+
+determine the length of an 64-\/bit integer vector that can hold x bits 
+
+
+
+\-Definition at line 69 of file fca\-\_\-macros.\-h.
+
+
+
+\-Referenced by new\-Concept\-Bulk\-V(), new\-Concept\-Chunk\-V(), and new\-Formal\-Context\-V().
+

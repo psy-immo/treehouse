@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="5,83,85,112"/>
+<area shape="rect" id="node5" href="$fca_8c.html" title="this file contains general formal context related operations and routines" alt="" coords="109,83,181,112"/>
+<area shape="rect" id="node7" href="$fcaV_8c.html" title="this file contains general formal context related operations and routines with IncidenceVector implem..." alt="" coords="205,83,288,112"/>
+<area shape="rect" id="node9" href="$fcaVnextClosureX_8c.html" title="this file contains a multi&#45;threading nextClosure implementation using the IncidenceVector implementat..." alt="" coords="312,83,472,112"/>
+</map>

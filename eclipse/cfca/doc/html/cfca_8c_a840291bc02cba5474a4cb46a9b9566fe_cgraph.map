@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$fca_8c.html#a965bdc1065d581495114a764020c3c6b" title="use this for bulks that are filled in order" alt="" coords="368,45,515,75"/>
+<area shape="rect" id="node5" href="$fca__private_8h.html#a7d53642e5953e35c86ef0425858d707e" title="use this for bulks that are filled in order" alt="" coords="364,123,519,152"/>
+<area shape="rect" id="node7" href="$fca_8c.html#acd989c02b03c2cc8bf2d477d2f5636e5" title="deletes the entire bulk list" alt="" coords="144,213,275,243"/>
+<area shape="rect" id="node11" href="$fca__private_8h.html#aa2cf22779998982c65e3762c7e2c2c84" title="deletes the entire bulk list" alt="" coords="139,267,280,296"/>
+<area shape="rect" id="node15" href="$fca_8c.html#a9835be78a56a9eaec5346a86562f10c3" title="deletes the formal context *ctx, and sets the pointer to zero" alt="" coords="139,320,280,349"/>
+<area shape="rect" id="node17" href="$fca_8h.html#a42ae183692b566f6d12c9db27e8f7ec1" title="deletes the formal context *ctx, and sets the pointer to zero" alt="" coords="133,373,285,403"/>
+<area shape="rect" id="node19" href="$fca_8c.html#a629cb24ff7d30d56d803e1848ff0019d" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="111,427,308,456"/>
+<area shape="rect" id="node30" href="$fca__private_8h.html#a90151fdf1b3ef3201deb2e1ab752729d" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="569,481,775,511"/>
+<area shape="rect" id="node41" href="$fca_8h.html#a9b6b69f5062c68c30c5e1e6d56ea37bc" title="create a new formal context object from a .cxt file" alt="" coords="113,584,305,613"/>
+<area shape="rect" id="node45" href="$fca_8c.html#ae3105d9c1d91e1816c8b7a83d3414790" title="create a new formal context with random incidence relation" alt="" coords="104,637,315,667"/>
+<area shape="rect" id="node49" href="$fca__private_8h.html#a858241e44987c35c2ae688f2797f2a30" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="155,531,264,560"/>
+<area shape="rect" id="node61" href="$fca_8c.html#ac1a973138b558d99763bfa84d022d42d" title="write a list of concept intents into a .cxt file" alt="" coords="139,5,280,35"/>
+<area shape="rect" id="node64" href="$fca__private_8h.html#ac1443261c57cc1d3db9361c188cd9c96" title="write a list of concept intents into a .cxt file" alt="" coords="135,109,284,139"/>
+<area shape="rect" id="node67" href="$fca_8c.html#a064800878bf96c6398d2f716609df081" title="save the context ctx at the given file location" alt="" coords="141,691,277,720"/>
+<area shape="rect" id="node69" href="$fca_8h.html#aa4861d8f750bb9786aa32c55a683764b" title="save the context ctx at the given file location" alt="" coords="137,744,281,773"/>
+<area shape="rect" id="node9" href="$fca_8c.html#ad13aa7f16480d11c9c89310cca51670b" title="deletes a concept chunk object and sets its pointer to zero" alt="" coords="369,213,513,243"/>
+<area shape="rect" id="node13" href="$fca__private_8h.html#afd9305761d657be7c21fb81e82d72a42" title="deletes a concept chunk object and sets its pointer to zero" alt="" coords="365,267,517,296"/>
+<area shape="rect" id="node21" href="$fca_8c.html#ae932250c17890745228ddb08bb856e40" title="close an attribute set, i.e." alt="" coords="399,323,484,352"/>
+<area shape="rect" id="node23" href="$fca_8c.html#a709ef22f213a99f6a46ca8aa78328ece" title="creates a new formal concept intent bulk list" alt="" coords="612,375,732,404"/>
+<area shape="rect" id="node25" href="$fca_8c.html#ac9e73d5390011291b92740d99f186ab4" title="copies the given intent to the bulk denoted by the root node." alt="" coords="375,427,508,456"/>
+<area shape="rect" id="node27" href="$fca_8c.html#a10016c73379236582a412ab83e159618" title="create a new formal concept chunk" alt="" coords="605,428,739,457"/>
+<area shape="rect" id="node32" href="$fca__private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="849,535,943,564"/>
+<area shape="rect" id="node34" href="$fca__private_8h.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="1023,508,1153,537"/>
+<area shape="rect" id="node36" href="$fca__private_8h.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="825,481,967,511"/>
+<area shape="rect" id="node38" href="$fca__private_8h.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="1017,455,1159,484"/>
+<area shape="rect" id="node43" href="$fca_8h.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context" alt="" coords="371,635,512,664"/>
+<area shape="rect" id="node47" href="$fca_8c.html#a8cc0086fc3f45b783688b21105632456" title="create a new formal context" alt="" coords="376,688,507,717"/>
+<area shape="rect" id="node51" href="$fca__private_8h.html#adcbb382ceada973214f6bbeca05cb279" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="613,559,731,588"/>
+<area shape="rect" id="node58" href="$fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140" title="callNextClosureVX1" alt="" coords="372,581,511,611"/>
+<area shape="rect" id="node56" href="$fca__private_8h.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="851,639,941,668"/>
+</map>

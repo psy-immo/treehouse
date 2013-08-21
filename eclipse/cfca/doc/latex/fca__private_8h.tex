@@ -1,0 +1,1997 @@
+\hypertarget{fca__private_8h}{\section{src/fca\-\_\-private.h \-File \-Reference}
+\label{fca__private_8h}\index{src/fca\-\_\-private.\-h@{src/fca\-\_\-private.\-h}}
+}
+
+
+\hyperlink{fca__private_8h}{fca\-\_\-private.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens  
+
+
+{\ttfamily \#include \char`\"{}fca\-\_\-structs.\-h\char`\"{}}\*
+\-Include dependency graph for fca\-\_\-private.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{fca__private_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__private_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fca__structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$ \hyperlink{fca__private_8h_a10016c73379236582a412ab83e159618}{new\-Concept\-Chunk} (int attributes)
+\begin{DoxyCompactList}\small\item\em create a new formal concept chunk \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_ad13aa7f16480d11c9c89310cca51670b}{delete\-Concept\-Chunk} (\hyperlink{fca__structs_8h_ae552e1b13988c8c4ca0ab8f8a3e60f96}{my\-Formal\-Concept\-Intent\-Chunk} $\ast$$\ast$c)
+\begin{DoxyCompactList}\small\item\em deletes a concept chunk object and sets its pointer to zero \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca__private_8h_a709ef22f213a99f6a46ca8aa78328ece}{new\-Concept\-Bulk} (int attributes)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent bulk list \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca__private_8h_a629cb24ff7d30d56d803e1848ff0019d}{new\-Concept\-Bulk\-From\-Context} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_ac1a973138b558d99763bfa84d022d42d}{write\-Concepts\-To\-File} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, \hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em write a list of concept intents into a .cxt file \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_acd989c02b03c2cc8bf2d477d2f5636e5}{delete\-Concept\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} $\ast$root\-Node)
+\begin{DoxyCompactList}\small\item\em deletes the entire bulk list \end{DoxyCompactList}\item 
+int \hyperlink{fca__private_8h_a965bdc1065d581495114a764020c3c6b}{count\-Concepts\-In\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root)
+\begin{DoxyCompactList}\small\item\em use this for bulks that are filled in order \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} \hyperlink{fca__private_8h_ac9e73d5390011291b92740d99f186ab4}{add\-Concept\-To\-Bulk} (\hyperlink{fca__structs_8h_a6c7fd90fd34d9ca52fedd96a01dd3566}{\-Formal\-Concept\-Intent\-Bulk\-List} root, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$intent)
+\begin{DoxyCompactList}\small\item\em copies the given intent to the bulk denoted by the root node. \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_ae932250c17890745228ddb08bb856e40}{close\-Intent} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$input, \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$output)
+\begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_a4596b3e7b389078cc2dab62448e0c58c}{close\-Intent2} (\hyperlink{fca_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} ctx, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$input, \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$output\-Intent, \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$output\-Extent)
+\begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
+int \hyperlink{fca__private_8h_a3eff21bebd55849e1049f6d8b6c50a8b}{intent\-Cmp} (int attributes, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$minus, const \hyperlink{fca_8h_a92fa84ef7a12663bb998f141ab729056}{\-Incidence\-Cell} $\ast$plus)
+\begin{DoxyCompactList}\small\item\em compare two intent vectors \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_adcfe1beba7f75ea7a6e4230916b6a65a}{close\-Intent\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} input, \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} output)
+\begin{DoxyCompactList}\small\item\em close an attribute set, i.\-e. \end{DoxyCompactList}\item 
+int \hyperlink{fca__private_8h_a55d40e1b5169e4466d00cb930c67e0ef}{intent\-Cmp\-V} (size\-\_\-t attributes, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} minus, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} plus)
+\begin{DoxyCompactList}\small\item\em compare two intent vectors \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$ \hyperlink{fca__private_8h_ab5c9a71c810ad1eeeb5f8ff78d77d899}{new\-Concept\-Chunk\-V} (size\-\_\-t attributes)
+\begin{DoxyCompactList}\small\item\em create a new formal concept chunk \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_afd9305761d657be7c21fb81e82d72a42}{delete\-Concept\-Chunk\-V} (\hyperlink{fca__structs_8h_abe3c190ec3375121cbfe3afff517b9b9}{my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$$\ast$c)
+\begin{DoxyCompactList}\small\item\em deletes a concept chunk object and sets its pointer to zero \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fca__private_8h_abda612c4305c29a37b6501e18d94ebc5}{new\-Concept\-Bulk\-V} (size\-\_\-t attributes)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent bulk list \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fca__private_8h_a90151fdf1b3ef3201deb2e1ab752729d}{new\-Concept\-Bulk\-From\-Context\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_ac1443261c57cc1d3db9361c188cd9c96}{write\-Concepts\-To\-File\-V} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, \hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em write a list of concept intents into a .cxt file \end{DoxyCompactList}\item 
+void \hyperlink{fca__private_8h_aa2cf22779998982c65e3762c7e2c2c84}{delete\-Concept\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} $\ast$root\-Node)
+\begin{DoxyCompactList}\small\item\em deletes the entire bulk list \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{fca__private_8h_a7d53642e5953e35c86ef0425858d707e}{count\-Concepts\-In\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root)
+\begin{DoxyCompactList}\small\item\em use this for bulks that are filled in order \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fca__private_8h_aa6cc62f8dfd08ef795a932cd06e69b91}{add\-Concept\-To\-Bulk\-V} (\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} root, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} intent)
+\begin{DoxyCompactList}\small\item\em copies the given intent to the bulk denoted by the root node. \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fca__private_8h_adcbb382ceada973214f6bbeca05cb279}{next\-Closure\-V\-X1} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} start, const \hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} stop)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset \end{DoxyCompactList}\item 
+\hyperlink{fca__structs_8h_a6306c91d1e7b5237618bab6172a784a1}{\-Formal\-Concept\-Intent\-Bulk\-List\-V} \hyperlink{fca__private_8h_a858241e44987c35c2ae688f2797f2a30}{next\-Closure\-V\-X} (\hyperlink{fca_8h_a98aafc7ce3efff805e9add08680b731f}{\-Formal\-Context\-V} ctx)
+\begin{DoxyCompactList}\small\item\em creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{fca__private_8h}{fca\-\_\-private.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
+this file contains forward declarations for fca related functions that are not part of the public interface 
+
+\-Definition in file \hyperlink{fca__private_8h_source}{fca\-\_\-private.\-h}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{fca__private_8h_ac9e73d5390011291b92740d99f186ab4}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!add\-Concept\-To\-Bulk@{add\-Concept\-To\-Bulk}}
+\index{add\-Concept\-To\-Bulk@{add\-Concept\-To\-Bulk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{add\-Concept\-To\-Bulk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List} {\bf add\-Concept\-To\-Bulk} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List}}]{root, }
+\item[{const {\bf \-Incidence\-Cell} $\ast$}]{intent}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ac9e73d5390011291b92740d99f186ab4}
+
+
+copies the given intent to the bulk denoted by the root node. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root} & root node of the bulk \\
+\hline
+{\em intent} & read-\/only pointer to an array of \-Incidence\-Cell\mbox{[}root-\/$>$attributes\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+the node where the intent was added to the last chunk 
+\end{DoxyReturn}
+
+
+\-Definition at line 428 of file fca.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-::attributes, \-B\-U\-L\-K\-S\-I\-Z\-E, \-C\-E\-L\-L, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks, \-C\-H\-U\-N\-K\-S\-I\-Z\-E, new\-Concept\-Bulk(), new\-Concept\-Chunk(), s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, smy\-Formal\-Concept\-Intent\-Chunk\-::size, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size.
+
+
+
+\-Referenced by new\-Concept\-Bulk\-From\-Context().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(root);
+
+    do
+    {
+
+        if (root->size == 0)
+        {
+            root->chunks[0] = newConceptChunk(root->attributes);
+            root->size = 1;
+        }
+
+        int last_index;
+        last_index = root->size - 1;
+
+        if (root->chunks[last_index]->size == CHUNKSIZE)
+        {
+            if (root->size == BULKSIZE)
+            {
+                if (root->next == 0)
+                {
+                    root->next = newConceptBulk(root->attributes);
+                }
+                root = root->next;
+                continue;
+            }
+            else
+            {
+                last_index = root->size++;
+                root->chunks[last_index] = newConceptChunk(root->attributes);
+            }
+        }
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+        memcpy(
+                &(CELL(root->chunks[last_index]->size, root->chunks[last_index]
+      ,0)),
+                intent, sizeof(IncidenceCell) * root->attributes);
+
+#pragma GCC diagnostic pop
+
+        root->chunks[last_index]->size++;
+
+        break;
+
+    } while (1);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{fca__private_8h_ac9e73d5390011291b92740d99f186ab4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_aa6cc62f8dfd08ef795a932cd06e69b91}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!add\-Concept\-To\-Bulk\-V@{add\-Concept\-To\-Bulk\-V}}
+\index{add\-Concept\-To\-Bulk\-V@{add\-Concept\-To\-Bulk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{add\-Concept\-To\-Bulk\-V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf add\-Concept\-To\-Bulk\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V}}]{root, }
+\item[{const {\bf \-Incidence\-Vector}}]{intent}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_aa6cc62f8dfd08ef795a932cd06e69b91}
+
+
+copies the given intent to the bulk denoted by the root node. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root} & root node of the bulk \\
+\hline
+{\em intent} & read-\/only pointer to an array of \-Incidence\-Cell\mbox{[}root-\/$>$attributes\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+the node where the intent was added to the last chunk 
+\end{DoxyReturn}
+
+
+\-Definition at line 837 of file fca\-V.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, \-B\-U\-L\-K\-S\-I\-Z\-E\-V, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::chunks, \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V, new\-Concept\-Bulk\-V(), new\-Concept\-Chunk\-V(), s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, \-R\-O\-W, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::size, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::width.
+
+
+
+\-Referenced by new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(root);
+
+
+    do
+    {
+
+        if (root->size == 0)
+        {
+            root->chunks[0] = newConceptChunkV(root->attributes);
+            root->size = 1;
+        }
+
+        size_t last_index;
+        last_index = root->size - 1;
+
+        if (root->chunks[last_index]->size == CHUNKSIZEV)
+        {
+            if (root->size == BULKSIZEV)
+            {
+                if (root->next == 0)
+                {
+                    root->next = newConceptBulkV(root->attributes);
+                }
+                root = root->next;
+                continue;
+            }
+            else
+            {
+                last_index = root->size++;
+                root->chunks[last_index] = newConceptChunkV(root->attributes);
+            }
+        }
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+        memcpy( ROW(root->chunks[last_index]->size, root->chunks[last_index]),
+                intent, sizeof(uint64_t) * root->width);
+
+#pragma GCC diagnostic pop
+
+        root->chunks[last_index]->size++;
+
+        break;
+
+    } while (1);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{fca__private_8h_aa6cc62f8dfd08ef795a932cd06e69b91_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_ae932250c17890745228ddb08bb856e40}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!close\-Intent@{close\-Intent}}
+\index{close\-Intent@{close\-Intent}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{close\-Intent}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf close\-Intent} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context}}]{ctx, }
+\item[{const {\bf \-Incidence\-Cell} $\ast$}]{input, }
+\item[{{\bf \-Incidence\-Cell} $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ae932250c17890745228ddb08bb856e40}
+
+
+close an attribute set, i.\-e. 
+
+add further attributes
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+{\em input} & the intent set that is to be closed \\
+\hline
+{\em output} & the closure intent'' wrt. ctx \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 538 of file fca.\-c.
+
+
+
+\-References smy\-Formal\-Context\-::attributes, \-C\-L\-E\-A\-R, \-C\-R\-O\-S\-S, g\-Im, \-I\-N\-C\-I\-D\-E\-S, and smy\-Formal\-Context\-::objects.
+
+
+
+\-Referenced by count\-Context\-Concepts(), and new\-Concept\-Bulk\-From\-Context().
+
+
+\begin{DoxyCode}
+{
+
+    myFormalContext* I;
+    I = (myFormalContext*) ctx;
+    for (int var = 0; var < I->attributes; ++var)
+    {
+        CROSS(output[var]);
+    }
+
+    for (int g = 0; g < I->objects; ++g)
+    {
+        int good;
+        good = 1;
+
+        for (int m = 0; m < I->attributes; ++m)
+        {
+            if (INCIDES(input[m]))
+                if (!gIm(g,I,m))
+                {
+                    /*
+                     * some attribute is not present for this object -> next
+       object
+                     */
+                    good = 0;
+                    break;
+                }
+        }
+        if (good)
+            /*
+             * remove attributes that are not common among all objects that
+       have the input
+             * attributes
+             */
+            for (int m = 0; m < I->attributes; ++m)
+            {
+                if (!gIm(g,I,m))
+                {
+                    CLEAR(output[m]);
+                }
+            }
+    }
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a4596b3e7b389078cc2dab62448e0c58c}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!close\-Intent2@{close\-Intent2}}
+\index{close\-Intent2@{close\-Intent2}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{close\-Intent2}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf close\-Intent2} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context}}]{ctx, }
+\item[{const {\bf \-Incidence\-Cell} $\ast$}]{input, }
+\item[{{\bf \-Incidence\-Cell} $\ast$}]{output\-Intent, }
+\item[{{\bf \-Incidence\-Cell} $\ast$}]{output\-Extent}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a4596b3e7b389078cc2dab62448e0c58c}
+
+
+close an attribute set, i.\-e. 
+
+add further attributes, 1.\-92 times slower than close\-Intent
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+{\em input} & the intent set that is to be closed \\
+\hline
+{\em output\-Intent} & the closure intent'' wrt. ctx \\
+\hline
+{\em output\-Objects} & the corresponding objects, i.\-e. intent' wrt. ctx \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 491 of file fca.\-c.
+
+
+
+\-References smy\-Formal\-Context\-::attributes, \-C\-L\-E\-A\-R, \-C\-R\-O\-S\-S, g\-Im, \-I\-N\-C\-I\-D\-E\-S, and smy\-Formal\-Context\-::objects.
+
+
+
+\-Referenced by count\-Context\-Concepts2().
+
+
+\begin{DoxyCode}
+{
+    myFormalContext* I;
+    I = (myFormalContext*) ctx;
+
+    for (int g = 0; g < I->objects; ++g)
+    {
+        CROSS(outputExtent[g]);
+        for (int m = 0; m < I->attributes; ++m)
+        {
+            if (INCIDES(input[m]))
+                if (!gIm(g,I,m))
+                {
+                    /*
+                     * some attribute is not present for this object -> next
+       object
+                     */
+                    CLEAR(outputExtent[g]);
+                    break;
+                }
+        }
+    }
+
+    for (int m = 0; m < I->attributes; ++m)
+    {
+        CROSS(outputIntent[m]);
+        for (int g = 0; g < I->objects; ++g)
+        {
+            if (INCIDES(outputExtent[g]))
+                if (!gIm(g,I,m))
+                {
+                    CLEAR(outputIntent[m]);
+                    break;
+                }
+        }
+    }
+
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_adcfe1beba7f75ea7a6e4230916b6a65a}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!close\-Intent\-V@{close\-Intent\-V}}
+\index{close\-Intent\-V@{close\-Intent\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{close\-Intent\-V}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf close\-Intent\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx, }
+\item[{const {\bf \-Incidence\-Vector}}]{input, }
+\item[{{\bf \-Incidence\-Vector}}]{output}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_adcfe1beba7f75ea7a6e4230916b6a65a}
+
+
+close an attribute set, i.\-e. 
+
+add further attributes
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+{\em input} & the intent set that is to be closed \\
+\hline
+{\em output} & the closure intent'' wrt. ctx \\
+\hline
+\end{DoxyParams}
+some attribute is not present for this object -\/$>$ next object
+
+remove attributes that are not common among all objects that have the input attributes
+
+\-Definition at line 413 of file fca\-V.\-c.
+
+
+
+\-References smy\-Formal\-Context\-V\-::attributes, \-M\-A\-S\-K\-V\-E\-C\-T\-O\-R, smy\-Formal\-Context\-V\-::objects, \-R\-O\-W, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+
+\begin{DoxyCode}
+{
+
+    myFormalContextV* I;
+    I = (myFormalContextV*) ctx;
+    for (size_t var = 0; var < I->width; ++var)
+    {
+        output[var] = ~0ULL;
+    }
+
+    MASKVECTOR(output, I->attributes);
+
+    for (size_t g = 0; g < I->objects; ++g)
+    {
+        int good;
+        good = 1;
+
+        for (size_t i = 0; i < I->width; ++i)
+        {
+            if ((input[i]) & (~(ROW(g,I)[i])))
+            {
+                good = 0;
+                break;
+            }
+
+        }
+
+        if (good)
+        {
+            for (size_t i = 0; i < I->width; ++i)
+            {
+                output[i] &= ROW(g,I)[i];
+            }
+        }
+    }
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a965bdc1065d581495114a764020c3c6b}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!count\-Concepts\-In\-Bulk@{count\-Concepts\-In\-Bulk}}
+\index{count\-Concepts\-In\-Bulk@{count\-Concepts\-In\-Bulk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{count\-Concepts\-In\-Bulk}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf count\-Concepts\-In\-Bulk} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List}}]{root}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a965bdc1065d581495114a764020c3c6b}
+
+
+use this for bulks that are filled in order 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+number of concepts in bulk 
+\end{DoxyReturn}
+
+
+\-Definition at line 393 of file fca.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks, \-C\-H\-U\-N\-K\-S\-I\-Z\-E, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, smy\-Formal\-Concept\-Intent\-Chunk\-::size, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size.
+
+
+
+\-Referenced by main(), and write\-Concepts\-To\-File().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(root);
+
+    int count = 0;
+
+    while (root != 0)
+    {
+        if (root->size > 0)
+        {
+            /*
+             * count the full chunks
+             */
+            count += CHUNKSIZE * (root->size - 1);
+            /*
+             * and the last chunk
+             */
+            count += root->chunks[root->size - 1]->size;
+        }
+        root = root->next;
+    }
+
+    return count;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a7d53642e5953e35c86ef0425858d707e}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!count\-Concepts\-In\-Bulk\-V@{count\-Concepts\-In\-Bulk\-V}}
+\index{count\-Concepts\-In\-Bulk\-V@{count\-Concepts\-In\-Bulk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{count\-Concepts\-In\-Bulk\-V}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf count\-Concepts\-In\-Bulk\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V}}]{root}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a7d53642e5953e35c86ef0425858d707e}
+
+
+use this for bulks that are filled in order 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+number of concepts in bulk 
+\end{DoxyReturn}
+count the full chunks
+
+and the last chunk
+
+\-Definition at line 802 of file fca\-V.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::chunks, \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::size.
+
+
+
+\-Referenced by main(), and write\-Concepts\-To\-File\-V().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(root);
+
+    size_t count = 0;
+
+    while (root != 0)
+    {
+        if (root->size > 0)
+        {
+            count += CHUNKSIZEV * (root->size - 1);
+            count += root->chunks[root->size - 1]->size;
+        }
+        root = root->next;
+    }
+
+    return count;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_acd989c02b03c2cc8bf2d477d2f5636e5}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!delete\-Concept\-Bulk@{delete\-Concept\-Bulk}}
+\index{delete\-Concept\-Bulk@{delete\-Concept\-Bulk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{delete\-Concept\-Bulk}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Concept\-Bulk} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List} $\ast$}]{root\-Node}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_acd989c02b03c2cc8bf2d477d2f5636e5}
+
+
+deletes the entire bulk list 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root\-Node} & pointer to the first node \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 361 of file fca.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks, delete\-Concept\-Chunk(), s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(rootNode);
+    RETURN_IF_ZERO(*rootNode);
+
+    FormalConceptIntentBulkList l;
+    l = *rootNode;
+    *rootNode = 0;
+
+    do
+    {
+        for (int var = 0; var < l->size; ++var)
+        {
+            deleteConceptChunk(&(l->chunks[var]));
+        }
+
+        FormalConceptIntentBulkList next;
+        next = l->next;
+
+        free(l->chunks);
+        free(l);
+
+        l = next;
+    } while (l != 0);
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{fca__private_8h_acd989c02b03c2cc8bf2d477d2f5636e5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_aa2cf22779998982c65e3762c7e2c2c84}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!delete\-Concept\-Bulk\-V@{delete\-Concept\-Bulk\-V}}
+\index{delete\-Concept\-Bulk\-V@{delete\-Concept\-Bulk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{delete\-Concept\-Bulk\-V}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Concept\-Bulk\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} $\ast$}]{root\-Node}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_aa2cf22779998982c65e3762c7e2c2c84}
+
+
+deletes the entire bulk list 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em root\-Node} & pointer to the first node \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 770 of file fca\-V.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::chunks, delete\-Concept\-Chunk\-V(), s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::size.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(rootNode);
+    RETURN_IF_ZERO(*rootNode);
+
+    FormalConceptIntentBulkListV l;
+    l = *rootNode;
+    *rootNode = 0;
+
+    do
+    {
+        for (size_t var = 0; var < l->size; ++var)
+        {
+            deleteConceptChunkV(&(l->chunks[var]));
+        }
+
+        FormalConceptIntentBulkListV next;
+        next = l->next;
+
+        free(l->chunks);
+        free(l);
+
+        l = next;
+    } while (l != 0);
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{fca__private_8h_aa2cf22779998982c65e3762c7e2c2c84_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_ad13aa7f16480d11c9c89310cca51670b}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!delete\-Concept\-Chunk@{delete\-Concept\-Chunk}}
+\index{delete\-Concept\-Chunk@{delete\-Concept\-Chunk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{delete\-Concept\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Concept\-Chunk} (
+\begin{DoxyParamCaption}
+\item[{{\bf my\-Formal\-Concept\-Intent\-Chunk} $\ast$$\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ad13aa7f16480d11c9c89310cca51670b}
+
+
+deletes a concept chunk object and sets its pointer to zero 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em c} & pointer to the concept chunk to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 326 of file fca.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by delete\-Concept\-Bulk().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(c);
+    RETURN_IF_ZERO(*c);
+
+    free((*c)->incidence);
+
+    free(*c);
+    *c = 0;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_afd9305761d657be7c21fb81e82d72a42}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!delete\-Concept\-Chunk\-V@{delete\-Concept\-Chunk\-V}}
+\index{delete\-Concept\-Chunk\-V@{delete\-Concept\-Chunk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{delete\-Concept\-Chunk\-V}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Concept\-Chunk\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf my\-Formal\-Concept\-Intent\-Chunk\-V} $\ast$$\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_afd9305761d657be7c21fb81e82d72a42}
+
+
+deletes a concept chunk object and sets its pointer to zero 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em c} & pointer to the concept chunk to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 539 of file fca\-V.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by delete\-Concept\-Bulk\-V().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(c);
+    RETURN_IF_ZERO(*c);
+
+    free((*c)->incidence);
+
+    free(*c);
+    *c = 0;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a3eff21bebd55849e1049f6d8b6c50a8b}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!intent\-Cmp@{intent\-Cmp}}
+\index{intent\-Cmp@{intent\-Cmp}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{intent\-Cmp}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf intent\-Cmp} (
+\begin{DoxyParamCaption}
+\item[{int}]{attributes, }
+\item[{const {\bf \-Incidence\-Cell} $\ast$}]{minus, }
+\item[{const {\bf \-Incidence\-Cell} $\ast$}]{plus}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a3eff21bebd55849e1049f6d8b6c50a8b}
+
+
+compare two intent vectors 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & attribute count \\
+\hline
+{\em minus} & \char`\"{}left\char`\"{} operand \\
+\hline
+{\em plus} & \char`\"{}right\char`\"{} operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+-\/1 if minus is bigger, 1 if plus is bigger, 0 if minus and plus is the same 
+\end{DoxyReturn}
+
+
+\-Definition at line 591 of file fca.\-c.
+
+
+
+\-References \-I\-N\-C\-I\-D\-E\-S.
+
+
+\begin{DoxyCode}
+{
+    for (int var = 0; var < attributes; ++var)
+    {
+        if (INCIDES(minus[var]))
+        {
+            if (!INCIDES((plus[var])))
+                return -1;
+        }
+        else if (INCIDES(plus[var]))
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a55d40e1b5169e4466d00cb930c67e0ef}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!intent\-Cmp\-V@{intent\-Cmp\-V}}
+\index{intent\-Cmp\-V@{intent\-Cmp\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{intent\-Cmp\-V}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf intent\-Cmp\-V} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{attributes, }
+\item[{const {\bf \-Incidence\-Vector}}]{minus, }
+\item[{const {\bf \-Incidence\-Vector}}]{plus}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a55d40e1b5169e4466d00cb930c67e0ef}
+
+
+compare two intent vectors 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & attribute count \\
+\hline
+{\em minus} & \char`\"{}left\char`\"{} operand \\
+\hline
+{\em plus} & \char`\"{}right\char`\"{} operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+-\/1 if minus is bigger, 1 if plus is bigger, 0 if minus and plus is the same 
+\end{DoxyReturn}
+in this case, \hyperlink{fca__macros_8h_ad12dce0a7bf9d908b172a28155b3d261}{\-O\-F\-F\-S\-E\-T(attributes)} == \-O\-F\-F\-S\-E\-T(attributes-\/1)
+
+we only check the lower bits 0 through (attributes-\/1)
+
+\-E\-L\-S\-E\-: attributes has 64 as factor, so we have done all necessary comparisons in the first loop.
+
+\-Definition at line 468 of file fca\-V.\-c.
+
+
+
+\-References \-B\-I\-T\-N\-B\-R, \-C\-R\-I\-M\-P\-V\-A\-L\-U\-E, and \-O\-F\-F\-S\-E\-T.
+
+
+
+\-Referenced by next\-Closure\-V\-X1().
+
+
+\begin{DoxyCode}
+{
+    for (size_t var = 0; var < OFFSET(attributes); ++var)
+    {
+        if (minus[var] > plus[var])
+            return -1;
+        if (plus[var] > minus[var])
+            return 1;
+    }
+
+    if (BITNBR(attributes))
+    {
+        uint64_t l, r;
+
+        l = minus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
+        r = plus[OFFSET(attributes)] & CRIMPVALUE(attributes-1);
+
+        if (l > r)
+            return -1;
+
+        if (r > l)
+            return 1;
+    }
+    return 0;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a709ef22f213a99f6a46ca8aa78328ece}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Bulk@{new\-Concept\-Bulk}}
+\index{new\-Concept\-Bulk@{new\-Concept\-Bulk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Bulk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List} {\bf new\-Concept\-Bulk} (
+\begin{DoxyParamCaption}
+\item[{int}]{attributes}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a709ef22f213a99f6a46ca8aa78328ece}
+
+
+creates a new formal concept intent bulk list 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & number of attributes of the concept intents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+new formal concept intent bulk list's first node 
+\end{DoxyReturn}
+
+
+\-Definition at line 344 of file fca.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-::attributes, \-B\-U\-L\-K\-S\-I\-Z\-E, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), and new\-Concept\-Bulk\-From\-Context().
+
+
+\begin{DoxyCode}
+{
+    FormalConceptIntentBulkList l;
+    l = malloc(sizeof(struct sFormalConceptIntentBulkNode));
+
+    l->attributes = attributes;
+    l->size = 0;
+    l->chunks = calloc(BULKSIZE, sizeof(myFormalConceptIntentChunk*));
+    l->next = 0;
+    return l;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a629cb24ff7d30d56d803e1848ff0019d}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Bulk\-From\-Context@{new\-Concept\-Bulk\-From\-Context}}
+\index{new\-Concept\-Bulk\-From\-Context@{new\-Concept\-Bulk\-From\-Context}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Bulk\-From\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List} {\bf new\-Concept\-Bulk\-From\-Context} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context}}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a629cb24ff7d30d56d803e1848ff0019d}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents 
+\end{DoxyReturn}
+
+
+\-Definition at line 616 of file fca.\-c.
+
+
+
+\-References add\-Concept\-To\-Bulk(), smy\-Formal\-Context\-::attributes, \-C\-L\-E\-A\-R, close\-Intent(), \-C\-R\-O\-S\-S, \-I\-N\-C\-I\-D\-E\-S, new\-Concept\-Bulk(), and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContext *c;
+    c = (myFormalContext*) ctx;
+
+    IncidenceCell *M;
+    IncidenceCell *Y;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    Y = calloc(c->attributes, sizeof(IncidenceCell));
+    M = malloc(c->attributes * sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
+
+    /*
+     * calculate the bottom intent of the concept lattice, i.e. {}''
+     */
+    closeIntent(ctx, Y, M);
+
+    FormalConceptIntentBulkList root;
+    FormalConceptIntentBulkList last;
+
+    root = newConceptBulk(c->attributes);
+
+    /*
+     * add the bottom element of the concept lattice (a concept lattice is
+       never empty)
+     */
+
+    last = addConceptToBulk(root, M);
+
+    /*
+     * begin of nextClosure function iteration
+     */
+    nextClosure:
+
+    for (int i = c->attributes - 1; i >= 0; --i)
+    {
+
+        if (!INCIDES(M[i]))
+        {
+            CROSS(M[i]);
+            closeIntent(ctx, M, Y);
+
+            int good;
+            good = 1;
+
+            for (int j = 0; j < i; ++j)
+            {
+                if (INCIDES(Y[j]))
+                {
+                    if (!INCIDES((M[j])))
+                    {
+
+                        good = 0;
+                        break;
+                    }
+                }
+            }
+            if (good)
+            {
+                /*
+                 * we found the next intent
+                 */
+                last = addConceptToBulk(last, Y);
+
+                /*
+                 * continue with Y for M
+                 */
+
+                IncidenceCell *DELTA;
+                DELTA = M;
+                M = Y;
+                Y = DELTA;
+                /*
+                 * do the nextClosure
+                 */
+                goto nextClosure;
+            }
+        }
+
+        CLEAR(M[i]);
+    }
+
+    /*
+     * free up memory
+     */
+
+    free(M);
+    free(Y);
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__private_8h_a629cb24ff7d30d56d803e1848ff0019d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_a90151fdf1b3ef3201deb2e1ab752729d}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Bulk\-From\-Context\-V@{new\-Concept\-Bulk\-From\-Context\-V}}
+\index{new\-Concept\-Bulk\-From\-Context\-V@{new\-Concept\-Bulk\-From\-Context\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Bulk\-From\-Context\-V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf new\-Concept\-Bulk\-From\-Context\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a90151fdf1b3ef3201deb2e1ab752729d}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents 
+\end{DoxyReturn}
+calculate the bottom intent of the concept lattice, i.\-e. \{\}''
+
+add the bottom element of the concept lattice (a concept lattice is never empty)
+
+begin of next\-Closure function iteration
+
+we found the next intent
+
+continue with \-Y for \-M
+
+do the next\-Closure
+
+free up memory
+
+\-Definition at line 578 of file fca\-V.\-c.
+
+
+
+\-References add\-Concept\-To\-Bulk\-V(), smy\-Formal\-Context\-V\-::attributes, \-C\-L\-E\-A\-R\-V, close\-Intent\-V(), \-C\-R\-I\-M\-P\-V\-A\-L\-U\-E, \-C\-R\-O\-S\-S\-V, \-I\-N\-C\-I\-D\-E\-S\-V, new\-Concept\-Bulk\-V(), \-O\-F\-F\-S\-E\-T, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContextV *c;
+    c = (myFormalContextV*) ctx;
+
+    IncidenceVector M;
+    IncidenceVector Y;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    Y = calloc(c->width, sizeof(uint64_t));
+    M = malloc(c->width * sizeof(uint64_t));
+
+#pragma GCC diagnostic pop
+
+    closeIntentV(ctx, Y, M);
+
+    FormalConceptIntentBulkListV root;
+    FormalConceptIntentBulkListV last;
+
+
+
+    root = newConceptBulkV(c->attributes);
+
+
+    last = addConceptToBulkV(root, M);
+
+
+    nextClosure:
+
+    for (size_t i = c->attributes; i > 0;)
+    {
+        --i;
+
+        if (!INCIDESV(M,i))
+        {
+            CROSSV(M, i);
+            closeIntentV(ctx, M, Y);
+
+            int good;
+            good = 1;
+
+            for (unsigned int j = 0; j < OFFSET(i); ++j)
+            {
+                if (Y[j] & (~(M[j])))
+                {
+                    good = 0;
+                    break;
+                }
+            }
+            if (good)
+            {
+                if (Y[OFFSET(i)] & (~M[OFFSET(i)]) & CRIMPVALUE(i))
+                {
+                    good = 0;
+                }
+            }
+
+            if (good)
+            {
+
+                last = addConceptToBulkV(last, Y);
+
+                IncidenceVector DELTA;
+                DELTA = M;
+                M = Y;
+                Y = DELTA;
+                goto nextClosure;
+            }
+        }
+
+        CLEARV(M, i);
+    }
+
+    free(M);
+    free(Y);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__private_8h_a90151fdf1b3ef3201deb2e1ab752729d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_abda612c4305c29a37b6501e18d94ebc5}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Bulk\-V@{new\-Concept\-Bulk\-V}}
+\index{new\-Concept\-Bulk\-V@{new\-Concept\-Bulk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Bulk\-V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf new\-Concept\-Bulk\-V} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{attributes}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_abda612c4305c29a37b6501e18d94ebc5}
+
+
+creates a new formal concept intent bulk list 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & number of attributes of the concept intents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+new formal concept intent bulk list's first node 
+\end{DoxyReturn}
+
+
+\-Definition at line 557 of file fca\-V.\-c.
+
+
+
+\-References s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, \-B\-U\-L\-K\-S\-I\-Z\-E\-V, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::chunks, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::size, \-W\-I\-D\-T\-H, and s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::width.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk\-V(), new\-Concept\-Bulk\-From\-Context\-V(), and next\-Closure\-V\-X1().
+
+
+\begin{DoxyCode}
+{
+    FormalConceptIntentBulkListV l;
+    l = malloc(sizeof(struct sFormalConceptIntentBulkNodeV));
+
+    l->attributes = attributes;
+    l->width = WIDTH(attributes);
+    l->size = 0;
+    l->chunks = calloc(BULKSIZEV, sizeof(myFormalConceptIntentChunkV*));
+    l->next = 0;
+    return l;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a10016c73379236582a412ab83e159618}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Chunk@{new\-Concept\-Chunk}}
+\index{new\-Concept\-Chunk@{new\-Concept\-Chunk}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\-Formal\-Concept\-Intent\-Chunk}$\ast$ {\bf new\-Concept\-Chunk} (
+\begin{DoxyParamCaption}
+\item[{int}]{attributes}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a10016c73379236582a412ab83e159618}
+
+
+create a new formal concept chunk 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & number of attributes of the hosting formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+a new concept chunk object 
+\end{DoxyReturn}
+
+
+\-Definition at line 303 of file fca.\-c.
+
+
+
+\-References smy\-Formal\-Concept\-Intent\-Chunk\-::attributes, \-C\-H\-U\-N\-K\-S\-I\-Z\-E, smy\-Formal\-Concept\-Intent\-Chunk\-::incidence, and smy\-Formal\-Concept\-Intent\-Chunk\-::size.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk().
+
+
+\begin{DoxyCode}
+{
+    myFormalConceptIntentChunk *c;
+    c = malloc(sizeof(myFormalConceptIntentChunk));
+    c->attributes = attributes;
+    c->size = 0;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    c->incidence = calloc(attributes * CHUNKSIZE, sizeof(IncidenceCell));
+
+#pragma GCC diagnostic pop
+
+    return c;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_ab5c9a71c810ad1eeeb5f8ff78d77d899}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!new\-Concept\-Chunk\-V@{new\-Concept\-Chunk\-V}}
+\index{new\-Concept\-Chunk\-V@{new\-Concept\-Chunk\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{new\-Concept\-Chunk\-V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\-Formal\-Concept\-Intent\-Chunk\-V}$\ast$ {\bf new\-Concept\-Chunk\-V} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{attributes}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ab5c9a71c810ad1eeeb5f8ff78d77d899}
+
+
+create a new formal concept chunk 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & number of attributes of the hosting formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+a new concept chunk object 
+\end{DoxyReturn}
+
+
+\-Definition at line 511 of file fca\-V.\-c.
+
+
+
+\-References smy\-Formal\-Concept\-Intent\-Chunk\-V\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, \-C\-H\-U\-N\-K\-S\-I\-Z\-E\-V, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::incidence, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, \-W\-I\-D\-T\-H, and smy\-Formal\-Concept\-Intent\-Chunk\-V\-::width.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk\-V().
+
+
+\begin{DoxyCode}
+{
+
+    myFormalConceptIntentChunkV *c;
+
+    c = malloc(sizeof(myFormalConceptIntentChunkV));
+
+    c->attributes = attributes;
+    c->width = WIDTH(attributes);
+    c->size = 0;
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    c->incidence = calloc(c->width * CHUNKSIZEV, sizeof(uint64_t));
+
+#pragma GCC diagnostic pop
+
+    return c;
+}
+\end{DoxyCode}
+\hypertarget{fca__private_8h_a858241e44987c35c2ae688f2797f2a30}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!next\-Closure\-V\-X@{next\-Closure\-V\-X}}
+\index{next\-Closure\-V\-X@{next\-Closure\-V\-X}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{next\-Closure\-V\-X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf next\-Closure\-V\-X} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_a858241e44987c35c2ae688f2797f2a30}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-N} & number of threads \\
+\hline
+{\em ctx} & formal context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents 
+\end{DoxyReturn}
+
+
+\-Definition at line 204 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\-References smy\-Formal\-Context\-V\-::attributes, call\-Next\-Closure\-V\-X1(), \-C\-R\-O\-S\-S\-V, snext\-Closure\-V\-X1\-Params\-::ctx, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, next\-Closure\-V\-X1(), \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, snext\-Closure\-V\-X1\-Params\-::r\-Val, snext\-Closure\-V\-X1\-Params\-::start, snext\-Closure\-V\-X1\-Params\-::stop, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContextV *c;
+    c = (myFormalContextV*) ctx;
+
+    size_t N;
+
+    N = 1;
+
+    if (c->attributes >= 3)
+        N = 8;
+    else if (c->attributes >= 2)
+        N = 4;
+    else if (c->attributes >= 1)
+        N = 2;
+
+    if (N < 2)
+        return nextClosureVX1(ctx, 0, 0);
+
+    IncidenceVector bounds;
+    bounds = calloc(c->width * (N - 1), sizeof(uint64_t));
+
+    if (N == 2)
+    {
+        CROSSV(bounds, 0);
+    }
+    else if (N == 4)
+    {
+        CROSSV(bounds, 1); //01
+
+        CROSSV(bounds + c->width, 0); //10
+
+        CROSSV(bounds + c->width * 2, 1); //11
+        CROSSV(bounds + c->width * 2, 0);
+    }
+    else if (N == 8)
+    {
+        CROSSV(bounds, 2); // 001
+
+        CROSSV(bounds + c->width, 1); //010
+
+        CROSSV(bounds + c->width * 2, 2); //011
+        CROSSV(bounds + c->width * 2, 1);
+
+        CROSSV(bounds + c->width * 3, 0); //100
+
+        CROSSV(bounds + c->width * 4, 0); //101
+        CROSSV(bounds + c->width * 4, 2);
+
+        CROSSV(bounds + c->width * 5, 1); //110
+        CROSSV(bounds + c->width * 5, 0);
+
+        CROSSV(bounds + c->width * 6, 0); //111
+        CROSSV(bounds + c->width * 6, 1);
+        CROSSV(bounds + c->width * 6, 2);
+    }
+
+//  for (int i = 0; i < N - 1; ++i)
+//  {
+//      printf("BOUND %16llx\n", *(bounds + i *
+       c->width)&CRIMPVALUE(c->attributes-1));
+//      if (i > 0)
+//          printf("CMP %d\n",
+//                  intentCmpV(c->attributes, bounds + (i - 1) * c->width,
+//                          bounds + i * c->width));
+//  }
+
+
+    nextClosureVX1Params chunks;
+    chunks = malloc(N * sizeof(struct snextClosureVX1Params));
+
+    pthread_t *threads;
+    threads = malloc(N * sizeof(pthread_t));
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        chunks[i].ctx = ctx;
+        if (i > 0)
+            chunks[i].start = (bounds + c->width * (i - 1));
+        else
+            chunks[i].start = 0;
+
+        if (i < N - 1)
+            chunks[i].stop = (bounds + c->width * (i));
+        else
+            chunks[i].stop = 0;
+    }
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        pthread_create(&threads[i], 0, callNextClosureVX1, (void*) &chunks[i]);
+    }
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        pthread_join(threads[i], 0);
+    }
+
+//  for (size_t i = 0; i < N; ++i)
+//  {
+//      printf("%zu thread: counts %zu\n", i,
+//              countConceptsInBulkV(chunks[i].rVal));
+//  }
+
+    FormalConceptIntentBulkListV root;
+    FormalConceptIntentBulkListV last;
+
+    root = chunks[0].rVal;
+    last = root;
+
+    for (size_t var = 1; var < N; ++var)
+    {
+
+        while (last->next)
+            last = last->next;
+
+        last->next = chunks[var].rVal;
+    }
+
+    free(bounds);
+    free(chunks);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__private_8h_a858241e44987c35c2ae688f2797f2a30_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_adcbb382ceada973214f6bbeca05cb279}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!next\-Closure\-V\-X1@{next\-Closure\-V\-X1}}
+\index{next\-Closure\-V\-X1@{next\-Closure\-V\-X1}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{next\-Closure\-V\-X1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V} {\bf next\-Closure\-V\-X1} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx, }
+\item[{const {\bf \-Incidence\-Vector}}]{start, }
+\item[{const {\bf \-Incidence\-Vector}}]{stop}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_adcbb382ceada973214f6bbeca05cb279}
+
+
+creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm, that are in a given lexicographic interval of the powerset 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context \\
+\hline
+{\em start} & first attribute vector (not included if it is a concept intent) if this is zero, start with \-M=\{\}, in this case, we add the bottom concept in case of \-M''==\{\} \\
+\hline
+{\em stop} & last attribute vector, or zero to continue until the end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+concept intents between (start, stop\mbox{]} 
+\end{DoxyReturn}
+calculate the bottom intent of the concept lattice, i.\-e. \{\}''
+
+add the bottom element of the concept lattice (a concept lattice is never empty)
+
+begin of next\-Closure function iteration
+
+check whether we are still in range
+
+the (pseudo)intent \-Y is bigger than stop
+
+we found the next intent
+
+continue with \-Y for \-M
+
+do the next\-Closure
+
+free up memory
+
+\-Definition at line 52 of file fca\-Vnext\-Closure\-X.\-c.
+
+
+
+\-References add\-Concept\-To\-Bulk\-V(), smy\-Formal\-Context\-V\-::attributes, \-C\-L\-E\-A\-R\-V, close\-Intent\-V(), \-C\-R\-I\-M\-P\-V\-A\-L\-U\-E, \-C\-R\-O\-S\-S\-V, \-I\-N\-C\-I\-D\-E\-S\-V, intent\-Cmp\-V(), new\-Concept\-Bulk\-V(), \-O\-F\-F\-S\-E\-T, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and smy\-Formal\-Context\-V\-::width.
+
+
+
+\-Referenced by call\-Next\-Closure\-V\-X1(), and next\-Closure\-V\-X().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(ctx);
+
+    myFormalContextV *c;
+    c = (myFormalContextV*) ctx;
+
+    IncidenceVector M;
+    IncidenceVector Y;
+
+    Y = calloc(c->width, sizeof(uint64_t));
+    M = malloc(c->width * sizeof(uint64_t));
+
+    FormalConceptIntentBulkListV root;
+    FormalConceptIntentBulkListV last;
+
+    root = newConceptBulkV(c->attributes);
+
+    if (start)
+    {
+        memcpy(M, start, c->width * sizeof(uint64_t));
+
+        last = root;
+
+    }
+    else
+    {
+
+        closeIntentV(ctx, Y, M);
+
+        last = addConceptToBulkV(root, M);
+    }
+
+    nextClosure:
+
+    for (size_t i = c->attributes; i > 0;)
+    {
+        --i;
+
+        if (!INCIDESV(M,i))
+        {
+            CROSSV(M, i);
+            closeIntentV(ctx, M, Y);
+
+            int good;
+            good = 1;
+
+            for (unsigned int j = 0; j < OFFSET(i); ++j)
+            {
+                if (Y[j] & (~(M[j])))
+                {
+                    good = 0;
+                    break;
+                }
+            }
+            if (good)
+            {
+                if (Y[OFFSET(i)] & (~M[OFFSET(i)]) & CRIMPVALUE(i))
+                {
+                    good = 0;
+                }
+            }
+
+            if (good)
+            {
+                if (stop)
+                {
+                    if (intentCmpV(c->attributes, Y, stop) < 0)
+                    {
+                        goto gracefulReturn;
+                    }
+                }
+
+                last = addConceptToBulkV(last, Y);
+
+                IncidenceVector DELTA;
+                DELTA = M;
+                M = Y;
+                Y = DELTA;
+                goto nextClosure;
+            }
+        }
+
+        CLEARV(M, i);
+    }
+
+    gracefulReturn:
+    free(M);
+    free(Y);
+
+    return root;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fca__private_8h_adcbb382ceada973214f6bbeca05cb279_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_ac1a973138b558d99763bfa84d022d42d}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!write\-Concepts\-To\-File@{write\-Concepts\-To\-File}}
+\index{write\-Concepts\-To\-File@{write\-Concepts\-To\-File}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{write\-Concepts\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-Concepts\-To\-File} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context}}]{ctx, }
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List}}]{root, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ac1a973138b558d99763bfa84d022d42d}
+
+
+write a list of concept intents into a .cxt file 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context (or 0, is used for attribute names) \\
+\hline
+{\em root} & the first node of the formal concept intent bulk \\
+\hline
+{\em filename} & output file name (.cxt) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 720 of file fca.\-c.
+
+
+
+\-References smy\-Formal\-Context\-::attribute\-Names, smy\-Formal\-Context\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::chunks, count\-Concepts\-In\-Bulk(), g\-Im, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, smy\-Formal\-Concept\-Intent\-Chunk\-::size, s\-Formal\-Concept\-Intent\-Bulk\-Node\-::size, and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(root);
+
+    myFormalContext* c;
+
+    if (ctx != 0)
+    {
+        c = (myFormalContext*) ctx;
+
+        WARN_IF_UNEQUAL_DO(c->attributes, root->attributes, c = 0);
+    }
+    else
+    {
+        c = 0;
+    }
+
+    RETURN_IF_ZERO(filename);
+
+    FILE* file;
+    file = fopen(filename, "w");
+
+    RETURN_IF_ZERO(file);
+
+    int objects;
+    objects = countConceptsInBulk(root);
+
+    fprintf(file, "B\n\n%d\n%d\n\n", objects, root->attributes);
+
+    for (int var = 0; var < objects; ++var)
+    {
+        fprintf(file, "C%8d\n", (var + 1));
+    }
+
+    if (c != 0)
+    {
+        for (int var = 0; var < c->attributes; ++var)
+        {
+            fputs(c->attributeNames[var], file);
+            fputs("\n", file);
+        }
+    }
+    else
+    {
+        for (int var = 0; var < root->attributes; ++var)
+        {
+            fprintf(file, "m%8d\n", (var + 1));
+        }
+    }
+
+    for (; root != 0; root = root->next)
+    {
+        for (int chunk = 0; chunk < root->size; ++chunk)
+        {
+            for (int g = 0; g < root->chunks[chunk]->size; ++g)
+            {
+                for (int m = 0; m < root->attributes; ++m)
+                {
+                    if ( gIm(g, root->chunks[chunk], m))
+                        fputs("X", file);
+                    else
+                        fputs(".", file);
+                }
+                fputs("\n", file);
+            }
+        }
+    }
+
+    fclose(file);
+
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{fca__private_8h_ac1a973138b558d99763bfa84d022d42d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fca__private_8h_ac1443261c57cc1d3db9361c188cd9c96}{\index{fca\-\_\-private.\-h@{fca\-\_\-private.\-h}!write\-Concepts\-To\-File\-V@{write\-Concepts\-To\-File\-V}}
+\index{write\-Concepts\-To\-File\-V@{write\-Concepts\-To\-File\-V}!fca_private.h@{fca\-\_\-private.\-h}}
+\subsubsection[{write\-Concepts\-To\-File\-V}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-Concepts\-To\-File\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Formal\-Context\-V}}]{ctx, }
+\item[{{\bf \-Formal\-Concept\-Intent\-Bulk\-List\-V}}]{root, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{fca__private_8h_ac1443261c57cc1d3db9361c188cd9c96}
+
+
+write a list of concept intents into a .cxt file 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ctx} & formal context (or 0, is used for attribute names) \\
+\hline
+{\em root} & the first node of the formal concept intent bulk \\
+\hline
+{\em filename} & output file name (.cxt) \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 693 of file fca\-V.\-c.
+
+
+
+\-References smy\-Formal\-Context\-V\-::attribute\-Names, smy\-Formal\-Context\-V\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::attributes, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::chunks, count\-Concepts\-In\-Bulk\-V(), \-I\-N\-C\-I\-D\-E\-S\-V, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::next, \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, \-R\-O\-W, smy\-Formal\-Concept\-Intent\-Chunk\-V\-::size, s\-Formal\-Concept\-Intent\-Bulk\-Node\-V\-::size, and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(root);
+
+    myFormalContextV* c;
+
+    if (ctx != 0)
+    {
+        c = (myFormalContextV*) ctx;
+
+        WARN_IF_UNEQUAL_DO(c->attributes, root->attributes, c = 0);
+    }
+    else
+    {
+        c = 0;
+    }
+
+    RETURN_IF_ZERO(filename);
+
+    FILE* file;
+    file = fopen(filename, "w");
+
+    RETURN_IF_ZERO(file);
+
+    size_t objects;
+    objects = countConceptsInBulkV(root);
+
+    fprintf(file, "B\n\n%zu\n%zu\n\n", objects, root->attributes);
+
+    for (size_t var = 0; var < objects; ++var)
+    {
+        fprintf(file, "C%8zu\n", (var + 1));
+    }
+
+    if (c != 0)
+    {
+        for (size_t var = 0; var < c->attributes; ++var)
+        {
+            fputs(c->attributeNames[var], file);
+            fputs("\n", file);
+        }
+    }
+    else
+    {
+        for (size_t var = 0; var < root->attributes; ++var)
+        {
+            fprintf(file, "m%8zu\n", (var + 1));
+        }
+    }
+
+    for (; root != 0; root = root->next)
+    {
+        for (size_t chunk = 0; chunk < root->size; ++chunk)
+        {
+            for (size_t g = 0; g < root->chunks[chunk]->size; ++g)
+            {
+                for (size_t m = 0; m < root->attributes; ++m)
+                {
+                    if (INCIDESV(ROW(g, root->chunks[chunk]), m))
+                        fputs("X", file);
+                    else
+                        fputs(".", file);
+                }
+                fputs("\n", file);
+            }
+        }
+    }
+
+    fclose(file);
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{fca__private_8h_ac1443261c57cc1d3db9361c188cd9c96_cgraph}
+\end{center}
+\end{figure}
+
+

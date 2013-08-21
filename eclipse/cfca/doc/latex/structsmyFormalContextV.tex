@@ -1,0 +1,110 @@
+\hypertarget{structsmyFormalContextV}{\section{smy\-Formal\-Context\-V \-Struct \-Reference}
+\label{structsmyFormalContextV}\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}}
+}
+
+
+each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix  
+
+
+
+
+{\ttfamily \#include $<$fca\-\_\-structs.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{structsmyFormalContextV_a94d6bf1233ed7e796e71595d53e85265}{attributes}
+\item 
+size\-\_\-t \hyperlink{structsmyFormalContextV_a6870c7afe6748004c41c81bd5e1c65d2}{objects}
+\item 
+size\-\_\-t \hyperlink{structsmyFormalContextV_ab4456c63ae1536d8a9afa9a42c30cd10}{width}
+\item 
+char $\ast$$\ast$ \hyperlink{structsmyFormalContextV_a10705bdd28894f84042e9c1be7f697c6}{attribute\-Names}
+\item 
+char $\ast$$\ast$ \hyperlink{structsmyFormalContextV_aac85d520aa4849d3dfbe4b1c85c17555}{object\-Names}
+\item 
+\hyperlink{fca_8h_aae617489ac88fff15979050721fe581f}{\-Incidence\-Vector} \hyperlink{structsmyFormalContextV_a1cc9b0c27ade0450dfe33b04c1f767b8}{incidence}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+each formal context has a finite number of objects and attributes, which may have names (though we do not require them to be unique or given), and an incidence relation which is represented by an objects×attributes-\/\-Incidence\-Cell matrix 
+
+for the vector implementation, we have the variable width which codes the width of each object's \-Incidence\-Vector 
+
+\-Definition at line 76 of file fca\-\_\-structs.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structsmyFormalContextV_a10705bdd28894f84042e9c1be7f697c6}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!attribute\-Names@{attribute\-Names}}
+\index{attribute\-Names@{attribute\-Names}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{attribute\-Names}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ {\bf smy\-Formal\-Context\-V\-::attribute\-Names}}}\label{structsmyFormalContextV_a10705bdd28894f84042e9c1be7f697c6}
+
+
+\-Definition at line 80 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by delete\-Formal\-Context\-V(), new\-Formal\-Context\-From\-File\-V(), new\-Formal\-Context\-V(), write\-Concepts\-To\-File\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{structsmyFormalContextV_a94d6bf1233ed7e796e71595d53e85265}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!attributes@{attributes}}
+\index{attributes@{attributes}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{attributes}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf smy\-Formal\-Context\-V\-::attributes}}}\label{structsmyFormalContextV_a94d6bf1233ed7e796e71595d53e85265}
+
+
+\-Definition at line 78 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by close\-Intent\-V(), count\-Context\-Concepts\-V(), delete\-Formal\-Context\-V(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-V(), next\-Closure\-V\-X(), next\-Closure\-V\-X1(), write\-Concepts\-To\-File\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{structsmyFormalContextV_a1cc9b0c27ade0450dfe33b04c1f767b8}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!incidence@{incidence}}
+\index{incidence@{incidence}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{incidence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Incidence\-Vector} {\bf smy\-Formal\-Context\-V\-::incidence}}}\label{structsmyFormalContextV_a1cc9b0c27ade0450dfe33b04c1f767b8}
+
+
+\-Definition at line 82 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by delete\-Formal\-Context\-V(), and new\-Formal\-Context\-V().
+
+\hypertarget{structsmyFormalContextV_aac85d520aa4849d3dfbe4b1c85c17555}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!object\-Names@{object\-Names}}
+\index{object\-Names@{object\-Names}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{object\-Names}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ {\bf smy\-Formal\-Context\-V\-::object\-Names}}}\label{structsmyFormalContextV_aac85d520aa4849d3dfbe4b1c85c17555}
+
+
+\-Definition at line 81 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by delete\-Formal\-Context\-V(), new\-Formal\-Context\-From\-File\-V(), new\-Formal\-Context\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{structsmyFormalContextV_a6870c7afe6748004c41c81bd5e1c65d2}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!objects@{objects}}
+\index{objects@{objects}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{objects}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf smy\-Formal\-Context\-V\-::objects}}}\label{structsmyFormalContextV_a6870c7afe6748004c41c81bd5e1c65d2}
+
+
+\-Definition at line 78 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by close\-Intent\-V(), delete\-Formal\-Context\-V(), new\-Formal\-Context\-V(), and write\-Formal\-Context\-V().
+
+\hypertarget{structsmyFormalContextV_ab4456c63ae1536d8a9afa9a42c30cd10}{\index{smy\-Formal\-Context\-V@{smy\-Formal\-Context\-V}!width@{width}}
+\index{width@{width}!smyFormalContextV@{smy\-Formal\-Context\-V}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf smy\-Formal\-Context\-V\-::width}}}\label{structsmyFormalContextV_ab4456c63ae1536d8a9afa9a42c30cd10}
+
+
+\-Definition at line 79 of file fca\-\_\-structs.\-h.
+
+
+
+\-Referenced by close\-Intent\-V(), count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{fca__structs_8h}{fca\-\_\-structs.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['writeconceptstofile',['writeConceptsToFile',['../fca_8c.html#ac1a973138b558d99763bfa84d022d42d',1,'writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root, const char *filename):&#160;fca.c'],['../fca__private_8h.html#ac1a973138b558d99763bfa84d022d42d',1,'writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root, const char *filename):&#160;fca.c']]],
+  ['writeconceptstofilev',['writeConceptsToFileV',['../fca__private_8h.html#ac1443261c57cc1d3db9361c188cd9c96',1,'writeConceptsToFileV(FormalContextV ctx, FormalConceptIntentBulkListV root, const char *filename):&#160;fcaV.c'],['../fcaV_8c.html#ac1443261c57cc1d3db9361c188cd9c96',1,'writeConceptsToFileV(FormalContextV ctx, FormalConceptIntentBulkListV root, const char *filename):&#160;fcaV.c']]],
+  ['writeformalcontext',['writeFormalContext',['../fca_8c.html#a064800878bf96c6398d2f716609df081',1,'writeFormalContext(FormalContext ctx, const char *filename):&#160;fca.c'],['../fca_8h.html#a064800878bf96c6398d2f716609df081',1,'writeFormalContext(FormalContext ctx, const char *filename):&#160;fca.c']]],
+  ['writeformalcontextv',['writeFormalContextV',['../fca_8h.html#aa4861d8f750bb9786aa32c55a683764b',1,'writeFormalContextV(FormalContextV ctx, const char *filename):&#160;fcaV.c'],['../fcaV_8c.html#aa4861d8f750bb9786aa32c55a683764b',1,'writeFormalContextV(FormalContextV ctx, const char *filename):&#160;fcaV.c']]]
+];

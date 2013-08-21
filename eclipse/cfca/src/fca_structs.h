@@ -28,18 +28,31 @@
 #include "fca.h"
 
 /**
+ * @def CHUNKSIZE
  * size of a chunk of concepts
  */
 #define CHUNKSIZE (64)
+
+/**
+ * @def CHUNKSIZEV
+ * size of a chunk of vector concepts
+ */
 #define CHUNKSIZEV (1024)
 
 /**
+ * @def BULKSIZE
  * size of chunks per bulk
  */
 #define BULKSIZE (1024)
+
+/**
+ * @def BULKSIZEV
+ * size of chunks per bulk (vector version)
+ */
 #define BULKSIZEV (1024)
 
 /**
+ * @def INPUTBUFFERSIZE
  * maximal (initial) size of a line (getline will resize buffers if necessary)
  *   (including delimiter)
  */
