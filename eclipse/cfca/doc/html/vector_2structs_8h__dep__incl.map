@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$vector_2private_8h.html" title="src/vector/private.h" alt="" coords="125,83,259,112"/>
-<area shape="rect" id="node7" href="$fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="5,160,128,189"/>
-<area shape="rect" id="node9" href="$fcaVnextClosureX_8c.html" title="this file contains a multi&#45;threading nextClosure implementation using the IncidenceVector implementat..." alt="" coords="256,160,456,189"/>
-<area shape="rect" id="node5" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="152,160,232,189"/>
+<area shape="rect" id="node3" href="$vector_2private_8h.html" title="src/fca/vector/private.h" alt="" coords="104,83,259,112"/>
+<area shape="rect" id="node5" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="5,160,85,189"/>
+<area shape="rect" id="node7" href="$fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="109,160,253,189"/>
+<area shape="rect" id="node9" href="$fcaVnextClosureX_8c.html" title="fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="277,160,499,189"/>
 </map>

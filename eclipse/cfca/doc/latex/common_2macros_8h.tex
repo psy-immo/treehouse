@@ -1,0 +1,128 @@
+\hypertarget{common_2macros_8h}{\section{src/fca/common/macros.h \-File \-Reference}
+\label{common_2macros_8h}\index{src/fca/common/macros.\-h@{src/fca/common/macros.\-h}}
+}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{common_2macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{common_2macros_8h_a740a16a7eb505fa8d595a191feed0941}{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(x)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return;\}\}
+\begin{DoxyCompactList}\small\item\em fca\-\_\-macros.\-h, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+\#define \hyperlink{common_2macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(x)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return 0;\}\}
+\begin{DoxyCompactList}\small\item\em checks whether x == 0, and returns 0; \end{DoxyCompactList}\item 
+\#define \hyperlink{common_2macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(x, y, d)~\{if (((x) != (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}
+\begin{DoxyCompactList}\small\item\em if x!=y, prints a warning and calls the statement d \end{DoxyCompactList}\item 
+\#define \hyperlink{common_2macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\-M\-I\-N}(a, b)~(((a)$<$(b))?(a)\-:(b))
+\begin{DoxyCompactList}\small\item\em gives minimum \end{DoxyCompactList}\item 
+\#define \hyperlink{common_2macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{\-M\-A\-X}(a, b)~(((a)$>$(b))?(a)\-:(b))
+\begin{DoxyCompactList}\small\item\em gives maximum \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{common_2macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{\index{common/macros.\-h@{common/macros.\-h}!\-M\-A\-X@{\-M\-A\-X}}
+\index{\-M\-A\-X@{\-M\-A\-X}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a)$>$(b))?(a)\-:(b))}}\label{common_2macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}
+
+
+gives maximum 
+
+
+
+\-Definition at line 56 of file macros.\-h.
+
+\hypertarget{common_2macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\index{common/macros.\-h@{common/macros.\-h}!\-M\-I\-N@{\-M\-I\-N}}
+\index{\-M\-I\-N@{\-M\-I\-N}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-I\-N}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a)$<$(b))?(a)\-:(b))}}\label{common_2macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}
+
+
+gives minimum 
+
+
+
+\-Definition at line 49 of file macros.\-h.
+
+
+
+\-Referenced by new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-File\-V().
+
+\hypertarget{common_2macros_8h_a740a16a7eb505fa8d595a191feed0941}{\index{common/macros.\-h@{common/macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
+\index{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return;\}\}}}\label{common_2macros_8h_a740a16a7eb505fa8d595a191feed0941}
+
+
+fca\-\_\-macros.\-h, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
+checks whether x == 0, and returns 
+
+\-Definition at line 27 of file macros.\-h.
+
+
+
+\-Referenced by delete\-Concept\-Bulk(), delete\-Concept\-Bulk\-V(), delete\-Concept\-Chunk(), delete\-Concept\-Chunk\-V(), delete\-Formal\-Context(), delete\-Formal\-Context\-V(), write\-Concepts\-To\-File(), write\-Concepts\-To\-File\-V(), write\-Formal\-Context(), and write\-Formal\-Context\-V().
+
+\hypertarget{common_2macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}{\index{common/macros.\-h@{common/macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
+\index{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{if ((x == (void$\ast$)0)) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \-Z\-E\-R\-O pointer \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); return 0;\}\}}}\label{common_2macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}
+
+
+checks whether x == 0, and returns 0; 
+
+
+
+\-Definition at line 34 of file macros.\-h.
+
+
+
+\-Referenced by add\-Concept\-To\-Bulk(), add\-Concept\-To\-Bulk\-V(), count\-Concepts\-In\-Bulk(), count\-Concepts\-In\-Bulk\-V(), count\-Context\-Concepts(), count\-Context\-Concepts2(), count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-From\-File(), new\-Formal\-Context\-From\-File\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
+
+\hypertarget{common_2macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\index{common/macros.\-h@{common/macros.\-h}!\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}}
+\index{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~\{if (((x) != (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}}}\label{common_2macros_8h_a8d200ab641cd359687ca7bbd465b219a}
+
+
+if x!=y, prints a warning and calls the statement d 
+
+
+
+\-Definition at line 41 of file macros.\-h.
+
+
+
+\-Referenced by write\-Concepts\-To\-File(), and write\-Concepts\-To\-File\-V().
+

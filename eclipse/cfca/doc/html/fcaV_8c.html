@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>C formal concept analysis library: src/vector/fcaV.c File Reference</title>
+<title>C formal concept analysis library: src/fca/vector/fcaV.c File Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">src/vector/fcaV.c File Reference</div>  </div>
+<div class="title">src/fca/vector/fcaV.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -87,36 +87,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="fca_8h_source.html">../fca.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="fca__macros_8h_source.html">../fca_macros.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="vector_2macros_8h_source.html">macros.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="vector_2structs_8h_source.html">structs.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="vector_8h_source.html">../vector.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="safeguard_8h_source.html">safeguard.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="vector_2private_8h_source.html">private.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fcaV.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="fcaV_8c__incl.png" border="0" usemap="#src_2vector_2fcaV_8c" alt=""/></div>
-<map name="src_2vector_2fcaV_8c" id="src_2vector_2fcaV_8c">
-<area shape="rect" id="node9" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="267,83,328,112"/><area shape="rect" id="node13" href="fca__macros_8h.html" title="../fca_macros.h" alt="" coords="352,83,464,112"/><area shape="rect" id="node15" href="vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="488,83,563,112"/><area shape="rect" id="node17" href="vector_2structs_8h.html" title="structs.h" alt="" coords="600,160,672,189"/><area shape="rect" id="node19" href="vector_2private_8h.html" title="private.h" alt="" coords="637,83,709,112"/></map>
+<div class="center"><img src="fcaV_8c__incl.png" border="0" usemap="#src_2fca_2vector_2fcaV_8c" alt=""/></div>
+<map name="src_2fca_2vector_2fcaV_8c" id="src_2fca_2vector_2fcaV_8c">
+<area shape="rect" id="node9" href="vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="284,160,364,189"/><area shape="rect" id="node19" href="safeguard_8h.html" title="vector/safeguard.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="317,83,408,112"/><area shape="rect" id="node21" href="vector_2private_8h.html" title="private.h" alt="" coords="432,83,504,112"/><area shape="rect" id="node13" href="common_8h.html" title="common.h" alt="" coords="283,237,365,267"/><area shape="rect" id="node17" href="vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="389,237,504,267"/><area shape="rect" id="node15" href="common_2macros_8h.html" title="common/macros.h" alt="" coords="259,315,389,344"/><area shape="rect" id="node24" href="vector_2structs_8h.html" title="structs.h" alt="" coords="432,160,504,189"/></map>
 </div>
 </div>
 <p><a href="fcaV_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913">newFormalContextV</a> (unsigned int objects, unsigned int attributes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913">newFormalContextV</a> (unsigned int objects, unsigned int attributes)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new formal context  <a href="#aa4f8b6d04c1fb2dd35fa8324bd383913"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a42ae183692b566f6d12c9db27e8f7ec1">deleteFormalContextV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> *ctx)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a42ae183692b566f6d12c9db27e8f7ec1">deleteFormalContextV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> *ctx)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the formal context *ctx, and sets the pointer to zero  <a href="#a42ae183692b566f6d12c9db27e8f7ec1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a9b6b69f5062c68c30c5e1e6d56ea37bc">newFormalContextFromFileV</a> (const char *filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a9b6b69f5062c68c30c5e1e6d56ea37bc">newFormalContextFromFileV</a> (const char *filename)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new formal context object from a .cxt file  <a href="#a9b6b69f5062c68c30c5e1e6d56ea37bc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa4861d8f750bb9786aa32c55a683764b">writeFormalContextV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, const char *filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa4861d8f750bb9786aa32c55a683764b">writeFormalContextV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, const char *filename)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">save the context ctx at the given file location  <a href="#aa4861d8f750bb9786aa32c55a683764b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#ae9e90e93ffaf10b9da1a3e3f789d00e9">countContextConceptsV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#ae9e90e93ffaf10b9da1a3e3f789d00e9">countContextConceptsV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">counts the concepts in the concept lattice of ctx, using next closure algorithm  <a href="#ae9e90e93ffaf10b9da1a3e3f789d00e9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a">closeIntentV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> input, <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> output)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">close an attribute set, i.e.  <a href="#adcfe1beba7f75ea7a6e4230916b6a65a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef">intentCmpV</a> (size_t attributes, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> minus, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> plus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07">closeIntentV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> restrict ctx, const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> restrict input, <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> restrict output)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">close an attribute set, i.e.  <a href="#aa30fbd99dd8ad4cee19d32d5debf9e07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef">intentCmpV</a> (size_t attributes, const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> minus, const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> plus)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two intent vectors  <a href="#a55d40e1b5169e4466d00cb930c67e0ef"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#abe3c190ec3375121cbfe3afff517b9b9">myFormalConceptIntentChunkV</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899">newConceptChunkV</a> (size_t attributes)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new formal concept chunk  <a href="#ab5c9a71c810ad1eeeb5f8ff78d77d899"></a><br/></td></tr>
@@ -124,15 +122,15 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes a concept chunk object and sets its pointer to zero  <a href="#afd9305761d657be7c21fb81e82d72a42"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5">newConceptBulkV</a> (size_t attributes)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new formal concept intent bulk list  <a href="#abda612c4305c29a37b6501e18d94ebc5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a90151fdf1b3ef3201deb2e1ab752729d">newConceptBulkFromContextV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a90151fdf1b3ef3201deb2e1ab752729d">newConceptBulkFromContextV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the concept lattice of ctx, using next closure algorithm  <a href="#a90151fdf1b3ef3201deb2e1ab752729d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#ac1443261c57cc1d3db9361c188cd9c96">writeConceptsToFileV</a> (<a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, <a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> root, const char *filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#ac1443261c57cc1d3db9361c188cd9c96">writeConceptsToFileV</a> (<a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> ctx, <a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> root, const char *filename)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">write a list of concept intents into a .cxt file  <a href="#ac1443261c57cc1d3db9361c188cd9c96"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa2cf22779998982c65e3762c7e2c2c84">deleteConceptBulkV</a> (<a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> *rootNode)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the entire bulk list  <a href="#aa2cf22779998982c65e3762c7e2c2c84"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#a7d53642e5953e35c86ef0425858d707e">countConceptsInBulkV</a> (<a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> root)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">use this for bulks that are filled in order  <a href="#a7d53642e5953e35c86ef0425858d707e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91">addConceptToBulkV</a> (<a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> root, const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> intent)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91">addConceptToBulkV</a> (<a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> root, const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> intent)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">copies the given intent to the bulk denoted by the root node.  <a href="#aa6cc62f8dfd08ef795a932cd06e69b91"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -156,7 +154,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
           <td class="paramname"><em>intent</em>&#160;</td>
         </tr>
         <tr>
@@ -178,14 +176,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the node where the intent was added to the last chunk </dd></dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00837">837</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00830">830</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00032">BULKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="vector_2structs_8h_source.html#l00026">CHUNKSIZEV</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00511">newConceptChunkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>, and <a class="el" href="vector_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNodeV::width</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00032">BULKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="vector_2structs_8h_source.html#l00026">CHUNKSIZEV</a>, <a class="el" href="fcaV_8c_source.html#l00554">newConceptBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00509">newConceptChunkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>, and <a class="el" href="vector_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNodeV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00578">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00575">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
-
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
 
     <span class="keywordflow">do</span>
     {
@@ -245,26 +242,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="adcfe1beba7f75ea7a6e4230916b6a65a"></a><!-- doxytag: member="fcaV.c::closeIntentV" ref="adcfe1beba7f75ea7a6e4230916b6a65a" args="(FormalContextV ctx, const IncidenceVector input, IncidenceVector output)" -->
+<a class="anchor" id="aa30fbd99dd8ad4cee19d32d5debf9e07"></a><!-- doxytag: member="fcaV.c::closeIntentV" ref="aa30fbd99dd8ad4cee19d32d5debf9e07" args="(FormalContextV restrict ctx, const IncidenceVector restrict input, IncidenceVector restrict output)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="vector_2private_8h.html#adcfe1beba7f75ea7a6e4230916b6a65a">closeIntentV</a> </td>
+          <td class="memname">void <a class="el" href="vector_2private_8h.html#aa30fbd99dd8ad4cee19d32d5debf9e07">closeIntentV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> restrict&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> restrict&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a> restrict&#160;</td>
           <td class="paramname"><em>output</em>&#160;</td>
         </tr>
         <tr>
@@ -290,28 +287,28 @@ Here is the call graph for this function:</div>
 <p>some attribute is not present for this object -&gt; next object</p>
 <p>remove attributes that are not common among all objects that have the input attributes</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00413">413</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00411">411</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00091">MASKVECTOR</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="vector_2macros_8h_source.html#l00091">MASKVECTOR</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00310">countContextConceptsV()</a>, <a class="el" href="fcaV_8c_source.html#l00578">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00308">countContextConceptsV()</a>, <a class="el" href="fcaV_8c_source.html#l00575">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
 <div class="fragment"><pre class="fragment">{
 
-    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>* I;
+    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>* restrict I;
     I = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
-    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> var = 0; var &lt; I-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>; ++var)
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> var = 0; var &lt; I-&gt;width; ++var)
     {
         output[var] = ~0ULL;
     }
 
-    <a class="code" href="vector_2macros_8h.html#aef2d7de0c2b6bb72a552503770da6cae" title="set the unused attribute bits to zero.">MASKVECTOR</a>(output, I-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
+    <a class="code" href="vector_2macros_8h.html#aef2d7de0c2b6bb72a552503770da6cae" title="set the unused attribute bits to zero.">MASKVECTOR</a>(output, I-&gt;attributes);
 
-    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = 0; g &lt; I-&gt;<a class="code" href="structsmyFormalContextV.html#a6870c7afe6748004c41c81bd5e1c65d2">objects</a>; ++g)
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = 0; g &lt; I-&gt;objects; ++g)
     {
         <span class="keywordtype">int</span> good;
         good = 1;
 
-        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; I-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>; ++i)
+        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; I-&gt;width; ++i)
         {
             <span class="keywordflow">if</span> ((input[i]) &amp; (~(<a class="code" href="vector_2macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(g,I)[i])))
             {
@@ -323,7 +320,7 @@ Here is the call graph for this function:</div>
 
         <span class="keywordflow">if</span> (good)
         {
-            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; I-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>; ++i)
+            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; I-&gt;width; ++i)
             {
                 output[i] &amp;= <a class="code" href="vector_2macros_8h.html#a9726c8302995a7cfcb79221354ef69b3" title="gives the attribute vector for a given object">ROW</a>(g,I)[i];
             }
@@ -359,13 +356,13 @@ Here is the call graph for this function:</div>
 <p>count the full chunks</p>
 <p>and the last chunk</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00802">802</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00795">795</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="vector_2structs_8h_source.html#l00026">CHUNKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, and <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="vector_2structs_8h_source.html#l00026">CHUNKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, and <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>, and <a class="el" href="fcaV_8c_source.html#l00693">writeConceptsToFileV()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>, and <a class="el" href="fcaV_8c_source.html#l00686">writeConceptsToFileV()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
 
     <span class="keywordtype">size_t</span> count = 0;
 
@@ -391,7 +388,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">int <a class="el" href="fcaV_8c.html#ae9e90e93ffaf10b9da1a3e3f789d00e9">countContextConceptsV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -414,27 +411,27 @@ Here is the call graph for this function:</div>
 <p>do the nextClosure</p>
 <p>free up memory</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00310">310</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00308">308</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00108">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00413">closeIntentV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="vector_2macros_8h_source.html#l00108">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00411">closeIntentV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>, and <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
-    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
+    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *restrict c;
     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
 
-    <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> M;
-    <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> Y;
+    <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> restrict M;
+    <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> restrict Y;
 
 <span class="preprocessor">#pragma GCC diagnostic push</span>
 <span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
 <span class="preprocessor"></span>
-    Y = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, <span class="keyword">sizeof</span>(uint64_t));
-    M = malloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
+    Y = calloc(c-&gt;width, <span class="keyword">sizeof</span>(uint64_t));
+    M = malloc(c-&gt;width * <span class="keyword">sizeof</span>(uint64_t));
 
 <span class="preprocessor">#pragma GCC diagnostic pop</span>
 <span class="preprocessor"></span>
-    <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
+    <a class="code" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
 
     <span class="keywordtype">int</span> count;
 
@@ -442,14 +439,14 @@ Here is the call graph for this function:</div>
 
     nextClosure:
 
-    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>; i &gt; 0;)
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;attributes; i &gt; 0;)
     {
         --i;
 
         <span class="keywordflow">if</span> (!<a class="code" href="vector_2macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
         {
             <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
-            <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
+            <a class="code" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
 
             <span class="keywordtype">int</span> good;
             good = 1;
@@ -474,7 +471,7 @@ Here is the call graph for this function:</div>
             {
                 count++;
 
-                <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
+                <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
                 DELTA = M;
                 M = Y;
                 Y = DELTA;
@@ -496,7 +493,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaV_8c_ae9e90e93ffaf10b9da1a3e3f789d00e9_cgraph.png" border="0" usemap="#fcaV_8c_ae9e90e93ffaf10b9da1a3e3f789d00e9_cgraph" alt=""/></div>
 <map name="fcaV_8c_ae9e90e93ffaf10b9da1a3e3f789d00e9_cgraph" id="fcaV_8c_ae9e90e93ffaf10b9da1a3e3f789d00e9_cgraph">
-<area shape="rect" id="node3" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="220,5,313,35"/></map>
+<area shape="rect" id="node3" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e." alt="" coords="220,5,313,35"/></map>
 </div>
 </p>
 
@@ -525,14 +522,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00770">770</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00763">763</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="fcaV_8c_source.html#l00539">deleteConceptChunkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="fcaV_8c_source.html#l00536">deleteConceptChunkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(rootNode);
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*rootNode);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(rootNode);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*rootNode);
 
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> l;
     l = *rootNode;
@@ -589,14 +586,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00539">539</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00536">536</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00770">deleteConceptBulkV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00763">deleteConceptBulkV()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(c);
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*c);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(c);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*c);
 
     free((*c)-&gt;incidence);
 
@@ -611,9 +608,9 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="fcaV_8c.html#a42ae183692b566f6d12c9db27e8f7ec1">deleteFormalContextV</a> </td>
+          <td class="memname">void <a class="el" href="vector_8h.html#a42ae183692b566f6d12c9db27e8f7ec1">deleteFormalContextV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -629,14 +626,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00086">86</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00084">84</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00058">smyFormalContextV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, and <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00058">smyFormalContextV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, and <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*ctx);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*ctx);
 
     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
 
@@ -675,13 +672,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
           <td class="paramname"><em>minus</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="fca_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="vector_8h.html#aae617489ac88fff15979050721fe581f">IncidenceVector</a>&#160;</td>
           <td class="paramname"><em>plus</em>&#160;</td>
         </tr>
         <tr>
@@ -707,11 +704,11 @@ Here is the call graph for this function:</div>
 <p>we only check the lower bits 0 through (attributes-1)</p>
 <p>ELSE: attributes has 64 as factor, so we have done all necessary comparisons in the first loop.</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00468">468</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00466">466</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
 <p>References <a class="el" href="vector_2macros_8h_source.html#l00039">BITNBR</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, and <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>.</p>
+<p>Referenced by <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> var = 0; var &lt; <a class="code" href="vector_2macros_8h.html#ad12dce0a7bf9d908b172a28155b3d261" title="get the offset of the x-th bit in an 64-bit integer vector">OFFSET</a>(attributes); ++var)
     {
@@ -746,7 +743,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="vector_2structs_8h.html#a6306c91d1e7b5237618bab6172a784a1">FormalConceptIntentBulkListV</a> <a class="el" href="vector_2private_8h.html#a90151fdf1b3ef3201deb2e1ab752729d">newConceptBulkFromContextV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -770,51 +767,47 @@ Here is the call graph for this function:</div>
 <p>do the nextClosure</p>
 <p>free up memory</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00578">578</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00575">575</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00108">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00413">closeIntentV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="fcaV_8c_source.html#l00557">newConceptBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
+<p>References <a class="el" href="fcaV_8c_source.html#l00830">addConceptToBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00108">CLEARV</a>, <a class="el" href="fcaV_8c_source.html#l00411">closeIntentV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00077">CRIMPVALUE</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="fcaV_8c_source.html#l00554">newConceptBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00033">OFFSET</a>, and <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
-    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
+    <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> * restrict c;
     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
 
-    <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> M;
-    <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> Y;
+    <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> restrict M;
+    <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> restrict Y;
 
 <span class="preprocessor">#pragma GCC diagnostic push</span>
 <span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
 <span class="preprocessor"></span>
-    Y = calloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a>, <span class="keyword">sizeof</span>(uint64_t));
-    M = malloc(c-&gt;<a class="code" href="structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10">width</a> * <span class="keyword">sizeof</span>(uint64_t));
+    Y = calloc(c-&gt;width, <span class="keyword">sizeof</span>(uint64_t));
+    M = malloc(c-&gt;width * <span class="keyword">sizeof</span>(uint64_t));
 
 <span class="preprocessor">#pragma GCC diagnostic pop</span>
 <span class="preprocessor"></span>
-    <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
+    <a class="code" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e.">closeIntentV</a>(ctx, Y, M);
 
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> root;
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> last;
 
-
-
-    root = <a class="code" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>);
-
+    root = <a class="code" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list">newConceptBulkV</a>(c-&gt;attributes);
 
     last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(root, M);
 
-
     nextClosure:
 
-    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>; i &gt; 0;)
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = c-&gt;attributes; i &gt; 0;)
     {
         --i;
 
         <span class="keywordflow">if</span> (!<a class="code" href="vector_2macros_8h.html#aee89242eec49a02707fd80427af50d23" title="checks whether the x-th attribute of an attribute vector is crossed">INCIDESV</a>(M,i))
         {
             <a class="code" href="vector_2macros_8h.html#aad0e5eaea1cfebf54257dc40ea185ed4" title="crosses the x-th attribute of an attribute vector">CROSSV</a>(M, i);
-            <a class="code" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
+            <a class="code" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e.">closeIntentV</a>(ctx, M, Y);
 
             <span class="keywordtype">int</span> good;
             good = 1;
@@ -840,7 +833,7 @@ Here is the call graph for this function:</div>
 
                 last = <a class="code" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node.">addConceptToBulkV</a>(last, Y);
 
-                <a class="code" href="fca_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
+                <a class="code" href="vector_8h.html#aae617489ac88fff15979050721fe581f" title="type of compressed attribute vectors">IncidenceVector</a> DELTA;
                 DELTA = M;
                 M = Y;
                 Y = DELTA;
@@ -862,7 +855,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d_cgraph.png" border="0" usemap="#fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d_cgraph" alt=""/></div>
 <map name="fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d_cgraph" id="fcaV_8c_a90151fdf1b3ef3201deb2e1ab752729d_cgraph">
-<area shape="rect" id="node3" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="263,57,404,87"/><area shape="rect" id="node5" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="460,5,591,35"/><area shape="rect" id="node9" href="fcaV_8c.html#adcfe1beba7f75ea7a6e4230916b6a65a" title="close an attribute set, i.e." alt="" coords="287,111,380,140"/><area shape="rect" id="node7" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="455,59,596,88"/></map>
+<area shape="rect" id="node3" href="fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="263,57,404,87"/><area shape="rect" id="node5" href="fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="460,5,591,35"/><area shape="rect" id="node9" href="fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e." alt="" coords="287,111,380,140"/><area shape="rect" id="node7" href="fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="455,59,596,88"/></map>
 </div>
 </p>
 
@@ -892,11 +885,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new formal concept intent bulk list's first node </dd></dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00557">557</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00554">554</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
 <p>References <a class="el" href="vector_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00032">BULKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>, <a class="el" href="vector_2macros_8h_source.html#l00046">WIDTH</a>, and <a class="el" href="vector_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNodeV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00578">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00051">nextClosureVX1()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00830">addConceptToBulkV()</a>, <a class="el" href="fcaV_8c_source.html#l00575">newConceptBulkFromContextV()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">FormalConceptIntentBulkListV</a> l;
     l = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsFormalConceptIntentBulkNodeV.html" title="a node of a single linked list of concept chunks.">sFormalConceptIntentBulkNodeV</a>));
@@ -935,11 +928,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>a new concept chunk object </dd></dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00511">511</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00509">509</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
 <p>References <a class="el" href="vector_2structs_8h_source.html#l00071">smyFormalConceptIntentChunkV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00026">CHUNKSIZEV</a>, <a class="el" href="vector_2structs_8h_source.html#l00083">smyFormalConceptIntentChunkV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, <a class="el" href="vector_2macros_8h_source.html#l00046">WIDTH</a>, and <a class="el" href="vector_2structs_8h_source.html#l00075">smyFormalConceptIntentChunkV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00837">addConceptToBulkV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00830">addConceptToBulkV()</a>.</p>
 <div class="fragment"><pre class="fragment">{
 
     <a class="code" href="structsmyFormalConceptIntentChunkV.html" title="A chunk of at most CHUNKSIZEV formal concept intent vectors.">myFormalConceptIntentChunkV</a> *c;
@@ -949,7 +942,6 @@ Here is the call graph for this function:</div>
     c-&gt;<a class="code" href="structsmyFormalConceptIntentChunkV.html#ab40281b9f96435442255be08563782c0" title="number of attributes">attributes</a> = attributes;
     c-&gt;<a class="code" href="structsmyFormalConceptIntentChunkV.html#a34213d18382955bee724884cd2bfd82c" title="width of each attribute vector">width</a> = <a class="code" href="vector_2macros_8h.html#a9978c9be0f4161638ec49b4eda697d42" title="determine the length of an 64-bit integer vector that can hold x bits">WIDTH</a>(attributes);
     c-&gt;<a class="code" href="structsmyFormalConceptIntentChunkV.html#acbb0ea8f58b4a13ecefc5a996c386206" title="how many formal concepts are in this chunk">size</a> = 0;
-
 
 <span class="preprocessor">#pragma GCC diagnostic push</span>
 <span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
@@ -968,7 +960,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="el" href="fcaV_8c.html#a9b6b69f5062c68c30c5e1e6d56ea37bc">newFormalContextFromFileV</a> </td>
+          <td class="memname"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="el" href="vector_8h.html#a9b6b69f5062c68c30c5e1e6d56ea37bc">newFormalContextFromFileV</a> </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
@@ -990,11 +982,11 @@ Here is the call graph for this function:</div>
 <p>we read all data</p>
 <p>free memory and return</p>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00120">120</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00118">118</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="easy_2structs_8h_source.html#l00042">INPUTBUFFERSIZE</a>, <a class="el" href="fca__macros_8h_source.html#l00049">MIN</a>, <a class="el" href="fcaV_8c_source.html#l00044">newFormalContextV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="fca__macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2macros_8h_source.html#l00102">CROSSV</a>, <a class="el" href="easy_2structs_8h_source.html#l00042">INPUTBUFFERSIZE</a>, <a class="el" href="common_2macros_8h_source.html#l00049">MIN</a>, <a class="el" href="fcaV_8c_source.html#l00042">newFormalContextV()</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">char</span> *line;
     <span class="keywordtype">size_t</span> len;
@@ -1011,7 +1003,7 @@ Here is the call graph for this function:</div>
     <span class="keywordflow">else</span>
     {
         file = fopen(filename, <span class="stringliteral">&quot;r&quot;</span>);
-        <a class="code" href="fca__macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(file);
+        <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(file);
     }
 
     ssize_t read;
@@ -1059,7 +1051,7 @@ Here is the call graph for this function:</div>
 <span class="preprocessor">#pragma GCC diagnostic push</span>
 <span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
 <span class="preprocessor"></span>            attributes = atoi(line);
-            ctx = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *) <a class="code" href="fca_8h.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context">newFormalContextV</a>(objects, attributes);
+            ctx = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *) <a class="code" href="fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context">newFormalContextV</a>(objects, attributes);
 <span class="preprocessor">#pragma GCC diagnostic pop</span>
 <span class="preprocessor"></span>        }
         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (line_nbr == 4)
@@ -1090,7 +1082,7 @@ Here is the call graph for this function:</div>
             i = line_nbr - 5 - objects - attributes;
 
             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width;
-            width = <a class="code" href="fca__macros_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f" title="gives minimum">MIN</a>((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)strlen(line),attributes);
+            width = <a class="code" href="common_2macros_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f" title="gives minimum">MIN</a>((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)strlen(line),attributes);
 
             <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> var = 0; var &lt; width; ++var)
             {
@@ -1117,7 +1109,7 @@ Here is the call graph for this function:</div>
 
     free(line);
 
-    <span class="keywordflow">return</span> (<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>) ctx;
+    <span class="keywordflow">return</span> (<a class="code" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>) ctx;
 }
 </pre></div>
 <p><div class="dynheader">
@@ -1125,7 +1117,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="fcaV_8c_a9b6b69f5062c68c30c5e1e6d56ea37bc_cgraph.png" border="0" usemap="#fcaV_8c_a9b6b69f5062c68c30c5e1e6d56ea37bc_cgraph" alt=""/></div>
 <map name="fcaV_8c_a9b6b69f5062c68c30c5e1e6d56ea37bc_cgraph" id="fcaV_8c_a9b6b69f5062c68c30c5e1e6d56ea37bc_cgraph">
-<area shape="rect" id="node3" href="fca_8h.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context" alt="" coords="245,5,387,35"/></map>
+<area shape="rect" id="node3" href="fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context" alt="" coords="245,5,387,35"/></map>
 </div>
 </p>
 
@@ -1136,7 +1128,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="el" href="fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913">newFormalContextV</a> </td>
+          <td class="memname"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a> <a class="el" href="vector_8h.html#aa4f8b6d04c1fb2dd35fa8324bd383913">newFormalContextV</a> </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>objects</em>, </td>
@@ -1166,11 +1158,11 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>a new FormalContext object </dd></dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00044">44</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00042">42</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
 <p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00058">smyFormalContextV::incidence</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="vector_2macros_8h_source.html#l00046">WIDTH</a>, and <a class="el" href="vector_2structs_8h_source.html#l00055">smyFormalContextV::width</a>.</p>
 
-<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00120">newFormalContextFromFileV()</a>.</p>
+<p>Referenced by <a class="el" href="fcaV_8c_source.html#l00118">newFormalContextFromFileV()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *ctx = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>));
 
@@ -1203,7 +1195,7 @@ Here is the call graph for this function:</div>
 
 <span class="preprocessor">#pragma GCC diagnostic pop</span>
 <span class="preprocessor"></span>
-    <span class="keywordflow">return</span> (<a class="code" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>) ctx;
+    <span class="keywordflow">return</span> (<a class="code" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>) ctx;
 }
 </pre></div>
 </div>
@@ -1215,7 +1207,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void <a class="el" href="vector_2private_8h.html#ac1443261c57cc1d3db9361c188cd9c96">writeConceptsToFileV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>
@@ -1249,13 +1241,13 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00693">693</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00686">686</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="fcaV_8c_source.html#l00802">countConceptsInBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>, and <a class="el" href="fca__macros_8h_source.html#l00041">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNodeV::attributes</a>, <a class="el" href="vector_2structs_8h_source.html#l00110">sFormalConceptIntentBulkNodeV::chunks</a>, <a class="el" href="fcaV_8c_source.html#l00795">countConceptsInBulkV()</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2structs_8h_source.html#l00114">sFormalConceptIntentBulkNodeV::next</a>, <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>, <a class="el" href="vector_2structs_8h_source.html#l00079">smyFormalConceptIntentChunkV::size</a>, <a class="el" href="vector_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNodeV::size</a>, and <a class="el" href="common_2macros_8h_source.html#l00041">WARN_IF_UNEQUAL_DO</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(root);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(root);
 
     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>* c;
 
@@ -1263,19 +1255,19 @@ Here is the call graph for this function:</div>
     {
         c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
 
-        <a class="code" href="fca__macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, root-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#a0bcc56cc39eb49a954c136099d6e46e7" title="number of attributes of the concept intents">attributes</a>, c = 0);
+        <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(c-&gt;<a class="code" href="structsmyFormalContextV.html#a94d6bf1233ed7e796e71595d53e85265">attributes</a>, root-&gt;<a class="code" href="structsFormalConceptIntentBulkNodeV.html#a0bcc56cc39eb49a954c136099d6e46e7" title="number of attributes of the concept intents">attributes</a>, c = 0);
     }
     <span class="keywordflow">else</span>
     {
         c = 0;
     }
 
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
 
     FILE* file;
     file = fopen(filename, <span class="stringliteral">&quot;w&quot;</span>);
 
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
 
     <span class="keywordtype">size_t</span> objects;
     objects = <a class="code" href="fcaV_8c.html#a7d53642e5953e35c86ef0425858d707e" title="use this for bulks that are filled in order">countConceptsInBulkV</a>(root);
@@ -1340,9 +1332,9 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="fcaV_8c.html#aa4861d8f750bb9786aa32c55a683764b">writeFormalContextV</a> </td>
+          <td class="memname">void <a class="el" href="vector_8h.html#aa4861d8f750bb9786aa32c55a683764b">writeFormalContextV</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="fca_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a98aafc7ce3efff805e9add08680b731f">FormalContextV</a>&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>
@@ -1369,19 +1361,19 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00262">262</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
+<p>Definition at line <a class="el" href="fcaV_8c_source.html#l00260">260</a> of file <a class="el" href="fcaV_8c_source.html">fcaV.c</a>.</p>
 
-<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="fca__macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
+<p>References <a class="el" href="vector_2structs_8h_source.html#l00056">smyFormalContextV::attributeNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::attributes</a>, <a class="el" href="vector_2macros_8h_source.html#l00114">INCIDESV</a>, <a class="el" href="vector_2structs_8h_source.html#l00057">smyFormalContextV::objectNames</a>, <a class="el" href="vector_2structs_8h_source.html#l00054">smyFormalContextV::objects</a>, <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="vector_2macros_8h_source.html#l00125">ROW</a>.</p>
 
-<p>Referenced by <a class="el" href="cfca_8c_source.html#l00035">main()</a>.</p>
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(ctx);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
 
     FILE* file;
     file = fopen(filename, <span class="stringliteral">&quot;w&quot;</span>);
 
-    <a class="code" href="fca__macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
 
     <a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a> *c;
     c = (<a class="code" href="structsmyFormalContextV.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContextV</a>*) ctx;
@@ -1435,7 +1427,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 13:46:18 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 21 2013 15:20:55 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

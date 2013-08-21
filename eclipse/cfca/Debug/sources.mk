@@ -13,7 +13,7 @@ EXECUTABLES :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-src/vector \
-src/easy \
+src/fca/vector \
+src/fca/easy \
 src \
 

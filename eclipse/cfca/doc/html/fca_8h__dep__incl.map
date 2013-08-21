@@ -1,6 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="5,83,85,112"/>
-<area shape="rect" id="node5" href="$fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="109,83,213,112"/>
-<area shape="rect" id="node7" href="$fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="237,83,360,112"/>
-<area shape="rect" id="node9" href="$fcaVnextClosureX_8c.html" title="this file contains a multi&#45;threading nextClosure implementation using the IncidenceVector implementat..." alt="" coords="384,83,584,112"/>
+<area shape="rect" id="node3" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="12,83,92,112"/>
 </map>

@@ -1,8 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="261,83,312,112"/>
-<area shape="rect" id="node13" href="$fca__macros_8h.html" title="fca_macros.h" alt="" coords="336,83,437,112"/>
-<area shape="rect" id="node15" href="$easy_2private_8h.html" title="easy/private.h" alt="" coords="461,83,565,112"/>
-<area shape="rect" id="node19" href="$vector_2private_8h.html" title="vector/private.h" alt="" coords="589,83,701,112"/>
-<area shape="rect" id="node17" href="$easy_2structs_8h.html" title="structs.h" alt="" coords="477,160,549,189"/>
-<area shape="rect" id="node21" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="609,160,681,189"/>
+<area shape="rect" id="node9" href="$fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="411,83,483,112"/>
+<area shape="rect" id="node27" href="$easy_2private_8h.html" title="fca/easy/private.h" alt="" coords="261,83,387,112"/>
+<area shape="rect" id="node32" href="$vector_2private_8h.html" title="fca/vector/private.h" alt="" coords="507,83,640,112"/>
+<area shape="rect" id="node11" href="$easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="371,160,432,189"/>
+<area shape="rect" id="node21" href="$vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="460,160,529,189"/>
+<area shape="rect" id="node15" href="$common_8h.html" title="common.h" alt="" coords="356,237,439,267"/>
+<area shape="rect" id="node19" href="$easy_2macros_8h.html" title="easy/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="225,237,332,267"/>
+<area shape="rect" id="node17" href="$common_2macros_8h.html" title="common/macros.h" alt="" coords="332,315,463,344"/>
+<area shape="rect" id="node25" href="$vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="564,237,679,267"/>
+<area shape="rect" id="node30" href="$easy_2structs_8h.html" title="structs.h" alt="" coords="275,160,347,189"/>
+<area shape="rect" id="node35" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="553,160,625,189"/>
 </map>

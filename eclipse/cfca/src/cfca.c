@@ -20,10 +20,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "fca.h"
-#include "fca_macros.h"
-#include "easy/private.h"
-#include "vector/private.h"
+#include "fca/fca.h"
+#include "fca/easy/private.h"
+#include "fca/vector/private.h"
 
 /**
  * this is the main testing routine for purposes of testing the formal concept analysis

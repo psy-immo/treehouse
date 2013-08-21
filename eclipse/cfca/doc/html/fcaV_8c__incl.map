@@ -1,7 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="267,83,328,112"/>
-<area shape="rect" id="node13" href="$fca__macros_8h.html" title="../fca_macros.h" alt="" coords="352,83,464,112"/>
-<area shape="rect" id="node15" href="$vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="488,83,563,112"/>
-<area shape="rect" id="node17" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="600,160,672,189"/>
-<area shape="rect" id="node19" href="$vector_2private_8h.html" title="private.h" alt="" coords="637,83,709,112"/>
+<area shape="rect" id="node9" href="$vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="284,160,364,189"/>
+<area shape="rect" id="node19" href="$safeguard_8h.html" title="vector/safeguard.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="317,83,408,112"/>
+<area shape="rect" id="node21" href="$vector_2private_8h.html" title="private.h" alt="" coords="432,83,504,112"/>
+<area shape="rect" id="node13" href="$common_8h.html" title="common.h" alt="" coords="283,237,365,267"/>
+<area shape="rect" id="node17" href="$vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="389,237,504,267"/>
+<area shape="rect" id="node15" href="$common_2macros_8h.html" title="common/macros.h" alt="" coords="259,315,389,344"/>
+<area shape="rect" id="node24" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="432,160,504,189"/>
 </map>
