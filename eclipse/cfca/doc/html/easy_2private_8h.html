@@ -88,7 +88,7 @@ Include dependency graph for private.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy_2private_8h__incl.png" border="0" usemap="#src_2fca_2easy_2private_8h" alt=""/></div>
 <map name="src_2fca_2easy_2private_8h" id="src_2fca_2easy_2private_8h">
-<area shape="rect" id="node3" href="easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="121,83,193,112"/><area shape="rect" id="node17" href="easy_2structs_8h.html" title="structs.h" alt="" coords="217,83,289,112"/><area shape="rect" id="node7" href="common_8h.html" title="common.h" alt="" coords="116,160,199,189"/><area shape="rect" id="node15" href="easy_2macros_8h.html" title="easy/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="223,160,329,189"/><area shape="rect" id="node9" href="common_2macros_8h.html" title="common/macros.h" alt="" coords="5,237,136,267"/><area shape="rect" id="node11" href="measurement_8h.html" title="common/measurement.h" alt="" coords="160,237,325,267"/></map>
+<area shape="rect" id="node3" href="easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="121,83,193,112"/><area shape="rect" id="node19" href="easy_2structs_8h.html" title="structs.h" alt="" coords="217,83,289,112"/><area shape="rect" id="node7" href="common_8h.html" title="common.h" alt="" coords="116,160,199,189"/><area shape="rect" id="node17" href="easy_2macros_8h.html" title="easy/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="223,160,329,189"/><area shape="rect" id="node9" href="common_2macros_8h.html" title="common/macros.h" alt="" coords="5,237,136,267"/><area shape="rect" id="node13" href="measurement_8h.html" title="common/measurement.h" alt="" coords="160,237,325,267"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -162,9 +162,9 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00423">423</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="easy_2structs_8h_source.html#l00094">sFormalConceptIntentBulkNode::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00035">BULKSIZE</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="easy_2structs_8h_source.html#l00027">CHUNKSIZE</a>, <a class="el" href="safeguard_8h_source.html#l00042">newConceptBulk</a>, <a class="el" href="safeguard_8h_source.html#l00040">newConceptChunk</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00094">sFormalConceptIntentBulkNode::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00035">BULKSIZE</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="easy_2structs_8h_source.html#l00027">CHUNKSIZE</a>, <a class="el" href="safeguard_8h_source.html#l00042">newConceptBulk</a>, <a class="el" href="safeguard_8h_source.html#l00040">newConceptChunk</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
 
     <span class="keywordflow">do</span>
     {
@@ -366,9 +366,9 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00388">388</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="easy_2structs_8h_source.html#l00027">CHUNKSIZE</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="easy_2structs_8h_source.html#l00027">CHUNKSIZE</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(root);
 
     <span class="keywordtype">int</span> count = 0;
 
@@ -418,7 +418,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00356">356</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="safeguard_8h_source.html#l00041">deleteConceptChunk</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="safeguard_8h_source.html#l00041">deleteConceptChunk</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, and <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(rootNode);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*rootNode);
@@ -471,7 +471,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00321">321</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>.</p>
+<p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(c);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*c);
@@ -613,9 +613,9 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00612">612</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="safeguard_8h_source.html#l00047">addConceptToBulk</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2macros_8h_source.html#l00042">CLEAR</a>, <a class="el" href="safeguard_8h_source.html#l00048">closeIntent</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="easy_2macros_8h_source.html#l00035">INCIDES</a>, <a class="el" href="safeguard_8h_source.html#l00042">newConceptBulk</a>, and <a class="el" href="common_2macros_8h_source.html#l00034">RETURN_ZERO_IF_ZERO</a>.</p>
+<p>References <a class="el" href="safeguard_8h_source.html#l00047">addConceptToBulk</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2macros_8h_source.html#l00042">CLEAR</a>, <a class="el" href="safeguard_8h_source.html#l00048">closeIntent</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="easy_2macros_8h_source.html#l00035">INCIDES</a>, <a class="el" href="safeguard_8h_source.html#l00042">newConceptBulk</a>, and <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(ctx);
 
     <a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a> *c;
     c = (<a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a>*) ctx;
@@ -803,7 +803,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="fca_8c_source.html#l00716">716</a> of file <a class="el" href="fca_8c_source.html">fca.c</a>.</p>
 
-<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00094">sFormalConceptIntentBulkNode::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="safeguard_8h_source.html#l00046">countConceptsInBulk</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00027">RETURN_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>, and <a class="el" href="common_2macros_8h_source.html#l00041">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="easy_2structs_8h_source.html#l00054">smyFormalContext::attributeNames</a>, <a class="el" href="easy_2structs_8h_source.html#l00053">smyFormalContext::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00094">sFormalConceptIntentBulkNode::attributes</a>, <a class="el" href="easy_2structs_8h_source.html#l00102">sFormalConceptIntentBulkNode::chunks</a>, <a class="el" href="safeguard_8h_source.html#l00046">countConceptsInBulk</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="easy_2structs_8h_source.html#l00106">sFormalConceptIntentBulkNode::next</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, <a class="el" href="easy_2structs_8h_source.html#l00074">smyFormalConceptIntentChunk::size</a>, <a class="el" href="easy_2structs_8h_source.html#l00098">sFormalConceptIntentBulkNode::size</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(root);
 
@@ -895,7 +895,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2013 16:07:41 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 22 2013 14:27:55 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

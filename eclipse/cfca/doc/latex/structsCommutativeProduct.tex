@@ -1,0 +1,77 @@
+\hypertarget{structsCommutativeProduct}{\section{s\-Commutative\-Product \-Struct \-Reference}
+\label{structsCommutativeProduct}\index{s\-Commutative\-Product@{s\-Commutative\-Product}}
+}
+
+
+\-This struct represents a formal product of formal constants x\-\_\-i and their counterparts (1-\/x\-\_\-i) under the assumption of communtativity of the product.  
+
+
+
+
+{\ttfamily \#include $<$measurement.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{structsCommutativeProduct_af77351b19630473b2fedc9267665032a}{constants}
+\begin{DoxyCompactList}\small\item\em the number of different formal probability constants \end{DoxyCompactList}\item 
+size\-\_\-t $\ast$ \hyperlink{structsCommutativeProduct_a95aa7c0ea80854b88afc16d913137f35}{mismatch}
+\begin{DoxyCompactList}\small\item\em \-This represents the first term part. \end{DoxyCompactList}\item 
+size\-\_\-t $\ast$ \hyperlink{structsCommutativeProduct_ae78261dbaf0a6455774a84836fe7334d}{match}
+\begin{DoxyCompactList}\small\item\em \-The represents the second term part. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This struct represents a formal product of formal constants x\-\_\-i and their counterparts (1-\/x\-\_\-i) under the assumption of communtativity of the product. 
+
+\-E.\-g.
+
+\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \cdot (1-x_i)^{\mathrm{match}(i)} \] 
+
+\-Definition at line 89 of file measurement.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structsCommutativeProduct_af77351b19630473b2fedc9267665032a}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!constants@{constants}}
+\index{constants@{constants}!sCommutativeProduct@{s\-Commutative\-Product}}
+\subsubsection[{constants}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Commutative\-Product\-::constants}}}\label{structsCommutativeProduct_af77351b19630473b2fedc9267665032a}
+
+
+the number of different formal probability constants 
+
+
+
+\-Definition at line 94 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Commutative\-Product().
+
+\hypertarget{structsCommutativeProduct_ae78261dbaf0a6455774a84836fe7334d}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!match@{match}}
+\index{match@{match}!sCommutativeProduct@{s\-Commutative\-Product}}
+\subsubsection[{match}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t$\ast$ {\bf s\-Commutative\-Product\-::match}}}\label{structsCommutativeProduct_ae78261dbaf0a6455774a84836fe7334d}
+
+
+\-The represents the second term part. 
+
+\[ \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)} \] 
+
+\-Definition at line 106 of file measurement.\-h.
+
+\hypertarget{structsCommutativeProduct_a95aa7c0ea80854b88afc16d913137f35}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!mismatch@{mismatch}}
+\index{mismatch@{mismatch}!sCommutativeProduct@{s\-Commutative\-Product}}
+\subsubsection[{mismatch}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t$\ast$ {\bf s\-Commutative\-Product\-::mismatch}}}\label{structsCommutativeProduct_a95aa7c0ea80854b88afc16d913137f35}
+
+
+\-This represents the first term part. 
+
+\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \] 
+
+\-Definition at line 100 of file measurement.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/fca/common/\hyperlink{common_2measurement_8h}{measurement.\-h}\end{DoxyCompactItemize}

@@ -76,4 +76,6 @@ writeFormalContextV(FormalContextV ctx, const char* filename);
 FormalContextV
 newFormalContextFromFileV(const char* filename);
 
+#include "vector/measurement.h"
+
 #endif /* VECTOR_H_ */

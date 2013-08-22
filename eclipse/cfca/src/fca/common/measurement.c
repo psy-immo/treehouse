@@ -114,3 +114,77 @@ EtaFunction newGeneralEtaFunction(size_t types, size_t measurements)
 
 	return e;
 }
+
+/**
+ * creates a new commutative product without any factors
+ * @param constants   number of formal constants
+ * @return new CommutativeProduct object
+ */
+
+CommutativeProduct newCommutativeProduct(size_t constants)
+{
+	RETURN_ZERO_IF_ZEROI(constants);
+
+	CommutativeProduct p;
+	p = malloc(sizeof(struct sCommutativeProduct));
+
+	p->constants = constants;
+
+	p->mismatch = calloc(constants, sizeof(size_t));
+	p->match = calloc(constants, sizeof(size_t));
+
+	return p;
+}
+
+/**
+ * deletes a CommutativeProduct and sets its pointer to zero.
+ *
+ * @param p
+ */
+
+void deleteCommutativeProduct(CommutativeProduct* p)
+{
+	RETURN_IF_ZERO(p);
+	RETURN_IF_ZERO(*p);
+
+	free((*p)->match);
+	free((*p)->mismatch);
+	free(*p);
+
+	*p = 0;
+}
+
+/**
+ * creates a new condition map
+ * @param objects   cardinality of the domain
+ * @return new ConditionMap object
+ */
+
+ConditionMap newConditionMap(size_t objects)
+{
+	RETURN_ZERO_IF_ZEROI(objects);
+
+	ConditionMap c;
+	c = malloc(sizeof(struct sConditionMap));
+
+	c->objects = objects;
+	c->c = calloc(objects, sizeof(size_t));
+
+	return c;
+}
+
+/**
+ * deletes a ConditionMap object
+ * @param c
+ */
+
+void deleteConditionMap(ConditionMap* c)
+{
+	RETURN_IF_ZERO(c);
+	RETURN_IF_ZERO(*c);
+
+	free((*c)->c);
+	free(*c);
+
+	*c = 0;
+}

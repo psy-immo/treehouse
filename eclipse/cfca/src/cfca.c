@@ -33,15 +33,6 @@
 
 int main(void)
 {
-//	uint64_t test[2];
-//	for (int i = 0; i < 65; ++i) {
-//		test[0] = ~0ULL;
-//
-//		test[1] = ~0ULL;
-//		MASKVECTOR(test,i+1);
-//		printf("%2d: %16llx %16llx %16llx%16llx\n",BITNBR(i),BITVALUE(i),CRIMPVALUE(i),test[0]);
-//	}
-
 	/**
 	 * initialize pseudo random number generator
 	 */
@@ -58,93 +49,22 @@ int main(void)
 	 */
 
 	FormalContext ctx;
-
-	ctx = newFormalContextFromRandom(80, 30, 0.3f);
+	ctx = newFormalContextFromRandom(15, 30, 0.3f);
 
 	writeFormalContext(ctx, "/home/immo/tmp/test.cxt");
 
-	puts("Cloning V...");
+	EtaFunction eta;
+	eta = newUniformEtaFunction(2, 30);
+	eta->C[0] = 0.05; //Type I error
+	eta->C[1] = 0.10; //Type II error
 
-	FormalContextV ctxV;
+	FormalContext B;
+	B = newFakeMeasurement(ctx,eta,150);
+	writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
 
-	ctxV = newFormalContextFromFileV("/home/immo/tmp/test.cxt");
 
-	writeFormalContextV(ctxV, "/home/immo/tmp/testV.cxt");
-
-	puts("Performance testing....");
-
-	clock_t start, end;
-	time_t xstart, xend;
-
-	FormalConceptIntentBulkListV conceptsV;
-
-	time(&xstart);
-	start = clock();
-
-	conceptsV = newConceptBulkFromContextV(ctxV);
-
-	end = clock();
-	time(&xend);
-
-	printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
-
-	printf("Time version V: %f sec in %f [%d-%d]\n",
-			(float) (end - start) / CLOCKS_PER_SEC,
-			(float) difftime(xend, xstart), start, end);
-
-	FormalConceptIntentBulkListV conceptsVX;
-
-	time(&xstart);
-	start = clock();
-
-	conceptsVX = nextClosureVX(ctxV);
-
-	end = clock();
-	time(&xend);
-
-	printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
-
-	printf("Time version VX: %f sec in %f [%d-%d]\n",
-			(float) (end - start) / CLOCKS_PER_SEC,
-			(float) difftime(xend, xstart), start, end);
-
-	FormalConceptIntentBulkList concepts;
-
-	time(&xstart);
-	start = clock();
-
-	concepts = newConceptBulkFromContext(ctx);
-
-	end = clock();
-	time(&xend);
-
-	printf("Concepts: %d\n", countConceptsInBulk(concepts));
-
-	printf("Time version 1: %f sec in %f [%d-%d]\n",
-			(float) (end - start) / CLOCKS_PER_SEC,
-			(float) difftime(xend, xstart), start, end);
-
-	writeConceptsToFile(ctx, concepts, "/home/immo/tmp/test1.cxt");
-	writeConceptsToFileV(ctxV, conceptsV, "/home/immo/tmp/testV.cxt");
-	writeConceptsToFileV(ctxV, conceptsVX, "/home/immo/tmp/testVX.cxt");
-
-	/*puts("=====");
-	 FILE* status = fopen("/proc/self/status", "r");
-	 char line[1000];
-	 while (fgets(line, sizeof line, status) != NULL)
-	 {
-	 printf("%s", line);
-	 }
-	 fclose(status);
-	 puts("=====");*/
-
-	puts("Clean up...");
-
-	deleteConceptBulkV(&conceptsVX);
-	deleteConceptBulkV(&conceptsV);
-	deleteConceptBulk(&concepts);
+	deleteFormalContext(&B);
 	deleteFormalContext(&ctx);
-	deleteFormalContextV(&ctxV);
 
 	return EXIT_SUCCESS;
 }

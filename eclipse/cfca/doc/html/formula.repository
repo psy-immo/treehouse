@@ -1,0 +1,5 @@
+\form#0:\[ \prod_{i=0}^{i<\mathrm{constants}} x_i^{\mathrm{powers}(i)} \]
+\form#1:\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{powers}(i)} \]
+\form#2:\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \cdot (1-x_i)^{\mathrm{match}(i)} \]
+\form#3:\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \]
+\form#4:\[ \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)} \]

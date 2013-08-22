@@ -1,6 +1,8 @@
 var searchData=
 [
   ['safeguard_2eh',['safeguard.h',['../safeguard_8h.html',1,'']]],
+  ['scommutativeproduct',['sCommutativeProduct',['../structsCommutativeProduct.html',1,'']]],
+  ['sconditionmap',['sConditionMap',['../structsConditionMap.html',1,'']]],
   ['setafunction',['sEtaFunction',['../structsEtaFunction.html',1,'']]],
   ['sformalconceptintentbulknode',['sFormalConceptIntentBulkNode',['../structsFormalConceptIntentBulkNode.html',1,'']]],
   ['sformalconceptintentbulknodev',['sFormalConceptIntentBulkNodeV',['../structsFormalConceptIntentBulkNodeV.html',1,'']]],
@@ -15,6 +17,6 @@ var searchData=
   ['snextclosurevx1params',['snextClosureVX1Params',['../structsnextClosureVX1Params.html',1,'']]],
   ['start',['start',['../structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093',1,'snextClosureVX1Params']]],
   ['stop',['stop',['../structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23',1,'snextClosureVX1Params']]],
-  ['structs_2eh',['structs.h',['../vector_2structs_8h.html',1,'']]],
-  ['structs_2eh',['structs.h',['../easy_2structs_8h.html',1,'']]]
+  ['structs_2eh',['structs.h',['../easy_2structs_8h.html',1,'']]],
+  ['structs_2eh',['structs.h',['../vector_2structs_8h.html',1,'']]]
 ];

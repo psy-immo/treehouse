@@ -31,7 +31,8 @@ typedef double Probability;
  * this structure contains information on how many cases for measurements there are,
  * and what the probabilities of erroneous measurement there is for each case
  */
-typedef struct sEtaFunction {
+typedef struct sEtaFunction
+{
 	/**
 	 * the number of different probability constants
 	 */
@@ -44,7 +45,13 @@ typedef struct sEtaFunction {
 	Probability *C;
 
 	/**
-	 * the number of error types
+	 * the number of error types,
+	 * usually this is equal to 2, where:
+	 * :                PREDICTED (I) :
+	 * : Error type     .   X         :
+	 * :(B) MEASURED . (0)  1         :
+	 * :(B) MEASURED X  0  (1)        :
+	 *
 	 */
 	size_t types;
 
@@ -62,7 +69,7 @@ typedef struct sEtaFunction {
 	 * C[eta[t*measurements + m]]
 	 */
 	size_t * eta;
-} *EtaFunction;
+}*EtaFunction;
 
 EtaFunction
 newEtaFunction(size_t types, size_t measurements, size_t constants);
@@ -76,5 +83,64 @@ newGeneralEtaFunction(size_t types, size_t measurements);
 void
 deleteEtaFunction(EtaFunction* eta);
 
+/**
+ * This struct represents a formal product of formal constants x_i
+ * and their counterparts (1-x_i)
+ * under the assumption of communtativity of the product. E.g.
+ *
+ * @f[  \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)}
+ *                               \cdot (1-x_i)^{\mathrm{match}(i)}  @f]
+ */
+
+typedef struct sCommutativeProduct
+{
+	/**
+	 * the number of different formal probability constants
+	 */
+	size_t constants;
+	/**
+	 * This represents the first term part
+	 *
+	 * @f[  \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)}  @f]
+	 */
+	size_t *mismatch;
+	/**
+		 * The represents the second term part
+		 *
+		 * @f[  \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)}  @f]
+		 */
+	size_t *match;
+
+}*CommutativeProduct;
+
+CommutativeProduct
+newCommutativeProduct(size_t constants);
+
+void
+deleteCommutativeProduct(CommutativeProduct* p);
+
+/**
+ * This struct represents a map between the object sets of two formal contexts.
+ */
+
+typedef struct sConditionMap {
+	/**
+	 * cardinality of the domain object set
+	 */
+	size_t objects;
+
+	/**
+	 * the object index of the image, i.e.
+	 * c[i] is the index of the image of the object with index i in the domain
+	 */
+	size_t *c;
+
+} *ConditionMap;
+
+ConditionMap
+newConditionMap(size_t objects);
+
+void
+deleteConditionMap(ConditionMap* c);
 
 #endif /* MEASUREMENT_H_ */

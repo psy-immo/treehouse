@@ -48,6 +48,13 @@
 
 #define WARN_IF_UNEQUAL_DO(x,y,d) {if (((x) != (y))) {fprintf(stderr, "WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n", #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}
 
+/**
+ * @def WARN_IF_GEQ_DO(x,y,d)
+ * if x>=y, prints a warning and calls the statement d
+ */
+
+#define WARN_IF_GEQ_DO(x,y,d) {if (((x) >= (y))) {fprintf(stderr, "WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n", #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}
+
 
 /**
  * @def MIN(a,b)

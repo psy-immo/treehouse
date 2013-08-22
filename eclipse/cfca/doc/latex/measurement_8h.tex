@@ -2,16 +2,14 @@
 \label{measurement_8h}\index{src/fca/common/measurement.\-h@{src/fca/common/measurement.\-h}}
 }
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
-\-Include dependency graph for measurement.\-h\-:
-\nopagebreak
+\-Include dependency graph for measurement.\-h\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=238pt]{measurement_8h__incl}
 \end{center}
 \end{figure}
-\-This graph shows which files directly or indirectly include this file\-:
-\nopagebreak
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,27 +20,62 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structsEtaFunction}{s\-Eta\-Function}
-\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\item 
+struct \hyperlink{structsCommutativeProduct}{s\-Commutative\-Product}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a formal product of formal constants under the assumption of communtativity of the product. \end{DoxyCompactList}\item 
+struct \hyperlink{structsConditionMap}{s\-Condition\-Map}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef double \hyperlink{measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\-Probability}
 \begin{DoxyCompactList}\small\item\em \hyperlink{measurement_8h}{measurement.\-h}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
-typedef struct \hyperlink{structsEtaFunction}{s\-Eta\-Function} $\ast$ \hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function}
-\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef struct \hyperlink{structsEtaFunction}{s\-Eta\-Function} $\ast$ \hyperlink{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function}
+\begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\item 
+typedef struct \*
+\hyperlink{structsCommutativeProduct}{s\-Commutative\-Product} $\ast$ \hyperlink{measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a formal product of formal constants under the assumption of communtativity of the product. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structsConditionMap}{s\-Condition\-Map} $\ast$ \hyperlink{measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function} \hyperlink{measurement_8h_aa0f12091b86c478e159761719923bd9a}{new\-Eta\-Function} (size\-\_\-t types, size\-\_\-t measurements, size\-\_\-t constants)
-\begin{DoxyCompactList}\small\item\em \hyperlink{measurement_8c}{measurement.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
-void \hyperlink{measurement_8h_a2905b59d4a364111890224a444fd6d30}{delete\-Eta\-Function} (\hyperlink{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\-Eta\-Function} $\ast$eta)
-\begin{DoxyCompactList}\small\item\em deletes an \-Eta\-Function and sets the pointer to zero \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} \hyperlink{measurement_8h_aa0f12091b86c478e159761719923bd9a}{new\-Eta\-Function} (size\-\_\-t types, size\-\_\-t measurements, size\-\_\-t constants)
+\begin{DoxyCompactList}\small\item\em creates a new \-Eta\-Function \end{DoxyCompactList}\item 
+\hyperlink{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} \hyperlink{measurement_8h_a48c795067056a496c8e4aa903fac7d71}{new\-Uniform\-Eta\-Function} (size\-\_\-t types, size\-\_\-t measurements)
+\begin{DoxyCompactList}\small\item\em create a new \-Eta\-Function with the same constant for each type \end{DoxyCompactList}\item 
+\hyperlink{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} \hyperlink{measurement_8h_a018a3a7d15c126cbf15d03ba2698fe39}{new\-General\-Eta\-Function} (size\-\_\-t types, size\-\_\-t measurements)
+\begin{DoxyCompactList}\small\item\em create a new \-Eta\-Function with the a constant for each type and measurement on its own \end{DoxyCompactList}\item 
+void \hyperlink{measurement_8h_a2905b59d4a364111890224a444fd6d30}{delete\-Eta\-Function} (\hyperlink{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} $\ast$eta)
+\begin{DoxyCompactList}\small\item\em deletes an \-Eta\-Function and sets the pointer to zero \end{DoxyCompactList}\item 
+\hyperlink{measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product} \hyperlink{measurement_8h_abe35a2e2ccf6060635d4daf6d6ebf59e}{new\-Commutative\-Product} (size\-\_\-t constants)
+\begin{DoxyCompactList}\small\item\em creates a new commutative product without any factors \end{DoxyCompactList}\item 
+void \hyperlink{measurement_8h_a2120fbc047167fd0a08f3015b8716cd1}{delete\-Commutative\-Product} (\hyperlink{measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product} $\ast$p)
+\begin{DoxyCompactList}\small\item\em deletes a \-Commutative\-Product and sets its pointer to zero. \end{DoxyCompactList}\item 
+\hyperlink{measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map} \hyperlink{measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}{new\-Condition\-Map} (size\-\_\-t attributes)
+\begin{DoxyCompactList}\small\item\em creates a new condition map \end{DoxyCompactList}\item 
+void \hyperlink{measurement_8h_ad40c601ad1dcd904cde0e9ebe2828d72}{delete\-Condition\-Map} (\hyperlink{measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map} $\ast$c)
+\begin{DoxyCompactList}\small\item\em deletes a \-Condition\-Map object \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Typedef \-Documentation}
-\hypertarget{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}{\index{measurement.\-h@{measurement.\-h}!\-Eta\-Function@{\-Eta\-Function}}
+\hypertarget{measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\index{measurement.\-h@{measurement.\-h}!\-Commutative\-Product@{\-Commutative\-Product}}
+\index{\-Commutative\-Product@{\-Commutative\-Product}!measurement.h@{measurement.\-h}}
+\subsubsection[{\-Commutative\-Product}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Commutative\-Product}$\ast$ {\bf \-Commutative\-Product}}}\label{measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}
+
+
+\-This struct represents a formal product of formal constants under the assumption of communtativity of the product. 
+
+\hypertarget{measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\index{measurement.\-h@{measurement.\-h}!\-Condition\-Map@{\-Condition\-Map}}
+\index{\-Condition\-Map@{\-Condition\-Map}!measurement.h@{measurement.\-h}}
+\subsubsection[{\-Condition\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Condition\-Map} $\ast$ {\bf \-Condition\-Map}}}\label{measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}
+
+
+\-This struct represents a map between the object sets of two formal contexts. 
+
+\hypertarget{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\index{measurement.\-h@{measurement.\-h}!\-Eta\-Function@{\-Eta\-Function}}
 \index{\-Eta\-Function@{\-Eta\-Function}!measurement.h@{measurement.\-h}}
-\subsubsection[{\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Eta\-Function} $\ast$ {\bf \-Eta\-Function}}}\label{measurement_8h_a9cc8d2965e28b94a57adac768863a6ba}
+\subsubsection[{\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Eta\-Function}$\ast$ {\bf \-Eta\-Function}}}\label{measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}
 
 
 this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case 
@@ -65,6 +98,78 @@ this structure contains information on how many cases for measurements there are
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{measurement_8h_a2120fbc047167fd0a08f3015b8716cd1}{\index{measurement.\-h@{measurement.\-h}!delete\-Commutative\-Product@{delete\-Commutative\-Product}}
+\index{delete\-Commutative\-Product@{delete\-Commutative\-Product}!measurement.h@{measurement.\-h}}
+\subsubsection[{delete\-Commutative\-Product}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Commutative\-Product} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Commutative\-Product} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_a2120fbc047167fd0a08f3015b8716cd1}
+
+
+deletes a \-Commutative\-Product and sets its pointer to zero. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 144 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(p);
+    RETURN_IF_ZERO(*p);
+
+    free((*p)->powers);
+    free(*p);
+
+    *p = 0;
+}
+\end{DoxyCode}
+\hypertarget{measurement_8h_ad40c601ad1dcd904cde0e9ebe2828d72}{\index{measurement.\-h@{measurement.\-h}!delete\-Condition\-Map@{delete\-Condition\-Map}}
+\index{delete\-Condition\-Map@{delete\-Condition\-Map}!measurement.h@{measurement.\-h}}
+\subsubsection[{delete\-Condition\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Condition\-Map} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Condition\-Map} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_ad40c601ad1dcd904cde0e9ebe2828d72}
+
+
+deletes a \-Condition\-Map object 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 179 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(c);
+    RETURN_IF_ZERO(*c);
+
+    free((*c)->c);
+    free(*c);
+
+    *c = 0;
+}
+\end{DoxyCode}
 \hypertarget{measurement_8h_a2905b59d4a364111890224a444fd6d30}{\index{measurement.\-h@{measurement.\-h}!delete\-Eta\-Function@{delete\-Eta\-Function}}
 \index{delete\-Eta\-Function@{delete\-Eta\-Function}!measurement.h@{measurement.\-h}}
 \subsubsection[{delete\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Eta\-Function} (
@@ -83,7 +188,7 @@ deletes an \-Eta\-Function and sets the pointer to zero
 \end{DoxyParams}
 
 
-\-Definition at line 55 of file measurement.\-c.
+\-Definition at line 60 of file measurement.\-c.
 
 
 
@@ -102,6 +207,89 @@ deletes an \-Eta\-Function and sets the pointer to zero
     *eta = 0;
 }
 \end{DoxyCode}
+\hypertarget{measurement_8h_abe35a2e2ccf6060635d4daf6d6ebf59e}{\index{measurement.\-h@{measurement.\-h}!new\-Commutative\-Product@{new\-Commutative\-Product}}
+\index{new\-Commutative\-Product@{new\-Commutative\-Product}!measurement.h@{measurement.\-h}}
+\subsubsection[{new\-Commutative\-Product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Commutative\-Product} {\bf new\-Commutative\-Product} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{constants}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_abe35a2e2ccf6060635d4daf6d6ebf59e}
+
+
+creates a new commutative product without any factors 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em constants} & number of formal constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+new \-Commutative\-Product object 
+\end{DoxyReturn}
+
+
+\-Definition at line 124 of file measurement.\-c.
+
+
+
+\-References s\-Commutative\-Product\-::constants, s\-Commutative\-Product\-::powers, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZEROI(constants);
+
+    CommutativeProduct p;
+    p = malloc(sizeof(struct sCommutativeProduct));
+
+    p->constants = constants;
+
+    p->powers = calloc(constants, sizeof(size_t));
+
+    return p;
+}
+\end{DoxyCode}
+\hypertarget{measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}{\index{measurement.\-h@{measurement.\-h}!new\-Condition\-Map@{new\-Condition\-Map}}
+\index{new\-Condition\-Map@{new\-Condition\-Map}!measurement.h@{measurement.\-h}}
+\subsubsection[{new\-Condition\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Condition\-Map} {\bf new\-Condition\-Map} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{attributes}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}
+
+
+creates a new condition map 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em attributes} & cardinality of the domain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+new \-Condition\-Map object 
+\end{DoxyReturn}
+
+
+\-Definition at line 161 of file measurement.\-c.
+
+
+
+\-References s\-Condition\-Map\-::attributes, s\-Condition\-Map\-::c, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZEROI(attributes);
+
+    ConditionMap c;
+    c = malloc(sizeof(struct sConditionMap));
+
+    c->attributes = attributes;
+    c->c = calloc(attributes, sizeof(size_t));
+
+    return c;
+}
+\end{DoxyCode}
 \hypertarget{measurement_8h_aa0f12091b86c478e159761719923bd9a}{\index{measurement.\-h@{measurement.\-h}!new\-Eta\-Function@{new\-Eta\-Function}}
 \index{new\-Eta\-Function@{new\-Eta\-Function}!measurement.h@{measurement.\-h}}
 \subsubsection[{new\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eta\-Function} {\bf new\-Eta\-Function} (
@@ -113,13 +301,7 @@ deletes an \-Eta\-Function and sets the pointer to zero
 )}}\label{measurement_8h_aa0f12091b86c478e159761719923bd9a}
 
 
-\hyperlink{measurement_8c}{measurement.\-c}, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens 
-
-\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
-
-\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
-
-\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. creates a new \-Eta\-Function
+creates a new \-Eta\-Function 
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -135,18 +317,22 @@ a new structure
 \end{DoxyReturn}
 
 
-\-Definition at line 31 of file measurement.\-c.
+\-Definition at line 36 of file measurement.\-c.
 
 
 
-\-References s\-Eta\-Function\-::\-C, s\-Eta\-Function\-::constants, s\-Eta\-Function\-::eta, s\-Eta\-Function\-::measurements, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and s\-Eta\-Function\-::types.
+\-References s\-Eta\-Function\-::\-C, s\-Eta\-Function\-::constants, s\-Eta\-Function\-::eta, s\-Eta\-Function\-::measurements, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I, and s\-Eta\-Function\-::types.
+
+
+
+\-Referenced by new\-General\-Eta\-Function(), and new\-Uniform\-Eta\-Function().
 
 
 \begin{DoxyCode}
 {
-    RETURN_ZERO_IF_ZERO(types);
-    RETURN_ZERO_IF_ZERO(measurements);
-    RETURN_ZERO_IF_ZERO(constants);
+    RETURN_ZERO_IF_ZEROI(types);
+    RETURN_ZERO_IF_ZEROI(measurements);
+    RETURN_ZERO_IF_ZEROI(constants);
 
     EtaFunction e;
     e = malloc(sizeof(struct sEtaFunction));
@@ -161,3 +347,119 @@ a new structure
     return e;
 }
 \end{DoxyCode}
+\hypertarget{measurement_8h_a018a3a7d15c126cbf15d03ba2698fe39}{\index{measurement.\-h@{measurement.\-h}!new\-General\-Eta\-Function@{new\-General\-Eta\-Function}}
+\index{new\-General\-Eta\-Function@{new\-General\-Eta\-Function}!measurement.h@{measurement.\-h}}
+\subsubsection[{new\-General\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eta\-Function} {\bf new\-General\-Eta\-Function} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{types, }
+\item[{size\-\_\-t}]{measurements}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_a018a3a7d15c126cbf15d03ba2698fe39}
+
+
+create a new \-Eta\-Function with the a constant for each type and measurement on its own 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em types} & \\
+\hline
+{\em measurements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 102 of file measurement.\-c.
+
+
+
+\-References s\-Eta\-Function\-::eta, and new\-Eta\-Function().
+
+
+\begin{DoxyCode}
+{
+    EtaFunction e;
+    e = newEtaFunction(types, measurements, types * measurements);
+
+    for (size_t t = 0; t < types; ++t)
+    {
+        for (size_t m = 0; m < measurements; ++m)
+        {
+            e->eta[t * measurements + m] = t * measurements + m;
+        }
+    }
+
+    return e;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{measurement_8h_a018a3a7d15c126cbf15d03ba2698fe39_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{measurement_8h_a48c795067056a496c8e4aa903fac7d71}{\index{measurement.\-h@{measurement.\-h}!new\-Uniform\-Eta\-Function@{new\-Uniform\-Eta\-Function}}
+\index{new\-Uniform\-Eta\-Function@{new\-Uniform\-Eta\-Function}!measurement.h@{measurement.\-h}}
+\subsubsection[{new\-Uniform\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eta\-Function} {\bf new\-Uniform\-Eta\-Function} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{types, }
+\item[{size\-\_\-t}]{measurements}
+\end{DoxyParamCaption}
+)}}\label{measurement_8h_a48c795067056a496c8e4aa903fac7d71}
+
+
+create a new \-Eta\-Function with the same constant for each type 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em types} & \\
+\hline
+{\em measurements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 79 of file measurement.\-c.
+
+
+
+\-References s\-Eta\-Function\-::eta, and new\-Eta\-Function().
+
+
+\begin{DoxyCode}
+{
+    EtaFunction e;
+    e = newEtaFunction(types, measurements, types);
+
+    for (size_t t = 0; t < types; ++t)
+    {
+        for (size_t m = 0; m < measurements; ++m)
+        {
+            e->eta[t * measurements + m] = t;
+        }
+    }
+
+    return e;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{measurement_8h_a48c795067056a496c8e4aa903fac7d71_cgraph}
+\end{center}
+\end{figure}
+
+

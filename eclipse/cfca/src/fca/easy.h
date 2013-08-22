@@ -69,4 +69,6 @@ writeFormalContext(FormalContext ctx, const char* filename);
 void
 deleteFormalContext(FormalContext* ctx);
 
+#include "easy/measurement.h"
+
 #endif /* EASY_H_ */
