@@ -7,7 +7,8 @@
 {\ttfamily \#include \char`\"{}fca/fca.\-h\char`\"{}}\*
 {\ttfamily \#include \char`\"{}fca/easy/private.\-h\char`\"{}}\*
 {\ttfamily \#include \char`\"{}fca/vector/private.\-h\char`\"{}}\*
-\-Include dependency graph for cfca.\-c\-:\nopagebreak
+\-Include dependency graph for cfca.\-c\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,21 +51,12 @@ start tests
 
 
 
-\-References count\-Concepts\-In\-Bulk, count\-Concepts\-In\-Bulk\-V(), delete\-Concept\-Bulk, delete\-Concept\-Bulk\-V(), delete\-Formal\-Context, delete\-Formal\-Context\-V(), new\-Concept\-Bulk\-From\-Context, new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-From\-File\-V(), new\-Formal\-Context\-From\-Random, next\-Closure\-V\-X(), write\-Concepts\-To\-File, write\-Concepts\-To\-File\-V(), write\-Formal\-Context, and write\-Formal\-Context\-V().
+\-References s\-Eta\-Function\-::\-C, calculate\-Logs(), s\-Eta\-Function\-::constants, delete\-Eta\-Function(), delete\-Formal\-Context, delete\-Log\-Cache(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-Random, new\-Log\-Cache(), new\-Uniform\-Eta\-Function(), and write\-Formal\-Context.
 
 
 \begin{DoxyCode}
 {
-//  uint64_t test[2];
-//  for (int i = 0; i < 65; ++i) {
-//      test[0] = ~0ULL;
-//
-//      test[1] = ~0ULL;
-//      MASKVECTOR(test,i+1);
-//      printf("%2d: %16llx %16llx
-       %16llx%16llx\n",BITNBR(i),BITVALUE(i),CRIMPVALUE(i),test[0]);
-//  }
-
+    puts("Go!");
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
 
@@ -73,100 +65,37 @@ start tests
 #pragma GCC diagnostic pop
 
     FormalContext ctx;
-
-    ctx = newFormalContextFromRandom(80, 30, 0.3f);
+    ctx = newFormalContextFromRandom(15, 30, 0.3f);
 
     writeFormalContext(ctx, "/home/immo/tmp/test.cxt");
 
-    puts("Cloning V...");
+    EtaFunction eta;
+    eta = newUniformEtaFunction(2, 30);
+    eta->C[0] = 0.05; //Type I error
+    eta->C[1] = 0.10; //Type II error
 
-    FormalContextV ctxV;
+    LogCache logC;
+    logC = newLogCache(eta->constants);
+    calculateLogs(eta,logC);
 
-    ctxV = newFormalContextFromFileV("/home/immo/tmp/test.cxt");
+    FormalContext B;
+    B = newFakeMeasurement(ctx,eta,150);
+    writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
 
-    writeFormalContextV(ctxV, "/home/immo/tmp/testV.cxt");
 
-    puts("Performance testing....");
-
-    clock_t start, end;
-    time_t xstart, xend;
-
-    FormalConceptIntentBulkListV conceptsV;
-
-    time(&xstart);
-    start = clock();
-
-    conceptsV = newConceptBulkFromContextV(ctxV);
-
-    end = clock();
-    time(&xend);
-
-    printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
-
-    printf("Time version V: %f sec in %f [%d-%d]\n",
-            (float) (end - start) / CLOCKS_PER_SEC,
-            (float) difftime(xend, xstart), start, end);
-
-    FormalConceptIntentBulkListV conceptsVX;
-
-    time(&xstart);
-    start = clock();
-
-    conceptsVX = nextClosureVX(ctxV);
-
-    end = clock();
-    time(&xend);
-
-    printf("Concepts: %zu\n", countConceptsInBulkV(conceptsV));
-
-    printf("Time version VX: %f sec in %f [%d-%d]\n",
-            (float) (end - start) / CLOCKS_PER_SEC,
-            (float) difftime(xend, xstart), start, end);
-
-    FormalConceptIntentBulkList concepts;
-
-    time(&xstart);
-    start = clock();
-
-    concepts = newConceptBulkFromContext(ctx);
-
-    end = clock();
-    time(&xend);
-
-    printf("Concepts: %d\n", countConceptsInBulk(concepts));
-
-    printf("Time version 1: %f sec in %f [%d-%d]\n",
-            (float) (end - start) / CLOCKS_PER_SEC,
-            (float) difftime(xend, xstart), start, end);
-
-    writeConceptsToFile(ctx, concepts, "/home/immo/tmp/test1.cxt");
-    writeConceptsToFileV(ctxV, conceptsV, "/home/immo/tmp/testV.cxt");
-    writeConceptsToFileV(ctxV, conceptsVX, "/home/immo/tmp/testVX.cxt");
-
-    /*puts("=====");
-     FILE* status = fopen("/proc/self/status", "r");
-     char line[1000];
-     while (fgets(line, sizeof line, status) != NULL)
-     {
-     printf("%s", line);
-     }
-     fclose(status);
-     puts("=====");*/
-
-    puts("Clean up...");
-
-    deleteConceptBulkV(&conceptsVX);
-    deleteConceptBulkV(&conceptsV);
-    deleteConceptBulk(&concepts);
+    deleteLogCache(&logC);
+    deleteEtaFunction(&eta);
+    deleteFormalContext(&B);
     deleteFormalContext(&ctx);
-    deleteFormalContextV(&ctxV);
 
+    puts("done.");
     return EXIT_SUCCESS;
 }
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

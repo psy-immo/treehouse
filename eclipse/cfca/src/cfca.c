@@ -33,6 +33,7 @@
 
 int main(void)
 {
+	puts("Go!");
 	/**
 	 * initialize pseudo random number generator
 	 */
@@ -58,13 +59,24 @@ int main(void)
 	eta->C[0] = 0.05; //Type I error
 	eta->C[1] = 0.10; //Type II error
 
+	LogCache logC;
+	logC = newLogCache(eta->constants);
+	calculateLogs(eta,logC);
+
+
 	FormalContext B;
 	B = newFakeMeasurement(ctx,eta,150);
 	writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
 
+	ConditionMap c;
+	c = newConditionMap(150);
 
+
+	deleteLogCache(&logC);
+	deleteEtaFunction(&eta);
 	deleteFormalContext(&B);
 	deleteFormalContext(&ctx);
 
+	puts("done.");
 	return EXIT_SUCCESS;
 }

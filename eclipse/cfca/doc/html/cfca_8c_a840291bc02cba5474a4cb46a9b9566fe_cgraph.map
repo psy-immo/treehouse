@@ -1,19 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$fcaV_8c.html#a7d53642e5953e35c86ef0425858d707e" title="use this for bulks that are filled in order" alt="" coords="345,26,500,55"/>
-<area shape="rect" id="node5" href="$fcaV_8c.html#aa2cf22779998982c65e3762c7e2c2c84" title="deletes the entire bulk list" alt="" coords="129,104,271,134"/>
-<area shape="rect" id="node9" href="$fcaV_8c.html#a42ae183692b566f6d12c9db27e8f7ec1" title="deletes the formal context *ctx, and sets the pointer to zero" alt="" coords="124,158,276,187"/>
-<area shape="rect" id="node11" href="$fcaV_8c.html#a90151fdf1b3ef3201deb2e1ab752729d" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="551,210,756,239"/>
-<area shape="rect" id="node22" href="$fcaV_8c.html#a9b6b69f5062c68c30c5e1e6d56ea37bc" title="create a new formal context object from a .cxt file" alt="" coords="104,315,296,344"/>
-<area shape="rect" id="node26" href="$fcaVnextClosureX_8c.html#a858241e44987c35c2ae688f2797f2a30" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="145,262,255,291"/>
-<area shape="rect" id="node38" href="$fcaV_8c.html#ac1443261c57cc1d3db9361c188cd9c96" title="write a list of concept intents into a .cxt file" alt="" coords="125,51,275,80"/>
-<area shape="rect" id="node41" href="$fcaV_8c.html#aa4861d8f750bb9786aa32c55a683764b" title="save the context ctx at the given file location" alt="" coords="128,368,272,398"/>
-<area shape="rect" id="node7" href="$fcaV_8c.html#afd9305761d657be7c21fb81e82d72a42" title="deletes a concept chunk object and sets its pointer to zero" alt="" coords="347,104,499,134"/>
-<area shape="rect" id="node13" href="$fcaV_8c.html#aa30fbd99dd8ad4cee19d32d5debf9e07" title="close an attribute set, i.e." alt="" coords="831,263,924,292"/>
-<area shape="rect" id="node15" href="$fcaV_8c.html#abda612c4305c29a37b6501e18d94ebc5" title="creates a new formal concept intent bulk list" alt="" coords="1004,236,1135,266"/>
-<area shape="rect" id="node17" href="$fcaV_8c.html#aa6cc62f8dfd08ef795a932cd06e69b91" title="copies the given intent to the bulk denoted by the root node." alt="" coords="807,210,948,239"/>
-<area shape="rect" id="node19" href="$fcaV_8c.html#ab5c9a71c810ad1eeeb5f8ff78d77d899" title="create a new formal concept chunk" alt="" coords="999,183,1140,212"/>
-<area shape="rect" id="node24" href="$fcaV_8c.html#aa4f8b6d04c1fb2dd35fa8324bd383913" title="create a new formal context" alt="" coords="352,366,493,395"/>
-<area shape="rect" id="node28" href="$fcaVnextClosureX_8c.html#a8ee9a9ab122e4e5e8c5148ef759172f2" title="creates a new formal concept intent chunk and fills it with the intents of all formal concepts in the..." alt="" coords="595,288,712,318"/>
-<area shape="rect" id="node35" href="$fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140" title="callNextClosureVX1" alt="" coords="353,312,492,342"/>
-<area shape="rect" id="node33" href="$fcaV_8c.html#a55d40e1b5169e4466d00cb930c67e0ef" title="compare two intent vectors" alt="" coords="832,367,923,396"/>
+<area shape="rect" id="node3" href="$common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572" title="calculates the logarithms of probabilities given by constants, and their complements" alt="" coords="135,5,236,35"/>
+<area shape="rect" id="node5" href="$common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero" alt="" coords="123,59,248,88"/>
+<area shape="rect" id="node7" href="$common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero" alt="" coords="128,112,243,141"/>
+<area shape="rect" id="node9" href="$easy_2measurement_8c.html#af5995b46b1b93746a2cf6af36ce00aed" title="generates a new formal context that comprises of a pseudo&#45;random fake measurement obtained from I wit..." alt="" coords="108,165,263,195"/>
+<area shape="rect" id="node11" href="$common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants" alt="" coords="133,219,237,248"/>
+<area shape="rect" id="node13" href="$common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type" alt="" coords="104,272,267,301"/>
+<area shape="rect" id="node15" href="$common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction" alt="" coords="316,272,431,301"/>
 </map>

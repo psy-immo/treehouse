@@ -18,7 +18,7 @@ size\-\_\-t \hyperlink{structsEtaFunction_a1fdf63f3a73e7fd663491e72421619f9}{con
 \hyperlink{common_2measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\-Probability} $\ast$ \hyperlink{structsEtaFunction_a05c2f93c1148d5268d359d78540c10be}{\-C}
 \begin{DoxyCompactList}\small\item\em the constants array. \end{DoxyCompactList}\item 
 size\-\_\-t \hyperlink{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}{types}
-\begin{DoxyCompactList}\small\item\em the number of error types \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em the number of error types, usually this is equal to 2, where\-: \-: \-P\-R\-E\-D\-I\-C\-T\-E\-D (\-I) \-: \-: \-Error type . \end{DoxyCompactList}\item 
 size\-\_\-t \hyperlink{structsEtaFunction_aa323ef11935cd1e8d6ef56405ab96cf8}{measurements}
 \begin{DoxyCompactList}\small\item\em the number of different measurements \end{DoxyCompactList}\item 
 size\-\_\-t $\ast$ \hyperlink{structsEtaFunction_a7585a59b1861523157055f8c8b0263e3}{eta}
@@ -28,7 +28,7 @@ size\-\_\-t $\ast$ \hyperlink{structsEtaFunction_a7585a59b1861523157055f8c8b0263
 \subsection{\-Detailed \-Description}
 this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case 
 
-\-Definition at line 34 of file measurement.\-h.
+\-Definition at line 35 of file measurement.\-h.
 
 
 
@@ -42,11 +42,11 @@ the constants array.
 
 
 
-\-Definition at line 45 of file measurement.\-h.
+\-Definition at line 46 of file measurement.\-h.
 
 
 
-\-Referenced by new\-Eta\-Function().
+\-Referenced by calculate\-Logs(), main(), new\-Eta\-Function(), and new\-Fake\-Measurement().
 
 \hypertarget{structsEtaFunction_a1fdf63f3a73e7fd663491e72421619f9}{\index{s\-Eta\-Function@{s\-Eta\-Function}!constants@{constants}}
 \index{constants@{constants}!sEtaFunction@{s\-Eta\-Function}}
@@ -57,11 +57,11 @@ the number of different probability constants
 
 
 
-\-Definition at line 39 of file measurement.\-h.
+\-Definition at line 40 of file measurement.\-h.
 
 
 
-\-Referenced by new\-Eta\-Function().
+\-Referenced by calculate\-Likelihood(), calculate\-Logs(), main(), and new\-Eta\-Function().
 
 \hypertarget{structsEtaFunction_a7585a59b1861523157055f8c8b0263e3}{\index{s\-Eta\-Function@{s\-Eta\-Function}!eta@{eta}}
 \index{eta@{eta}!sEtaFunction@{s\-Eta\-Function}}
@@ -74,11 +74,11 @@ the error probability for type t error and measurement m is\-:
 
 \-C\mbox{[}eta\mbox{[}t$\ast$measurements + m\mbox{]}\mbox{]} 
 
-\-Definition at line 65 of file measurement.\-h.
+\-Definition at line 72 of file measurement.\-h.
 
 
 
-\-Referenced by new\-Eta\-Function(), new\-General\-Eta\-Function(), and new\-Uniform\-Eta\-Function().
+\-Referenced by calculate\-Likelihood(), new\-Eta\-Function(), new\-Fake\-Measurement(), new\-General\-Eta\-Function(), and new\-Uniform\-Eta\-Function().
 
 \hypertarget{structsEtaFunction_aa323ef11935cd1e8d6ef56405ab96cf8}{\index{s\-Eta\-Function@{s\-Eta\-Function}!measurements@{measurements}}
 \index{measurements@{measurements}!sEtaFunction@{s\-Eta\-Function}}
@@ -89,26 +89,26 @@ the number of different measurements
 
 
 
-\-Definition at line 56 of file measurement.\-h.
+\-Definition at line 63 of file measurement.\-h.
 
 
 
-\-Referenced by new\-Eta\-Function().
+\-Referenced by calculate\-Likelihood(), new\-Eta\-Function(), and new\-Fake\-Measurement().
 
 \hypertarget{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}{\index{s\-Eta\-Function@{s\-Eta\-Function}!types@{types}}
 \index{types@{types}!sEtaFunction@{s\-Eta\-Function}}
 \subsubsection[{types}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Eta\-Function\-::types}}}\label{structsEtaFunction_afd94a9856047e0987c5e8667a4838b71}
 
 
-the number of error types 
+the number of error types, usually this is equal to 2, where\-: \-: \-P\-R\-E\-D\-I\-C\-T\-E\-D (\-I) \-: \-: \-Error type . 
+
+\-X \-: \-:(\-B) \-M\-E\-A\-S\-U\-R\-E\-D . (0) 1 \-: \-:(\-B) \-M\-E\-A\-S\-U\-R\-E\-D \-X 0 (1) \-: 
+
+\-Definition at line 57 of file measurement.\-h.
 
 
 
-\-Definition at line 50 of file measurement.\-h.
-
-
-
-\-Referenced by new\-Eta\-Function().
+\-Referenced by calculate\-Likelihood(), and new\-Eta\-Function().
 
 
 

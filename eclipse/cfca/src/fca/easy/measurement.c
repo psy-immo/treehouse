@@ -120,7 +120,6 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 				MIN((int) floor((double) (random()) /
 								(double) RAND_MAX * (double)i->objects), i->objects-1);
 
-
 		for (int m = 0; m < i->attributes; ++m)
 		{
 			Probability rnd;
@@ -137,9 +136,47 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 					CROSS(CELL(x,b,m));
 			}
 		}
-		puts("\n");
 	}
 
 	return (FormalContext) b;
 }
 
+/**
+ * recalculate the condition map C, such that the likelihood of (B,c,I,eta) is maximal
+ *
+ * @param B       the measurement context
+ * @param c       output: ConditionMap that will be filled with c_{I,eta}
+ * @param I       the condition context
+ * @param eta     the error probabilities
+ * @param log_c   log constants corresponding to eta
+ */
+
+void optimizeConditionMap(const FormalContext B, ConditionMap c,
+		const FormalContext I, const EtaFunction eta, const LogCache log_c)
+{
+	RETURN_IF_ZERO(B);
+	RETURN_IF_ZERO(c);
+	RETURN_IF_ZERO(I);
+	RETURN_IF_ZERO(eta);
+	RETURN_IF_ZERO(log_c);
+
+	const myFormalContext* restrict b;
+	b = (const myFormalContext*) B;
+
+	const myFormalContext* restrict i;
+	i = (const myFormalContext*) I;
+
+	WARN_IF_UNEQUAL_DO(b->objects, c->objects, return);
+	WARN_IF_UNEQUAL_DO(b->objects, i->objects, return);
+	WARN_IF_UNEQUAL_DO(b->attributes, i->attributes, return);
+	WARN_IF_UNEQUAL_DO(b->attributes, eta->measurements, return);
+	WARN_IF_UNEQUAL_DO(2, eta->types, return);
+	WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return);
+
+	CommutativeProduct l;
+	l = newCommutativeProduct(eta->constants);
+
+	//TODO: continue here :)
+
+	deleteCommutativeProduct(&l);
+}

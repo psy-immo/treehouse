@@ -90,35 +90,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsConditionMap.html#a6a6975dfaba87cd345610cf6526ede4e">attributes</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">number of attributes in the domain object set  <a href="#a6a6975dfaba87cd345610cf6526ede4e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca">objects</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">cardinality of the domain object set  <a href="#aba0e3734a3c3c6de4f39d9a6c72f3cca"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28">c</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">the attribute index of the image, i.e.  <a href="#a8fba8e129aa41cc4fd2f1898e83c2f28"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">the object index of the image, i.e.  <a href="#a8fba8e129aa41cc4fd2f1898e83c2f28"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This struct represents a map between the object sets of two formal contexts. </p>
 
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00120">120</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00127">127</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 </div><hr/><h2>Field Documentation</h2>
-<a class="anchor" id="a6a6975dfaba87cd345610cf6526ede4e"></a><!-- doxytag: member="sConditionMap::attributes" ref="a6a6975dfaba87cd345610cf6526ede4e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t <a class="el" href="structsConditionMap.html#a6a6975dfaba87cd345610cf6526ede4e">sConditionMap::attributes</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>number of attributes in the domain object set </p>
-
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00124">124</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
-
-<p>Referenced by <a class="el" href="measurement_8c_source.html#l00161">newConditionMap()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a8fba8e129aa41cc4fd2f1898e83c2f28"></a><!-- doxytag: member="sConditionMap::c" ref="a8fba8e129aa41cc4fd2f1898e83c2f28" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -130,12 +111,31 @@ Data Fields</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>the attribute index of the image, i.e. </p>
-<p>c[i] is the index of the image of the attribute with index i in the domain </p>
+<p>the object index of the image, i.e. </p>
+<p>c[i] is the index of the image of the object with index i in the domain </p>
 
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00130">130</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00137">137</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 
-<p>Referenced by <a class="el" href="measurement_8c_source.html#l00161">newConditionMap()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00164">newConditionMap()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba0e3734a3c3c6de4f39d9a6c72f3cca"></a><!-- doxytag: member="sConditionMap::objects" ref="aba0e3734a3c3c6de4f39d9a6c72f3cca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca">sConditionMap::objects</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>cardinality of the domain object set </p>
+
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00131">131</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00164">newConditionMap()</a>.</p>
 
 </div>
 </div>
@@ -160,7 +160,7 @@ Data Fields</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 22 2013 14:27:55 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 23 2013 12:42:11 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

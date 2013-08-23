@@ -24,6 +24,11 @@ calculateLikelihood(const FormalContext B, const ConditionMap c,
 		const FormalContext I, const EtaFunction eta, CommutativeProduct L);
 
 FormalContext
-newFakeMeasurement(const FormalContext I, const EtaFunction eta, int experiments);
+newFakeMeasurement(const FormalContext I, const EtaFunction eta,
+		int experiments);
+
+void
+optimizeConditionMap(const FormalContext B, ConditionMap c,
+		const FormalContext I, const EtaFunction eta, const LogCache log_c);
 
 #endif /* MEASUREMENT_H_ */

@@ -2,8 +2,7 @@
 \label{common_2measurement_8h}\index{src/fca/common/measurement.\-h@{src/fca/common/measurement.\-h}}
 }
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
-\-Include dependency graph for measurement.\-h\-:
-\nopagebreak
+\-Include dependency graph for measurement.\-h\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,19 +25,25 @@ struct \hyperlink{structsEtaFunction}{s\-Eta\-Function}
 struct \hyperlink{structsCommutativeProduct}{s\-Commutative\-Product}
 \begin{DoxyCompactList}\small\item\em \-This struct represents a formal product of formal constants x\-\_\-i and their counterparts (1-\/x\-\_\-i) under the assumption of communtativity of the product. \end{DoxyCompactList}\item 
 struct \hyperlink{structsConditionMap}{s\-Condition\-Map}
-\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\item 
+struct \hyperlink{structsLogCache}{s\-Log\-Cache}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef double \hyperlink{common_2measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\-Probability}
 \begin{DoxyCompactList}\small\item\em measurement.\-h, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Technology, \-Professur für die \-Psychologie des \-Lernen und \-Lehrens \end{DoxyCompactList}\item 
+typedef double \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability}
+\item 
 typedef struct \hyperlink{structsEtaFunction}{s\-Eta\-Function} $\ast$ \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function}
 \begin{DoxyCompactList}\small\item\em this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case \end{DoxyCompactList}\item 
 typedef struct \*
 \hyperlink{structsCommutativeProduct}{s\-Commutative\-Product} $\ast$ \hyperlink{common_2measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product}
 \begin{DoxyCompactList}\small\item\em \-This struct represents a formal product of formal constants x\-\_\-i and their counterparts (1-\/x\-\_\-i) under the assumption of communtativity of the product. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{structsConditionMap}{s\-Condition\-Map} $\ast$ \hyperlink{common_2measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map}
-\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structsLogCache}{s\-Log\-Cache} $\ast$ \hyperlink{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}{\-Log\-Cache}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,10 +59,16 @@ void \hyperlink{common_2measurement_8h_a2905b59d4a364111890224a444fd6d30}{delete
 \begin{DoxyCompactList}\small\item\em creates a new commutative product without any factors \end{DoxyCompactList}\item 
 void \hyperlink{common_2measurement_8h_a2120fbc047167fd0a08f3015b8716cd1}{delete\-Commutative\-Product} (\hyperlink{common_2measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product} $\ast$p)
 \begin{DoxyCompactList}\small\item\em deletes a \-Commutative\-Product and sets its pointer to zero. \end{DoxyCompactList}\item 
-\hyperlink{common_2measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map} \hyperlink{common_2measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}{new\-Condition\-Map} (size\-\_\-t attributes)
+\hyperlink{common_2measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map} \hyperlink{common_2measurement_8h_ac4b7705e5a5c82b5d59b67617e6f2dc4}{new\-Condition\-Map} (size\-\_\-t objects)
 \begin{DoxyCompactList}\small\item\em creates a new condition map \end{DoxyCompactList}\item 
 void \hyperlink{common_2measurement_8h_ad40c601ad1dcd904cde0e9ebe2828d72}{delete\-Condition\-Map} (\hyperlink{common_2measurement_8h_ad29ab52c5830e8da1f1327d6e3fb1d64}{\-Condition\-Map} $\ast$c)
-\begin{DoxyCompactList}\small\item\em deletes a \-Condition\-Map object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em deletes a \-Condition\-Map object \end{DoxyCompactList}\item 
+\hyperlink{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}{\-Log\-Cache} \hyperlink{common_2measurement_8h_a25fcd9b89607eaa3abe03aea6ffe0447}{new\-Log\-Cache} (size\-\_\-t constants)
+\begin{DoxyCompactList}\small\item\em creates a new cache for logs of constants \end{DoxyCompactList}\item 
+void \hyperlink{common_2measurement_8h_ae9d17380c2a4280b6760d9d917dfb573}{delete\-Log\-Cache} (\hyperlink{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}{\-Log\-Cache} $\ast$log\-\_\-c)
+\begin{DoxyCompactList}\small\item\em deletes a \-Log\-Cache and sets its pointer to zero \end{DoxyCompactList}\item 
+void \hyperlink{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{calculate\-Logs} (const \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} eta, \hyperlink{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}{\-Log\-Cache} log\-\_\-c)
+\begin{DoxyCompactList}\small\item\em calculates the logarithms of probabilities given by constants, and their complements \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Typedef \-Documentation}
@@ -84,6 +95,20 @@ void \hyperlink{common_2measurement_8h_ad40c601ad1dcd904cde0e9ebe2828d72}{delete
 
 this structure contains information on how many cases for measurements there are, and what the probabilities of erroneous measurement there is for each case 
 
+\hypertarget{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Log\-Cache@{\-Log\-Cache}}
+\index{\-Log\-Cache@{\-Log\-Cache}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{\-Log\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Log\-Cache} $\ast$ {\bf \-Log\-Cache}}}\label{common_2measurement_8h_a29c6128f57f26ad6d417575faf853071}
+
+
+\-This structure stores the logarithms of probabilities and of their complements. 
+
+\-We use logarithms to the base 2. \hypertarget{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Log\-Probability@{\-Log\-Probability}}
+\index{\-Log\-Probability@{\-Log\-Probability}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{\-Log\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf \-Log\-Probability}}}\label{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}
+
+
+\-Definition at line 29 of file measurement.\-h.
+
 \hypertarget{common_2measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Probability@{\-Probability}}
 \index{\-Probability@{\-Probability}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf \-Probability}}}\label{common_2measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}
@@ -102,6 +127,53 @@ measurement.\-h, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Te
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{\index{common/measurement.\-h@{common/measurement.\-h}!calculate\-Logs@{calculate\-Logs}}
+\index{calculate\-Logs@{calculate\-Logs}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{calculate\-Logs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf calculate\-Logs} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Eta\-Function}}]{eta, }
+\item[{{\bf \-Log\-Cache}}]{log\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}
+
+
+calculates the logarithms of probabilities given by constants, and their complements 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em eta} & input constants \\
+\hline
+{\em log\-\_\-c} & output structure to update the constants \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 235 of file measurement.\-c.
+
+
+
+\-References s\-Eta\-Function\-::\-C, s\-Eta\-Function\-::constants, s\-Log\-Cache\-::constants, s\-Log\-Cache\-::log\-C, s\-Log\-Cache\-::log\-Not\-C, and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return);
+
+    /*
+     * we could use just any logarithm, so 2 seems reasonable...
+     */
+
+    for (size_t i = 0; i < eta->constants; ++i)
+    {
+        log_c->logC[i] = log2(eta->C[i]);
+        log_c->logNotC[i] = log2(1. - eta->C[i]);
+    }
+}
+\end{DoxyCode}
 \hypertarget{common_2measurement_8h_a2120fbc047167fd0a08f3015b8716cd1}{\index{common/measurement.\-h@{common/measurement.\-h}!delete\-Commutative\-Product@{delete\-Commutative\-Product}}
 \index{delete\-Commutative\-Product@{delete\-Commutative\-Product}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{delete\-Commutative\-Product}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Commutative\-Product} (
@@ -120,7 +192,7 @@ deletes a \-Commutative\-Product and sets its pointer to zero.
 \end{DoxyParams}
 
 
-\-Definition at line 144 of file measurement.\-c.
+\-Definition at line 146 of file measurement.\-c.
 
 
 
@@ -132,7 +204,8 @@ deletes a \-Commutative\-Product and sets its pointer to zero.
     RETURN_IF_ZERO(p);
     RETURN_IF_ZERO(*p);
 
-    free((*p)->powers);
+    free((*p)->match);
+    free((*p)->mismatch);
     free(*p);
 
     *p = 0;
@@ -156,7 +229,7 @@ deletes a \-Condition\-Map object
 \end{DoxyParams}
 
 
-\-Definition at line 179 of file measurement.\-c.
+\-Definition at line 182 of file measurement.\-c.
 
 
 
@@ -192,11 +265,15 @@ deletes an \-Eta\-Function and sets the pointer to zero
 \end{DoxyParams}
 
 
-\-Definition at line 60 of file measurement.\-c.
+\-Definition at line 61 of file measurement.\-c.
 
 
 
 \-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
 
 
 \begin{DoxyCode}
@@ -209,6 +286,47 @@ deletes an \-Eta\-Function and sets the pointer to zero
     free(*eta);
 
     *eta = 0;
+}
+\end{DoxyCode}
+\hypertarget{common_2measurement_8h_ae9d17380c2a4280b6760d9d917dfb573}{\index{common/measurement.\-h@{common/measurement.\-h}!delete\-Log\-Cache@{delete\-Log\-Cache}}
+\index{delete\-Log\-Cache@{delete\-Log\-Cache}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{delete\-Log\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Log\-Cache} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Log\-Cache} $\ast$}]{log\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_ae9d17380c2a4280b6760d9d917dfb573}
+
+
+deletes a \-Log\-Cache and sets its pointer to zero 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em log\-\_\-c} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 217 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(log_c);
+    RETURN_IF_ZERO(*log_c);
+
+    free((*log_c)->logC);
+    free((*log_c)->logNotC);
+    free(*log_c);
+
+    *log_c = 0;
 }
 \end{DoxyCode}
 \hypertarget{common_2measurement_8h_abe35a2e2ccf6060635d4daf6d6ebf59e}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Commutative\-Product@{new\-Commutative\-Product}}
@@ -232,11 +350,11 @@ new \-Commutative\-Product object
 \end{DoxyReturn}
 
 
-\-Definition at line 124 of file measurement.\-c.
+\-Definition at line 125 of file measurement.\-c.
 
 
 
-\-References s\-Commutative\-Product\-::constants, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
+\-References s\-Commutative\-Product\-::constants, s\-Commutative\-Product\-::match, s\-Commutative\-Product\-::mismatch, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
 
 
 \begin{DoxyCode}
@@ -248,25 +366,26 @@ new \-Commutative\-Product object
 
     p->constants = constants;
 
-    p->powers = calloc(constants, sizeof(size_t));
+    p->mismatch = calloc(constants, sizeof(size_t));
+    p->match = calloc(constants, sizeof(size_t));
 
     return p;
 }
 \end{DoxyCode}
-\hypertarget{common_2measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Condition\-Map@{new\-Condition\-Map}}
+\hypertarget{common_2measurement_8h_ac4b7705e5a5c82b5d59b67617e6f2dc4}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Condition\-Map@{new\-Condition\-Map}}
 \index{new\-Condition\-Map@{new\-Condition\-Map}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{new\-Condition\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Condition\-Map} {\bf new\-Condition\-Map} (
 \begin{DoxyParamCaption}
-\item[{size\-\_\-t}]{attributes}
+\item[{size\-\_\-t}]{objects}
 \end{DoxyParamCaption}
-)}}\label{common_2measurement_8h_a16d3598c02eae9773e8b2e24e408d0e8}
+)}}\label{common_2measurement_8h_ac4b7705e5a5c82b5d59b67617e6f2dc4}
 
 
 creates a new condition map 
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em attributes} & cardinality of the domain \\
+{\em objects} & cardinality of the domain \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}
@@ -274,22 +393,22 @@ new \-Condition\-Map object
 \end{DoxyReturn}
 
 
-\-Definition at line 161 of file measurement.\-c.
+\-Definition at line 164 of file measurement.\-c.
 
 
 
-\-References s\-Condition\-Map\-::attributes, s\-Condition\-Map\-::c, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
+\-References s\-Condition\-Map\-::c, s\-Condition\-Map\-::objects, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
 
 
 \begin{DoxyCode}
 {
-    RETURN_ZERO_IF_ZEROI(attributes);
+    RETURN_ZERO_IF_ZEROI(objects);
 
     ConditionMap c;
     c = malloc(sizeof(struct sConditionMap));
 
-    c->attributes = attributes;
-    c->c = calloc(attributes, sizeof(size_t));
+    c->objects = objects;
+    c->c = calloc(objects, sizeof(size_t));
 
     return c;
 }
@@ -321,7 +440,7 @@ a new structure
 \end{DoxyReturn}
 
 
-\-Definition at line 36 of file measurement.\-c.
+\-Definition at line 37 of file measurement.\-c.
 
 
 
@@ -375,7 +494,7 @@ create a new \-Eta\-Function with the a constant for each type and measurement o
 \end{DoxyReturn}
 
 
-\-Definition at line 102 of file measurement.\-c.
+\-Definition at line 103 of file measurement.\-c.
 
 
 
@@ -410,6 +529,52 @@ create a new \-Eta\-Function with the a constant for each type and measurement o
 \end{figure}
 
 
+\hypertarget{common_2measurement_8h_a25fcd9b89607eaa3abe03aea6ffe0447}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Log\-Cache@{new\-Log\-Cache}}
+\index{new\-Log\-Cache@{new\-Log\-Cache}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{new\-Log\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Log\-Cache} {\bf new\-Log\-Cache} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{constants}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_a25fcd9b89607eaa3abe03aea6ffe0447}
+
+
+creates a new cache for logs of constants 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em constants} & number of constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+new \-Log\-Cache 
+\end{DoxyReturn}
+
+
+\-Definition at line 199 of file measurement.\-c.
+
+
+
+\-References s\-Log\-Cache\-::constants, s\-Log\-Cache\-::log\-C, and s\-Log\-Cache\-::log\-Not\-C.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    LogCache l;
+
+    l = malloc(sizeof(struct sLogCache));
+
+    l->constants = constants;
+
+    l->logC = calloc(constants, sizeof(LogProbability));
+    l->logNotC = calloc(constants, sizeof(LogProbability));
+
+    return l;
+}
+\end{DoxyCode}
 \hypertarget{common_2measurement_8h_a48c795067056a496c8e4aa903fac7d71}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Uniform\-Eta\-Function@{new\-Uniform\-Eta\-Function}}
 \index{new\-Uniform\-Eta\-Function@{new\-Uniform\-Eta\-Function}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{new\-Uniform\-Eta\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Eta\-Function} {\bf new\-Uniform\-Eta\-Function} (
@@ -434,11 +599,15 @@ create a new \-Eta\-Function with the same constant for each type
 \end{DoxyReturn}
 
 
-\-Definition at line 79 of file measurement.\-c.
+\-Definition at line 80 of file measurement.\-c.
 
 
 
 \-References s\-Eta\-Function\-::eta, and new\-Eta\-Function().
+
+
+
+\-Referenced by main().
 
 
 \begin{DoxyCode}

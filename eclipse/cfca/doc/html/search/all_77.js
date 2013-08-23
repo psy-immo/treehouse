@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['warn_5fif_5fgeq_5fdo',['WARN_IF_GEQ_DO',['../common_2macros_8h.html#aad9d5baa0093f289563ebcebc5a84de9',1,'macros.h']]],
   ['warn_5fif_5funequal_5fdo',['WARN_IF_UNEQUAL_DO',['../common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a',1,'macros.h']]],
   ['width',['width',['../structsmyFormalContextV.html#ab4456c63ae1536d8a9afa9a42c30cd10',1,'smyFormalContextV::width()'],['../structsmyFormalConceptIntentChunkV.html#a34213d18382955bee724884cd2bfd82c',1,'smyFormalConceptIntentChunkV::width()'],['../structsFormalConceptIntentBulkNodeV.html#ab6c271021365b30649e33b474862f5d8',1,'sFormalConceptIntentBulkNodeV::width()'],['../structsFormalIntentV.html#a70711ba6edc09660adb6a838ef8d1555',1,'sFormalIntentV::width()'],['../vector_2macros_8h.html#a9978c9be0f4161638ec49b4eda697d42',1,'WIDTH():&#160;macros.h']]],
   ['writeconceptstofile',['writeConceptsToFile',['../safeguard_8h.html#a1038adb6a096d61bd00d22880bd3f6e7',1,'writeConceptsToFile():&#160;safeguard.h'],['../fca_8c.html#ac1a973138b558d99763bfa84d022d42d',1,'writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root, const char *filename):&#160;fca.c'],['../easy_2private_8h.html#ac1a973138b558d99763bfa84d022d42d',1,'writeConceptsToFile(FormalContext ctx, FormalConceptIntentBulkList root, const char *filename):&#160;fca.c']]],

@@ -92,7 +92,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_2macros_8h__dep__incl.png" border="0" usemap="#src_2fca_2common_2macros_8hdep" alt=""/></div>
 <map name="src_2fca_2common_2macros_8hdep" id="src_2fca_2common_2macros_8hdep">
-<area shape="rect" id="node3" href="common_8h.html" title="src/fca/common.h" alt="" coords="225,83,351,112"/><area shape="rect" id="node5" href="easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="104,160,208,189"/><area shape="rect" id="node16" href="vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="232,160,344,189"/><area shape="rect" id="node26" href="measurement_8c.html" title="measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="368,160,579,189"/><area shape="rect" id="node7" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="176,237,269,267"/><area shape="rect" id="node11" href="easy_2private_8h.html" title="src/fca/easy/private.h" alt="" coords="5,237,152,267"/><area shape="rect" id="node9" href="cfca_8c.html" title="src/cfca.c" alt="" coords="183,315,263,344"/><area shape="rect" id="node14" href="fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="16,315,141,344"/><area shape="rect" id="node19" href="vector_2private_8h.html" title="src/fca/vector/private.h" alt="" coords="293,237,448,267"/><area shape="rect" id="node22" href="fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="292,315,436,344"/><area shape="rect" id="node24" href="fcaVnextClosureX_8c.html" title="fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="460,315,681,344"/></map>
+<area shape="rect" id="node3" href="common_8h.html" title="src/fca/common.h" alt="" coords="408,83,533,112"/><area shape="rect" id="node5" href="easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="287,160,391,189"/><area shape="rect" id="node18" href="vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="415,160,527,189"/><area shape="rect" id="node28" href="common_2measurement_8c.html" title="measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="551,160,761,189"/><area shape="rect" id="node7" href="fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="359,237,452,267"/><area shape="rect" id="node11" href="easy_2private_8h.html" title="src/fca/easy/private.h" alt="" coords="181,237,328,267"/><area shape="rect" id="node9" href="cfca_8c.html" title="src/cfca.c" alt="" coords="365,315,445,344"/><area shape="rect" id="node14" href="fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="5,315,131,344"/><area shape="rect" id="node16" href="easy_2measurement_8c.html" title="src/fca/easy/measurement.c" alt="" coords="155,315,341,344"/><area shape="rect" id="node21" href="vector_2private_8h.html" title="src/fca/vector/private.h" alt="" coords="489,237,644,267"/><area shape="rect" id="node24" href="fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="715,315,859,344"/><area shape="rect" id="node26" href="fcaVnextClosureX_8c.html" title="fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="469,315,691,344"/></map>
 </div>
 </div>
 <p><a href="common_2macros_8h_source.html">Go to the source code of this file.</a></p>
@@ -107,6 +107,8 @@ Defines</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">checks whether x == 0, and returns 0;  <a href="#a204342bc46513e130770caef51b50d55"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a">WARN_IF_UNEQUAL_DO</a>(x, y, d)&#160;&#160;&#160;{if (((x) != (y))) {fprintf(stderr, &quot;WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n&quot;, #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">if x!=y, prints a warning and calls the statement d  <a href="#a8d200ab641cd359687ca7bbd465b219a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2macros_8h.html#aad9d5baa0093f289563ebcebc5a84de9">WARN_IF_GEQ_DO</a>(x, y, d)&#160;&#160;&#160;{if (((x) &gt;= (y))) {fprintf(stderr, &quot;WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n&quot;, #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">if x&gt;=y, prints a warning and calls the statement d  <a href="#aad9d5baa0093f289563ebcebc5a84de9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2macros_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a, b)&#160;&#160;&#160;(((a)&lt;(b))?(a):(b))</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">gives minimum  <a href="#a3acffbd305ee72dcd4593c0d8af64a4f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2macros_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a, b)&#160;&#160;&#160;(((a)&gt;(b))?(a):(b))</td></tr>
@@ -140,7 +142,7 @@ Defines</h2></td></tr>
 
 <p>gives maximum </p>
 
-<p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00064">64</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00071">71</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>
@@ -171,9 +173,9 @@ Defines</h2></td></tr>
 
 <p>gives minimum </p>
 
-<p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00057">57</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00064">64</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fca_8c_source.html#l00080">newFormalContextFromFile()</a>, and <a class="el" href="fcaV_8c_source.html#l00116">newFormalContextFromFileV()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00102">newFakeMeasurement()</a>, <a class="el" href="fca_8c_source.html#l00080">newFormalContextFromFile()</a>, and <a class="el" href="fcaV_8c_source.html#l00116">newFormalContextFromFileV()</a>.</p>
 
 </div>
 </div>
@@ -200,7 +202,7 @@ Defines</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00029">29</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="measurement_8c_source.html#l00144">deleteCommutativeProduct()</a>, <a class="el" href="fca_8c_source.html#l00356">deleteConceptBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00761">deleteConceptBulkV()</a>, <a class="el" href="fca_8c_source.html#l00321">deleteConceptChunk()</a>, <a class="el" href="fcaV_8c_source.html#l00534">deleteConceptChunkV()</a>, <a class="el" href="measurement_8c_source.html#l00179">deleteConditionMap()</a>, <a class="el" href="measurement_8c_source.html#l00060">deleteEtaFunction()</a>, <a class="el" href="fca_8c_source.html#l00264">deleteFormalContext()</a>, <a class="el" href="fcaV_8c_source.html#l00082">deleteFormalContextV()</a>, <a class="el" href="fca_8c_source.html#l00716">writeConceptsToFile()</a>, <a class="el" href="fcaV_8c_source.html#l00684">writeConceptsToFileV()</a>, <a class="el" href="fca_8c_source.html#l00216">writeFormalContext()</a>, and <a class="el" href="fcaV_8c_source.html#l00258">writeFormalContextV()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, <a class="el" href="common_2measurement_8c_source.html#l00146">deleteCommutativeProduct()</a>, <a class="el" href="fca_8c_source.html#l00356">deleteConceptBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00761">deleteConceptBulkV()</a>, <a class="el" href="fca_8c_source.html#l00321">deleteConceptChunk()</a>, <a class="el" href="fcaV_8c_source.html#l00534">deleteConceptChunkV()</a>, <a class="el" href="common_2measurement_8c_source.html#l00182">deleteConditionMap()</a>, <a class="el" href="common_2measurement_8c_source.html#l00061">deleteEtaFunction()</a>, <a class="el" href="fca_8c_source.html#l00264">deleteFormalContext()</a>, <a class="el" href="fcaV_8c_source.html#l00082">deleteFormalContextV()</a>, <a class="el" href="common_2measurement_8c_source.html#l00217">deleteLogCache()</a>, <a class="el" href="fca_8c_source.html#l00716">writeConceptsToFile()</a>, <a class="el" href="fcaV_8c_source.html#l00684">writeConceptsToFileV()</a>, <a class="el" href="fca_8c_source.html#l00216">writeFormalContext()</a>, and <a class="el" href="fcaV_8c_source.html#l00258">writeFormalContextV()</a>.</p>
 
 </div>
 </div>
@@ -223,7 +225,7 @@ Defines</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00036">36</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fca_8c_source.html#l00423">addConceptToBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00828">addConceptToBulkV()</a>, <a class="el" href="fca_8c_source.html#l00388">countConceptsInBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00793">countConceptsInBulkV()</a>, <a class="el" href="fca_8c_source.html#l00926">countContextConcepts()</a>, <a class="el" href="fca_8c_source.html#l00828">countContextConcepts2()</a>, <a class="el" href="fcaV_8c_source.html#l00306">countContextConceptsV()</a>, <a class="el" href="fca_8c_source.html#l00612">newConceptBulkFromContext()</a>, <a class="el" href="fcaV_8c_source.html#l00573">newConceptBulkFromContextV()</a>, <a class="el" href="fca_8c_source.html#l00080">newFormalContextFromFile()</a>, <a class="el" href="fcaV_8c_source.html#l00116">newFormalContextFromFileV()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00199">nextClosureVX()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
+<p>Referenced by <a class="el" href="fca_8c_source.html#l00423">addConceptToBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00828">addConceptToBulkV()</a>, <a class="el" href="fca_8c_source.html#l00388">countConceptsInBulk()</a>, <a class="el" href="fcaV_8c_source.html#l00793">countConceptsInBulkV()</a>, <a class="el" href="fca_8c_source.html#l00926">countContextConcepts()</a>, <a class="el" href="fca_8c_source.html#l00828">countContextConcepts2()</a>, <a class="el" href="fcaV_8c_source.html#l00306">countContextConceptsV()</a>, <a class="el" href="fca_8c_source.html#l00612">newConceptBulkFromContext()</a>, <a class="el" href="fcaV_8c_source.html#l00573">newConceptBulkFromContextV()</a>, <a class="el" href="easy_2measurement_8c_source.html#l00102">newFakeMeasurement()</a>, <a class="el" href="fca_8c_source.html#l00080">newFormalContextFromFile()</a>, <a class="el" href="fcaV_8c_source.html#l00116">newFormalContextFromFileV()</a>, <a class="el" href="fcaVnextClosureX_8c_source.html#l00199">nextClosureVX()</a>, and <a class="el" href="fcaVnextClosureX_8c_source.html#l00047">nextClosureVX1()</a>.</p>
 
 </div>
 </div>
@@ -246,7 +248,46 @@ Defines</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00042">42</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="measurement_8c_source.html#l00124">newCommutativeProduct()</a>, <a class="el" href="measurement_8c_source.html#l00161">newConditionMap()</a>, and <a class="el" href="measurement_8c_source.html#l00036">newEtaFunction()</a>.</p>
+<p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00125">newCommutativeProduct()</a>, <a class="el" href="common_2measurement_8c_source.html#l00164">newConditionMap()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00037">newEtaFunction()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad9d5baa0093f289563ebcebc5a84de9"></a><!-- doxytag: member="macros.h::WARN_IF_GEQ_DO" ref="aad9d5baa0093f289563ebcebc5a84de9" args="(x, y, d)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="common_2macros_8h.html#aad9d5baa0093f289563ebcebc5a84de9">WARN_IF_GEQ_DO</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">d&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{if (((x) &gt;= (y))) {fprintf(stderr, &quot;WARNING: %s NOT EQUAL TO %s in %s [%s:%u]\n&quot;, #x, #y, __FUNCTION__, __FILE__,__LINE__); d;}}</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>if x&gt;=y, prints a warning and calls the statement d </p>
+
+<p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00056">56</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
+
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>.</p>
 
 </div>
 </div>
@@ -285,7 +326,7 @@ Defines</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_2macros_8h_source.html#l00049">49</a> of file <a class="el" href="common_2macros_8h_source.html">macros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="fca_8c_source.html#l00716">writeConceptsToFile()</a>, and <a class="el" href="fcaV_8c_source.html#l00684">writeConceptsToFileV()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, <a class="el" href="common_2measurement_8c_source.html#l00235">calculateLogs()</a>, <a class="el" href="easy_2measurement_8c_source.html#l00102">newFakeMeasurement()</a>, <a class="el" href="fca_8c_source.html#l00716">writeConceptsToFile()</a>, and <a class="el" href="fcaV_8c_source.html#l00684">writeConceptsToFileV()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +348,7 @@ Defines</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 22 2013 14:27:55 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 23 2013 12:42:11 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

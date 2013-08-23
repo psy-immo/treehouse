@@ -1,6 +1,8 @@
 var searchData=
 [
   ['c',['c',['../structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28',1,'sConditionMap::c()'],['../structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be',1,'sEtaFunction::C()']]],
+  ['calculatelikelihood',['calculateLikelihood',['../easy_2measurement_8c.html#a0d243c594867f254694b0a91409d9b87',1,'calculateLikelihood(const FormalContext B, const ConditionMap c, const FormalContext I, const EtaFunction eta, CommutativeProduct L):&#160;measurement.c'],['../easy_2measurement_8h.html#a0d243c594867f254694b0a91409d9b87',1,'calculateLikelihood(const FormalContext B, const ConditionMap c, const FormalContext I, const EtaFunction eta, CommutativeProduct L):&#160;measurement.c']]],
+  ['calculatelogs',['calculateLogs',['../common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572',1,'calculateLogs(const EtaFunction eta, LogCache log_c):&#160;measurement.c'],['../common_2measurement_8h.html#aea95ce7469fb27ec5a2fa98d099df572',1,'calculateLogs(const EtaFunction eta, LogCache log_c):&#160;measurement.c']]],
   ['callnextclosurevx1',['callNextClosureVX1',['../fcaVnextClosureX_8c.html#a93c37a01d282f3ab4d5ee7ff52028140',1,'fcaVnextClosureX.c']]],
   ['cell',['CELL',['../easy_2macros_8h.html#a6716296e0c0390116c559152e613eb17',1,'macros.h']]],
   ['cfca_2ec',['cfca.c',['../cfca_8c.html',1,'']]],
@@ -15,7 +17,7 @@ var searchData=
   ['common_2eh',['common.h',['../common_8h.html',1,'']]],
   ['commutativeproduct',['CommutativeProduct',['../common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994',1,'measurement.h']]],
   ['conditionmap',['ConditionMap',['../common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64',1,'measurement.h']]],
-  ['constants',['constants',['../structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9',1,'sEtaFunction::constants()'],['../structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a',1,'sCommutativeProduct::constants()']]],
+  ['constants',['constants',['../structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9',1,'sEtaFunction::constants()'],['../structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a',1,'sCommutativeProduct::constants()'],['../structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1',1,'sLogCache::constants()']]],
   ['countconceptsinbulk',['countConceptsInBulk',['../safeguard_8h.html#ad758c47181c35e4ea11d101f7ae31c3b',1,'countConceptsInBulk():&#160;safeguard.h'],['../fca_8c.html#a965bdc1065d581495114a764020c3c6b',1,'countConceptsInBulk(FormalConceptIntentBulkList root):&#160;fca.c'],['../easy_2private_8h.html#a965bdc1065d581495114a764020c3c6b',1,'countConceptsInBulk(FormalConceptIntentBulkList root):&#160;fca.c']]],
   ['countconceptsinbulkv',['countConceptsInBulkV',['../fcaV_8c.html#a7d53642e5953e35c86ef0425858d707e',1,'countConceptsInBulkV(FormalConceptIntentBulkListV root):&#160;fcaV.c'],['../vector_2private_8h.html#a7d53642e5953e35c86ef0425858d707e',1,'countConceptsInBulkV(FormalConceptIntentBulkListV root):&#160;fcaV.c']]],
   ['countcontextconcepts',['countContextConcepts',['../safeguard_8h.html#a3a6b552e60c8245e1eaebac1dca523a6',1,'countContextConcepts():&#160;safeguard.h'],['../fca_8c.html#aaf6da61c84352d127039536dd6e790b6',1,'countContextConcepts(FormalContext ctx):&#160;fca.c'],['../easy_8h.html#aaf6da61c84352d127039536dd6e790b6',1,'countContextConcepts(FormalContext ctx):&#160;fca.c']]],

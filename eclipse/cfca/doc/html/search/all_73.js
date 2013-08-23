@@ -10,6 +10,7 @@ var searchData=
   ['sformalintent',['sFormalIntent',['../structsFormalIntent.html',1,'sFormalIntent'],['../safeguard_8h.html#ac86d4e8dd73f66f8ef496144def124e3',1,'sFormalIntent():&#160;safeguard.h']]],
   ['sformalintentv',['sFormalIntentV',['../structsFormalIntentV.html',1,'']]],
   ['size',['size',['../structsmyFormalConceptIntentChunk.html#a39483f44afbcd1de56c41243c7a442aa',1,'smyFormalConceptIntentChunk::size()'],['../structsFormalConceptIntentBulkNode.html#afc96b660c7becf5517e4391846e0975f',1,'sFormalConceptIntentBulkNode::size()'],['../structsmyFormalConceptIntentChunkV.html#acbb0ea8f58b4a13ecefc5a996c386206',1,'smyFormalConceptIntentChunkV::size()'],['../structsFormalConceptIntentBulkNodeV.html#a516403c9da58b5bedbf72f0a037d5c4f',1,'sFormalConceptIntentBulkNodeV::size()']]],
+  ['slogcache',['sLogCache',['../structsLogCache.html',1,'']]],
   ['smyformalconceptintentchunk',['smyFormalConceptIntentChunk',['../structsmyFormalConceptIntentChunk.html',1,'smyFormalConceptIntentChunk'],['../safeguard_8h.html#a40cc56c27bccdfdcb6fcb84969c34703',1,'smyFormalConceptIntentChunk():&#160;safeguard.h']]],
   ['smyformalconceptintentchunkv',['smyFormalConceptIntentChunkV',['../structsmyFormalConceptIntentChunkV.html',1,'']]],
   ['smyformalcontext',['smyFormalContext',['../structsmyFormalContext.html',1,'smyFormalContext'],['../safeguard_8h.html#a7b708d6613fd52b5343713584b9fcc37',1,'smyFormalContext():&#160;safeguard.h']]],

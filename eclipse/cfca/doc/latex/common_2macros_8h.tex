@@ -9,7 +9,8 @@
 \includegraphics[width=210pt]{common_2macros_8h__incl}
 \end{center}
 \end{figure}
-\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,6 +28,8 @@
 \begin{DoxyCompactList}\small\item\em checks whether x == 0, and returns 0; \end{DoxyCompactList}\item 
 \#define \hyperlink{common_2macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(x, y, d)~\{if (((x) != (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}
 \begin{DoxyCompactList}\small\item\em if x!=y, prints a warning and calls the statement d \end{DoxyCompactList}\item 
+\#define \hyperlink{common_2macros_8h_aad9d5baa0093f289563ebcebc5a84de9}{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O}(x, y, d)~\{if (((x) $>$= (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}
+\begin{DoxyCompactList}\small\item\em if x$>$=y, prints a warning and calls the statement d \end{DoxyCompactList}\item 
 \#define \hyperlink{common_2macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\-M\-I\-N}(a, b)~(((a)$<$(b))?(a)\-:(b))
 \begin{DoxyCompactList}\small\item\em gives minimum \end{DoxyCompactList}\item 
 \#define \hyperlink{common_2macros_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{\-M\-A\-X}(a, b)~(((a)$>$(b))?(a)\-:(b))
@@ -48,7 +51,7 @@ gives maximum
 
 
 
-\-Definition at line 64 of file macros.\-h.
+\-Definition at line 71 of file macros.\-h.
 
 \hypertarget{common_2macros_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{\index{common/macros.\-h@{common/macros.\-h}!\-M\-I\-N@{\-M\-I\-N}}
 \index{\-M\-I\-N@{\-M\-I\-N}!common/macros.h@{common/macros.\-h}}
@@ -64,11 +67,11 @@ gives minimum
 
 
 
-\-Definition at line 57 of file macros.\-h.
+\-Definition at line 64 of file macros.\-h.
 
 
 
-\-Referenced by new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-File\-V().
+\-Referenced by new\-Fake\-Measurement(), new\-Formal\-Context\-From\-File(), and new\-Formal\-Context\-From\-File\-V().
 
 \hypertarget{common_2macros_8h_a740a16a7eb505fa8d595a191feed0941}{\index{common/macros.\-h@{common/macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
 \index{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!common/macros.h@{common/macros.\-h}}
@@ -93,7 +96,7 @@ checks whether x == 0, and returns
 
 
 
-\-Referenced by delete\-Commutative\-Product(), delete\-Concept\-Bulk(), delete\-Concept\-Bulk\-V(), delete\-Concept\-Chunk(), delete\-Concept\-Chunk\-V(), delete\-Condition\-Map(), delete\-Eta\-Function(), delete\-Formal\-Context(), delete\-Formal\-Context\-V(), write\-Concepts\-To\-File(), write\-Concepts\-To\-File\-V(), write\-Formal\-Context(), and write\-Formal\-Context\-V().
+\-Referenced by calculate\-Likelihood(), delete\-Commutative\-Product(), delete\-Concept\-Bulk(), delete\-Concept\-Bulk\-V(), delete\-Concept\-Chunk(), delete\-Concept\-Chunk\-V(), delete\-Condition\-Map(), delete\-Eta\-Function(), delete\-Formal\-Context(), delete\-Formal\-Context\-V(), delete\-Log\-Cache(), write\-Concepts\-To\-File(), write\-Concepts\-To\-File\-V(), write\-Formal\-Context(), and write\-Formal\-Context\-V().
 
 \hypertarget{common_2macros_8h_aecdd5bdf585ad172473c37e40bfac5ff}{\index{common/macros.\-h@{common/macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}}
 \index{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O}!common/macros.h@{common/macros.\-h}}
@@ -112,7 +115,7 @@ checks whether x == (void$\ast$)0, and returns 0;
 
 
 
-\-Referenced by add\-Concept\-To\-Bulk(), add\-Concept\-To\-Bulk\-V(), count\-Concepts\-In\-Bulk(), count\-Concepts\-In\-Bulk\-V(), count\-Context\-Concepts(), count\-Context\-Concepts2(), count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Formal\-Context\-From\-File(), new\-Formal\-Context\-From\-File\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
+\-Referenced by add\-Concept\-To\-Bulk(), add\-Concept\-To\-Bulk\-V(), count\-Concepts\-In\-Bulk(), count\-Concepts\-In\-Bulk\-V(), count\-Context\-Concepts(), count\-Context\-Concepts2(), count\-Context\-Concepts\-V(), new\-Concept\-Bulk\-From\-Context(), new\-Concept\-Bulk\-From\-Context\-V(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-File(), new\-Formal\-Context\-From\-File\-V(), next\-Closure\-V\-X(), and next\-Closure\-V\-X1().
 
 \hypertarget{common_2macros_8h_a204342bc46513e130770caef51b50d55}{\index{common/macros.\-h@{common/macros.\-h}!\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I}}
 \index{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I@{\-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I}!common/macros.h@{common/macros.\-h}}
@@ -133,6 +136,27 @@ checks whether x == 0, and returns 0;
 
 \-Referenced by new\-Commutative\-Product(), new\-Condition\-Map(), and new\-Eta\-Function().
 
+\hypertarget{common_2macros_8h_aad9d5baa0093f289563ebcebc5a84de9}{\index{common/macros.\-h@{common/macros.\-h}!\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O}}
+\index{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-G\-E\-Q\-\_\-\-D\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~\{if (((x) $>$= (y))) \{fprintf(stderr, \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \%s \-N\-O\-T \-E\-Q\-U\-A\-L \-T\-O \%s in \%s \mbox{[}\%s\-:\%u\mbox{]}$\backslash$n\char`\"{}, \#x, \#y, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-); d;\}\}}}\label{common_2macros_8h_aad9d5baa0093f289563ebcebc5a84de9}
+
+
+if x$>$=y, prints a warning and calls the statement d 
+
+
+
+\-Definition at line 56 of file macros.\-h.
+
+
+
+\-Referenced by calculate\-Likelihood().
+
 \hypertarget{common_2macros_8h_a8d200ab641cd359687ca7bbd465b219a}{\index{common/macros.\-h@{common/macros.\-h}!\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}}
 \index{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O@{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}!common/macros.h@{common/macros.\-h}}
 \subsubsection[{\-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O}(
@@ -152,5 +176,5 @@ if x!=y, prints a warning and calls the statement d
 
 
 
-\-Referenced by write\-Concepts\-To\-File(), and write\-Concepts\-To\-File\-V().
+\-Referenced by calculate\-Likelihood(), calculate\-Logs(), new\-Fake\-Measurement(), write\-Concepts\-To\-File(), and write\-Concepts\-To\-File\-V().
 

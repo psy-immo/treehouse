@@ -7,6 +7,7 @@ var searchData=
   ['sformalconceptintentbulknodev',['sFormalConceptIntentBulkNodeV',['../structsFormalConceptIntentBulkNodeV.html',1,'']]],
   ['sformalintent',['sFormalIntent',['../structsFormalIntent.html',1,'']]],
   ['sformalintentv',['sFormalIntentV',['../structsFormalIntentV.html',1,'']]],
+  ['slogcache',['sLogCache',['../structsLogCache.html',1,'']]],
   ['smyformalconceptintentchunk',['smyFormalConceptIntentChunk',['../structsmyFormalConceptIntentChunk.html',1,'']]],
   ['smyformalconceptintentchunkv',['smyFormalConceptIntentChunkV',['../structsmyFormalConceptIntentChunkV.html',1,'']]],
   ['smyformalcontext',['smyFormalContext',['../structsmyFormalContext.html',1,'']]],

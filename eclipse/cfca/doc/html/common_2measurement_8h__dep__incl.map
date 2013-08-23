@@ -1,13 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$common_8h.html" title="src/fca/common.h" alt="" coords="225,83,351,112"/>
-<area shape="rect" id="node5" href="$easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="104,160,208,189"/>
-<area shape="rect" id="node16" href="$vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="232,160,344,189"/>
-<area shape="rect" id="node26" href="$measurement_8c.html" title="measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="368,160,579,189"/>
-<area shape="rect" id="node7" href="$fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="176,237,269,267"/>
-<area shape="rect" id="node11" href="$easy_2private_8h.html" title="src/fca/easy/private.h" alt="" coords="5,237,152,267"/>
-<area shape="rect" id="node9" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="183,315,263,344"/>
-<area shape="rect" id="node14" href="$fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="16,315,141,344"/>
-<area shape="rect" id="node19" href="$vector_2private_8h.html" title="src/fca/vector/private.h" alt="" coords="293,237,448,267"/>
-<area shape="rect" id="node22" href="$fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="292,315,436,344"/>
-<area shape="rect" id="node24" href="$fcaVnextClosureX_8c.html" title="fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="460,315,681,344"/>
+<area shape="rect" id="node3" href="$common_8h.html" title="src/fca/common.h" alt="" coords="408,83,533,112"/>
+<area shape="rect" id="node5" href="$easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="287,160,391,189"/>
+<area shape="rect" id="node18" href="$vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="415,160,527,189"/>
+<area shape="rect" id="node28" href="$common_2measurement_8c.html" title="measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="551,160,761,189"/>
+<area shape="rect" id="node7" href="$fca_8h.html" title="fca.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="359,237,452,267"/>
+<area shape="rect" id="node11" href="$easy_2private_8h.html" title="src/fca/easy/private.h" alt="" coords="181,237,328,267"/>
+<area shape="rect" id="node9" href="$cfca_8c.html" title="src/cfca.c" alt="" coords="365,315,445,344"/>
+<area shape="rect" id="node14" href="$fca_8c.html" title="fca.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie d..." alt="" coords="5,315,131,344"/>
+<area shape="rect" id="node16" href="$easy_2measurement_8c.html" title="src/fca/easy/measurement.c" alt="" coords="155,315,341,344"/>
+<area shape="rect" id="node21" href="$vector_2private_8h.html" title="src/fca/vector/private.h" alt="" coords="489,237,644,267"/>
+<area shape="rect" id="node24" href="$fcaV_8c.html" title="fcaV.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="715,315,859,344"/>
+<area shape="rect" id="node26" href="$fcaVnextClosureX_8c.html" title="fcaVnextClosureX.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens" alt="" coords="469,315,691,344"/>
 </map>

@@ -16,6 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <math.h>
 #include "../common.h"
 
 /** @file
@@ -187,4 +188,61 @@ void deleteConditionMap(ConditionMap* c)
 	free(*c);
 
 	*c = 0;
+}
+
+/**
+ * creates a new cache for logs of constants
+ * @param constants number of constants
+ * @return new LogCache
+ */
+
+LogCache newLogCache(size_t constants)
+{
+	LogCache l;
+
+	l = malloc(sizeof(struct sLogCache));
+
+	l->constants = constants;
+
+	l->logC = calloc(constants, sizeof(LogProbability));
+	l->logNotC = calloc(constants, sizeof(LogProbability));
+
+	return l;
+}
+
+/**
+ * deletes a LogCache and sets its pointer to zero
+ * @param log_c
+ */
+void deleteLogCache(LogCache* log_c)
+{
+	RETURN_IF_ZERO(log_c);
+	RETURN_IF_ZERO(*log_c);
+
+	free((*log_c)->logC);
+	free((*log_c)->logNotC);
+	free(*log_c);
+
+	*log_c = 0;
+}
+
+/**
+ * calculates the logarithms of probabilities given by constants, and their complements
+ *
+ * @param eta    input constants
+ * @param log_c  output structure to update the constants
+ */
+void calculateLogs(const EtaFunction eta, LogCache log_c)
+{
+	WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return);
+
+	/*
+	 * we could use just any logarithm, so 2 seems reasonable...
+	 */
+
+	for (size_t i = 0; i < eta->constants; ++i)
+	{
+		log_c->logC[i] = log2(eta->C[i]);
+		log_c->logNotC[i] = log2(1. - eta->C[i]);
+	}
 }

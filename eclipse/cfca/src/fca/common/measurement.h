@@ -26,6 +26,7 @@
  */
 
 typedef double Probability;
+typedef double LogProbability;
 
 /**
  * this structure contains information on how many cases for measurements there are,
@@ -142,5 +143,39 @@ newConditionMap(size_t objects);
 
 void
 deleteConditionMap(ConditionMap* c);
+
+/**
+ * This structure stores the logarithms of probabilities and of their complements.
+ * We use logarithms to the base 2.
+ */
+
+typedef struct sLogCache {
+	/**
+	 * number of constants
+	 */
+	size_t constants;
+
+	/**
+	 * logarithms of the probabilities, i.e.
+	 * logC[i] = log2(C[i])
+	 */
+	LogProbability *logC;
+
+	/**
+	 * logarithms of the complementary probabilities, i.e.
+	 * logNotC[i] = log2(1-C[i])
+	 */
+	LogProbability *logNotC;
+
+} *LogCache;
+
+LogCache
+newLogCache(size_t constants);
+
+void
+deleteLogCache(LogCache* log_c);
+
+void
+calculateLogs(const EtaFunction eta, LogCache log_c);
 
 #endif /* MEASUREMENT_H_ */
