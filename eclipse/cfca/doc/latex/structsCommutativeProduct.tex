@@ -18,7 +18,9 @@ size\-\_\-t \hyperlink{structsCommutativeProduct_af77351b19630473b2fedc926766503
 size\-\_\-t $\ast$ \hyperlink{structsCommutativeProduct_a95aa7c0ea80854b88afc16d913137f35}{mismatch}
 \begin{DoxyCompactList}\small\item\em \-This represents the first term part. \end{DoxyCompactList}\item 
 size\-\_\-t $\ast$ \hyperlink{structsCommutativeProduct_ae78261dbaf0a6455774a84836fe7334d}{match}
-\begin{DoxyCompactList}\small\item\em \-The represents the second term part. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-The represents the second term part. \end{DoxyCompactList}\item 
+\hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} $\ast$ \hyperlink{structsCommutativeProduct_a62301df4ed7d412fb3e45fc7f8d6b0f3}{intermediate}
+\begin{DoxyCompactList}\small\item\em \-This is an intermediate helper structure used to calculate the log probabilities\-: we need to store the intermediate results per constant and matchtype. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
@@ -28,7 +30,7 @@ size\-\_\-t $\ast$ \hyperlink{structsCommutativeProduct_ae78261dbaf0a6455774a848
 
 \[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \cdot (1-x_i)^{\mathrm{match}(i)} \] 
 
-\-Definition at line 96 of file measurement.\-h.
+\-Definition at line 100 of file measurement.\-h.
 
 
 
@@ -42,11 +44,26 @@ the number of different formal probability constants
 
 
 
-\-Definition at line 101 of file measurement.\-h.
+\-Definition at line 105 of file measurement.\-h.
 
 
 
-\-Referenced by calculate\-Likelihood(), and new\-Commutative\-Product().
+\-Referenced by calculate\-Likelihood(), log\-Probability\-From\-Product(), and new\-Commutative\-Product().
+
+\hypertarget{structsCommutativeProduct_a62301df4ed7d412fb3e45fc7f8d6b0f3}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!intermediate@{intermediate}}
+\index{intermediate@{intermediate}!sCommutativeProduct@{s\-Commutative\-Product}}
+\subsubsection[{intermediate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Log\-Probability}$\ast$ {\bf s\-Commutative\-Product\-::intermediate}}}\label{structsCommutativeProduct_a62301df4ed7d412fb3e45fc7f8d6b0f3}
+
+
+\-This is an intermediate helper structure used to calculate the log probabilities\-: we need to store the intermediate results per constant and matchtype. 
+
+\-Length of this array\-: 2$\ast$constants 
+
+\-Definition at line 125 of file measurement.\-h.
+
+
+
+\-Referenced by log\-Probability\-From\-Product(), and new\-Commutative\-Product().
 
 \hypertarget{structsCommutativeProduct_ae78261dbaf0a6455774a84836fe7334d}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!match@{match}}
 \index{match@{match}!sCommutativeProduct@{s\-Commutative\-Product}}
@@ -57,11 +74,11 @@ the number of different formal probability constants
 
 \[ \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)} \] 
 
-\-Definition at line 113 of file measurement.\-h.
+\-Definition at line 117 of file measurement.\-h.
 
 
 
-\-Referenced by calculate\-Likelihood(), and new\-Commutative\-Product().
+\-Referenced by calculate\-Likelihood(), log\-Probability\-From\-Product(), and new\-Commutative\-Product().
 
 \hypertarget{structsCommutativeProduct_a95aa7c0ea80854b88afc16d913137f35}{\index{s\-Commutative\-Product@{s\-Commutative\-Product}!mismatch@{mismatch}}
 \index{mismatch@{mismatch}!sCommutativeProduct@{s\-Commutative\-Product}}
@@ -72,11 +89,11 @@ the number of different formal probability constants
 
 \[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \] 
 
-\-Definition at line 107 of file measurement.\-h.
+\-Definition at line 111 of file measurement.\-h.
 
 
 
-\-Referenced by calculate\-Likelihood(), and new\-Commutative\-Product().
+\-Referenced by calculate\-Likelihood(), log\-Probability\-From\-Product(), and new\-Commutative\-Product().
 
 
 

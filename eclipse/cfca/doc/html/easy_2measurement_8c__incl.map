@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$easy_2private_8h.html" title="private.h" alt="" coords="251,83,323,112"/>
-<area shape="rect" id="node11" href="$easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="251,160,323,189"/>
-<area shape="rect" id="node28" href="$easy_2structs_8h.html" title="structs.h" alt="" coords="347,160,419,189"/>
-<area shape="rect" id="node15" href="$common_8h.html" title="common.h" alt="" coords="245,237,328,267"/>
-<area shape="rect" id="node24" href="$easy_2macros_8h.html" title="easy/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="352,237,459,267"/>
-<area shape="rect" id="node26" href="$easy_2measurement_8h.html" title="easy/measurement.h" alt="" coords="483,237,627,267"/>
+<area shape="rect" id="node9" href="$easy_2private_8h.html" title="private.h" alt="" coords="229,83,301,112"/>
+<area shape="rect" id="node11" href="$easy_8h.html" title="easy.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie ..." alt="" coords="321,160,393,189"/>
+<area shape="rect" id="node30" href="$easy_2structs_8h.html" title="structs.h" alt="" coords="225,160,297,189"/>
+<area shape="rect" id="node15" href="$common_8h.html" title="common.h" alt="" coords="189,237,272,267"/>
+<area shape="rect" id="node26" href="$easy_2macros_8h.html" title="easy/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych..." alt="" coords="296,237,403,267"/>
+<area shape="rect" id="node28" href="$easy_2measurement_8h.html" title="easy/measurement.h" alt="" coords="427,237,571,267"/>
 <area shape="rect" id="node17" href="$common_2macros_8h.html" title="common/macros.h" alt="" coords="333,315,464,344"/>
 <area shape="rect" id="node21" href="$common_2measurement_8h.html" title="common/measurement.h" alt="" coords="144,315,309,344"/>
 </map>

@@ -2,8 +2,9 @@
 <area shape="rect" id="node3" href="$common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572" title="calculates the logarithms of probabilities given by constants, and their complements" alt="" coords="135,5,236,35"/>
 <area shape="rect" id="node5" href="$common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero" alt="" coords="123,59,248,88"/>
 <area shape="rect" id="node7" href="$common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero" alt="" coords="128,112,243,141"/>
-<area shape="rect" id="node9" href="$easy_2measurement_8c.html#af5995b46b1b93746a2cf6af36ce00aed" title="generates a new formal context that comprises of a pseudo&#45;random fake measurement obtained from I wit..." alt="" coords="108,165,263,195"/>
-<area shape="rect" id="node11" href="$common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants" alt="" coords="133,219,237,248"/>
-<area shape="rect" id="node13" href="$common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type" alt="" coords="104,272,267,301"/>
-<area shape="rect" id="node15" href="$common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction" alt="" coords="316,272,431,301"/>
+<area shape="rect" id="node9" href="$common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map" alt="" coords="123,165,248,195"/>
+<area shape="rect" id="node11" href="$easy_2measurement_8c.html#af5995b46b1b93746a2cf6af36ce00aed" title="generates a new formal context that comprises of a pseudo&#45;random fake measurement obtained from I wit..." alt="" coords="108,219,263,248"/>
+<area shape="rect" id="node13" href="$common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants" alt="" coords="133,272,237,301"/>
+<area shape="rect" id="node15" href="$common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type" alt="" coords="104,325,267,355"/>
+<area shape="rect" id="node17" href="$common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction" alt="" coords="316,325,431,355"/>
 </map>

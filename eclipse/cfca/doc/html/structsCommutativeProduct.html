@@ -96,6 +96,8 @@ Data Fields</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This represents the first term part.  <a href="#a95aa7c0ea80854b88afc16d913137f35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d">match</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The represents the second term part.  <a href="#ae78261dbaf0a6455774a84836fe7334d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3">intermediate</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an intermediate helper structure used to calculate the log probabilities: we need to store the intermediate results per constant and matchtype.  <a href="#a62301df4ed7d412fb3e45fc7f8d6b0f3"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under the assumption of communtativity of the product. </p>
@@ -104,7 +106,7 @@ Data Fields</h2></td></tr>
 <img class="formulaDsp" alt="\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \cdot (1-x_i)^{\mathrm{match}(i)} \]" src="form_2.png"/>
 </p>
  
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00096">96</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00100">100</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 </div><hr/><h2>Field Documentation</h2>
 <a class="anchor" id="af77351b19630473b2fedc9267665032a"></a><!-- doxytag: member="sCommutativeProduct::constants" ref="af77351b19630473b2fedc9267665032a" args="" -->
 <div class="memitem">
@@ -119,9 +121,29 @@ Data Fields</h2></td></tr>
 
 <p>the number of different formal probability constants </p>
 
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00101">101</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00105">105</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00125">newCommutativeProduct()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62301df4ed7d412fb3e45fc7f8d6b0f3"></a><!-- doxytag: member="sCommutativeProduct::intermediate" ref="a62301df4ed7d412fb3e45fc7f8d6b0f3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>* <a class="el" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3">sCommutativeProduct::intermediate</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This is an intermediate helper structure used to calculate the log probabilities: we need to store the intermediate results per constant and matchtype. </p>
+<p>Length of this array: 2*constants </p>
+
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00125">125</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+
+<p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>.</p>
 
 </div>
 </div>
@@ -141,9 +163,9 @@ Data Fields</h2></td></tr>
 <img class="formulaDsp" alt="\[ \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)} \]" src="form_4.png"/>
 </p>
  
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00113">113</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00117">117</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00125">newCommutativeProduct()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>.</p>
 
 </div>
 </div>
@@ -163,9 +185,9 @@ Data Fields</h2></td></tr>
 <img class="formulaDsp" alt="\[ \prod_{i=0}^{\mathrm{constants}} x_i^{\mathrm{mismatch}(i)} \]" src="form_3.png"/>
 </p>
  
-<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00107">107</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8h_source.html#l00111">111</a> of file <a class="el" href="common_2measurement_8h_source.html">measurement.h</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00125">newCommutativeProduct()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00034">calculateLikelihood()</a>, <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>.</p>
 
 </div>
 </div>
@@ -190,7 +212,7 @@ Data Fields</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 23 2013 12:42:11 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 26 2013 15:24:40 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

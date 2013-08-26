@@ -20,6 +20,7 @@
 #define FCA__MEASUREMENT_H_
 
 #include <stdlib.h>
+#include <float.h>
 
 /**
  * type for probabilities
@@ -27,6 +28,9 @@
 
 typedef double Probability;
 typedef double LogProbability;
+
+#define LOG_PROB_LOWER_BOUND (-DBL_MAX)
+#define LOG_PROB_UPPER_BOUND (1.)
 
 /**
  * this structure contains information on how many cases for measurements there are,
@@ -106,11 +110,19 @@ typedef struct sCommutativeProduct
 	 */
 	size_t *mismatch;
 	/**
-		 * The represents the second term part
-		 *
-		 * @f[  \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)}  @f]
-		 */
+	 * The represents the second term part
+	 *
+	 * @f[  \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)}  @f]
+	 */
 	size_t *match;
+	/**
+	 *  This is an intermediate helper structure used to calculate the log
+	 *  probabilities: we need to store the intermediate results per constant and
+	 *  matchtype.
+	 *
+	 *  Length of this array: 2*constants
+	 */
+	LogProbability *intermediate;
 
 }*CommutativeProduct;
 
@@ -124,7 +136,8 @@ deleteCommutativeProduct(CommutativeProduct* p);
  * This struct represents a map between the object sets of two formal contexts.
  */
 
-typedef struct sConditionMap {
+typedef struct sConditionMap
+{
 	/**
 	 * cardinality of the domain object set
 	 */
@@ -136,7 +149,7 @@ typedef struct sConditionMap {
 	 */
 	size_t *c;
 
-} *ConditionMap;
+}*ConditionMap;
 
 ConditionMap
 newConditionMap(size_t objects);
@@ -149,7 +162,8 @@ deleteConditionMap(ConditionMap* c);
  * We use logarithms to the base 2.
  */
 
-typedef struct sLogCache {
+typedef struct sLogCache
+{
 	/**
 	 * number of constants
 	 */
@@ -167,7 +181,7 @@ typedef struct sLogCache {
 	 */
 	LogProbability *logNotC;
 
-} *LogCache;
+}*LogCache;
 
 LogCache
 newLogCache(size_t constants);
@@ -177,5 +191,12 @@ deleteLogCache(LogCache* log_c);
 
 void
 calculateLogs(const EtaFunction eta, LogCache log_c);
+
+LogProbability
+logProbabilityFromProduct(const LogCache log_c, CommutativeProduct l);
+
+LogProbability
+sumUp(const LogProbability * restrict  V, size_t length,
+		LogProbability lower_bound, LogProbability upper_bound);
 
 #endif /* MEASUREMENT_H_ */

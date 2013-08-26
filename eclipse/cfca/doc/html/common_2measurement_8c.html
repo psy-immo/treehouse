@@ -85,13 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;math.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="common_8h_source.html">../common.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for measurement.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_2measurement_8c__incl.png" border="0" usemap="#src_2fca_2common_2measurement_8c" alt=""/></div>
 <map name="src_2fca_2common_2measurement_8c" id="src_2fca_2common_2measurement_8c">
-<area shape="rect" id="node5" href="common_8h.html" title="../common.h" alt="" coords="115,83,208,112"/><area shape="rect" id="node7" href="common_2macros_8h.html" title="common/macros.h" alt="" coords="9,160,140,189"/><area shape="rect" id="node11" href="common_2measurement_8h.html" title="common/measurement.h" alt="" coords="164,160,329,189"/></map>
+<area shape="rect" id="node7" href="common_8h.html" title="../common.h" alt="" coords="179,83,272,112"/><area shape="rect" id="node9" href="common_2macros_8h.html" title="common/macros.h" alt="" coords="73,160,204,189"/><area shape="rect" id="node13" href="common_2measurement_8h.html" title="common/measurement.h" alt="" coords="228,160,393,189"/></map>
 </div>
 </div>
 <p><a href="common_2measurement_8c_source.html">Go to the source code of this file.</a></p>
@@ -110,16 +111,20 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new commutative product without any factors  <a href="#abe35a2e2ccf6060635d4daf6d6ebf59e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1">deleteCommutativeProduct</a> (<a class="el" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994">CommutativeProduct</a> *p)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes a CommutativeProduct and sets its pointer to zero.  <a href="#a2120fbc047167fd0a08f3015b8716cd1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64">ConditionMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4">newConditionMap</a> (size_t objects)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4">newConditionMap</a> (size_t objects)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new condition map  <a href="#ac4b7705e5a5c82b5d59b67617e6f2dc4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ad40c601ad1dcd904cde0e9ebe2828d72">deleteConditionMap</a> (<a class="el" href="common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64">ConditionMap</a> *c)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ad40c601ad1dcd904cde0e9ebe2828d72">deleteConditionMap</a> (<a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> *c)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes a ConditionMap object  <a href="#ad40c601ad1dcd904cde0e9ebe2828d72"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447">newLogCache</a> (size_t constants)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447">newLogCache</a> (size_t constants)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new cache for logs of constants  <a href="#a25fcd9b89607eaa3abe03aea6ffe0447"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573">deleteLogCache</a> (<a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a> *log_c)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573">deleteLogCache</a> (<a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> *log_c)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes a LogCache and sets its pointer to zero  <a href="#ae9d17380c2a4280b6760d9d917dfb573"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572">calculateLogs</a> (const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, <a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a> log_c)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572">calculateLogs</a> (const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, <a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> log_c)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the logarithms of probabilities given by constants, and their complements  <a href="#aea95ce7469fb27ec5a2fa98d099df572"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a8df411530d5811c51cb675a64547eed9">logProbabilityFromProduct</a> (const <a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> log_c, <a class="el" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994">CommutativeProduct</a> l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the log probability from a power vector  <a href="#a8df411530d5811c51cb675a64547eed9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604">sumUp</a> (const <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *restrict V, size_t length, <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> lower_bound, <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> upper_bound)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This routine calculates the sum of elements of a vector using in place quick sort strategies to branch sums.  <a href="#a6ec39ef8a7180bc340afed87c57ca604"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens </p>
@@ -142,7 +147,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a>&#160;</td>
           <td class="paramname"><em>log_c</em>&#160;</td>
         </tr>
         <tr>
@@ -163,9 +168,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00235">235</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00239">239</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00046">sEtaFunction::C</a>, <a class="el" href="common_2measurement_8h_source.html#l00040">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00156">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00162">sLogCache::logC</a>, <a class="el" href="common_2measurement_8h_source.html#l00168">sLogCache::logNotC</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00050">sEtaFunction::C</a>, <a class="el" href="common_2measurement_8h_source.html#l00044">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00170">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00176">sLogCache::logC</a>, <a class="el" href="common_2measurement_8h_source.html#l00182">sLogCache::logNotC</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
 
 <p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -207,15 +212,18 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00146">146</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00149">149</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
 <p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00154">optimizeConditionMap()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(p);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*p);
 
     free((*p)-&gt;match);
     free((*p)-&gt;mismatch);
+    free((*p)-&gt;intermediate);
     free(*p);
 
     *p = 0;
@@ -230,7 +238,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="common_2measurement_8h.html#ad40c601ad1dcd904cde0e9ebe2828d72">deleteConditionMap</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64">ConditionMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> *&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -246,7 +254,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00182">182</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00186">186</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
 <p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -284,7 +292,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00061">61</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00062">62</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
 <p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
 
@@ -309,7 +317,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="common_2measurement_8h.html#ae9d17380c2a4280b6760d9d917dfb573">deleteLogCache</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> *&#160;</td>
           <td class="paramname"><em>log_c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -325,7 +333,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00217">217</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00221">221</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
 <p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
 
@@ -341,6 +349,76 @@ Functions</h2></td></tr>
     *log_c = 0;
 }
 </pre></div>
+</div>
+</div>
+<a class="anchor" id="a8df411530d5811c51cb675a64547eed9"></a><!-- doxytag: member="measurement.c::logProbabilityFromProduct" ref="a8df411530d5811c51cb675a64547eed9" args="(const LogCache log_c, CommutativeProduct l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> <a class="el" href="common_2measurement_8h.html#a8df411530d5811c51cb675a64547eed9">logProbabilityFromProduct</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a>&#160;</td>
+          <td class="paramname"><em>log_c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994">CommutativeProduct</a>&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>calculate the log probability from a power vector </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">log_c</td><td>logarithms of constants </td></tr>
+    <tr><td class="paramname">l</td><td>vector of constant and complementary powers </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the log probability of the product given by the vector of powers, l </dd></dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00261">261</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00105">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00170">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00125">sCommutativeProduct::intermediate</a>, <a class="el" href="common_2measurement_8h_source.html#l00032">LOG_PROB_LOWER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00033">LOG_PROB_UPPER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00176">sLogCache::logC</a>, <a class="el" href="common_2measurement_8h_source.html#l00182">sLogCache::logNotC</a>, <a class="el" href="common_2measurement_8h_source.html#l00117">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00111">sCommutativeProduct::mismatch</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="common_2measurement_8c_source.html#l00295">sumUp()</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(log_c);
+    <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(l);
+
+    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(log_c-&gt;<a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>, l-&gt;<a class="code" href="structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a" title="the number of different formal probability constants">constants</a>, <span class="keywordflow">return</span> 0);
+    <span class="keywordtype">size_t</span> constants = log_c-&gt;<a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>;
+
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c = 0; c &lt; constants; ++c)
+    {
+<span class="preprocessor">#pragma GCC diagnostic push</span>
+<span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wconversion&quot;</span>
+<span class="preprocessor"></span>        l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = log_c-&gt;<a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163" title="logarithms of the probabilities, i.e.">logC</a>[c] * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c];
+        l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c + constants] = log_c-&gt;<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>[c]
+                * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>[c];
+<span class="preprocessor">#pragma GCC diagnostic pop</span>
+<span class="preprocessor"></span>    }
+
+    <span class="keywordflow">return</span> <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector using in place quick sort strategies to branc...">sumUp</a>(l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>, constants * 2, <a class="code" href="common_2measurement_8h.html#a0b858a576d6a3db1ea8020021d49896c">LOG_PROB_LOWER_BOUND</a>,
+    <a class="code" href="common_2measurement_8h.html#a34f2d788868c9760922910e9444443a1">LOG_PROB_UPPER_BOUND</a>);
+}
+</pre></div>
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_2measurement_8c_a8df411530d5811c51cb675a64547eed9_cgraph.png" border="0" usemap="#common_2measurement_8c_a8df411530d5811c51cb675a64547eed9_cgraph" alt=""/></div>
+<map name="common_2measurement_8c_a8df411530d5811c51cb675a64547eed9_cgraph" id="common_2measurement_8c_a8df411530d5811c51cb675a64547eed9_cgraph">
+<area shape="rect" id="node3" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector using in place quick sort strategies to branc..." alt="" coords="229,5,293,35"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="abe35a2e2ccf6060635d4daf6d6ebf59e"></a><!-- doxytag: member="measurement.c::newCommutativeProduct" ref="abe35a2e2ccf6060635d4daf6d6ebf59e" args="(size_t constants)" -->
@@ -367,9 +445,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new CommutativeProduct object </dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00125">125</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00126">126</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00101">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00113">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00107">sCommutativeProduct::mismatch</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00105">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00125">sCommutativeProduct::intermediate</a>, <a class="el" href="common_2measurement_8h_source.html#l00117">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00111">sCommutativeProduct::mismatch</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
+
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00154">optimizeConditionMap()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(constants);
 
@@ -381,6 +461,8 @@ Functions</h2></td></tr>
     p-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a> = calloc(constants, <span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>));
     p-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a> = calloc(constants, <span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>));
 
+    p-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a> = malloc(constants * 2 * <span class="keyword">sizeof</span>(<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>));
+
     <span class="keywordflow">return</span> p;
 }
 </pre></div>
@@ -391,7 +473,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64">ConditionMap</a> <a class="el" href="common_2measurement_8h.html#ac4b7705e5a5c82b5d59b67617e6f2dc4">newConditionMap</a> </td>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> <a class="el" href="common_2measurement_8h.html#ac4b7705e5a5c82b5d59b67617e6f2dc4">newConditionMap</a> </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>objects</em></td><td>)</td>
@@ -410,9 +492,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new ConditionMap object </dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00164">164</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00168">168</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00137">sConditionMap::c</a>, <a class="el" href="common_2measurement_8h_source.html#l00131">sConditionMap::objects</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00150">sConditionMap::c</a>, <a class="el" href="common_2measurement_8h_source.html#l00144">sConditionMap::objects</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
+
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(objects);
 
@@ -469,11 +553,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>a new structure </dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00037">37</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00038">38</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00046">sEtaFunction::C</a>, <a class="el" href="common_2measurement_8h_source.html#l00040">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00072">sEtaFunction::eta</a>, <a class="el" href="common_2measurement_8h_source.html#l00063">sEtaFunction::measurements</a>, <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>, and <a class="el" href="common_2measurement_8h_source.html#l00057">sEtaFunction::types</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00050">sEtaFunction::C</a>, <a class="el" href="common_2measurement_8h_source.html#l00044">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00076">sEtaFunction::eta</a>, <a class="el" href="common_2measurement_8h_source.html#l00067">sEtaFunction::measurements</a>, <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>, and <a class="el" href="common_2measurement_8h_source.html#l00061">sEtaFunction::types</a>.</p>
 
-<p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00103">newGeneralEtaFunction()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00080">newUniformEtaFunction()</a>.</p>
+<p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00104">newGeneralEtaFunction()</a>, and <a class="el" href="common_2measurement_8c_source.html#l00081">newUniformEtaFunction()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(types);
     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(measurements);
@@ -529,9 +613,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00103">103</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00104">104</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00072">sEtaFunction::eta</a>, and <a class="el" href="common_2measurement_8c_source.html#l00037">newEtaFunction()</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00076">sEtaFunction::eta</a>, and <a class="el" href="common_2measurement_8c_source.html#l00038">newEtaFunction()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a> e;
     e = <a class="code" href="common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction">newEtaFunction</a>(types, measurements, types * measurements);
@@ -563,7 +647,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071">LogCache</a> <a class="el" href="common_2measurement_8h.html#a25fcd9b89607eaa3abe03aea6ffe0447">newLogCache</a> </td>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> <a class="el" href="common_2measurement_8h.html#a25fcd9b89607eaa3abe03aea6ffe0447">newLogCache</a> </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>constants</em></td><td>)</td>
@@ -582,9 +666,9 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new LogCache </dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00199">199</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00203">203</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00156">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00162">sLogCache::logC</a>, and <a class="el" href="common_2measurement_8h_source.html#l00168">sLogCache::logNotC</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00170">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00176">sLogCache::logC</a>, and <a class="el" href="common_2measurement_8h_source.html#l00182">sLogCache::logNotC</a>.</p>
 
 <p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -637,9 +721,9 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00080">80</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00081">81</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00072">sEtaFunction::eta</a>, and <a class="el" href="common_2measurement_8c_source.html#l00037">newEtaFunction()</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00076">sEtaFunction::eta</a>, and <a class="el" href="common_2measurement_8c_source.html#l00038">newEtaFunction()</a>.</p>
 
 <p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -668,6 +752,67 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a6ec39ef8a7180bc340afed87c57ca604"></a><!-- doxytag: member="measurement.c::sumUp" ref="a6ec39ef8a7180bc340afed87c57ca604" args="(const LogProbability *restrict V, size_t length, LogProbability lower_bound, LogProbability upper_bound)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> <a class="el" href="common_2measurement_8h.html#a6ec39ef8a7180bc340afed87c57ca604">sumUp</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *restrict&#160;</td>
+          <td class="paramname"><em>V</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>&#160;</td>
+          <td class="paramname"><em>lower_bound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>&#160;</td>
+          <td class="paramname"><em>upper_bound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This routine calculates the sum of elements of a vector using in place quick sort strategies to branch sums. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V</td><td>ptr to array of LogProbabilities </td></tr>
+    <tr><td class="paramname">length</td><td>length of array V </td></tr>
+    <tr><td class="paramname">lower_bound</td><td>lower bound to include in this sum </td></tr>
+    <tr><td class="paramname">upper_bound</td><td>upper bound to include in this sum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \sum_{i=0: \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \]" src="form_6.png"/>
+</p>
+ </dd></dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00295">295</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>.</p>
+<div class="fragment"><pre class="fragment">{
+
+}
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -686,7 +831,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 23 2013 12:42:11 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 26 2013 15:24:40 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

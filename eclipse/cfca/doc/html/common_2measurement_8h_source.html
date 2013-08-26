@@ -84,81 +84,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define FCA__MEASUREMENT_H_</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>
 <a name="l00022"></a>00022 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00023"></a>00023 
-<a name="l00028"></a><a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724">00028</a> <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724" title="measurement.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">Probability</a>;
-<a name="l00029"></a><a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">00029</a> <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>;
-<a name="l00030"></a>00030 
-<a name="l00035"></a><a class="code" href="structsEtaFunction.html">00035</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">sEtaFunction</a>
-<a name="l00036"></a>00036 {
-<a name="l00040"></a><a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9">00040</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9" title="the number of different probability constants">constants</a>;
-<a name="l00041"></a>00041 
-<a name="l00046"></a><a class="code" href="structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be">00046</a>     <a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724" title="measurement.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">Probability</a> *<a class="code" href="structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be" title="the constants array.">C</a>;
-<a name="l00047"></a>00047 
-<a name="l00057"></a><a class="code" href="structsEtaFunction.html#afd94a9856047e0987c5e8667a4838b71">00057</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#afd94a9856047e0987c5e8667a4838b71" title="the number of error types, usually this is equal to 2, where: : PREDICTED (I) : : Error type ...">types</a>;
-<a name="l00058"></a>00058 
-<a name="l00063"></a><a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8">00063</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8" title="the number of different measurements">measurements</a>;
-<a name="l00064"></a>00064 
-<a name="l00072"></a><a class="code" href="structsEtaFunction.html#a7585a59b1861523157055f8c8b0263e3">00072</a>     <span class="keywordtype">size_t</span> * <a class="code" href="structsEtaFunction.html#a7585a59b1861523157055f8c8b0263e3" title="the error constants, where the rows (t) are types, and the columns (m) are measurements, i.e.">eta</a>;
-<a name="l00073"></a>00073 }*<a class="code" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
-<a name="l00076"></a>00076 <a class="code" href="common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction">newEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements, <span class="keywordtype">size_t</span> constants);
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
-<a name="l00079"></a>00079 <a class="code" href="common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type">newUniformEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
-<a name="l00082"></a>00082 <a class="code" href="common_2measurement_8c.html#a018a3a7d15c126cbf15d03ba2698fe39" title="create a new EtaFunction with the a constant for each type and measurement on its own...">newGeneralEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements);
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="keywordtype">void</span>
-<a name="l00085"></a>00085 <a class="code" href="common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero">deleteEtaFunction</a>(<a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>* eta);
-<a name="l00086"></a>00086 
-<a name="l00096"></a><a class="code" href="structsCommutativeProduct.html">00096</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">sCommutativeProduct</a>
-<a name="l00097"></a>00097 {
-<a name="l00101"></a><a class="code" href="structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a">00101</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a" title="the number of different formal probability constants">constants</a>;
-<a name="l00107"></a><a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35">00107</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>;
-<a name="l00113"></a><a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d">00113</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>;
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 }*<a class="code" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>;
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117 <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>
-<a name="l00118"></a>00118 <a class="code" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors">newCommutativeProduct</a>(<span class="keywordtype">size_t</span> constants);
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 <span class="keywordtype">void</span>
-<a name="l00121"></a>00121 <a class="code" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero.">deleteCommutativeProduct</a>(<a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>* p);
-<a name="l00122"></a>00122 
-<a name="l00127"></a><a class="code" href="structsConditionMap.html">00127</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">sConditionMap</a> {
-<a name="l00131"></a><a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca">00131</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca" title="cardinality of the domain object set">objects</a>;
-<a name="l00132"></a>00132 
-<a name="l00137"></a><a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28">00137</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28" title="the object index of the image, i.e.">c</a>;
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139 } *<a class="code" href="common_2measurement_8h.html#ad29ab52c5830e8da1f1327d6e3fb1d64" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>;
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>
-<a name="l00142"></a>00142 <a class="code" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map">newConditionMap</a>(<span class="keywordtype">size_t</span> objects);
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144 <span class="keywordtype">void</span>
-<a name="l00145"></a>00145 <a class="code" href="common_2measurement_8c.html#ad40c601ad1dcd904cde0e9ebe2828d72" title="deletes a ConditionMap object">deleteConditionMap</a>(<a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>* c);
-<a name="l00146"></a>00146 
-<a name="l00152"></a><a class="code" href="structsLogCache.html">00152</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">sLogCache</a> {
-<a name="l00156"></a><a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1">00156</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>;
-<a name="l00157"></a>00157 
-<a name="l00162"></a><a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163">00162</a>     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *<a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163" title="logarithms of the probabilities, i.e.">logC</a>;
-<a name="l00163"></a>00163 
-<a name="l00168"></a><a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c">00168</a>     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>;
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170 } *<a class="code" href="common_2measurement_8h.html#a29c6128f57f26ad6d417575faf853071" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>;
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;float.h&gt;</span>
+<a name="l00024"></a>00024 
+<a name="l00029"></a><a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724">00029</a> <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724" title="measurement.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">Probability</a>;
+<a name="l00030"></a><a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">00030</a> <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>;
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="common_2measurement_8h.html#a0b858a576d6a3db1ea8020021d49896c">00032</a> <span class="preprocessor">#define LOG_PROB_LOWER_BOUND (-DBL_MAX)</span>
+<a name="l00033"></a><a class="code" href="common_2measurement_8h.html#a34f2d788868c9760922910e9444443a1">00033</a> <span class="preprocessor"></span><span class="preprocessor">#define LOG_PROB_UPPER_BOUND (1.)</span>
+<a name="l00034"></a>00034 <span class="preprocessor"></span>
+<a name="l00039"></a><a class="code" href="structsEtaFunction.html">00039</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">sEtaFunction</a>
+<a name="l00040"></a>00040 {
+<a name="l00044"></a><a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9">00044</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9" title="the number of different probability constants">constants</a>;
+<a name="l00045"></a>00045 
+<a name="l00050"></a><a class="code" href="structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be">00050</a>     <a class="code" href="common_2measurement_8h.html#ae6d7a8c80f18bc080ab1cfa38d119724" title="measurement.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psych...">Probability</a> *<a class="code" href="structsEtaFunction.html#a05c2f93c1148d5268d359d78540c10be" title="the constants array.">C</a>;
+<a name="l00051"></a>00051 
+<a name="l00061"></a><a class="code" href="structsEtaFunction.html#afd94a9856047e0987c5e8667a4838b71">00061</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#afd94a9856047e0987c5e8667a4838b71" title="the number of error types, usually this is equal to 2, where: : PREDICTED (I) : : Error type ...">types</a>;
+<a name="l00062"></a>00062 
+<a name="l00067"></a><a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8">00067</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8" title="the number of different measurements">measurements</a>;
+<a name="l00068"></a>00068 
+<a name="l00076"></a><a class="code" href="structsEtaFunction.html#a7585a59b1861523157055f8c8b0263e3">00076</a>     <span class="keywordtype">size_t</span> * <a class="code" href="structsEtaFunction.html#a7585a59b1861523157055f8c8b0263e3" title="the error constants, where the rows (t) are types, and the columns (m) are measurements, i.e.">eta</a>;
+<a name="l00077"></a>00077 }*<a class="code" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
+<a name="l00080"></a>00080 <a class="code" href="common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction">newEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements, <span class="keywordtype">size_t</span> constants);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
+<a name="l00083"></a>00083 <a class="code" href="common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type">newUniformEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements);
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>
+<a name="l00086"></a>00086 <a class="code" href="common_2measurement_8c.html#a018a3a7d15c126cbf15d03ba2698fe39" title="create a new EtaFunction with the a constant for each type and measurement on its own...">newGeneralEtaFunction</a>(<span class="keywordtype">size_t</span> types, <span class="keywordtype">size_t</span> measurements);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="keywordtype">void</span>
+<a name="l00089"></a>00089 <a class="code" href="common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero">deleteEtaFunction</a>(<a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a>* eta);
+<a name="l00090"></a>00090 
+<a name="l00100"></a><a class="code" href="structsCommutativeProduct.html">00100</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">sCommutativeProduct</a>
+<a name="l00101"></a>00101 {
+<a name="l00105"></a><a class="code" href="structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a">00105</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsCommutativeProduct.html#af77351b19630473b2fedc9267665032a" title="the number of different formal probability constants">constants</a>;
+<a name="l00111"></a><a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35">00111</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>;
+<a name="l00117"></a><a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d">00117</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>;
+<a name="l00125"></a><a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3">00125</a>     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 }*<a class="code" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>;
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>
+<a name="l00130"></a>00130 <a class="code" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors">newCommutativeProduct</a>(<span class="keywordtype">size_t</span> constants);
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 <span class="keywordtype">void</span>
+<a name="l00133"></a>00133 <a class="code" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero.">deleteCommutativeProduct</a>(<a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a>* p);
+<a name="l00134"></a>00134 
+<a name="l00139"></a><a class="code" href="structsConditionMap.html">00139</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">sConditionMap</a>
+<a name="l00140"></a>00140 {
+<a name="l00144"></a><a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca">00144</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca" title="cardinality of the domain object set">objects</a>;
+<a name="l00145"></a>00145 
+<a name="l00150"></a><a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28">00150</a>     <span class="keywordtype">size_t</span> *<a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28" title="the object index of the image, i.e.">c</a>;
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152 }*<a class="code" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>;
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>
+<a name="l00155"></a>00155 <a class="code" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map">newConditionMap</a>(<span class="keywordtype">size_t</span> objects);
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 <span class="keywordtype">void</span>
+<a name="l00158"></a>00158 <a class="code" href="common_2measurement_8c.html#ad40c601ad1dcd904cde0e9ebe2828d72" title="deletes a ConditionMap object">deleteConditionMap</a>(<a class="code" href="structsConditionMap.html" title="This struct represents a map between the object sets of two formal contexts.">ConditionMap</a>* c);
+<a name="l00159"></a>00159 
+<a name="l00165"></a><a class="code" href="structsLogCache.html">00165</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">sLogCache</a>
+<a name="l00166"></a>00166 {
+<a name="l00170"></a><a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1">00170</a>     <span class="keywordtype">size_t</span> <a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>;
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172 <a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>
-<a name="l00173"></a>00173 <a class="code" href="common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants">newLogCache</a>(<span class="keywordtype">size_t</span> constants);
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175 <span class="keywordtype">void</span>
-<a name="l00176"></a>00176 <a class="code" href="common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero">deleteLogCache</a>(<a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>* log_c);
+<a name="l00176"></a><a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163">00176</a>     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *<a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163" title="logarithms of the probabilities, i.e.">logC</a>;
 <a name="l00177"></a>00177 
-<a name="l00178"></a>00178 <span class="keywordtype">void</span>
-<a name="l00179"></a>00179 <a class="code" href="common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572" title="calculates the logarithms of probabilities given by constants, and their complements">calculateLogs</a>(<span class="keyword">const</span> <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a> eta, <a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a> log_c);
-<a name="l00180"></a>00180 
-<a name="l00181"></a>00181 <span class="preprocessor">#endif </span><span class="comment">/* MEASUREMENT_H_ */</span>
+<a name="l00182"></a><a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c">00182</a>     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>;
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 }*<a class="code" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>;
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 <a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>
+<a name="l00187"></a>00187 <a class="code" href="common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants">newLogCache</a>(<span class="keywordtype">size_t</span> constants);
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 <span class="keywordtype">void</span>
+<a name="l00190"></a>00190 <a class="code" href="common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero">deleteLogCache</a>(<a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a>* log_c);
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192 <span class="keywordtype">void</span>
+<a name="l00193"></a>00193 <a class="code" href="common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572" title="calculates the logarithms of probabilities given by constants, and their complements">calculateLogs</a>(<span class="keyword">const</span> <a class="code" href="structsEtaFunction.html" title="this structure contains information on how many cases for measurements there are, and what the probab...">EtaFunction</a> eta, <a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a> log_c);
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195 <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>
+<a name="l00196"></a>00196 <a class="code" href="common_2measurement_8c.html#a8df411530d5811c51cb675a64547eed9" title="calculate the log probability from a power vector">logProbabilityFromProduct</a>(<span class="keyword">const</span> <a class="code" href="structsLogCache.html" title="This structure stores the logarithms of probabilities and of their complements.">LogCache</a> log_c, <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a> l);
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198 <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>
+<a name="l00199"></a>00199 <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector using in place quick sort strategies to branc...">sumUp</a>(<span class="keyword">const</span> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> * restrict  V, <span class="keywordtype">size_t</span> length,
+<a name="l00200"></a>00200         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> lower_bound, <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> upper_bound);
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202 <span class="preprocessor">#endif </span><span class="comment">/* MEASUREMENT_H_ */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -177,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 23 2013 12:42:11 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 26 2013 15:24:40 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -19,5 +19,6 @@ var searchData=
   ['start',['start',['../structsnextClosureVX1Params.html#a61ba68899ccb6dff43b95531868f5093',1,'snextClosureVX1Params']]],
   ['stop',['stop',['../structsnextClosureVX1Params.html#a4ebb2a834d87fa4bed2bb7597ac29d23',1,'snextClosureVX1Params']]],
   ['structs_2eh',['structs.h',['../easy_2structs_8h.html',1,'']]],
-  ['structs_2eh',['structs.h',['../vector_2structs_8h.html',1,'']]]
+  ['structs_2eh',['structs.h',['../vector_2structs_8h.html',1,'']]],
+  ['sumup',['sumUp',['../common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604',1,'sumUp(const LogProbability *restrict V, size_t length, LogProbability lower_bound, LogProbability upper_bound):&#160;measurement.c'],['../common_2measurement_8h.html#a6ec39ef8a7180bc340afed87c57ca604',1,'sumUp(const LogProbability *restrict V, size_t length, LogProbability lower_bound, LogProbability upper_bound):&#160;measurement.c']]]
 ];

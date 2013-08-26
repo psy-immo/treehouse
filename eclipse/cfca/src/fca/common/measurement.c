@@ -17,6 +17,7 @@
  */
 
 #include <math.h>
+#include <string.h>
 #include "../common.h"
 
 /** @file
@@ -134,6 +135,8 @@ CommutativeProduct newCommutativeProduct(size_t constants)
 	p->mismatch = calloc(constants, sizeof(size_t));
 	p->match = calloc(constants, sizeof(size_t));
 
+	p->intermediate = malloc(constants * 2 * sizeof(LogProbability));
+
 	return p;
 }
 
@@ -150,6 +153,7 @@ void deleteCommutativeProduct(CommutativeProduct* p)
 
 	free((*p)->match);
 	free((*p)->mismatch);
+	free((*p)->intermediate);
 	free(*p);
 
 	*p = 0;
@@ -246,3 +250,66 @@ void calculateLogs(const EtaFunction eta, LogCache log_c)
 		log_c->logNotC[i] = log2(1. - eta->C[i]);
 	}
 }
+
+/**
+ * calculate the log probability from a power vector
+ *
+ * @param log_c  logarithms of constants
+ * @param l   vector of constant and complementary powers
+ * @return the log probability of the product given by the vector of powers, l
+ */
+LogProbability logProbabilityFromProduct(const LogCache log_c,
+		CommutativeProduct l)
+{
+	RETURN_ZERO_IF_ZERO(log_c);
+	RETURN_ZERO_IF_ZERO(l);
+
+	WARN_IF_UNEQUAL_DO(log_c->constants, l->constants, return 0);
+	size_t constants = log_c->constants;
+
+	for (size_t c = 0; c < constants; ++c)
+	{
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+		l->intermediate[c] = log_c->logC[c] * (LogProbability) l->match[c];
+		l->intermediate[c + constants] = log_c->logNotC[c]
+				* (LogProbability) l->mismatch[c];
+#pragma GCC diagnostic pop
+	}
+
+	return sumUp(l->intermediate, constants * 2, LOG_PROB_LOWER_BOUND,
+	LOG_PROB_UPPER_BOUND);
+}
+
+/**
+ * This routine calculates the sum of elements of a vector
+ *
+ * @param V                ptr to array of LogProbabilities
+ * @param length           length of array V
+ * @param lower_bound      lower bound to include in this sum
+ * @param upper_bound      upper bound to include in this sum
+ * @return @f[ \sum_{i=0, \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{
+ *                            \mathrm{length}} V(i) @f]
+ */
+LogProbability sumUp(const LogProbability * restrict V, size_t length,
+		LogProbability lower_bound, LogProbability upper_bound)
+{
+	//TODO: Make this routine smarter with respect to LARGE sums
+
+	LogProbability sum;
+	sum = 0.;
+
+	for (size_t i = 0; i < length; ++i)
+	{
+		LogProbability summand;
+		summand = V[i];
+
+		if ((lower_bound <= summand) && (summand < upper_bound))
+		{
+			sum += summand;
+		}
+	}
+
+	return sum;
+}
+
