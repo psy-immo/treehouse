@@ -1,10 +1,16 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$common_2measurement_8c.html#aea95ce7469fb27ec5a2fa98d099df572" title="calculates the logarithms of probabilities given by constants, and their complements" alt="" coords="135,5,236,35"/>
-<area shape="rect" id="node5" href="$common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero" alt="" coords="123,59,248,88"/>
-<area shape="rect" id="node7" href="$common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero" alt="" coords="128,112,243,141"/>
-<area shape="rect" id="node9" href="$common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map" alt="" coords="123,165,248,195"/>
-<area shape="rect" id="node11" href="$easy_2measurement_8c.html#af5995b46b1b93746a2cf6af36ce00aed" title="generates a new formal context that comprises of a pseudo&#45;random fake measurement obtained from I wit..." alt="" coords="108,219,263,248"/>
-<area shape="rect" id="node13" href="$common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants" alt="" coords="133,272,237,301"/>
-<area shape="rect" id="node15" href="$common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type" alt="" coords="104,325,267,355"/>
-<area shape="rect" id="node17" href="$common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction" alt="" coords="316,325,431,355"/>
+<area shape="rect" id="node5" href="$common_2measurement_8c.html#ad40c601ad1dcd904cde0e9ebe2828d72" title="deletes a ConditionMap object" alt="" coords="117,59,253,88"/>
+<area shape="rect" id="node7" href="$common_2measurement_8c.html#a2905b59d4a364111890224a444fd6d30" title="deletes an EtaFunction and sets the pointer to zero" alt="" coords="123,112,248,141"/>
+<area shape="rect" id="node9" href="$common_2measurement_8c.html#ae9d17380c2a4280b6760d9d917dfb573" title="deletes a LogCache and sets its pointer to zero" alt="" coords="128,165,243,195"/>
+<area shape="rect" id="node11" href="$common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map" alt="" coords="343,243,468,272"/>
+<area shape="rect" id="node13" href="$easy_2measurement_8c.html#a9f03ccc14548b541ae120c6b869c1210" title="generates a new formal context that comprises of a pseudo&#45;random fake measurement obtained from I wit..." alt="" coords="108,269,263,299"/>
+<area shape="rect" id="node16" href="$common_2measurement_8c.html#a25fcd9b89607eaa3abe03aea6ffe0447" title="creates a new cache for logs of constants" alt="" coords="133,323,237,352"/>
+<area shape="rect" id="node18" href="$common_2measurement_8c.html#a48c795067056a496c8e4aa903fac7d71" title="create a new EtaFunction with the same constant for each type" alt="" coords="104,376,267,405"/>
+<area shape="rect" id="node22" href="$easy_2measurement_8c.html#a521fc75fe217d457d76687a8cea85092" title="recalculate the condition map C, such that the likelihood of (B,c,I,eta) is maximal" alt="" coords="111,456,260,485"/>
+<area shape="rect" id="node20" href="$common_2measurement_8c.html#aa0f12091b86c478e159761719923bd9a" title="creates a new EtaFunction" alt="" coords="348,363,463,392"/>
+<area shape="rect" id="node24" href="$common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors" alt="" coords="321,416,489,445"/>
+<area shape="rect" id="node26" href="$common_2measurement_8c.html#a8df411530d5811c51cb675a64547eed9" title="calculate the log probability from a power vector" alt="" coords="319,469,492,499"/>
+<area shape="rect" id="node30" href="$common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero." alt="" coords="316,523,495,552"/>
+<area shape="rect" id="node28" href="$common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector." alt="" coords="544,469,608,499"/>
 </map>

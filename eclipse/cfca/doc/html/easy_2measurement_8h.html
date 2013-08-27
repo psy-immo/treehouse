@@ -95,10 +95,10 @@ This graph shows which files directly or indirectly include this file:</div>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy_2measurement_8h.html#a0d243c594867f254694b0a91409d9b87">calculateLikelihood</a> (const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> B, const <a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> c, const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> I, const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, <a class="el" href="common_2measurement_8h.html#afb8ffb8c068ef8c9fa3677762ac85994">CommutativeProduct</a> L)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="easy_2measurement_8h.html">easy/measurement.h</a>, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens  <a href="#a0d243c594867f254694b0a91409d9b87"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy_2measurement_8h.html#af5995b46b1b93746a2cf6af36ce00aed">newFakeMeasurement</a> (const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> I, const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, int experiments)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">generates a new formal context that comprises of a pseudo-random fake measurement obtained from I with the given error probabilites and experiment count  <a href="#af5995b46b1b93746a2cf6af36ce00aed"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy_2measurement_8h.html#a4051d4faf633d33c040c217813480adf">optimizeConditionMap</a> (const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> B, <a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> c, const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> I, const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, const <a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> log_c)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">recalculate the condition map C, such that the likelihood of (B,c,I,eta) is maximal  <a href="#a4051d4faf633d33c040c217813480adf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy_2measurement_8h.html#a9f03ccc14548b541ae120c6b869c1210">newFakeMeasurement</a> (const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> I, const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> eta, int experiments, <a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> *output_c)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">generates a new formal context that comprises of a pseudo-random fake measurement obtained from I with the given error probabilites and experiment count  <a href="#a9f03ccc14548b541ae120c6b869c1210"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy_2measurement_8h.html#a521fc75fe217d457d76687a8cea85092">optimizeConditionMap</a> (const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> B, <a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> c, const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> I, const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> restrict eta, const <a class="el" href="common_2measurement_8h.html#ace94e4c4dddc7766492a0f041a72963b">LogCache</a> log_c)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">recalculate the condition map C, such that the likelihood of (B,c,I,eta) is maximal  <a href="#a521fc75fe217d457d76687a8cea85092"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a0d243c594867f254694b0a91409d9b87"></a><!-- doxytag: member="measurement.h::calculateLikelihood" ref="a0d243c594867f254694b0a91409d9b87" args="(const FormalContext B, const ConditionMap c, const FormalContext I, const EtaFunction eta, CommutativeProduct L)" -->
@@ -165,7 +165,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="easy_2measurement_8c_source.html#l00034">34</a> of file <a class="el" href="easy_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00150">sConditionMap::c</a>, <a class="el" href="common_2measurement_8h_source.html#l00044">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00105">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00076">sEtaFunction::eta</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="common_2measurement_8h_source.html#l00117">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00067">sEtaFunction::measurements</a>, <a class="el" href="common_2measurement_8h_source.html#l00111">sCommutativeProduct::mismatch</a>, <a class="el" href="common_2measurement_8h_source.html#l00144">sConditionMap::objects</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, <a class="el" href="common_2measurement_8h_source.html#l00061">sEtaFunction::types</a>, <a class="el" href="common_2macros_8h_source.html#l00056">WARN_IF_GEQ_DO</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00151">sConditionMap::c</a>, <a class="el" href="common_2measurement_8h_source.html#l00045">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00106">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00077">sEtaFunction::eta</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="common_2measurement_8h_source.html#l00118">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00068">sEtaFunction::measurements</a>, <a class="el" href="common_2measurement_8h_source.html#l00112">sCommutativeProduct::mismatch</a>, <a class="el" href="common_2measurement_8h_source.html#l00145">sConditionMap::objects</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, <a class="el" href="common_2measurement_8h_source.html#l00062">sEtaFunction::types</a>, <a class="el" href="common_2macros_8h_source.html#l00056">WARN_IF_GEQ_DO</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(B);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(c);
@@ -225,12 +225,12 @@ Functions</h2></td></tr>
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="af5995b46b1b93746a2cf6af36ce00aed"></a><!-- doxytag: member="measurement.h::newFakeMeasurement" ref="af5995b46b1b93746a2cf6af36ce00aed" args="(const FormalContext I, const EtaFunction eta, int experiments)" -->
+<a class="anchor" id="a9f03ccc14548b541ae120c6b869c1210"></a><!-- doxytag: member="measurement.h::newFakeMeasurement" ref="a9f03ccc14548b541ae120c6b869c1210" args="(const FormalContext I, const EtaFunction eta, int experiments, ConditionMap *output_c)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> <a class="el" href="easy_2measurement_8h.html#af5995b46b1b93746a2cf6af36ce00aed">newFakeMeasurement</a> </td>
+          <td class="memname"><a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a> <a class="el" href="easy_2measurement_8h.html#a9f03ccc14548b541ae120c6b869c1210">newFakeMeasurement</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a>&#160;</td>
           <td class="paramname"><em>I</em>, </td>
@@ -245,7 +245,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>experiments</em>&#160;</td>
+          <td class="paramname"><em>experiments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#ab2f71cb9d9b10edcc10d44f79ee40d10">ConditionMap</a> *&#160;</td>
+          <td class="paramname"><em>output_c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -262,14 +268,15 @@ Functions</h2></td></tr>
     <tr><td class="paramname">I</td><td>experimental condition context </td></tr>
     <tr><td class="paramname">eta</td><td>error probabilities </td></tr>
     <tr><td class="paramname">experiments</td><td>number of conducted experiments </td></tr>
+    <tr><td class="paramname">output_c</td><td>a new ConditionMap will be generated to this pointer, if nonzero </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>a new FormalContext object </dd></dl>
 
-<p>Definition at line <a class="el" href="easy_2measurement_8c_source.html#l00102">102</a> of file <a class="el" href="easy_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="easy_2measurement_8c_source.html#l00103">103</a> of file <a class="el" href="easy_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00050">sEtaFunction::C</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="common_2measurement_8h_source.html#l00076">sEtaFunction::eta</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="common_2measurement_8h_source.html#l00067">sEtaFunction::measurements</a>, <a class="el" href="common_2macros_8h_source.html#l00064">MIN</a>, <a class="el" href="safeguard_8h_source.html#l00057">newFormalContext</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00051">sEtaFunction::C</a>, <a class="el" href="easy_2macros_8h_source.html#l00061">CELL</a>, <a class="el" href="easy_2macros_8h_source.html#l00050">CROSS</a>, <a class="el" href="common_2measurement_8h_source.html#l00077">sEtaFunction::eta</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="common_2measurement_8h_source.html#l00068">sEtaFunction::measurements</a>, <a class="el" href="common_2macros_8h_source.html#l00064">MIN</a>, <a class="el" href="common_2measurement_8c_source.html#l00168">newConditionMap()</a>, <a class="el" href="safeguard_8h_source.html#l00057">newFormalContext</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
 
 <p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -281,6 +288,9 @@ Functions</h2></td></tr>
 
     <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(i-&gt;attributes, (<span class="keywordtype">int</span> ) eta-&gt;<a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8" title="the number of different measurements">measurements</a>, <span class="keywordflow">return</span> 0);
 
+    <span class="keywordflow">if</span> (output_c)
+        *output_c = <a class="code" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map">newConditionMap</a>(experiments);
+
     <a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a> *b;
     b = (<a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a> *) <a class="code" href="safeguard_8h.html#abf7c824d5afa44caeea9078244081940">newFormalContext</a>(experiments, i-&gt;attributes);
 
@@ -290,6 +300,9 @@ Functions</h2></td></tr>
         c_x =
                 <a class="code" href="common_2macros_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f" title="gives minimum">MIN</a>((<span class="keywordtype">int</span>) floor((<span class="keywordtype">double</span>) (random()) /
                                 (<span class="keywordtype">double</span>) RAND_MAX * (<span class="keywordtype">double</span>)i-&gt;objects), i-&gt;objects-1);
+
+        <span class="keywordflow">if</span> (output_c)
+            (*output_c)-&gt;c[x] = c_x;
 
         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; i-&gt;attributes; ++m)
         {
@@ -312,14 +325,23 @@ Functions</h2></td></tr>
     <span class="keywordflow">return</span> (<a class="code" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a>) b;
 }
 </pre></div>
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210_cgraph.png" border="0" usemap="#easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210_cgraph" alt=""/></div>
+<map name="easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210_cgraph" id="easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210_cgraph">
+<area shape="rect" id="node3" href="common_2measurement_8c.html#ac4b7705e5a5c82b5d59b67617e6f2dc4" title="creates a new condition map" alt="" coords="209,5,335,35"/></map>
+</div>
+</p>
+
 </div>
 </div>
-<a class="anchor" id="a4051d4faf633d33c040c217813480adf"></a><!-- doxytag: member="measurement.h::optimizeConditionMap" ref="a4051d4faf633d33c040c217813480adf" args="(const FormalContext B, ConditionMap c, const FormalContext I, const EtaFunction eta, const LogCache log_c)" -->
+<a class="anchor" id="a521fc75fe217d457d76687a8cea85092"></a><!-- doxytag: member="measurement.h::optimizeConditionMap" ref="a521fc75fe217d457d76687a8cea85092" args="(const FormalContext B, ConditionMap c, const FormalContext I, const EtaFunction restrict eta, const LogCache log_c)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="easy_2measurement_8h.html#a4051d4faf633d33c040c217813480adf">optimizeConditionMap</a> </td>
+          <td class="memname">void <a class="el" href="easy_2measurement_8h.html#a521fc75fe217d457d76687a8cea85092">optimizeConditionMap</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="easy_8h.html#ad53dc3fc96151a44387245e6481f95a4">FormalContext</a>&#160;</td>
           <td class="paramname"><em>B</em>, </td>
@@ -339,7 +361,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="common_2measurement_8h.html#ab2406aaef0ce3e9f38a79f42ce470ffb">EtaFunction</a> restrict&#160;</td>
           <td class="paramname"><em>eta</em>, </td>
         </tr>
         <tr>
@@ -369,9 +391,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="easy_2measurement_8c_source.html#l00154">154</a> of file <a class="el" href="easy_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="easy_2measurement_8c_source.html#l00161">161</a> of file <a class="el" href="easy_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00044">sEtaFunction::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00170">sLogCache::constants</a>, <a class="el" href="common_2measurement_8c_source.html#l00149">deleteCommutativeProduct()</a>, <a class="el" href="common_2measurement_8h_source.html#l00067">sEtaFunction::measurements</a>, <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>, <a class="el" href="common_2measurement_8h_source.html#l00144">sConditionMap::objects</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, <a class="el" href="common_2measurement_8h_source.html#l00061">sEtaFunction::types</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00151">sConditionMap::c</a>, <a class="el" href="common_2measurement_8h_source.html#l00171">sLogCache::constants</a>, <a class="el" href="common_2measurement_8c_source.html#l00149">deleteCommutativeProduct()</a>, <a class="el" href="easy_2macros_8h_source.html#l00068">gIm</a>, <a class="el" href="common_2measurement_8h_source.html#l00033">LOG_PROB_LOWER_BOUND</a>, <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>, <a class="el" href="common_2measurement_8c_source.html#l00126">newCommutativeProduct()</a>, <a class="el" href="common_2measurement_8h_source.html#l00145">sConditionMap::objects</a>, <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(B);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(c);
@@ -385,27 +409,130 @@ Functions</h2></td></tr>
     <span class="keyword">const</span> <a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a>* restrict i;
     i = (<span class="keyword">const</span> <a class="code" href="structsmyFormalContext.html" title="each formal context has a finite number of objects and attributes, which may have names (though we do...">myFormalContext</a>*) I;
 
-    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;objects, c-&gt;<a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca" title="cardinality of the domain object set">objects</a>, <span class="keywordflow">return</span>);
-    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;objects, i-&gt;objects, <span class="keywordflow">return</span>);
+    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;objects, (<span class="keywordtype">int</span> )c-&gt;<a class="code" href="structsConditionMap.html#aba0e3734a3c3c6de4f39d9a6c72f3cca" title="cardinality of the domain object set">objects</a>, <span class="keywordflow">return</span>);
     <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;attributes, i-&gt;attributes, <span class="keywordflow">return</span>);
-    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;attributes, eta-&gt;<a class="code" href="structsEtaFunction.html#aa323ef11935cd1e8d6ef56405ab96cf8" title="the number of different measurements">measurements</a>, <span class="keywordflow">return</span>);
-    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(2, eta-&gt;<a class="code" href="structsEtaFunction.html#afd94a9856047e0987c5e8667a4838b71" title="the number of error types, usually this is equal to 2, where: : PREDICTED (I) : : Error type ...">types</a>, <span class="keywordflow">return</span>);
-    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(eta-&gt;<a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9" title="the number of different probability constants">constants</a>, log_c-&gt;<a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>, <span class="keywordflow">return</span>);
+    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(b-&gt;attributes, (<span class="keywordtype">int</span> )eta-&gt;measurements, <span class="keywordflow">return</span>);
+    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(2, eta-&gt;types, <span class="keywordflow">return</span>);
+    <a class="code" href="common_2macros_8h.html#a8d200ab641cd359687ca7bbd465b219a" title="if x!=y, prints a warning and calls the statement d">WARN_IF_UNEQUAL_DO</a>(eta-&gt;constants, log_c-&gt;<a class="code" href="structsLogCache.html#a06855ad644ec7343d2952cb079d83cd1" title="number of constants">constants</a>, <span class="keywordflow">return</span>);
 
-    <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a> l;
-    l = <a class="code" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors">newCommutativeProduct</a>(eta-&gt;<a class="code" href="structsEtaFunction.html#a1fdf63f3a73e7fd663491e72421619f9" title="the number of different probability constants">constants</a>);
+    <span class="keywordtype">size_t</span> attributes;
+    attributes = (size_t) b-&gt;attributes;
 
-    <span class="comment">//TODO: continue here :)</span>
+    <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a> lp;
+    lp = <a class="code" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors">newCommutativeProduct</a>(eta-&gt;constants);
 
-    <a class="code" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero.">deleteCommutativeProduct</a>(&amp;l);
+    <a class="code" href="structsCommutativeProduct.html" title="This struct represents a formal product of formal constants x_i and their counterparts (1-x_i) under ...">CommutativeProduct</a> restrict l;
+    l = lp;
+
+    <span class="comment">/*</span>
+<span class="comment">     * For every object index x of B, find the last object index of I, such that</span>
+<span class="comment">     * the likelihood that experiment x was conducted under that condition is maximal.</span>
+<span class="comment">     */</span>
+
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; (size_t) b-&gt;objects; ++x)
+    {
+
+        <span class="keywordtype">size_t</span> best_cx;
+        best_cx = 0;
+
+        <span class="comment">/*</span>
+<span class="comment">         * initialize the current maximal probability with the bottom value of</span>
+<span class="comment">         * LogProbability</span>
+<span class="comment">         */</span>
+
+        <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> maximal_prob;
+        maximal_prob = <a class="code" href="common_2measurement_8h.html#a0b858a576d6a3db1ea8020021d49896c">LOG_PROB_LOWER_BOUND</a>;
+
+        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> cx = 0; cx &lt; (size_t) i-&gt;objects; ++cx)
+        {
+            <span class="comment">/*</span>
+<span class="comment">             * calculate (partial) likelihood if c(x) = cx</span>
+<span class="comment">             */</span>
+            memset(l-&gt;match, 0, <span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>) * l-&gt;constants);
+            memset(l-&gt;mismatch, 0, <span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>) * l-&gt;constants);
+
+            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m = 0; m &lt; attributes; ++m)
+            {
+<span class="preprocessor">#pragma GCC diagnostic push</span>
+<span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
+<span class="preprocessor"></span>                <span class="keywordflow">if</span> (<a class="code" href="easy_2macros_8h.html#ac504a61c4c85120715ba5d25a72148b1" title="test whether g and m incides">gIm</a>(x,b,m))
+                {
+                    <span class="keywordflow">if</span> (<a class="code" href="easy_2macros_8h.html#ac504a61c4c85120715ba5d25a72148b1" title="test whether g and m incides">gIm</a>(cx,i,m))
+                    {
+<span class="preprocessor">#pragma GCC diagnostic pop</span>
+<span class="preprocessor"></span>                        <span class="comment">/*</span>
+<span class="comment">                         * 1-eta(m,1)</span>
+<span class="comment">                         */</span>
+                        l-&gt;match[eta-&gt;eta[1 * eta-&gt;constants + m]]++;
+                        <span class="comment">//printf(&quot;X&quot;);</span>
+                    }
+                    <span class="keywordflow">else</span>
+                    {
+                        <span class="comment">/*</span>
+<span class="comment">                         * eta(m,0)</span>
+<span class="comment">                         */</span>
+                        l-&gt;mismatch[eta-&gt;eta[0 * eta-&gt;constants + m]]++;
+                        <span class="comment">//printf(&quot;O&quot;);</span>
+                    }
+                }
+                <span class="keywordflow">else</span>
+                {
+<span class="preprocessor">#pragma GCC diagnostic push</span>
+<span class="preprocessor"></span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-conversion&quot;</span>
+<span class="preprocessor"></span>                    <span class="keywordflow">if</span> (<a class="code" href="easy_2macros_8h.html#ac504a61c4c85120715ba5d25a72148b1" title="test whether g and m incides">gIm</a>(cx,i,m))
+                    {
+<span class="preprocessor">#pragma GCC diagnostic pop</span>
+<span class="preprocessor"></span>                        <span class="comment">/*</span>
+<span class="comment">                         * eta(m,0)</span>
+<span class="comment">                         */</span>
+                        l-&gt;mismatch[eta-&gt;eta[1 * eta-&gt;constants + m]]++;
+                        <span class="comment">//printf(&quot;_&quot;);</span>
+                    }
+                    <span class="keywordflow">else</span>
+                    {
+                        <span class="comment">/*</span>
+<span class="comment">                         * 1-eta(m,0)</span>
+<span class="comment">                         */</span>
+                        l-&gt;match[eta-&gt;eta[0 * eta-&gt;constants + m]]++;
+                        <span class="comment">//printf(&quot;.&quot;);</span>
+                    }
+                }
+            }
+
+            <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> p;
+            p = <a class="code" href="common_2measurement_8c.html#a8df411530d5811c51cb675a64547eed9" title="calculate the log probability from a power vector">logProbabilityFromProduct</a>(log_c, l);
+
+            <span class="comment">//printf(&quot;%f\t&quot;, p);</span>
+
+            <span class="comment">/*</span>
+<span class="comment">             * cx is more likely than best_cx</span>
+<span class="comment">             * so, update cx -&gt; best_cx</span>
+<span class="comment">             */</span>
+
+            <span class="keywordflow">if</span> (maximal_prob &lt;= p)
+            {
+                maximal_prob = p;
+                best_cx = cx;
+            }
+        }
+
+        <span class="comment">/*</span>
+<span class="comment">         * choose the most likely match</span>
+<span class="comment">         */</span>
+
+        c-&gt;<a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28" title="the object index of the image, i.e.">c</a>[x] = best_cx;
+        <span class="comment">//printf(&quot;c(%4zu) = %4zu\n&quot;, x, c-&gt;c[x]);</span>
+    }
+
+    <a class="code" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero.">deleteCommutativeProduct</a>(&amp;lp);
 }
 </pre></div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="easy_2measurement_8h_a4051d4faf633d33c040c217813480adf_cgraph.png" border="0" usemap="#easy_2measurement_8h_a4051d4faf633d33c040c217813480adf_cgraph" alt=""/></div>
-<map name="easy_2measurement_8h_a4051d4faf633d33c040c217813480adf_cgraph" id="easy_2measurement_8h_a4051d4faf633d33c040c217813480adf_cgraph">
-<area shape="rect" id="node3" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero." alt="" coords="207,5,385,35"/><area shape="rect" id="node5" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors" alt="" coords="212,59,380,88"/></map>
+<div class="center"><img src="easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092_cgraph.png" border="0" usemap="#easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092_cgraph" alt=""/></div>
+<map name="easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092_cgraph" id="easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092_cgraph">
+<area shape="rect" id="node3" href="common_2measurement_8c.html#a2120fbc047167fd0a08f3015b8716cd1" title="deletes a CommutativeProduct and sets its pointer to zero." alt="" coords="207,5,385,35"/><area shape="rect" id="node5" href="common_2measurement_8c.html#a8df411530d5811c51cb675a64547eed9" title="calculate the log probability from a power vector" alt="" coords="209,59,383,88"/><area shape="rect" id="node9" href="common_2measurement_8c.html#abe35a2e2ccf6060635d4daf6d6ebf59e" title="creates a new commutative product without any factors" alt="" coords="212,112,380,141"/><area shape="rect" id="node7" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector." alt="" coords="435,59,499,88"/></map>
 </div>
 </p>
 
@@ -429,7 +556,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 26 2013 15:24:40 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 27 2013 14:50:57 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

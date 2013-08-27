@@ -1,9 +1,9 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$vector_8h.html" title="vector.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologi..." alt="" coords="179,83,259,112"/>
-<area shape="rect" id="node23" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="283,83,355,112"/>
+<area shape="rect" id="node25" href="$vector_2structs_8h.html" title="structs.h" alt="" coords="283,83,355,112"/>
 <area shape="rect" id="node7" href="$common_8h.html" title="common.h" alt="" coords="116,160,199,189"/>
-<area shape="rect" id="node19" href="$vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="223,160,337,189"/>
-<area shape="rect" id="node21" href="$vector_2measurement_8h.html" title="vector/measurement.h" alt="" coords="361,160,513,189"/>
+<area shape="rect" id="node21" href="$vector_2macros_8h.html" title="vector/macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psy..." alt="" coords="223,160,337,189"/>
+<area shape="rect" id="node23" href="$vector_2measurement_8h.html" title="vector/measurement.h" alt="" coords="361,160,513,189"/>
 <area shape="rect" id="node9" href="$common_2macros_8h.html" title="common/macros.h" alt="" coords="5,237,136,267"/>
 <area shape="rect" id="node13" href="$common_2measurement_8h.html" title="common/measurement.h" alt="" coords="160,237,325,267"/>
 </map>

@@ -3,11 +3,13 @@
 }
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
 {\ttfamily \#include $<$float.\-h$>$}\*
-\-Include dependency graph for measurement.\-h\-:\nopagebreak
+{\ttfamily \#include $<$math.\-h$>$}\*
+\-Include dependency graph for measurement.\-h\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{common_2measurement_8h__incl}
+\includegraphics[width=254pt]{common_2measurement_8h__incl}
 \end{center}
 \end{figure}
 \-This graph shows which files directly or indirectly include this file\-:\nopagebreak
@@ -31,7 +33,7 @@ struct \hyperlink{structsLogCache}{s\-Log\-Cache}
 \subsection*{\-Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{common_2measurement_8h_a0b858a576d6a3db1ea8020021d49896c}{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(-\/\-D\-B\-L\-\_\-\-M\-A\-X)
+\#define \hyperlink{common_2measurement_8h_a0b858a576d6a3db1ea8020021d49896c}{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(-\/\-I\-N\-F\-I\-N\-I\-T\-Y)
 \item 
 \#define \hyperlink{common_2measurement_8h_a34f2d788868c9760922910e9444443a1}{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(1.)
 \end{DoxyCompactItemize}
@@ -79,27 +81,27 @@ void \hyperlink{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{calcul
 \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} \hyperlink{common_2measurement_8h_a8df411530d5811c51cb675a64547eed9}{log\-Probability\-From\-Product} (const \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache} log\-\_\-c, \hyperlink{common_2measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product} l)
 \begin{DoxyCompactList}\small\item\em calculate the log probability from a power vector \end{DoxyCompactList}\item 
 \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} \hyperlink{common_2measurement_8h_a6ec39ef8a7180bc340afed87c57ca604}{sum\-Up} (const \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} $\ast$restrict \-V, size\-\_\-t length, \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} lower\-\_\-bound, \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} upper\-\_\-bound)
-\begin{DoxyCompactList}\small\item\em \-This routine calculates the sum of elements of a vector using in place quick sort strategies to branch sums. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This routine calculates the sum of elements of a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Define \-Documentation}
 \hypertarget{common_2measurement_8h_a0b858a576d6a3db1ea8020021d49896c}{\index{common/measurement.\-h@{common/measurement.\-h}!\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D@{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}}
 \index{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D@{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}!common/measurement.h@{common/measurement.\-h}}
-\subsubsection[{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(-\/\-D\-B\-L\-\_\-\-M\-A\-X)}}\label{common_2measurement_8h_a0b858a576d6a3db1ea8020021d49896c}
+\subsubsection[{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(-\/\-I\-N\-F\-I\-N\-I\-T\-Y)}}\label{common_2measurement_8h_a0b858a576d6a3db1ea8020021d49896c}
 
 
-\-Definition at line 32 of file measurement.\-h.
+\-Definition at line 33 of file measurement.\-h.
 
 
 
-\-Referenced by log\-Probability\-From\-Product().
+\-Referenced by log\-Probability\-From\-Product(), and optimize\-Condition\-Map().
 
 \hypertarget{common_2measurement_8h_a34f2d788868c9760922910e9444443a1}{\index{common/measurement.\-h@{common/measurement.\-h}!\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D@{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D}}
 \index{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D@{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{\-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D}~(1.)}}\label{common_2measurement_8h_a34f2d788868c9760922910e9444443a1}
 
 
-\-Definition at line 33 of file measurement.\-h.
+\-Definition at line 34 of file measurement.\-h.
 
 
 
@@ -143,7 +145,7 @@ this structure contains information on how many cases for measurements there are
 \subsubsection[{\-Log\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf \-Log\-Probability}}}\label{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}
 
 
-\-Definition at line 30 of file measurement.\-h.
+\-Definition at line 31 of file measurement.\-h.
 
 \hypertarget{common_2measurement_8h_ae6d7a8c80f18bc080ab1cfa38d119724}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Probability@{\-Probability}}
 \index{\-Probability@{\-Probability}!common/measurement.h@{common/measurement.\-h}}
@@ -158,7 +160,7 @@ measurement.\-h, (c) 2013, \-Immanuel \-Albrecht; \-Dresden \-University of \-Te
 
 \-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. type for probabilities 
 
-\-Definition at line 29 of file measurement.\-h.
+\-Definition at line 30 of file measurement.\-h.
 
 
 
@@ -275,6 +277,10 @@ deletes a \-Condition\-Map object
 
 
 \-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
 
 
 \begin{DoxyCode}
@@ -401,6 +407,10 @@ the log probability of the product given by the vector of powers, l
 \-References s\-Commutative\-Product\-::constants, s\-Log\-Cache\-::constants, s\-Commutative\-Product\-::intermediate, \-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-L\-O\-W\-E\-R\-\_\-\-B\-O\-U\-N\-D, \-L\-O\-G\-\_\-\-P\-R\-O\-B\-\_\-\-U\-P\-P\-E\-R\-\_\-\-B\-O\-U\-N\-D, s\-Log\-Cache\-::log\-C, s\-Log\-Cache\-::log\-Not\-C, s\-Commutative\-Product\-::match, s\-Commutative\-Product\-::mismatch, \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, sum\-Up(), and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
 
 
+
+\-Referenced by optimize\-Condition\-Map().
+
+
 \begin{DoxyCode}
 {
     RETURN_ZERO_IF_ZERO(log_c);
@@ -413,9 +423,20 @@ the log probability of the product given by the vector of powers, l
     {
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
-        l->intermediate[c] = log_c->logC[c] * (LogProbability) l->match[c];
-        l->intermediate[c + constants] = log_c->logNotC[c]
-                * (LogProbability) l->mismatch[c];
+        /*
+         * 0*-inf is still -inf; but we want to enforce 0*-inf = 0
+         */
+        if (l->match[c] > 0)
+            l->intermediate[c] = log_c->logNotC[c] * (LogProbability) l->match[
+      c];
+        else
+            l->intermediate[c] = 0.;
+
+        if (l->mismatch[c] > 0)
+            l->intermediate[c + constants] = log_c->logC[c]
+                    * (LogProbability) l->mismatch[c];
+        else
+            l->intermediate[c + constants] = 0.;
 #pragma GCC diagnostic pop
     }
 
@@ -425,7 +446,8 @@ the log probability of the product given by the vector of powers, l
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -512,7 +534,7 @@ new \-Condition\-Map object
 
 
 
-\-Referenced by main().
+\-Referenced by main(), and new\-Fake\-Measurement().
 
 
 \begin{DoxyCode}
@@ -763,7 +785,7 @@ create a new \-Eta\-Function with the same constant for each type
 )}}\label{common_2measurement_8h_a6ec39ef8a7180bc340afed87c57ca604}
 
 
-\-This routine calculates the sum of elements of a vector using in place quick sort strategies to branch sums. 
+\-This routine calculates the sum of elements of a vector. 
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -777,11 +799,11 @@ create a new \-Eta\-Function with the same constant for each type
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}
-\[ \sum_{i=0: \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \] 
+\[ \sum_{i=0, \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \] 
 \end{DoxyReturn}
 
 
-\-Definition at line 295 of file measurement.\-c.
+\-Definition at line 304 of file measurement.\-c.
 
 
 
@@ -790,6 +812,24 @@ create a new \-Eta\-Function with the same constant for each type
 
 \begin{DoxyCode}
 {
+    //TODO: Make this routine smarter with respect to LARGE sums
 
+    LogProbability sum;
+    sum = 0.;
+
+    for (size_t i = 0; i < length; ++i)
+    {
+        LogProbability summand;
+        summand = V[i];
+
+        if ((lower_bound <= summand) && (summand < upper_bound))
+        {
+            //printf("+%.2f",summand);
+            sum += summand;
+        }
+    }
+    //printf("=");
+
+    return sum;
 }
 \end{DoxyCode}

@@ -5,3 +5,4 @@
 \form#4:\[ \prod_{i=0}^{\mathrm{constants}} (1-x_i)^{\mathrm{match}(i)} \]
 \form#5:\[ \sum_{i=0, \mathrm{lower_bound}\leq i < \mathrm{upper_bound}}^{ \mathrm{length}} V(i) \]
 \form#6:\[ \sum_{i=0: \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \]
+\form#7:\[ \sum_{i=0, \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \]
