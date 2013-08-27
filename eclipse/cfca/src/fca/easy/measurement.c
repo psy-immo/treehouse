@@ -120,6 +120,8 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 				MIN((int) floor((double) (random()) /
 								(double) RAND_MAX * (double)i->objects), i->objects-1);
 
+		printf("C(%4d) = %4d\n", x, c_x);
+
 		for (int m = 0; m < i->attributes; ++m)
 		{
 			Probability rnd;
@@ -152,7 +154,8 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
  */
 
 void optimizeConditionMap(const FormalContext B, ConditionMap c,
-		const FormalContext I, const EtaFunction eta, const LogCache log_c)
+		const FormalContext I, const EtaFunction restrict eta,
+		const LogCache log_c)
 {
 	RETURN_IF_ZERO(B);
 	RETURN_IF_ZERO(c);
@@ -166,17 +169,120 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 	const myFormalContext* restrict i;
 	i = (const myFormalContext*) I;
 
-	WARN_IF_UNEQUAL_DO(b->objects, c->objects, return);
-	WARN_IF_UNEQUAL_DO(b->objects, i->objects, return);
+	WARN_IF_UNEQUAL_DO(b->objects, (int )c->objects, return);
 	WARN_IF_UNEQUAL_DO(b->attributes, i->attributes, return);
-	WARN_IF_UNEQUAL_DO(b->attributes, eta->measurements, return);
+	WARN_IF_UNEQUAL_DO(b->attributes, (int )eta->measurements, return);
 	WARN_IF_UNEQUAL_DO(2, eta->types, return);
 	WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return);
 
-	CommutativeProduct l;
-	l = newCommutativeProduct(eta->constants);
+	size_t attributes;
+	attributes = (size_t) b->attributes;
 
-	//TODO: continue here :)
+	CommutativeProduct lp;
+	lp = newCommutativeProduct(eta->constants);
 
-	deleteCommutativeProduct(&l);
+	CommutativeProduct restrict l;
+	l = lp;
+
+	/*
+	 * For every object index x of B, find the last object index of I, such that
+	 * the likelihood that experiment x was conducted under that condition is maximal.
+	 */
+
+	for (size_t x = 0; x < (size_t) b->objects; ++x)
+	{
+
+		size_t best_cx;
+		best_cx = 0;
+
+		/*
+		 * initialize the current maximal probability with the bottom value of
+		 * LogProbability
+		 */
+
+		LogProbability maximal_prob;
+		maximal_prob = LOG_PROB_LOWER_BOUND;
+
+		for (size_t cx = 0; cx < (size_t) i->objects; ++cx)
+		{
+			/*
+			 * calculate (partial) likelihood if c(x) = cx
+			 */
+			memset(l->match, 0, sizeof(size_t) * l->constants);
+			memset(l->mismatch, 0, sizeof(size_t) * l->constants);
+
+			for (size_t m = 0; m < attributes; ++m)
+			{
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+				if (gIm(x,b,m))
+				{
+					if (gIm(cx,i,m))
+					{
+#pragma GCC diagnostic pop
+						/*
+						 * 1-eta(m,1)
+						 */
+						l->match[eta->eta[1 * eta->constants + m]]++;
+						printf("X");
+					}
+					else
+					{
+						/*
+						 * eta(m,0)
+						 */
+						l->mismatch[eta->eta[0 * eta->constants + m]]++;
+						printf("O");
+					}
+				}
+				else
+				{
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+					if (gIm(cx,i,m))
+					{
+#pragma GCC diagnostic pop
+						/*
+						 * eta(m,0)
+						 */
+						l->mismatch[eta->eta[1 * eta->constants + m]]++;
+						printf("_");
+					}
+					else
+					{
+						/*
+						 * 1-eta(m,0)
+						 */
+						l->match[eta->eta[0 * eta->constants + m]]++;
+						printf(".");
+					}
+				}
+			}
+
+			LogProbability p;
+			p = logProbabilityFromProduct(log_c, l);
+
+			printf("%f\t", p);
+
+			/*
+			 * cx is more likely than best_cx
+			 * so, update cx -> best_cx
+			 */
+
+			if (maximal_prob <= p)
+			{
+				maximal_prob = p;
+				best_cx = cx;
+			}
+		}
+
+		/*
+		 * choose the most likely match
+		 */
+
+		c->c[x] = best_cx;
+		printf("c(%4zu) = %4zu\n", x, c->c[x]);
+	}
+
+	deleteCommutativeProduct(&lp);
 }

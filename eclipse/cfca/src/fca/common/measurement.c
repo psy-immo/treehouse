@@ -271,9 +271,19 @@ LogProbability logProbabilityFromProduct(const LogCache log_c,
 	{
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
-		l->intermediate[c] = log_c->logC[c] * (LogProbability) l->match[c];
-		l->intermediate[c + constants] = log_c->logNotC[c]
-				* (LogProbability) l->mismatch[c];
+		/*
+		 * 0*-inf is still -inf; but we want to enforce 0*-inf = 0
+		 */
+		if (l->match[c] > 0)
+			l->intermediate[c] = log_c->logC[c] * (LogProbability) l->match[c];
+		else
+			l->intermediate[c] = 0.;
+
+		if (l->mismatch[c] > 0)
+			l->intermediate[c + constants] = log_c->logNotC[c]
+					* (LogProbability) l->mismatch[c];
+		else
+			l->intermediate[c + constants] = 0.;
 #pragma GCC diagnostic pop
 	}
 
@@ -282,7 +292,7 @@ LogProbability logProbabilityFromProduct(const LogCache log_c,
 }
 
 /**
- * This routine calculates the sum of elements of a vector
+ * This routine calculates the sum of elements of a vector.
  *
  * @param V                ptr to array of LogProbabilities
  * @param length           length of array V
@@ -306,9 +316,11 @@ LogProbability sumUp(const LogProbability * restrict V, size_t length,
 
 		if ((lower_bound <= summand) && (summand < upper_bound))
 		{
+			printf("+%.2f",summand);
 			sum += summand;
 		}
 	}
+	printf("=");
 
 	return sum;
 }

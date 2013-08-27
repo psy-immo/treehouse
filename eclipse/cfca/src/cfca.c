@@ -56,8 +56,8 @@ int main(void)
 
 	EtaFunction eta;
 	eta = newUniformEtaFunction(2, 30);
-	eta->C[0] = 0.05; //Type I error
-	eta->C[1] = 0.10; //Type II error
+	eta->C[0] = 0.0; //Type I error
+	eta->C[1] = 0.0; //Type II error
 
 	LogCache logC;
 	logC = newLogCache(eta->constants);
@@ -70,6 +70,8 @@ int main(void)
 
 	ConditionMap c;
 	c = newConditionMap(150);
+
+	optimizeConditionMap(B,c,ctx,eta,logC);
 
 
 	deleteLogCache(&logC);

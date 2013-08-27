@@ -29,6 +29,6 @@ newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 
 void
 optimizeConditionMap(const FormalContext B, ConditionMap c,
-		const FormalContext I, const EtaFunction eta, const LogCache log_c);
+		const FormalContext I, const EtaFunction restrict eta, const LogCache log_c);
 
 #endif /* MEASUREMENT_H_ */

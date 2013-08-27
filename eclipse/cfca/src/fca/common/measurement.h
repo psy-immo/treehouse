@@ -21,6 +21,7 @@
 
 #include <stdlib.h>
 #include <float.h>
+#include <math.h>
 
 /**
  * type for probabilities
@@ -29,7 +30,7 @@
 typedef double Probability;
 typedef double LogProbability;
 
-#define LOG_PROB_LOWER_BOUND (-DBL_MAX)
+#define LOG_PROB_LOWER_BOUND (-INFINITY)
 #define LOG_PROB_UPPER_BOUND (1.)
 
 /**
