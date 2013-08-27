@@ -275,12 +275,12 @@ LogProbability logProbabilityFromProduct(const LogCache log_c,
 		 * 0*-inf is still -inf; but we want to enforce 0*-inf = 0
 		 */
 		if (l->match[c] > 0)
-			l->intermediate[c] = log_c->logC[c] * (LogProbability) l->match[c];
+			l->intermediate[c] = log_c->logNotC[c] * (LogProbability) l->match[c];
 		else
 			l->intermediate[c] = 0.;
 
 		if (l->mismatch[c] > 0)
-			l->intermediate[c + constants] = log_c->logNotC[c]
+			l->intermediate[c + constants] = log_c->logC[c]
 					* (LogProbability) l->mismatch[c];
 		else
 			l->intermediate[c + constants] = 0.;
@@ -316,11 +316,11 @@ LogProbability sumUp(const LogProbability * restrict V, size_t length,
 
 		if ((lower_bound <= summand) && (summand < upper_bound))
 		{
-			printf("+%.2f",summand);
+			//printf("+%.2f",summand);
 			sum += summand;
 		}
 	}
-	printf("=");
+	//printf("=");
 
 	return sum;
 }

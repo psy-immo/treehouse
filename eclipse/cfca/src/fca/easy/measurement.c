@@ -97,10 +97,11 @@ void calculateLikelihood(const FormalContext B, const ConditionMap c,
  * @param I            experimental condition context
  * @param eta          error probabilities
  * @param experiments  number of conducted experiments
+ * @param output_c     a new ConditionMap will be generated to this pointer, if nonzero
  * @return  a new FormalContext object
  */
 FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
-		int experiments)
+		int experiments, ConditionMap* output_c)
 {
 	RETURN_ZERO_IF_ZERO(I);
 	RETURN_ZERO_IF_ZERO(eta);
@@ -109,6 +110,9 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 	i = (const myFormalContext*) I;
 
 	WARN_IF_UNEQUAL_DO(i->attributes, (int ) eta->measurements, return 0);
+
+	if (output_c)
+		*output_c = newConditionMap(experiments);
 
 	myFormalContext *b;
 	b = (myFormalContext *) newFormalContext(experiments, i->attributes);
@@ -120,7 +124,8 @@ FormalContext newFakeMeasurement(const FormalContext I, const EtaFunction eta,
 				MIN((int) floor((double) (random()) /
 								(double) RAND_MAX * (double)i->objects), i->objects-1);
 
-		printf("C(%4d) = %4d\n", x, c_x);
+		if (output_c)
+			(*output_c)->c[x] = c_x;
 
 		for (int m = 0; m < i->attributes; ++m)
 		{
@@ -224,7 +229,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 						 * 1-eta(m,1)
 						 */
 						l->match[eta->eta[1 * eta->constants + m]]++;
-						printf("X");
+						//printf("X");
 					}
 					else
 					{
@@ -232,7 +237,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 						 * eta(m,0)
 						 */
 						l->mismatch[eta->eta[0 * eta->constants + m]]++;
-						printf("O");
+						//printf("O");
 					}
 				}
 				else
@@ -246,7 +251,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 						 * eta(m,0)
 						 */
 						l->mismatch[eta->eta[1 * eta->constants + m]]++;
-						printf("_");
+						//printf("_");
 					}
 					else
 					{
@@ -254,7 +259,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 						 * 1-eta(m,0)
 						 */
 						l->match[eta->eta[0 * eta->constants + m]]++;
-						printf(".");
+						//printf(".");
 					}
 				}
 			}
@@ -262,7 +267,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 			LogProbability p;
 			p = logProbabilityFromProduct(log_c, l);
 
-			printf("%f\t", p);
+			//printf("%f\t", p);
 
 			/*
 			 * cx is more likely than best_cx
@@ -281,7 +286,7 @@ void optimizeConditionMap(const FormalContext B, ConditionMap c,
 		 */
 
 		c->c[x] = best_cx;
-		printf("c(%4zu) = %4zu\n", x, c->c[x]);
+		//printf("c(%4zu) = %4zu\n", x, c->c[x]);
 	}
 
 	deleteCommutativeProduct(&lp);

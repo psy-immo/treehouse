@@ -56,24 +56,36 @@ int main(void)
 
 	EtaFunction eta;
 	eta = newUniformEtaFunction(2, 30);
-	eta->C[0] = 0.0; //Type I error
-	eta->C[1] = 0.0; //Type II error
+	eta->C[0] = 0.10; //Type I error
+	eta->C[1] = 0.10; //Type II error
 
 	LogCache logC;
 	logC = newLogCache(eta->constants);
 	calculateLogs(eta,logC);
 
-
+	ConditionMap c_gen;
 	FormalContext B;
-	B = newFakeMeasurement(ctx,eta,150);
+	const size_t experiments = 1500;
+
+
+	B = newFakeMeasurement(ctx,eta,experiments,&c_gen);
 	writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
 
+	puts("Testing restorability of the condition map...");
+
 	ConditionMap c;
-	c = newConditionMap(150);
+	c = newConditionMap(experiments);
 
 	optimizeConditionMap(B,c,ctx,eta,logC);
 
+	for (int x=0;x<c->objects;++x) {
+		if (c->c[x] != c_gen->c[x]) {
+			printf("c(%d) = %d != %d\n",x,c->c[x],c_gen->c[x]);
+		}
+	}
 
+	deleteConditionMap(&c);
+	deleteConditionMap(&c_gen);
 	deleteLogCache(&logC);
 	deleteEtaFunction(&eta);
 	deleteFormalContext(&B);
