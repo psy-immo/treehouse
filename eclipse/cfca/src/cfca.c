@@ -65,7 +65,7 @@ int main(void)
 
 	ConditionMap c_gen;
 	FormalContext B;
-	const size_t experiments = 1500;
+	const size_t experiments = 60;
 
 
 	B = newFakeMeasurement(ctx,eta,experiments,&c_gen);
@@ -83,6 +83,23 @@ int main(void)
 			printf("c(%d) = %d != %d\n",x,c->c[x],c_gen->c[x]);
 		}
 	}
+
+	optimizeApproximationContext(B,c,ctx,eta,logC);
+	writeFormalContext(ctx, "/home/immo/tmp/test_C.cxt");
+
+	optimizeConditionMap(B,c,ctx,eta,logC);
+	optimizeApproximationContext(B,c,ctx,eta,logC);
+	writeFormalContext(ctx, "/home/immo/tmp/test_D.cxt");
+
+
+	optimizeConditionMap(B,c,ctx,eta,logC);
+	optimizeApproximationContext(B,c,ctx,eta,logC);
+	writeFormalContext(ctx, "/home/immo/tmp/test_E.cxt");
+
+
+	optimizeConditionMap(B,c,ctx,eta,logC);
+	optimizeApproximationContext(B,c,ctx,eta,logC);
+	writeFormalContext(ctx, "/home/immo/tmp/test_F.cxt");
 
 	deleteConditionMap(&c);
 	deleteConditionMap(&c_gen);

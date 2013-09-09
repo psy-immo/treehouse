@@ -32,4 +32,8 @@ optimizeConditionMap(const FormalContext B, ConditionMap c,
 		const FormalContext I, const EtaFunction restrict eta,
 		const LogCache log_c);
 
+void
+optimizeApproximationContext(const FormalContext B, const ConditionMap cmap,
+		FormalContext I, const EtaFunction restrict eta, const LogCache log_c);
+
 #endif /* MEASUREMENT_H_ */
