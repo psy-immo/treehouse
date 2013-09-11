@@ -413,3 +413,27 @@ void writeDistancesToFile(const DistanceMatrix d, const char* filename)
 
 	fclose(file);
 }
+
+/**
+ * normalizes the distance matrix by replacing d with d', which is defined to be
+ *
+ * @f[     d'(x,y) = d(x,y) - d(y,y)     @f]
+ *
+ * @param d  distance matrix
+ */
+
+void normalizeDistanceMatrix(DistanceMatrix restrict d)
+{
+	RETURN_IF_ZERO(d);
+
+	for (size_t y = 0; y < d->objects; ++y)
+	{
+		LogProbability dyy;
+		dyy = d->d[y*d->objects + y];
+
+		for (size_t x = 0; x < d->objects; ++x)
+		{
+			d->d[x*d->objects + y] -= dyy;
+		}
+	}
+}

@@ -235,4 +235,7 @@ deleteDistanceMatrix(DistanceMatrix* d);
 void
 writeDistancesToFile(const DistanceMatrix d, const char* filename);
 
+void
+normalizeDistanceMatrix(DistanceMatrix restrict d);
+
 #endif /* MEASUREMENT_H_ */

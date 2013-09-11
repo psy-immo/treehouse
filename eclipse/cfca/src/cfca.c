@@ -78,6 +78,9 @@ int main(void)
 
 	writeDistancesToFile(d,"/home/immo/tmp/test_d.csv");
 
+	normalizeDistanceMatrix(d);
+	writeDistancesToFile(d,"/home/immo/tmp/test_dnorm.csv");
+
 	puts("Testing restorability of the condition map...");
 
 	ConditionMap c;
