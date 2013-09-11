@@ -259,46 +259,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00275"></a>00275 <span class="comment">         * 0*-inf is still -inf; but we want to enforce 0*-inf = 0</span>
 <a name="l00276"></a>00276 <span class="comment">         */</span>
 <a name="l00277"></a>00277         <span class="keywordflow">if</span> (l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c] &gt; 0)
-<a name="l00278"></a>00278             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = log_c-&gt;<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>[c] * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c];
-<a name="l00279"></a>00279         <span class="keywordflow">else</span>
-<a name="l00280"></a>00280             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = 0.;
-<a name="l00281"></a>00281 
-<a name="l00282"></a>00282         if (l-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>[c] &gt; 0)
-<a name="l00283"></a>00283             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c + constants] = log_c-&gt;<a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163" title="logarithms of the probabilities, i.e.">logC</a>[c]
-<a name="l00284"></a>00284                     * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>[c];
-<a name="l00285"></a>00285         <span class="keywordflow">else</span>
-<a name="l00286"></a>00286             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c + constants] = 0.;
-<a name="l00287"></a>00287 #pragma GCC diagnostic pop
-<a name="l00288"></a>00288     }
-<a name="l00289"></a>00289 
-<a name="l00290"></a>00290     <span class="keywordflow">return</span> <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector.">sumUp</a>(l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>, constants * 2, <a class="code" href="common_2measurement_8h.html#a0b858a576d6a3db1ea8020021d49896c">LOG_PROB_LOWER_BOUND</a>,
-<a name="l00291"></a>00291     <a class="code" href="common_2measurement_8h.html#a34f2d788868c9760922910e9444443a1">LOG_PROB_UPPER_BOUND</a>);
-<a name="l00292"></a>00292 }
-<a name="l00293"></a>00293 
-<a name="l00304"></a><a class="code" href="common_2measurement_8h.html#a6ec39ef8a7180bc340afed87c57ca604">00304</a> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector.">sumUp</a>(<span class="keyword">const</span> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> * restrict V, <span class="keywordtype">size_t</span> length,
-<a name="l00305"></a>00305         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> lower_bound, <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> upper_bound)
-<a name="l00306"></a>00306 {
-<a name="l00307"></a>00307     <span class="comment">//TODO: Make this routine smarter with respect to LARGE sums</span>
-<a name="l00308"></a>00308 
-<a name="l00309"></a>00309     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> sum;
-<a name="l00310"></a>00310     sum = 0.;
-<a name="l00311"></a>00311 
-<a name="l00312"></a>00312     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i)
-<a name="l00313"></a>00313     {
-<a name="l00314"></a>00314         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> summand;
-<a name="l00315"></a>00315         summand = V[i];
-<a name="l00316"></a>00316 
-<a name="l00317"></a>00317         <span class="keywordflow">if</span> ((lower_bound &lt;= summand) &amp;&amp; (summand &lt; upper_bound))
-<a name="l00318"></a>00318         {
-<a name="l00319"></a>00319             <span class="comment">//printf(&quot;+%.2f&quot;,summand);</span>
-<a name="l00320"></a>00320             sum += summand;
-<a name="l00321"></a>00321         }
-<a name="l00322"></a>00322     }
-<a name="l00323"></a>00323     <span class="comment">//printf(&quot;=&quot;);</span>
-<a name="l00324"></a>00324 
-<a name="l00325"></a>00325     <span class="keywordflow">return</span> sum;
-<a name="l00326"></a>00326 }
-<a name="l00327"></a>00327 
+<a name="l00278"></a>00278             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = log_c-&gt;<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>[c]
+<a name="l00279"></a>00279                     * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c];
+<a name="l00280"></a>00280         <span class="keywordflow">else</span>
+<a name="l00281"></a>00281             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = 0.;
+<a name="l00282"></a>00282 
+<a name="l00283"></a>00283         if (l-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>[c] &gt; 0)
+<a name="l00284"></a>00284             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c + constants] = log_c-&gt;<a class="code" href="structsLogCache.html#ac1a2fe56f678e4b2be3b56f9b6c04163" title="logarithms of the probabilities, i.e.">logC</a>[c]
+<a name="l00285"></a>00285                     * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#a95aa7c0ea80854b88afc16d913137f35" title="This represents the first term part.">mismatch</a>[c];
+<a name="l00286"></a>00286         <span class="keywordflow">else</span>
+<a name="l00287"></a>00287             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c + constants] = 0.;
+<a name="l00288"></a>00288 #pragma GCC diagnostic pop
+<a name="l00289"></a>00289     }
+<a name="l00290"></a>00290 
+<a name="l00291"></a>00291     <span class="keywordflow">return</span> <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector.">sumUp</a>(l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>, constants * 2, <a class="code" href="common_2measurement_8h.html#a0b858a576d6a3db1ea8020021d49896c">LOG_PROB_LOWER_BOUND</a>,
+<a name="l00292"></a>00292     <a class="code" href="common_2measurement_8h.html#a34f2d788868c9760922910e9444443a1">LOG_PROB_UPPER_BOUND</a>);
+<a name="l00293"></a>00293 }
+<a name="l00294"></a>00294 
+<a name="l00305"></a><a class="code" href="common_2measurement_8h.html#a6ec39ef8a7180bc340afed87c57ca604">00305</a> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> <a class="code" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604" title="This routine calculates the sum of elements of a vector.">sumUp</a>(<span class="keyword">const</span> <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> * restrict V, <span class="keywordtype">size_t</span> length,
+<a name="l00306"></a>00306         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> lower_bound, <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> upper_bound)
+<a name="l00307"></a>00307 {
+<a name="l00308"></a>00308     <span class="comment">//TODO: Make this routine smarter with respect to LARGE sums</span>
+<a name="l00309"></a>00309 
+<a name="l00310"></a>00310     <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> sum;
+<a name="l00311"></a>00311     sum = 0.;
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i)
+<a name="l00314"></a>00314     {
+<a name="l00315"></a>00315         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> summand;
+<a name="l00316"></a>00316         summand = V[i];
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318         <span class="keywordflow">if</span> ((lower_bound &lt;= summand) &amp;&amp; (summand &lt; upper_bound))
+<a name="l00319"></a>00319         {
+<a name="l00320"></a>00320             <span class="comment">//printf(&quot;+%.2f&quot;,summand);</span>
+<a name="l00321"></a>00321             sum += summand;
+<a name="l00322"></a>00322         }
+<a name="l00323"></a>00323     }
+<a name="l00324"></a>00324     <span class="comment">//printf(&quot;=&quot;);</span>
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326     <span class="keywordflow">return</span> sum;
+<a name="l00327"></a>00327 }
+<a name="l00328"></a>00328 
+<a name="l00336"></a><a class="code" href="common_2measurement_8h.html#ae6570aaa925f8a9155f9385de467dcbd">00336</a> <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a> <a class="code" href="common_2measurement_8c.html#ae6570aaa925f8a9155f9385de467dcbd" title="creates a new DistanceMatrix of the given size">newDistanceMatrix</a>(<span class="keywordtype">size_t</span> objects)
+<a name="l00337"></a>00337 {
+<a name="l00338"></a>00338     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(objects);
+<a name="l00339"></a>00339 
+<a name="l00340"></a>00340     <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a> d;
+<a name="l00341"></a>00341 
+<a name="l00342"></a>00342     d = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">sDistanceMatrix</a>));
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344     d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a> = objects;
+<a name="l00345"></a>00345 
+<a name="l00346"></a>00346     d-&gt;<a class="code" href="structsDistanceMatrix.html#a740d78f59a68ca470cb4c1d4ad998c05" title="stores the distance between measurements: let x,y be object indices of some context, then">d</a> = calloc(objects * objects, <span class="keyword">sizeof</span>(<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>));
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348     <span class="keywordflow">return</span> d;
+<a name="l00349"></a>00349 }
+<a name="l00350"></a>00350 
+<a name="l00357"></a><a class="code" href="common_2measurement_8h.html#a573c3990ed39b5ca911c9ef448f74703">00357</a> <span class="keywordtype">void</span> <a class="code" href="common_2measurement_8c.html#a573c3990ed39b5ca911c9ef448f74703" title="deletes the given object and sets its pointer to zero">deleteDistanceMatrix</a>(<a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a>* d)
+<a name="l00358"></a>00358 {
+<a name="l00359"></a>00359     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+<a name="l00360"></a>00360 
+<a name="l00361"></a>00361     free((*d)-&gt;d);
+<a name="l00362"></a>00362     free(*d);
+<a name="l00363"></a>00363 
+<a name="l00364"></a>00364     d = 0;
+<a name="l00365"></a>00365 }
+<a name="l00366"></a>00366 
+<a name="l00375"></a><a class="code" href="common_2measurement_8h.html#ad54d95f7de71efa2ad16ce6b133cf439">00375</a> <span class="keywordtype">void</span> <a class="code" href="common_2measurement_8c.html#ad54d95f7de71efa2ad16ce6b133cf439" title="Writes the contents of a distance matrix to the given file in CSV format: d(x,y) will be written on t...">writeDistancesToFile</a>(<span class="keyword">const</span> <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a> d, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename)
+<a name="l00376"></a>00376 {
+<a name="l00377"></a>00377     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+<a name="l00378"></a>00378     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
+<a name="l00379"></a>00379 
+<a name="l00380"></a>00380     FILE* file;
+<a name="l00381"></a>00381     file = fopen(filename, <span class="stringliteral">&quot;w&quot;</span>);
+<a name="l00382"></a>00382 
+<a name="l00383"></a>00383     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385     <span class="comment">/*</span>
+<a name="l00386"></a>00386 <span class="comment">     * header row</span>
+<a name="l00387"></a>00387 <span class="comment">     */</span>
+<a name="l00388"></a>00388 
+<a name="l00389"></a>00389     fputs(<span class="stringliteral">&quot;\&quot;d(x,y)\&quot;&quot;</span>, file);
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++y)
+<a name="l00392"></a>00392     {
+<a name="l00393"></a>00393         fprintf(file, <span class="stringliteral">&quot;,y=%zu&quot;</span>, y);
+<a name="l00394"></a>00394     }
+<a name="l00395"></a>00395 
+<a name="l00396"></a>00396     fputs(<span class="stringliteral">&quot;\n&quot;</span>, file);
+<a name="l00397"></a>00397 
+<a name="l00398"></a>00398     <span class="comment">/*</span>
+<a name="l00399"></a>00399 <span class="comment">     * contents</span>
+<a name="l00400"></a>00400 <span class="comment">     */</span>
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++x)
+<a name="l00403"></a>00403     {
+<a name="l00404"></a>00404         fprintf(file, <span class="stringliteral">&quot;x=%zu&quot;</span>, x);
+<a name="l00405"></a>00405 
+<a name="l00406"></a>00406         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++y)
+<a name="l00407"></a>00407         {
+<a name="l00408"></a>00408             fprintf(file, <span class="stringliteral">&quot;,%f&quot;</span>, d-&gt;<a class="code" href="structsDistanceMatrix.html#a740d78f59a68ca470cb4c1d4ad998c05" title="stores the distance between measurements: let x,y be object indices of some context, then">d</a>[x * d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a> + y]);
+<a name="l00409"></a>00409         }
+<a name="l00410"></a>00410 
+<a name="l00411"></a>00411         fputs(<span class="stringliteral">&quot;\n&quot;</span>, file);
+<a name="l00412"></a>00412     }
+<a name="l00413"></a>00413 
+<a name="l00414"></a>00414     fclose(file);
+<a name="l00415"></a>00415 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -317,7 +384,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 27 2013 14:50:57 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 11 2013 13:20:10 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

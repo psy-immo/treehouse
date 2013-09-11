@@ -36,4 +36,8 @@ void
 optimizeApproximationContext(const FormalContext B, const ConditionMap cmap,
 		FormalContext I, const EtaFunction restrict eta, const LogCache log_c);
 
+DistanceMatrix
+newDistanceMatrixFromContext(const FormalContext B,
+		const EtaFunction restrict eta, const LogCache log_c);
+
 #endif /* MEASUREMENT_H_ */

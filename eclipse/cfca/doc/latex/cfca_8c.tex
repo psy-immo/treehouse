@@ -7,8 +7,7 @@
 {\ttfamily \#include \char`\"{}fca/fca.\-h\char`\"{}}\*
 {\ttfamily \#include \char`\"{}fca/easy/private.\-h\char`\"{}}\*
 {\ttfamily \#include \char`\"{}fca/vector/private.\-h\char`\"{}}\*
-\-Include dependency graph for cfca.\-c\-:
-\nopagebreak
+\-Include dependency graph for cfca.\-c\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,7 +50,7 @@ start tests
 
 
 
-\-References s\-Eta\-Function\-::\-C, s\-Condition\-Map\-::c, calculate\-Logs(), s\-Eta\-Function\-::constants, delete\-Condition\-Map(), delete\-Eta\-Function(), delete\-Formal\-Context, delete\-Log\-Cache(), new\-Condition\-Map(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-Random, new\-Log\-Cache(), new\-Uniform\-Eta\-Function(), s\-Condition\-Map\-::objects, optimize\-Condition\-Map(), and write\-Formal\-Context.
+\-References s\-Eta\-Function\-::\-C, s\-Condition\-Map\-::c, calculate\-Logs(), s\-Eta\-Function\-::constants, delete\-Condition\-Map(), delete\-Distance\-Matrix(), delete\-Eta\-Function(), delete\-Formal\-Context, delete\-Log\-Cache(), new\-Condition\-Map(), new\-Distance\-Matrix\-From\-Context(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-Random, new\-Log\-Cache(), new\-Uniform\-Eta\-Function(), s\-Condition\-Map\-::objects, optimize\-Approximation\-Context(), optimize\-Condition\-Map(), write\-Distances\-To\-File(), and write\-Formal\-Context.
 
 
 \begin{DoxyCode}
@@ -72,7 +71,7 @@ start tests
     EtaFunction eta;
     eta = newUniformEtaFunction(2, 30);
     eta->C[0] = 0.10; //Type I error
-    eta->C[1] = 0.10; //Type II error
+    eta->C[1] = 0.04; //Type II error
 
     LogCache logC;
     logC = newLogCache(eta->constants);
@@ -80,11 +79,18 @@ start tests
 
     ConditionMap c_gen;
     FormalContext B;
-    const size_t experiments = 1500;
+    const size_t experiments = 60;
 
 
     B = newFakeMeasurement(ctx,eta,experiments,&c_gen);
     writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
+
+    puts("Calculating DistanceMatrix");
+
+    DistanceMatrix d;
+    d = newDistanceMatrixFromContext(B,eta,logC);
+
+    writeDistancesToFile(d,"/home/immo/tmp/test_d.csv");
 
     puts("Testing restorability of the condition map...");
 
@@ -99,12 +105,30 @@ start tests
         }
     }
 
+    optimizeApproximationContext(B,c,ctx,eta,logC);
+    writeFormalContext(ctx, "/home/immo/tmp/test_C.cxt");
+
+    optimizeConditionMap(B,c,ctx,eta,logC);
+    optimizeApproximationContext(B,c,ctx,eta,logC);
+    writeFormalContext(ctx, "/home/immo/tmp/test_D.cxt");
+
+
+    optimizeConditionMap(B,c,ctx,eta,logC);
+    optimizeApproximationContext(B,c,ctx,eta,logC);
+    writeFormalContext(ctx, "/home/immo/tmp/test_E.cxt");
+
+
+    optimizeConditionMap(B,c,ctx,eta,logC);
+    optimizeApproximationContext(B,c,ctx,eta,logC);
+    writeFormalContext(ctx, "/home/immo/tmp/test_F.cxt");
+
     deleteConditionMap(&c);
     deleteConditionMap(&c_gen);
     deleteLogCache(&logC);
     deleteEtaFunction(&eta);
     deleteFormalContext(&B);
     deleteFormalContext(&ctx);
+    deleteDistanceMatrix(&d);
 
     puts("done.");
     return EXIT_SUCCESS;

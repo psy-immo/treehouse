@@ -275,7 +275,8 @@ LogProbability logProbabilityFromProduct(const LogCache log_c,
 		 * 0*-inf is still -inf; but we want to enforce 0*-inf = 0
 		 */
 		if (l->match[c] > 0)
-			l->intermediate[c] = log_c->logNotC[c] * (LogProbability) l->match[c];
+			l->intermediate[c] = log_c->logNotC[c]
+					* (LogProbability) l->match[c];
 		else
 			l->intermediate[c] = 0.;
 
@@ -325,3 +326,90 @@ LogProbability sumUp(const LogProbability * restrict V, size_t length,
 	return sum;
 }
 
+/**
+ * creates a new DistanceMatrix of the given size
+ *
+ * @param objects    square matrix dimension
+ * @return   the new DistanceMatrix object
+ */
+
+DistanceMatrix newDistanceMatrix(size_t objects)
+{
+	RETURN_ZERO_IF_ZEROI(objects);
+
+	DistanceMatrix d;
+
+	d = malloc(sizeof(struct sDistanceMatrix));
+
+	d->objects = objects;
+
+	d->d = calloc(objects * objects, sizeof(LogProbability));
+
+	return d;
+}
+
+/**
+ * deletes the given object and sets its pointer to zero
+ *
+ * @param d   DistanceMatrix
+ */
+
+void deleteDistanceMatrix(DistanceMatrix* d)
+{
+	RETURN_IF_ZERO(d);
+
+	free((*d)->d);
+	free(*d);
+
+	d = 0;
+}
+
+/**
+ * Writes the contents of a distance matrix to the given file in CSV format:
+ * d(x,y) will be written on the (x+1)th line to the (y+1)th column.
+ *
+ * @param d    the distance matrix
+ * @param filename  output file name
+ */
+
+void writeDistancesToFile(const DistanceMatrix d, const char* filename)
+{
+	RETURN_IF_ZERO(d);
+	RETURN_IF_ZERO(filename);
+
+	FILE* file;
+	file = fopen(filename, "w");
+
+	RETURN_IF_ZERO(file);
+
+	/*
+	 * header row
+	 */
+
+	fputs("\"d(x,y)\"", file);
+
+	for (size_t y = 0; y < d->objects; ++y)
+	{
+		fprintf(file, ",y=%zu", y);
+	}
+
+	fputs("\n", file);
+
+	/*
+	 * contents
+	 */
+
+	for (size_t x = 0; x < d->objects; ++x)
+	{
+		fprintf(file, "x=%zu", x);
+
+		for (size_t y = 0; y < d->objects; ++y)
+		{
+			fprintf(file, ",%f", d->d[x * d->objects + y]);
+		}
+
+		fputs("\n", file);
+	}
+
+	fclose(file);
+}

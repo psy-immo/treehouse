@@ -456,3 +456,125 @@ void optimizeApproximationContext(const FormalContext B,
 
 	free(l_array);
 }
+
+/**
+ * calculates the asymmetric distances for some measurement context
+ *
+ * @param B     the measurement context
+ * @param eta   the error probabilities
+ * @param log_c the logarithms corresponding to eta
+ * @return  a new DistanceMatrix
+ */
+
+DistanceMatrix newDistanceMatrixFromContext(const FormalContext B,
+		const EtaFunction restrict eta, const LogCache log_c)
+{
+	RETURN_ZERO_IF_ZERO(B);
+	RETURN_ZERO_IF_ZERO(eta);
+	RETURN_ZERO_IF_ZERO(log_c);
+
+	const myFormalContext* restrict b;
+	b = (const myFormalContext*) B;
+
+	WARN_IF_UNEQUAL_DO(b->attributes, (int )eta->measurements, return 0);
+	WARN_IF_UNEQUAL_DO(2, eta->types, return 0);
+	WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return 0);
+
+	size_t attributes;
+	attributes = (size_t) b->attributes;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+	size_t measurements;
+	measurements = b->objects;
+
+#pragma GCC diagnostic pop
+
+	DistanceMatrix d;
+	d = newDistanceMatrix(measurements);
+
+	CommutativeProduct dxy, dyx;
+
+	dxy = newCommutativeProduct(eta->constants);
+	dyx = newCommutativeProduct(eta->constants);
+
+	/*
+	 * calculate the distances d(x,y) and d(y,x) in parallel
+	 */
+
+	for (size_t x = 0; x < measurements; ++x)
+	{
+		for (size_t y = x; y < measurements; ++y)
+		{
+			/*
+			 * set dxy and dyx to zero
+			 */
+			for (size_t i = 0; i < eta->constants; ++i)
+			{
+				dxy->match[i] = 0;
+				dxy->mismatch[i] = 0;
+
+				dyx->match[i] = 0;
+				dyx->mismatch[i] = 0;
+			}
+
+			/*
+			 * check where the attribute vectors coincide and where not
+			 */
+
+			for (size_t m = 0; m < attributes; ++m)
+			{
+				size_t eta_m0, eta_m1;
+
+				eta_m0 = eta->eta[0 * eta->constants + m];
+				eta_m1 = eta->eta[1 * eta->constants + m];
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+				if (gIm(x,b,m))
+				{
+					if (gIm(y,b,m))
+					{
+
+						dxy->match[eta_m1]++;
+						dyx->match[eta_m1]++;
+					}
+					else
+					{
+						dxy->mismatch[eta_m1]++;
+						dyx->mismatch[eta_m0]++;
+					}
+				}
+				else
+				{
+					if (gIm(y,b,m))
+					{
+						dxy->mismatch[eta_m0]++;
+						dyx->mismatch[eta_m1]++;
+					}
+					else
+					{
+						dxy->match[eta_m0]++;
+						dyx->match[eta_m0]++;
+					}
+				}
+
+#pragma GCC diagnostic pop
+			}
+
+			/*
+			 * calculate the logarithms of the likelihoods
+			 */
+
+			d->d[x * measurements + y] = logProbabilityFromProduct(log_c, dxy);
+			d->d[y * measurements + x] = logProbabilityFromProduct(log_c, dyx);
+		}
+	}
+
+	deleteCommutativeProduct(&dxy);
+	deleteCommutativeProduct(&dyx);
+
+	return d;
+}

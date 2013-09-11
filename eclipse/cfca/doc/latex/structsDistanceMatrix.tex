@@ -1,0 +1,66 @@
+\hypertarget{structsDistanceMatrix}{\section{s\-Distance\-Matrix \-Struct \-Reference}
+\label{structsDistanceMatrix}\index{s\-Distance\-Matrix@{s\-Distance\-Matrix}}
+}
+
+
+\-This structure stores the asymmetric distances between objects of some formal context.  
+
+
+
+
+{\ttfamily \#include $<$measurement.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{structsDistanceMatrix_a29d599ff7b9002cc4d88f14bae637ebf}{objects}
+\begin{DoxyCompactList}\small\item\em number of objects of the corresponding context, the matrix will have the dimension (objects x objects) \end{DoxyCompactList}\item 
+\hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} $\ast$ \hyperlink{structsDistanceMatrix_a740d78f59a68ca470cb4c1d4ad998c05}{d}
+\begin{DoxyCompactList}\small\item\em stores the distance between measurements\-: let x,y be object indices of some context, then \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This structure stores the asymmetric distances between objects of some formal context. 
+
+\-Definition at line 208 of file measurement.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structsDistanceMatrix_a740d78f59a68ca470cb4c1d4ad998c05}{\index{s\-Distance\-Matrix@{s\-Distance\-Matrix}!d@{d}}
+\index{d@{d}!sDistanceMatrix@{s\-Distance\-Matrix}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Log\-Probability}$\ast$ {\bf s\-Distance\-Matrix\-::d}}}\label{structsDistanceMatrix_a740d78f59a68ca470cb4c1d4ad998c05}
+
+
+stores the distance between measurements\-: let x,y be object indices of some context, then 
+
+d\mbox{[}x $\ast$ objects + y\mbox{]}
+
+contains the distance from x to y, which is the likelihood of measuring the attribute vector of y under the assumption that the measured object has indeed all the attributes corresponding to x. 
+
+\-Definition at line 226 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Distance\-Matrix(), and write\-Distances\-To\-File().
+
+\hypertarget{structsDistanceMatrix_a29d599ff7b9002cc4d88f14bae637ebf}{\index{s\-Distance\-Matrix@{s\-Distance\-Matrix}!objects@{objects}}
+\index{objects@{objects}!sDistanceMatrix@{s\-Distance\-Matrix}}
+\subsubsection[{objects}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf s\-Distance\-Matrix\-::objects}}}\label{structsDistanceMatrix_a29d599ff7b9002cc4d88f14bae637ebf}
+
+
+number of objects of the corresponding context, the matrix will have the dimension (objects x objects) 
+
+
+
+\-Definition at line 213 of file measurement.\-h.
+
+
+
+\-Referenced by new\-Distance\-Matrix(), and write\-Distances\-To\-File().
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/fca/common/\hyperlink{common_2measurement_8h}{measurement.\-h}\end{DoxyCompactItemize}

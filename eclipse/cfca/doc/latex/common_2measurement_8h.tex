@@ -4,8 +4,7 @@
 {\ttfamily \#include $<$stdlib.\-h$>$}\*
 {\ttfamily \#include $<$float.\-h$>$}\*
 {\ttfamily \#include $<$math.\-h$>$}\*
-\-Include dependency graph for measurement.\-h\-:
-\nopagebreak
+\-Include dependency graph for measurement.\-h\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +28,9 @@ struct \hyperlink{structsCommutativeProduct}{s\-Commutative\-Product}
 struct \hyperlink{structsConditionMap}{s\-Condition\-Map}
 \begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\item 
 struct \hyperlink{structsLogCache}{s\-Log\-Cache}
-\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\item 
+struct \hyperlink{structsDistanceMatrix}{s\-Distance\-Matrix}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the asymmetric distances between objects of some formal context. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Defines}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,7 +53,9 @@ typedef struct \*
 typedef struct \hyperlink{structsConditionMap}{s\-Condition\-Map} $\ast$ \hyperlink{common_2measurement_8h_ab2f71cb9d9b10edcc10d44f79ee40d10}{\-Condition\-Map}
 \begin{DoxyCompactList}\small\item\em \-This struct represents a map between the object sets of two formal contexts. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{structsLogCache}{s\-Log\-Cache} $\ast$ \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache}
-\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the logarithms of probabilities and of their complements. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structsDistanceMatrix}{s\-Distance\-Matrix} $\ast$ \hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix}
+\begin{DoxyCompactList}\small\item\em \-This structure stores the asymmetric distances between objects of some formal context. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -81,7 +84,13 @@ void \hyperlink{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{calcul
 \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} \hyperlink{common_2measurement_8h_a8df411530d5811c51cb675a64547eed9}{log\-Probability\-From\-Product} (const \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache} log\-\_\-c, \hyperlink{common_2measurement_8h_afb8ffb8c068ef8c9fa3677762ac85994}{\-Commutative\-Product} l)
 \begin{DoxyCompactList}\small\item\em calculate the log probability from a power vector \end{DoxyCompactList}\item 
 \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} \hyperlink{common_2measurement_8h_a6ec39ef8a7180bc340afed87c57ca604}{sum\-Up} (const \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} $\ast$restrict \-V, size\-\_\-t length, \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} lower\-\_\-bound, \hyperlink{common_2measurement_8h_a0a02860cc83aa9ce63d00855bc9058e0}{\-Log\-Probability} upper\-\_\-bound)
-\begin{DoxyCompactList}\small\item\em \-This routine calculates the sum of elements of a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-This routine calculates the sum of elements of a vector. \end{DoxyCompactList}\item 
+\hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} \hyperlink{common_2measurement_8h_ae6570aaa925f8a9155f9385de467dcbd}{new\-Distance\-Matrix} (size\-\_\-t objects)
+\begin{DoxyCompactList}\small\item\em creates a new \-Distance\-Matrix of the given size \end{DoxyCompactList}\item 
+void \hyperlink{common_2measurement_8h_a573c3990ed39b5ca911c9ef448f74703}{delete\-Distance\-Matrix} (\hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} $\ast$d)
+\begin{DoxyCompactList}\small\item\em deletes the given object and sets its pointer to zero \end{DoxyCompactList}\item 
+void \hyperlink{common_2measurement_8h_ad54d95f7de71efa2ad16ce6b133cf439}{write\-Distances\-To\-File} (const \hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} d, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em \-Writes the contents of a distance matrix to the given file in \-C\-S\-V format\-: d(x,y) will be written on the (x+1)th line to the (y+1)th column. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Define \-Documentation}
@@ -125,6 +134,13 @@ void \hyperlink{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{calcul
 
 
 \-This struct represents a map between the object sets of two formal contexts. 
+
+\hypertarget{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Distance\-Matrix@{\-Distance\-Matrix}}
+\index{\-Distance\-Matrix@{\-Distance\-Matrix}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{\-Distance\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-Distance\-Matrix} $\ast$ {\bf \-Distance\-Matrix}}}\label{common_2measurement_8h_a315318def4482768da7077f76ff0c768}
+
+
+\-This structure stores the asymmetric distances between objects of some formal context. 
 
 \hypertarget{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\index{common/measurement.\-h@{common/measurement.\-h}!\-Eta\-Function@{\-Eta\-Function}}
 \index{\-Eta\-Function@{\-Eta\-Function}!common/measurement.h@{common/measurement.\-h}}
@@ -238,7 +254,7 @@ deletes a \-Commutative\-Product and sets its pointer to zero.
 
 
 
-\-Referenced by optimize\-Condition\-Map().
+\-Referenced by new\-Distance\-Matrix\-From\-Context(), optimize\-Approximation\-Context(), and optimize\-Condition\-Map().
 
 
 \begin{DoxyCode}
@@ -292,6 +308,45 @@ deletes a \-Condition\-Map object
     free(*c);
 
     *c = 0;
+}
+\end{DoxyCode}
+\hypertarget{common_2measurement_8h_a573c3990ed39b5ca911c9ef448f74703}{\index{common/measurement.\-h@{common/measurement.\-h}!delete\-Distance\-Matrix@{delete\-Distance\-Matrix}}
+\index{delete\-Distance\-Matrix@{delete\-Distance\-Matrix}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{delete\-Distance\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf delete\-Distance\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Distance\-Matrix} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_a573c3990ed39b5ca911c9ef448f74703}
+
+
+deletes the given object and sets its pointer to zero 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em d} & \-Distance\-Matrix \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 357 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(d);
+
+    free((*d)->d);
+    free(*d);
+
+    d = 0;
 }
 \end{DoxyCode}
 \hypertarget{common_2measurement_8h_a2905b59d4a364111890224a444fd6d30}{\index{common/measurement.\-h@{common/measurement.\-h}!delete\-Eta\-Function@{delete\-Eta\-Function}}
@@ -408,7 +463,7 @@ the log probability of the product given by the vector of powers, l
 
 
 
-\-Referenced by optimize\-Condition\-Map().
+\-Referenced by new\-Distance\-Matrix\-From\-Context(), optimize\-Approximation\-Context(), and optimize\-Condition\-Map().
 
 
 \begin{DoxyCode}
@@ -427,8 +482,8 @@ the log probability of the product given by the vector of powers, l
          * 0*-inf is still -inf; but we want to enforce 0*-inf = 0
          */
         if (l->match[c] > 0)
-            l->intermediate[c] = log_c->logNotC[c] * (LogProbability) l->match[
-      c];
+            l->intermediate[c] = log_c->logNotC[c]
+                    * (LogProbability) l->match[c];
         else
             l->intermediate[c] = 0.;
 
@@ -446,8 +501,7 @@ the log probability of the product given by the vector of powers, l
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:
-\nopagebreak
+\-Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -485,7 +539,7 @@ new \-Commutative\-Product object
 
 
 
-\-Referenced by optimize\-Condition\-Map().
+\-Referenced by new\-Distance\-Matrix\-From\-Context(), optimize\-Approximation\-Context(), and optimize\-Condition\-Map().
 
 
 \begin{DoxyCode}
@@ -548,6 +602,53 @@ new \-Condition\-Map object
     c->c = calloc(objects, sizeof(size_t));
 
     return c;
+}
+\end{DoxyCode}
+\hypertarget{common_2measurement_8h_ae6570aaa925f8a9155f9385de467dcbd}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Distance\-Matrix@{new\-Distance\-Matrix}}
+\index{new\-Distance\-Matrix@{new\-Distance\-Matrix}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{new\-Distance\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Distance\-Matrix} {\bf new\-Distance\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{objects}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_ae6570aaa925f8a9155f9385de467dcbd}
+
+
+creates a new \-Distance\-Matrix of the given size 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em objects} & square matrix dimension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+the new \-Distance\-Matrix object 
+\end{DoxyReturn}
+
+
+\-Definition at line 336 of file measurement.\-c.
+
+
+
+\-References s\-Distance\-Matrix\-::d, s\-Distance\-Matrix\-::objects, and \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O\-I.
+
+
+
+\-Referenced by new\-Distance\-Matrix\-From\-Context().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZEROI(objects);
+
+    DistanceMatrix d;
+
+    d = malloc(sizeof(struct sDistanceMatrix));
+
+    d->objects = objects;
+
+    d->d = calloc(objects * objects, sizeof(LogProbability));
+
+    return d;
 }
 \end{DoxyCode}
 \hypertarget{common_2measurement_8h_aa0f12091b86c478e159761719923bd9a}{\index{common/measurement.\-h@{common/measurement.\-h}!new\-Eta\-Function@{new\-Eta\-Function}}
@@ -803,7 +904,7 @@ create a new \-Eta\-Function with the same constant for each type
 \end{DoxyReturn}
 
 
-\-Definition at line 304 of file measurement.\-c.
+\-Definition at line 305 of file measurement.\-c.
 
 
 
@@ -831,5 +932,79 @@ create a new \-Eta\-Function with the same constant for each type
     //printf("=");
 
     return sum;
+}
+\end{DoxyCode}
+\hypertarget{common_2measurement_8h_ad54d95f7de71efa2ad16ce6b133cf439}{\index{common/measurement.\-h@{common/measurement.\-h}!write\-Distances\-To\-File@{write\-Distances\-To\-File}}
+\index{write\-Distances\-To\-File@{write\-Distances\-To\-File}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{write\-Distances\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf write\-Distances\-To\-File} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Distance\-Matrix}}]{d, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_ad54d95f7de71efa2ad16ce6b133cf439}
+
+
+\-Writes the contents of a distance matrix to the given file in \-C\-S\-V format\-: d(x,y) will be written on the (x+1)th line to the (y+1)th column. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em d} & the distance matrix \\
+\hline
+{\em filename} & output file name \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 375 of file measurement.\-c.
+
+
+
+\-References s\-Distance\-Matrix\-::d, s\-Distance\-Matrix\-::objects, and \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(d);
+    RETURN_IF_ZERO(filename);
+
+    FILE* file;
+    file = fopen(filename, "w");
+
+    RETURN_IF_ZERO(file);
+
+    /*
+     * header row
+     */
+
+    fputs("\"d(x,y)\"", file);
+
+    for (size_t y = 0; y < d->objects; ++y)
+    {
+        fprintf(file, ",y=%zu", y);
+    }
+
+    fputs("\n", file);
+
+    /*
+     * contents
+     */
+
+    for (size_t x = 0; x < d->objects; ++x)
+    {
+        fprintf(file, "x=%zu", x);
+
+        for (size_t y = 0; y < d->objects; ++y)
+        {
+            fprintf(file, ",%f", d->d[x * d->objects + y]);
+        }
+
+        fputs("\n", file);
+    }
+
+    fclose(file);
 }
 \end{DoxyCode}

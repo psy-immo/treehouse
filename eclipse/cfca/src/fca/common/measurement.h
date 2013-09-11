@@ -200,4 +200,39 @@ LogProbability
 sumUp(const LogProbability * restrict  V, size_t length,
 		LogProbability lower_bound, LogProbability upper_bound);
 
+/**
+ * This structure stores the asymmetric distances between objects
+ * of some formal context.
+ */
+
+typedef struct sDistanceMatrix {
+	/**
+	 * number of objects of the corresponding context,
+	 * the matrix will have the dimension (objects x objects)
+	 */
+	size_t objects;
+
+	/**
+	 * stores the distance between measurements:
+	 * let x,y be object indices of some context, then
+	 *
+	 * d[x * objects + y]
+	 *
+	 * contains the distance from x to y,
+	 * which is the likelihood of measuring the attribute vector of y
+	 * under the assumption that the measured object has indeed all
+	 * the attributes corresponding to x.
+	 */
+	LogProbability *d;
+} *DistanceMatrix;
+
+DistanceMatrix
+newDistanceMatrix(size_t objects);
+
+void
+deleteDistanceMatrix(DistanceMatrix* d);
+
+void
+writeDistancesToFile(const DistanceMatrix d, const char* filename);
+
 #endif /* MEASUREMENT_H_ */

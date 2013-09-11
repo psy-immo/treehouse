@@ -57,7 +57,7 @@ int main(void)
 	EtaFunction eta;
 	eta = newUniformEtaFunction(2, 30);
 	eta->C[0] = 0.10; //Type I error
-	eta->C[1] = 0.10; //Type II error
+	eta->C[1] = 0.04; //Type II error
 
 	LogCache logC;
 	logC = newLogCache(eta->constants);
@@ -70,6 +70,13 @@ int main(void)
 
 	B = newFakeMeasurement(ctx,eta,experiments,&c_gen);
 	writeFormalContext(B, "/home/immo/tmp/test_B.cxt");
+
+	puts("Calculating DistanceMatrix");
+
+	DistanceMatrix d;
+	d = newDistanceMatrixFromContext(B,eta,logC);
+
+	writeDistancesToFile(d,"/home/immo/tmp/test_d.csv");
 
 	puts("Testing restorability of the condition map...");
 
@@ -107,6 +114,7 @@ int main(void)
 	deleteEtaFunction(&eta);
 	deleteFormalContext(&B);
 	deleteFormalContext(&ctx);
+	deleteDistanceMatrix(&d);
 
 	puts("done.");
 	return EXIT_SUCCESS;

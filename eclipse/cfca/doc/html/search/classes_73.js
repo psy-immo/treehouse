@@ -2,6 +2,7 @@ var searchData=
 [
   ['scommutativeproduct',['sCommutativeProduct',['../structsCommutativeProduct.html',1,'']]],
   ['sconditionmap',['sConditionMap',['../structsConditionMap.html',1,'']]],
+  ['sdistancematrix',['sDistanceMatrix',['../structsDistanceMatrix.html',1,'']]],
   ['setafunction',['sEtaFunction',['../structsEtaFunction.html',1,'']]],
   ['sformalconceptintentbulknode',['sFormalConceptIntentBulkNode',['../structsFormalConceptIntentBulkNode.html',1,'']]],
   ['sformalconceptintentbulknodev',['sFormalConceptIntentBulkNodeV',['../structsFormalConceptIntentBulkNodeV.html',1,'']]],

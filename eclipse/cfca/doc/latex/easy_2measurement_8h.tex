@@ -16,7 +16,11 @@ void \hyperlink{easy_2measurement_8h_a0d243c594867f254694b0a91409d9b87}{calculat
 \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \hyperlink{easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210}{new\-Fake\-Measurement} (const \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-I, const \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} eta, int experiments, \hyperlink{common_2measurement_8h_ab2f71cb9d9b10edcc10d44f79ee40d10}{\-Condition\-Map} $\ast$output\-\_\-c)
 \begin{DoxyCompactList}\small\item\em generates a new formal context that comprises of a pseudo-\/random fake measurement obtained from \-I with the given error probabilites and experiment count \end{DoxyCompactList}\item 
 void \hyperlink{easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092}{optimize\-Condition\-Map} (const \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-B, \hyperlink{common_2measurement_8h_ab2f71cb9d9b10edcc10d44f79ee40d10}{\-Condition\-Map} c, const \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-I, const \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} restrict eta, const \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache} log\-\_\-c)
-\begin{DoxyCompactList}\small\item\em recalculate the condition map \-C, such that the likelihood of (\-B,c,\-I,eta) is maximal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em recalculate the condition map \-C, such that the likelihood of (\-B,c,\-I,eta) is maximal \end{DoxyCompactList}\item 
+void \hyperlink{easy_2measurement_8h_a1de1f8bcc4d06953f1b5bb130389aa3f}{optimize\-Approximation\-Context} (const \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-B, const \hyperlink{common_2measurement_8h_ab2f71cb9d9b10edcc10d44f79ee40d10}{\-Condition\-Map} cmap, \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-I, const \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} restrict eta, const \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache} log\-\_\-c)
+\begin{DoxyCompactList}\small\item\em optimize the approximated context for a given measurement and condition map \end{DoxyCompactList}\item 
+\hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} \hyperlink{easy_2measurement_8h_a63b673e042e8f51a7587322bf49ab7f2}{new\-Distance\-Matrix\-From\-Context} (const \hyperlink{easy_8h_ad53dc3fc96151a44387245e6481f95a4}{\-Formal\-Context} \-B, const \hyperlink{common_2measurement_8h_ab2406aaef0ce3e9f38a79f42ce470ffb}{\-Eta\-Function} restrict eta, const \hyperlink{common_2measurement_8h_ace94e4c4dddc7766492a0f041a72963b}{\-Log\-Cache} log\-\_\-c)
+\begin{DoxyCompactList}\small\item\em calculates the asymmetric distances for some measurement context \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Function \-Documentation}
@@ -127,6 +131,167 @@ void \hyperlink{easy_2measurement_8h_a521fc75fe217d457d76687a8cea85092}{optimize
     }
 }
 \end{DoxyCode}
+\hypertarget{easy_2measurement_8h_a63b673e042e8f51a7587322bf49ab7f2}{\index{easy/measurement.\-h@{easy/measurement.\-h}!new\-Distance\-Matrix\-From\-Context@{new\-Distance\-Matrix\-From\-Context}}
+\index{new\-Distance\-Matrix\-From\-Context@{new\-Distance\-Matrix\-From\-Context}!easy/measurement.h@{easy/measurement.\-h}}
+\subsubsection[{new\-Distance\-Matrix\-From\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Distance\-Matrix} {\bf new\-Distance\-Matrix\-From\-Context} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Formal\-Context}}]{\-B, }
+\item[{const {\bf \-Eta\-Function} restrict}]{eta, }
+\item[{const {\bf \-Log\-Cache}}]{log\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{easy_2measurement_8h_a63b673e042e8f51a7587322bf49ab7f2}
+
+
+calculates the asymmetric distances for some measurement context 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-B} & the measurement context \\
+\hline
+{\em eta} & the error probabilities \\
+\hline
+{\em log\-\_\-c} & the logarithms corresponding to eta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+a new \-Distance\-Matrix 
+\end{DoxyReturn}
+
+
+\-Definition at line 469 of file measurement.\-c.
+
+
+
+\-References s\-Log\-Cache\-::constants, delete\-Commutative\-Product(), g\-Im, log\-Probability\-From\-Product(), s\-Commutative\-Product\-::match, s\-Commutative\-Product\-::mismatch, new\-Commutative\-Product(), new\-Distance\-Matrix(), \-R\-E\-T\-U\-R\-N\-\_\-\-Z\-E\-R\-O\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_ZERO_IF_ZERO(B);
+    RETURN_ZERO_IF_ZERO(eta);
+    RETURN_ZERO_IF_ZERO(log_c);
+
+    const myFormalContext* restrict b;
+    b = (const myFormalContext*) B;
+
+    WARN_IF_UNEQUAL_DO(b->attributes, (int )eta->measurements, return 0);
+    WARN_IF_UNEQUAL_DO(2, eta->types, return 0);
+    WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return 0);
+
+    size_t attributes;
+    attributes = (size_t) b->attributes;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    size_t measurements;
+    measurements = b->objects;
+
+#pragma GCC diagnostic pop
+
+    DistanceMatrix d;
+    d = newDistanceMatrix(measurements);
+
+    CommutativeProduct dxy, dyx;
+
+    dxy = newCommutativeProduct(eta->constants);
+    dyx = newCommutativeProduct(eta->constants);
+
+    /*
+     * calculate the distances d(x,y) and d(y,x) in parallel
+     */
+
+    for (size_t x = 0; x < measurements; ++x)
+    {
+        for (size_t y = x; y < measurements; ++y)
+        {
+            /*
+             * set dxy and dyx to zero
+             */
+            for (size_t i = 0; i < eta->constants; ++i)
+            {
+                dxy->match[i] = 0;
+                dxy->mismatch[i] = 0;
+
+                dyx->match[i] = 0;
+                dyx->mismatch[i] = 0;
+            }
+
+            /*
+             * check where the attribute vectors coincide and where not
+             */
+
+            for (size_t m = 0; m < attributes; ++m)
+            {
+                size_t eta_m0, eta_m1;
+
+                eta_m0 = eta->eta[0 * eta->constants + m];
+                eta_m1 = eta->eta[1 * eta->constants + m];
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+                if (gIm(x,b,m))
+                {
+                    if (gIm(y,b,m))
+                    {
+
+                        dxy->match[eta_m1]++;
+                        dyx->match[eta_m1]++;
+                    }
+                    else
+                    {
+                        dxy->mismatch[eta_m1]++;
+                        dyx->mismatch[eta_m0]++;
+                    }
+                }
+                else
+                {
+                    if (gIm(y,b,m))
+                    {
+                        dxy->mismatch[eta_m0]++;
+                        dyx->mismatch[eta_m1]++;
+                    }
+                    else
+                    {
+                        dxy->match[eta_m0]++;
+                        dyx->match[eta_m0]++;
+                    }
+                }
+
+#pragma GCC diagnostic pop
+            }
+
+            /*
+             * calculate the logarithms of the likelihoods
+             */
+
+            d->d[x * measurements + y] = logProbabilityFromProduct(log_c, dxy);
+            d->d[y * measurements + x] = logProbabilityFromProduct(log_c, dyx);
+        }
+    }
+
+    deleteCommutativeProduct(&dxy);
+    deleteCommutativeProduct(&dyx);
+
+    return d;
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{easy_2measurement_8h_a63b673e042e8f51a7587322bf49ab7f2_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210}{\index{easy/measurement.\-h@{easy/measurement.\-h}!new\-Fake\-Measurement@{new\-Fake\-Measurement}}
 \index{new\-Fake\-Measurement@{new\-Fake\-Measurement}!easy/measurement.h@{easy/measurement.\-h}}
 \subsubsection[{new\-Fake\-Measurement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Formal\-Context} {\bf new\-Fake\-Measurement} (
@@ -178,8 +343,13 @@ a new \-Formal\-Context object
 
     WARN_IF_UNEQUAL_DO(i->attributes, (int ) eta->measurements, return 0);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
     if (output_c)
         *output_c = newConditionMap(experiments);
+
+#pragma GCC diagnostic pop
 
     myFormalContext *b;
     b = (myFormalContext *) newFormalContext(experiments, i->attributes);
@@ -192,8 +362,13 @@ a new \-Formal\-Context object
                                 (double) RAND_MAX * (double)i->objects), i->
       objects-1);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
         if (output_c)
             (*output_c)->c[x] = c_x;
+
+#pragma GCC diagnostic pop
 
         for (int m = 0; m < i->attributes; ++m)
         {
@@ -218,12 +393,210 @@ a new \-Formal\-Context object
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:
-\nopagebreak
+\-Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=328pt]{easy_2measurement_8h_a9f03ccc14548b541ae120c6b869c1210_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{easy_2measurement_8h_a1de1f8bcc4d06953f1b5bb130389aa3f}{\index{easy/measurement.\-h@{easy/measurement.\-h}!optimize\-Approximation\-Context@{optimize\-Approximation\-Context}}
+\index{optimize\-Approximation\-Context@{optimize\-Approximation\-Context}!easy/measurement.h@{easy/measurement.\-h}}
+\subsubsection[{optimize\-Approximation\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf optimize\-Approximation\-Context} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Formal\-Context}}]{\-B, }
+\item[{const {\bf \-Condition\-Map}}]{cmap, }
+\item[{{\bf \-Formal\-Context}}]{\-I, }
+\item[{const {\bf \-Eta\-Function} restrict}]{eta, }
+\item[{const {\bf \-Log\-Cache}}]{log\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{easy_2measurement_8h_a1de1f8bcc4d06953f1b5bb130389aa3f}
+
+
+optimize the approximated context for a given measurement and condition map 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-B} & the measurement context \\
+\hline
+{\em cmap} & condition map \\
+\hline
+{\em \-I} & output\-: new approximated context \\
+\hline
+{\em eta} & the error probabilities \\
+\hline
+{\em log\-\_\-c} & log constants corresponding to eta \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 314 of file measurement.\-c.
+
+
+
+\-References smy\-Formal\-Context\-::attributes, s\-Condition\-Map\-::c, \-C\-E\-L\-L, \-C\-L\-E\-A\-R, s\-Log\-Cache\-::constants, \-C\-R\-O\-S\-S, delete\-Commutative\-Product(), g\-Im, log\-Probability\-From\-Product(), new\-Commutative\-Product(), smy\-Formal\-Context\-::objects, s\-Condition\-Map\-::objects, \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O, and \-W\-A\-R\-N\-\_\-\-I\-F\-\_\-\-U\-N\-E\-Q\-U\-A\-L\-\_\-\-D\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(B);
+    RETURN_IF_ZERO(cmap);
+    RETURN_IF_ZERO(I);
+    RETURN_IF_ZERO(eta);
+    RETURN_IF_ZERO(log_c);
+
+    const myFormalContext* restrict b;
+    b = (const myFormalContext*) B;
+
+    myFormalContext* i;
+    i = (myFormalContext*) I;
+
+    WARN_IF_UNEQUAL_DO(b->objects, (int )cmap->objects, return);
+    WARN_IF_UNEQUAL_DO(b->attributes, i->attributes, return);
+    WARN_IF_UNEQUAL_DO(b->attributes, (int )eta->measurements, return);
+    WARN_IF_UNEQUAL_DO(2, eta->types, return);
+    WARN_IF_UNEQUAL_DO(eta->constants, log_c->constants, return);
+
+    size_t attributes;
+    attributes = (size_t) b->attributes;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+    size_t measurements;
+    measurements = b->objects;
+
+    size_t conditions;
+    conditions = i->objects;
+
+#pragma GCC diagnostic pop
+
+    CommutativeProduct *l_array;
+
+    l_array = malloc(sizeof(CommutativeProduct) * conditions * 2);
+
+    CommutativeProduct restrict * l_cross;
+    l_cross = (CommutativeProduct restrict *) l_array;
+
+    CommutativeProduct restrict * l_gap;
+    l_gap = (CommutativeProduct restrict *) (l_array + conditions);
+
+    for (size_t c = 0; c < conditions; ++c)
+    {
+        l_cross[c] = newCommutativeProduct(eta->constants);
+        l_gap[c] = newCommutativeProduct(eta->constants);
+    }
+
+    /*
+     * check column wise, whether there should be a cross in the incidence
+       matrix I
+     * or not.
+     */
+
+    for (size_t a = 0; a < attributes; ++a)
+    {
+        size_t eta_a0, eta_a1;
+
+        eta_a0 = eta->eta[0 * eta->constants + a];
+        eta_a1 = eta->eta[1 * eta->constants + a];
+
+        for (size_t c = 0; c < conditions; ++c)
+        {
+            for (size_t i = 0; i < eta->constants; ++i)
+            {
+                l_cross[c]->match[i] = 0;
+                l_cross[c]->mismatch[i] = 0;
+                l_gap[c]->match[i] = 0;
+                l_gap[c]->mismatch[i] = 0;
+            }
+        }
+
+        /*
+         * count how often we measured attribute a for each condition cmap
+         * and fill it in the corresponding CommutativeProduct
+         */
+
+        for (size_t o = 0; o < measurements; ++o)
+        {
+            size_t condition;
+            condition = cmap->c[o];
+
+            /*
+             * add up in parallel both error vectors for both cross and gap
+       case
+             * in the approximation
+             */
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+            if (gIm(o, b, a))
+            {
+                l_cross[condition]->match[eta_a1]++;
+                l_gap[condition]->mismatch[eta_a0]++;
+            }
+            else
+            {
+                l_cross[condition]->mismatch[eta_a1]++;
+                l_gap[condition]->match[eta_a0]++;
+            }
+
+#pragma GCC diagnostic pop
+        }
+
+        /*
+         * now each l_cross[c] and l_gap[c] contain the same indexed factors
+       for
+         * the likelihoods with and without a cross for c I a
+         * we sum up both and the bigger wins
+         */
+
+        for (size_t c = 0; c < conditions; ++c)
+        {
+            LogProbability cross;
+            LogProbability gap;
+
+            cross = logProbabilityFromProduct(log_c, l_cross[c]);
+            gap = logProbabilityFromProduct(log_c, l_gap[c]);
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-conversion"
+
+            if (gap <= cross)
+            {
+                CROSS(CELL(c,i,a));
+            }
+            else
+            {
+                CLEAR(CELL(c,i,a));
+            }
+
+#pragma GCC diagnostic pop
+        }
+    }
+
+    for (size_t c = 0; c < conditions; ++c)
+    {
+        deleteCommutativeProduct(l_array + c);
+        deleteCommutativeProduct(l_array + c + conditions);
+    }
+
+    free(l_array);
+}
+\end{DoxyCode}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{easy_2measurement_8h_a1de1f8bcc4d06953f1b5bb130389aa3f_cgraph}
 \end{center}
 \end{figure}
 
@@ -258,7 +631,7 @@ recalculate the condition map \-C, such that the likelihood of (\-B,c,\-I,eta) i
 \end{DoxyParams}
 
 
-\-Definition at line 161 of file measurement.\-c.
+\-Definition at line 171 of file measurement.\-c.
 
 
 
@@ -359,7 +732,7 @@ recalculate the condition map \-C, such that the likelihood of (\-B,c,\-I,eta) i
                     {
 #pragma GCC diagnostic pop
                         /*
-                         * eta(m,0)
+                         * eta(m,1)
                          */
                         l->mismatch[eta->eta[1 * eta->constants + m]]++;
                         //printf("_");
@@ -405,8 +778,7 @@ recalculate the condition map \-C, such that the likelihood of (\-B,c,\-I,eta) i
 \end{DoxyCode}
 
 
-\-Here is the call graph for this function\-:
-\nopagebreak
+\-Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

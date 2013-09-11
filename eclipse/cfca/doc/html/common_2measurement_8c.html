@@ -125,6 +125,12 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the log probability from a power vector  <a href="#a8df411530d5811c51cb675a64547eed9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a6ec39ef8a7180bc340afed87c57ca604">sumUp</a> (const <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> *restrict V, size_t length, <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> lower_bound, <a class="el" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> upper_bound)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This routine calculates the sum of elements of a vector.  <a href="#a6ec39ef8a7180bc340afed87c57ca604"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ae6570aaa925f8a9155f9385de467dcbd">newDistanceMatrix</a> (size_t objects)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new DistanceMatrix of the given size  <a href="#ae6570aaa925f8a9155f9385de467dcbd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a573c3990ed39b5ca911c9ef448f74703">deleteDistanceMatrix</a> (<a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> *d)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the given object and sets its pointer to zero  <a href="#a573c3990ed39b5ca911c9ef448f74703"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ad54d95f7de71efa2ad16ce6b133cf439">writeDistancesToFile</a> (const <a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> d, const char *filename)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the contents of a distance matrix to the given file in CSV format: d(x,y) will be written on the (x+1)th line to the (y+1)th column.  <a href="#ad54d95f7de71efa2ad16ce6b133cf439"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens </p>
@@ -216,7 +222,7 @@ Functions</h2></td></tr>
 
 <p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00161">optimizeConditionMap()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00469">newDistanceMatrixFromContext()</a>, <a class="el" href="easy_2measurement_8c_source.html#l00314">optimizeApproximationContext()</a>, and <a class="el" href="easy_2measurement_8c_source.html#l00171">optimizeConditionMap()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(p);
     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(*p);
@@ -267,6 +273,45 @@ Functions</h2></td></tr>
     free(*c);
 
     *c = 0;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a573c3990ed39b5ca911c9ef448f74703"></a><!-- doxytag: member="measurement.c::deleteDistanceMatrix" ref="a573c3990ed39b5ca911c9ef448f74703" args="(DistanceMatrix *d)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="common_2measurement_8h.html#a573c3990ed39b5ca911c9ef448f74703">deleteDistanceMatrix</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>deletes the given object and sets its pointer to zero </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>DistanceMatrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00357">357</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+
+    free((*d)-&gt;d);
+    free(*d);
+
+    d = 0;
 }
 </pre></div>
 </div>
@@ -390,9 +435,9 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00261">261</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
-<p>References <a class="el" href="common_2measurement_8h_source.html#l00106">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00171">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00126">sCommutativeProduct::intermediate</a>, <a class="el" href="common_2measurement_8h_source.html#l00033">LOG_PROB_LOWER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00034">LOG_PROB_UPPER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00177">sLogCache::logC</a>, <a class="el" href="common_2measurement_8h_source.html#l00183">sLogCache::logNotC</a>, <a class="el" href="common_2measurement_8h_source.html#l00118">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00112">sCommutativeProduct::mismatch</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="common_2measurement_8c_source.html#l00304">sumUp()</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00106">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00171">sLogCache::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00126">sCommutativeProduct::intermediate</a>, <a class="el" href="common_2measurement_8h_source.html#l00033">LOG_PROB_LOWER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00034">LOG_PROB_UPPER_BOUND</a>, <a class="el" href="common_2measurement_8h_source.html#l00177">sLogCache::logC</a>, <a class="el" href="common_2measurement_8h_source.html#l00183">sLogCache::logNotC</a>, <a class="el" href="common_2measurement_8h_source.html#l00118">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00112">sCommutativeProduct::mismatch</a>, <a class="el" href="common_2macros_8h_source.html#l00036">RETURN_ZERO_IF_ZERO</a>, <a class="el" href="common_2measurement_8c_source.html#l00305">sumUp()</a>, and <a class="el" href="common_2macros_8h_source.html#l00049">WARN_IF_UNEQUAL_DO</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00161">optimizeConditionMap()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00469">newDistanceMatrixFromContext()</a>, <a class="el" href="easy_2measurement_8c_source.html#l00314">optimizeApproximationContext()</a>, and <a class="el" href="easy_2measurement_8c_source.html#l00171">optimizeConditionMap()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(log_c);
     <a class="code" href="common_2macros_8h.html#aecdd5bdf585ad172473c37e40bfac5ff" title="checks whether x == (void*)0, and returns 0;">RETURN_ZERO_IF_ZERO</a>(l);
@@ -408,7 +453,8 @@ Functions</h2></td></tr>
 <span class="comment">         * 0*-inf is still -inf; but we want to enforce 0*-inf = 0</span>
 <span class="comment">         */</span>
         <span class="keywordflow">if</span> (l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c] &gt; 0)
-            l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = log_c-&gt;<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>[c] * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c];
+            l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = log_c-&gt;<a class="code" href="structsLogCache.html#aa9bfdee3aa5ff16f6ef8e3bef6da8f9c" title="logarithms of the complementary probabilities, i.e.">logNotC</a>[c]
+                    * (<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>) l-&gt;<a class="code" href="structsCommutativeProduct.html#ae78261dbaf0a6455774a84836fe7334d" title="The represents the second term part.">match</a>[c];
         <span class="keywordflow">else</span>
             l-&gt;<a class="code" href="structsCommutativeProduct.html#a62301df4ed7d412fb3e45fc7f8d6b0f3" title="This is an intermediate helper structure used to calculate the log probabilities: we need to store th...">intermediate</a>[c] = 0.;
 
@@ -463,7 +509,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="common_2measurement_8h_source.html#l00106">sCommutativeProduct::constants</a>, <a class="el" href="common_2measurement_8h_source.html#l00126">sCommutativeProduct::intermediate</a>, <a class="el" href="common_2measurement_8h_source.html#l00118">sCommutativeProduct::match</a>, <a class="el" href="common_2measurement_8h_source.html#l00112">sCommutativeProduct::mismatch</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
 
-<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00161">optimizeConditionMap()</a>.</p>
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00469">newDistanceMatrixFromContext()</a>, <a class="el" href="easy_2measurement_8c_source.html#l00314">optimizeApproximationContext()</a>, and <a class="el" href="easy_2measurement_8c_source.html#l00171">optimizeConditionMap()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(constants);
 
@@ -521,6 +567,51 @@ Here is the call graph for this function:</div>
     c-&gt;<a class="code" href="structsConditionMap.html#a8fba8e129aa41cc4fd2f1898e83c2f28" title="the object index of the image, i.e.">c</a> = calloc(objects, <span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>));
 
     <span class="keywordflow">return</span> c;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ae6570aaa925f8a9155f9385de467dcbd"></a><!-- doxytag: member="measurement.c::newDistanceMatrix" ref="ae6570aaa925f8a9155f9385de467dcbd" args="(size_t objects)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> <a class="el" href="common_2measurement_8h.html#ae6570aaa925f8a9155f9385de467dcbd">newDistanceMatrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>objects</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>creates a new DistanceMatrix of the given size </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects</td><td>square matrix dimension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the new DistanceMatrix object </dd></dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00336">336</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00226">sDistanceMatrix::d</a>, <a class="el" href="common_2measurement_8h_source.html#l00213">sDistanceMatrix::objects</a>, and <a class="el" href="common_2macros_8h_source.html#l00042">RETURN_ZERO_IF_ZEROI</a>.</p>
+
+<p>Referenced by <a class="el" href="easy_2measurement_8c_source.html#l00469">newDistanceMatrixFromContext()</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="common_2macros_8h.html#a204342bc46513e130770caef51b50d55" title="checks whether x == 0, and returns 0;">RETURN_ZERO_IF_ZEROI</a>(objects);
+
+    <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a> d;
+
+    d = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">sDistanceMatrix</a>));
+
+    d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a> = objects;
+
+    d-&gt;<a class="code" href="structsDistanceMatrix.html#a740d78f59a68ca470cb4c1d4ad998c05" title="stores the distance between measurements: let x,y be object indices of some context, then">d</a> = calloc(objects * objects, <span class="keyword">sizeof</span>(<a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a>));
+
+    <span class="keywordflow">return</span> d;
 }
 </pre></div>
 </div>
@@ -818,7 +909,7 @@ Here is the call graph for this function:</div>
 </p>
  </dd></dl>
 
-<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00304">304</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00305">305</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
 
 <p>Referenced by <a class="el" href="common_2measurement_8c_source.html#l00261">logProbabilityFromProduct()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -845,6 +936,88 @@ Here is the call graph for this function:</div>
 </pre></div>
 </div>
 </div>
+<a class="anchor" id="ad54d95f7de71efa2ad16ce6b133cf439"></a><!-- doxytag: member="measurement.c::writeDistancesToFile" ref="ad54d95f7de71efa2ad16ce6b133cf439" args="(const DistanceMatrix d, const char *filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="common_2measurement_8h.html#ad54d95f7de71efa2ad16ce6b133cf439">writeDistancesToFile</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Writes the contents of a distance matrix to the given file in CSV format: d(x,y) will be written on the (x+1)th line to the (y+1)th column. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the distance matrix </td></tr>
+    <tr><td class="paramname">filename</td><td>output file name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00375">375</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>References <a class="el" href="common_2measurement_8h_source.html#l00226">sDistanceMatrix::d</a>, <a class="el" href="common_2measurement_8h_source.html#l00213">sDistanceMatrix::objects</a>, and <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(filename);
+
+    FILE* file;
+    file = fopen(filename, <span class="stringliteral">&quot;w&quot;</span>);
+
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(file);
+
+    <span class="comment">/*</span>
+<span class="comment">     * header row</span>
+<span class="comment">     */</span>
+
+    fputs(<span class="stringliteral">&quot;\&quot;d(x,y)\&quot;&quot;</span>, file);
+
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++y)
+    {
+        fprintf(file, <span class="stringliteral">&quot;,y=%zu&quot;</span>, y);
+    }
+
+    fputs(<span class="stringliteral">&quot;\n&quot;</span>, file);
+
+    <span class="comment">/*</span>
+<span class="comment">     * contents</span>
+<span class="comment">     */</span>
+
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++x)
+    {
+        fprintf(file, <span class="stringliteral">&quot;x=%zu&quot;</span>, x);
+
+        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a>; ++y)
+        {
+            fprintf(file, <span class="stringliteral">&quot;,%f&quot;</span>, d-&gt;<a class="code" href="structsDistanceMatrix.html#a740d78f59a68ca470cb4c1d4ad998c05" title="stores the distance between measurements: let x,y be object indices of some context, then">d</a>[x * d-&gt;<a class="code" href="structsDistanceMatrix.html#a29d599ff7b9002cc4d88f14bae637ebf" title="number of objects of the corresponding context, the matrix will have the dimension (objects x objects...">objects</a> + y]);
+        }
+
+        fputs(<span class="stringliteral">&quot;\n&quot;</span>, file);
+    }
+
+    fclose(file);
+}
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -863,7 +1036,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 27 2013 14:50:57 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 11 2013 13:20:10 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
