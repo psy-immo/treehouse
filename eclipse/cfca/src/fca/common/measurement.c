@@ -433,6 +433,9 @@ void normalizeDistanceMatrix(DistanceMatrix restrict d)
 
 		for (size_t x = 0; x < d->objects; ++x)
 		{
+			/*
+			 * d(x,y) <- d(x,y) - d(y,y)
+			 */
 			d->d[x*d->objects + y] -= dyy;
 		}
 	}

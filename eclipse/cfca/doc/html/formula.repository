@@ -6,3 +6,4 @@
 \form#5:\[ \sum_{i=0, \mathrm{lower_bound}\leq i < \mathrm{upper_bound}}^{ \mathrm{length}} V(i) \]
 \form#6:\[ \sum_{i=0: \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \]
 \form#7:\[ \sum_{i=0, \mathrm{lower\_bound}\leq V(i) < \mathrm{upper\_bound}}^{ \mathrm{length}} V(i) \]
+\form#8:\[ d'(x,y) = d(x,y) - d(y,y) \]

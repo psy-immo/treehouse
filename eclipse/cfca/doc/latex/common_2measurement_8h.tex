@@ -90,7 +90,9 @@ void \hyperlink{common_2measurement_8h_aea95ce7469fb27ec5a2fa98d099df572}{calcul
 void \hyperlink{common_2measurement_8h_a573c3990ed39b5ca911c9ef448f74703}{delete\-Distance\-Matrix} (\hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} $\ast$d)
 \begin{DoxyCompactList}\small\item\em deletes the given object and sets its pointer to zero \end{DoxyCompactList}\item 
 void \hyperlink{common_2measurement_8h_ad54d95f7de71efa2ad16ce6b133cf439}{write\-Distances\-To\-File} (const \hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} d, const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em \-Writes the contents of a distance matrix to the given file in \-C\-S\-V format\-: d(x,y) will be written on the (x+1)th line to the (y+1)th column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-Writes the contents of a distance matrix to the given file in \-C\-S\-V format\-: d(x,y) will be written on the (x+1)th line to the (y+1)th column. \end{DoxyCompactList}\item 
+void \hyperlink{common_2measurement_8h_a6441c79f9d24d9b47cf21dc69ab7638b}{normalize\-Distance\-Matrix} (\hyperlink{common_2measurement_8h_a315318def4482768da7077f76ff0c768}{\-Distance\-Matrix} restrict d)
+\begin{DoxyCompactList}\small\item\em normalizes the distance matrix by replacing d with d', which is defined to be \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Define \-Documentation}
@@ -874,6 +876,56 @@ create a new \-Eta\-Function with the same constant for each type
 \end{figure}
 
 
+\hypertarget{common_2measurement_8h_a6441c79f9d24d9b47cf21dc69ab7638b}{\index{common/measurement.\-h@{common/measurement.\-h}!normalize\-Distance\-Matrix@{normalize\-Distance\-Matrix}}
+\index{normalize\-Distance\-Matrix@{normalize\-Distance\-Matrix}!common/measurement.h@{common/measurement.\-h}}
+\subsubsection[{normalize\-Distance\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf normalize\-Distance\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Distance\-Matrix} restrict}]{d}
+\end{DoxyParamCaption}
+)}}\label{common_2measurement_8h_a6441c79f9d24d9b47cf21dc69ab7638b}
+
+
+normalizes the distance matrix by replacing d with d', which is defined to be 
+
+\[ d'(x,y) = d(x,y) - d(y,y) \]
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em d} & distance matrix \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 425 of file measurement.\-c.
+
+
+
+\-References \-R\-E\-T\-U\-R\-N\-\_\-\-I\-F\-\_\-\-Z\-E\-R\-O.
+
+
+
+\-Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    RETURN_IF_ZERO(d);
+
+    for (size_t y = 0; y < d->objects; ++y)
+    {
+        LogProbability dyy;
+        dyy = d->d[y*d->objects + y];
+
+        for (size_t x = 0; x < d->objects; ++x)
+        {
+            /*
+             * d(x,y) <- d(x,y) - d(y,y)
+             */
+            d->d[x*d->objects + y] -= dyy;
+        }
+    }
+}
+\end{DoxyCode}
 \hypertarget{common_2measurement_8h_a6ec39ef8a7180bc340afed87c57ca604}{\index{common/measurement.\-h@{common/measurement.\-h}!sum\-Up@{sum\-Up}}
 \index{sum\-Up@{sum\-Up}!common/measurement.h@{common/measurement.\-h}}
 \subsubsection[{sum\-Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Log\-Probability} {\bf sum\-Up} (

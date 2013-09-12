@@ -366,6 +366,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00413"></a>00413 
 <a name="l00414"></a>00414     fclose(file);
 <a name="l00415"></a>00415 }
+<a name="l00416"></a>00416 
+<a name="l00425"></a><a class="code" href="common_2measurement_8h.html#a6441c79f9d24d9b47cf21dc69ab7638b">00425</a> <span class="keywordtype">void</span> <a class="code" href="common_2measurement_8c.html#a6441c79f9d24d9b47cf21dc69ab7638b" title="normalizes the distance matrix by replacing d with d&#39;, which is defined to be">normalizeDistanceMatrix</a>(<a class="code" href="structsDistanceMatrix.html" title="This structure stores the asymmetric distances between objects of some formal context.">DistanceMatrix</a> restrict d)
+<a name="l00426"></a>00426 {
+<a name="l00427"></a>00427     <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+<a name="l00428"></a>00428 
+<a name="l00429"></a>00429     <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;objects; ++y)
+<a name="l00430"></a>00430     {
+<a name="l00431"></a>00431         <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> dyy;
+<a name="l00432"></a>00432         dyy = d-&gt;d[y*d-&gt;objects + y];
+<a name="l00433"></a>00433 
+<a name="l00434"></a>00434         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; d-&gt;objects; ++x)
+<a name="l00435"></a>00435         {
+<a name="l00436"></a>00436             <span class="comment">/*</span>
+<a name="l00437"></a>00437 <span class="comment">             * d(x,y) &lt;- d(x,y) - d(y,y)</span>
+<a name="l00438"></a>00438 <span class="comment">             */</span>
+<a name="l00439"></a>00439             d-&gt;d[x*d-&gt;objects + y] -= dyy;
+<a name="l00440"></a>00440         }
+<a name="l00441"></a>00441     }
+<a name="l00442"></a>00442 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -384,7 +403,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 11 2013 13:20:10 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 12 2013 12:14:46 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -131,6 +131,8 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the given object and sets its pointer to zero  <a href="#a573c3990ed39b5ca911c9ef448f74703"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#ad54d95f7de71efa2ad16ce6b133cf439">writeDistancesToFile</a> (const <a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> d, const char *filename)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the contents of a distance matrix to the given file in CSV format: d(x,y) will be written on the (x+1)th line to the (y+1)th column.  <a href="#ad54d95f7de71efa2ad16ce6b133cf439"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_2measurement_8c.html#a6441c79f9d24d9b47cf21dc69ab7638b">normalizeDistanceMatrix</a> (<a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> restrict d)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">normalizes the distance matrix by replacing d with d', which is defined to be  <a href="#a6441c79f9d24d9b47cf21dc69ab7638b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>measurement.c, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psychologie des Lernen und Lehrens </p>
@@ -857,6 +859,57 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a6441c79f9d24d9b47cf21dc69ab7638b"></a><!-- doxytag: member="measurement.c::normalizeDistanceMatrix" ref="a6441c79f9d24d9b47cf21dc69ab7638b" args="(DistanceMatrix restrict d)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="common_2measurement_8h.html#a6441c79f9d24d9b47cf21dc69ab7638b">normalizeDistanceMatrix</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_2measurement_8h.html#a315318def4482768da7077f76ff0c768">DistanceMatrix</a> restrict&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>normalizes the distance matrix by replacing d with d', which is defined to be </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ d'(x,y) = d(x,y) - d(y,y) \]" src="form_8.png"/>
+</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>distance matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="common_2measurement_8c_source.html#l00425">425</a> of file <a class="el" href="common_2measurement_8c_source.html">measurement.c</a>.</p>
+
+<p>References <a class="el" href="common_2macros_8h_source.html#l00029">RETURN_IF_ZERO</a>.</p>
+
+<p>Referenced by <a class="el" href="cfca_8c_source.html#l00034">main()</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="common_2macros_8h.html#a740a16a7eb505fa8d595a191feed0941" title="fca_macros.h, (c) 2013, Immanuel Albrecht; Dresden University of Technology, Professur für die Psycho...">RETURN_IF_ZERO</a>(d);
+
+    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; d-&gt;objects; ++y)
+    {
+        <a class="code" href="common_2measurement_8h.html#a0a02860cc83aa9ce63d00855bc9058e0">LogProbability</a> dyy;
+        dyy = d-&gt;d[y*d-&gt;objects + y];
+
+        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; d-&gt;objects; ++x)
+        {
+            <span class="comment">/*</span>
+<span class="comment">             * d(x,y) &lt;- d(x,y) - d(y,y)</span>
+<span class="comment">             */</span>
+            d-&gt;d[x*d-&gt;objects + y] -= dyy;
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
 <a class="anchor" id="a6ec39ef8a7180bc340afed87c57ca604"></a><!-- doxytag: member="measurement.c::sumUp" ref="a6ec39ef8a7180bc340afed87c57ca604" args="(const LogProbability *restrict V, size_t length, LogProbability lower_bound, LogProbability upper_bound)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1036,7 +1089,7 @@ Here is the call graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 11 2013 13:20:10 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 12 2013 12:14:46 for C formal concept analysis library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

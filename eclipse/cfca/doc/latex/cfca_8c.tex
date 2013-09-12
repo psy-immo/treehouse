@@ -50,7 +50,7 @@ start tests
 
 
 
-\-References s\-Eta\-Function\-::\-C, s\-Condition\-Map\-::c, calculate\-Logs(), s\-Eta\-Function\-::constants, delete\-Condition\-Map(), delete\-Distance\-Matrix(), delete\-Eta\-Function(), delete\-Formal\-Context, delete\-Log\-Cache(), new\-Condition\-Map(), new\-Distance\-Matrix\-From\-Context(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-Random, new\-Log\-Cache(), new\-Uniform\-Eta\-Function(), s\-Condition\-Map\-::objects, optimize\-Approximation\-Context(), optimize\-Condition\-Map(), write\-Distances\-To\-File(), and write\-Formal\-Context.
+\-References s\-Eta\-Function\-::\-C, s\-Condition\-Map\-::c, calculate\-Logs(), s\-Eta\-Function\-::constants, delete\-Condition\-Map(), delete\-Distance\-Matrix(), delete\-Eta\-Function(), delete\-Formal\-Context, delete\-Log\-Cache(), new\-Condition\-Map(), new\-Distance\-Matrix\-From\-Context(), new\-Fake\-Measurement(), new\-Formal\-Context\-From\-Random, new\-Log\-Cache(), new\-Uniform\-Eta\-Function(), normalize\-Distance\-Matrix(), s\-Condition\-Map\-::objects, optimize\-Approximation\-Context(), optimize\-Condition\-Map(), write\-Distances\-To\-File(), and write\-Formal\-Context.
 
 
 \begin{DoxyCode}
@@ -91,6 +91,9 @@ start tests
     d = newDistanceMatrixFromContext(B,eta,logC);
 
     writeDistancesToFile(d,"/home/immo/tmp/test_d.csv");
+
+    normalizeDistanceMatrix(d);
+    writeDistancesToFile(d,"/home/immo/tmp/test_dnorm.csv");
 
     puts("Testing restorability of the condition map...");
 
