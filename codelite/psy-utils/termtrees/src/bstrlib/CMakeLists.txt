@@ -1,0 +1,1 @@
+add_library(bstrlib bstrlib.c bstraux.c bsafe.c)

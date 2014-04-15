@@ -1,0 +1,2 @@
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/build/src/CMakeFiles/../termtrees.dir
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/build/src/bstrlib/CMakeFiles/bstrlib.dir

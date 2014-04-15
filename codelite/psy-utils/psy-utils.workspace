@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="psy-utils" Database="">
-  <Project Name="termTrees" Path="termTrees/termTrees.project" Active="Yes"/>
+  <Project Name="termtrees" Path="termtrees/termtrees.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
-      <Project Name="termTrees" ConfigName="Debug"/>
+      <Project Name="termtrees" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="termTrees" ConfigName="Release"/>
+      <Project Name="termtrees" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
