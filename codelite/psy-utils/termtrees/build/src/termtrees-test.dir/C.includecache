@@ -16,6 +16,10 @@ limits.h
 ctype.h
 -
 
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/cli.c
+termtrees.h
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
+
 /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 bstrlib/bstrlib.h
 /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
@@ -35,8 +39,4 @@ cprops/trie.h
 -
 assert.h
 -
-
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/test.c
-termtrees.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 

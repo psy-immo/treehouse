@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/../bstrlib/bstrlib.h
+stdarg.h
+-
+string.h
+-
+limits.h
+-
+ctype.h
+-
+
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+cprops/heap.h
+-
+cprops/util.h
+-
+cprops/hashtable.h
+-
+cprops/vector.h
+-
+cprops/multimap.h
+-
+stdlib.h
+-
+
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/test.c
+stdio.h
+-
+assert.h
+-
+hygra.h
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+../bstrlib/bstrlib.h
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/../bstrlib/bstrlib.h
+

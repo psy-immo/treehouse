@@ -8,7 +8,7 @@ globals* globals_alloc() {
 	globals *g = malloc(sizeof(globals));
 	assert(g);
 
-	g->sorts = cp_trie_create_trie(COLLECTION_MODE_DEEP, 0, free);
+	g->sorts = cp_trie_create_trie(COLLECTION_MODE_DEEP, 0, bcstrfree);
 	assert(g->sorts);
 
 	g->sorts_N = 0;
@@ -26,6 +26,9 @@ globals* globals_alloc() {
 			op_s_key, op_cmp, op_dup, free); /* TODO: CHANGE TO REFLECT THE TARGET SORT OF THE TERM ONLY */
 
 	g->f = stdout;
+	
+	g->bstring_keep = cp_vector_create(1);
+	assert(g->bstring_keep);
 
 	return g;
 }
@@ -38,8 +41,10 @@ void globals_free(globals **p) {
 	cp_multimap_destroy(g->terms);
 
 	cp_multimap_destroy(g->ops);
+	
+	cp_vector_destroy_custom(g->op_names,bcstrfree);
 
-	cp_vector_destroy_custom(g->op_names, free);
+	cp_vector_destroy_custom(g->bstring_keep, bdestroy);
 
 	free(*p);
 	*p = 0;
@@ -62,6 +67,8 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 	cfg_t *cfg;
 
 	int i, j, N, err;
+
+	bstring bsortname, bopname;
 
 	char *found, *sortname, *opname;
 	op_signature *ops = malloc(sizeof(op_signature)+sizeof(char*)*MAX_OP_INPUTS);
@@ -87,7 +94,10 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 		found = cp_trie_exact_match(vars->sorts, sortname);
 		if (!found)
 		{
-			sortname = strdup(sortname);
+			bsortname = bfromcstr(sortname);
+			cp_vector_add_element(vars->bstring_keep,bsortname);
+			sortname = bstr2cstr(bsortname,' ');
+			
 			cp_trie_add(vars->sorts, sortname, sortname);
 			vars->sorts_N += 1;
 		}
@@ -102,8 +112,9 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 	{
 
 		cfg_t *op = cfg_getnsec(cfg, "op", i);
-		opname = strdup(cfg_title(op));
-
+		bopname = bfromcstr(cfg_title(op));
+		cp_vector_add_element(vars->bstring_keep,bopname);
+		opname = bstr2cstr(bopname,' ');
 		cp_vector_add_element(vars->op_names, opname);
 
 
@@ -119,7 +130,10 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 			fputs(sortname,stderr);
 			fputs("\n",stderr);
 			/** fix it */
-			sortname = strdup(sortname);
+			bsortname = bfromcstr(sortname);
+			cp_vector_add_element(vars->bstring_keep,bsortname);
+			sortname = bstr2cstr(bsortname,' ');
+			
 			cp_trie_add(vars->sorts, sortname, sortname);
 			vars->sorts_N += 1;
 			found = sortname;
@@ -143,7 +157,9 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 				fputs(sortname,stderr);
 				fputs("\n",stderr);
 				/** fix it */
-				sortname = strdup(sortname);
+				bsortname = bfromcstr(sortname);
+				cp_vector_add_element(vars->bstring_keep,bsortname);
+				sortname = bstr2cstr(bsortname,' ');
 				cp_trie_add(vars->sorts, sortname, sortname);
 				vars->sorts_N += 1;
 				found = sortname;

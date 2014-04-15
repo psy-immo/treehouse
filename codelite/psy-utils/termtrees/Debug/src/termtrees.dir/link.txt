@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O2 -Wall -g    CMakeFiles/../termtrees.dir/main.c.o CMakeFiles/../termtrees.dir/op_signature.c.o CMakeFiles/../termtrees.dir/cli.c.o CMakeFiles/../termtrees.dir/terms.c.o CMakeFiles/../termtrees.dir/termtrees.c.o  -o ../termtrees -rdynamic bstrlib/libbstrlib.a -lconfuse -lcprops libhygra/libhygra.a 

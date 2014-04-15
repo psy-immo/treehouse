@@ -18,6 +18,12 @@
     <File Name="src/terms.c"/>
     <File Name="src/test.c"/>
     <File Name="src/termtrees.c"/>
+    <VirtualDirectory Name="libhygra">
+      <File Name="src/libhygra/hygra.h"/>
+      <File Name="src/libhygra/CMakeLists.txt"/>
+      <File Name="src/libhygra/test.c"/>
+      <File Name="src/libhygra/dihy.c"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>

@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O2 -Wall -g    CMakeFiles/../../hygra-test.dir/test.c.o  -o ../../hygra-test -rdynamic ../bstrlib/libbstrlib.a libhygra.a -lcprops 

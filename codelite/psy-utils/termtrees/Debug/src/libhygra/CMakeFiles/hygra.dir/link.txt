@@ -1,0 +1,2 @@
+/usr/bin/ar cr libhygra.a  CMakeFiles/hygra.dir/dihy.c.o
+/usr/bin/ranlib libhygra.a

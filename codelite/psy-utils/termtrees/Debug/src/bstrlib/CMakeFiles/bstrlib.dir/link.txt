@@ -1,0 +1,2 @@
+/usr/bin/ar cr libbstrlib.a  CMakeFiles/bstrlib.dir/bstrlib.c.o CMakeFiles/bstrlib.dir/bstraux.c.o CMakeFiles/bstrlib.dir/bsafe.c.o
+/usr/bin/ranlib libbstrlib.a

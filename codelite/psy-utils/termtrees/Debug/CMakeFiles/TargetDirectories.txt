@@ -1,0 +1,5 @@
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/../../hygra-test.dir
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/CMakeFiles/../termtrees.dir
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/CMakeFiles/../termtrees-test.dir
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir
+/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/hygra.dir

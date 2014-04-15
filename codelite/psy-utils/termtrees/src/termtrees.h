@@ -71,6 +71,8 @@ typedef struct {
 	/* calculations */
 
 	cp_multimap *terms;
+	
+	cp_vector *bstring_keep;
 
 	/* output */
 	FILE *f;
