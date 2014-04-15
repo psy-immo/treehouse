@@ -109,6 +109,47 @@ src/CMakeFiles/../termtrees.dir/rule:
 	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/build
 .PHONY : ../termtrees/fast
 
+# Convenience name for target.
+src/CMakeFiles/../termtrees-test.dir/rule:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees-test.dir/rule
+.PHONY : src/CMakeFiles/../termtrees-test.dir/rule
+
+# Convenience name for target.
+../termtrees-test: src/CMakeFiles/../termtrees-test.dir/rule
+.PHONY : ../termtrees-test
+
+# fast build rule for target.
+../termtrees-test/fast:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
+.PHONY : ../termtrees-test/fast
+
+cli.o: cli.c.o
+.PHONY : cli.o
+
+# target to build an object file
+cli.c.o:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.o
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.o
+.PHONY : cli.c.o
+
+cli.i: cli.c.i
+.PHONY : cli.i
+
+# target to preprocess a source file
+cli.c.i:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.i
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.i
+.PHONY : cli.c.i
+
+cli.s: cli.c.s
+.PHONY : cli.s
+
+# target to generate assembly for a file
+cli.c.s:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.s
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.s
+.PHONY : cli.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -133,6 +174,111 @@ main.c.s:
 	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.s
 .PHONY : main.c.s
 
+op_signature.o: op_signature.c.o
+.PHONY : op_signature.o
+
+# target to build an object file
+op_signature.c.o:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.o
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.o
+.PHONY : op_signature.c.o
+
+op_signature.i: op_signature.c.i
+.PHONY : op_signature.i
+
+# target to preprocess a source file
+op_signature.c.i:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.i
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.i
+.PHONY : op_signature.c.i
+
+op_signature.s: op_signature.c.s
+.PHONY : op_signature.s
+
+# target to generate assembly for a file
+op_signature.c.s:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.s
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.s
+.PHONY : op_signature.c.s
+
+terms.o: terms.c.o
+.PHONY : terms.o
+
+# target to build an object file
+terms.c.o:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.o
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.o
+.PHONY : terms.c.o
+
+terms.i: terms.c.i
+.PHONY : terms.i
+
+# target to preprocess a source file
+terms.c.i:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.i
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.i
+.PHONY : terms.c.i
+
+terms.s: terms.c.s
+.PHONY : terms.s
+
+# target to generate assembly for a file
+terms.c.s:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.s
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.s
+.PHONY : terms.c.s
+
+termtrees.o: termtrees.c.o
+.PHONY : termtrees.o
+
+# target to build an object file
+termtrees.c.o:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.o
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.o
+.PHONY : termtrees.c.o
+
+termtrees.i: termtrees.c.i
+.PHONY : termtrees.i
+
+# target to preprocess a source file
+termtrees.c.i:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.i
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.i
+.PHONY : termtrees.c.i
+
+termtrees.s: termtrees.c.s
+.PHONY : termtrees.s
+
+# target to generate assembly for a file
+termtrees.c.s:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.s
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.s
+.PHONY : termtrees.c.s
+
+test.o: test.c.o
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/build && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.s
+.PHONY : test.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -140,11 +286,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... ../termtrees"
+	@echo "... ../termtrees-test"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cli.o"
+	@echo "... cli.i"
+	@echo "... cli.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... op_signature.o"
+	@echo "... op_signature.i"
+	@echo "... op_signature.s"
+	@echo "... terms.o"
+	@echo "... terms.i"
+	@echo "... terms.s"
+	@echo "... termtrees.o"
+	@echo "... termtrees.i"
+	@echo "... termtrees.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

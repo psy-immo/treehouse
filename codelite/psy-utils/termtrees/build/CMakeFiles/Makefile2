@@ -54,11 +54,13 @@ CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/build
 
 # Convenience name for "all" pass in the directory.
 src/all: src/CMakeFiles/../termtrees.dir/all
+src/all: src/CMakeFiles/../termtrees-test.dir/all
 src/all: src/bstrlib/all
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
 src/clean: src/CMakeFiles/../termtrees.dir/clean
+src/clean: src/CMakeFiles/../termtrees-test.dir/clean
 src/clean: src/bstrlib/clean
 .PHONY : src/clean
 
@@ -73,7 +75,7 @@ src/preinstall: src/bstrlib/preinstall
 src/CMakeFiles/../termtrees.dir/all: src/bstrlib/CMakeFiles/bstrlib.dir/all
 	$(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/depend
 	$(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles  1 2 3 4 5
 	@echo "Built target ../termtrees"
 .PHONY : src/CMakeFiles/../termtrees.dir/all
 
@@ -83,7 +85,7 @@ all: src/CMakeFiles/../termtrees.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/../termtrees.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/../termtrees.dir/rule
@@ -99,6 +101,41 @@ src/CMakeFiles/../termtrees.dir/clean:
 
 # clean rule for target.
 clean: src/CMakeFiles/../termtrees.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/../termtrees-test.dir
+
+# All Build rule for target.
+src/CMakeFiles/../termtrees-test.dir/all: src/bstrlib/CMakeFiles/bstrlib.dir/all
+	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/depend
+	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles  6 7 8 9 10
+	@echo "Built target ../termtrees-test"
+.PHONY : src/CMakeFiles/../termtrees-test.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/../termtrees-test.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/../termtrees-test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees-test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/../termtrees-test.dir/rule
+
+# Convenience name for target.
+../termtrees-test: src/CMakeFiles/../termtrees-test.dir/rule
+.PHONY : ../termtrees-test
+
+# clean rule for target.
+src/CMakeFiles/../termtrees-test.dir/clean:
+	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/clean
+.PHONY : src/CMakeFiles/../termtrees-test.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/../termtrees-test.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -123,7 +160,7 @@ src/bstrlib/preinstall:
 src/bstrlib/CMakeFiles/bstrlib.dir/all:
 	$(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/depend
 	$(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles  2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/build/CMakeFiles  11 12 13
 	@echo "Built target bstrlib"
 .PHONY : src/bstrlib/CMakeFiles/bstrlib.dir/all
 

@@ -1,5 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/../termtrees.dir/main.c.o"
+  "CMakeFiles/../termtrees.dir/op_signature.c.o"
+  "CMakeFiles/../termtrees.dir/cli.c.o"
+  "CMakeFiles/../termtrees.dir/terms.c.o"
+  "CMakeFiles/../termtrees.dir/termtrees.c.o"
   "../termtrees.pdb"
   "../termtrees"
 )

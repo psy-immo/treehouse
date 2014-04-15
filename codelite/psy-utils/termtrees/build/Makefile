@@ -109,6 +109,19 @@ depend:
 .PHONY : ../termtrees/fast
 
 #=============================================================================
+# Target rules for targets named ../termtrees-test
+
+# Build rule for target.
+../termtrees-test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ../termtrees-test
+.PHONY : ../termtrees-test
+
+# fast build rule for target.
+../termtrees-test/fast:
+	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
+.PHONY : ../termtrees-test/fast
+
+#=============================================================================
 # Target rules for targets named bstrlib
 
 # Build rule for target.
@@ -130,6 +143,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ../termtrees"
+	@echo "... ../termtrees-test"
 	@echo "... bstrlib"
 .PHONY : help
 

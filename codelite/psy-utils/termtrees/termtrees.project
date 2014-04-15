@@ -12,6 +12,12 @@
     </VirtualDirectory>
     <File Name="src/main.c"/>
     <File Name="src/CMakeLists.txt"/>
+    <File Name="src/op_signature.c"/>
+    <File Name="src/termtrees.h"/>
+    <File Name="src/cli.c"/>
+    <File Name="src/terms.c"/>
+    <File Name="src/test.c"/>
+    <File Name="src/termtrees.c"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
