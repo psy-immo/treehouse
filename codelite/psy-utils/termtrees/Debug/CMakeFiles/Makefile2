@@ -44,10 +44,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees
+CMAKE_SOURCE_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug
+CMAKE_BINARY_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees/Debug
 
 #=============================================================================
 # Directory level rules for directory src
@@ -79,7 +79,7 @@ src/CMakeFiles/../termtrees.dir/all: src/bstrlib/CMakeFiles/bstrlib.dir/all
 src/CMakeFiles/../termtrees.dir/all: src/libhygra/CMakeFiles/hygra.dir/all
 	$(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/depend
 	$(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  2 3 4 5 6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  2 3 4 5 6
 	@echo "Built target ../termtrees"
 .PHONY : src/CMakeFiles/../termtrees.dir/all
 
@@ -89,9 +89,9 @@ all: src/CMakeFiles/../termtrees.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/../termtrees.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : src/CMakeFiles/../termtrees.dir/rule
 
 # Convenience name for target.
@@ -115,7 +115,7 @@ src/CMakeFiles/../termtrees-test.dir/all: src/bstrlib/CMakeFiles/bstrlib.dir/all
 src/CMakeFiles/../termtrees-test.dir/all: src/libhygra/CMakeFiles/hygra.dir/all
 	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/depend
 	$(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  7 8 9 10 11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  7 8 9 10 11
 	@echo "Built target ../termtrees-test"
 .PHONY : src/CMakeFiles/../termtrees-test.dir/all
 
@@ -125,9 +125,9 @@ all: src/CMakeFiles/../termtrees-test.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/../termtrees-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees-test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : src/CMakeFiles/../termtrees-test.dir/rule
 
 # Convenience name for target.
@@ -165,7 +165,7 @@ src/bstrlib/preinstall:
 src/bstrlib/CMakeFiles/bstrlib.dir/all:
 	$(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/depend
 	$(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  12 13 14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  12 13 14
 	@echo "Built target bstrlib"
 .PHONY : src/bstrlib/CMakeFiles/bstrlib.dir/all
 
@@ -175,9 +175,9 @@ all: src/bstrlib/CMakeFiles/bstrlib.dir/all
 
 # Build rule for subdir invocation for target.
 src/bstrlib/CMakeFiles/bstrlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/CMakeFiles/bstrlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : src/bstrlib/CMakeFiles/bstrlib.dir/rule
 
 # Convenience name for target.
@@ -218,7 +218,7 @@ src/libhygra/CMakeFiles/../../hygra-test.dir/all: src/bstrlib/CMakeFiles/bstrlib
 src/libhygra/CMakeFiles/../../hygra-test.dir/all: src/libhygra/CMakeFiles/hygra.dir/all
 	$(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/depend
 	$(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  1
 	@echo "Built target ../../hygra-test"
 .PHONY : src/libhygra/CMakeFiles/../../hygra-test.dir/all
 
@@ -228,9 +228,9 @@ all: src/libhygra/CMakeFiles/../../hygra-test.dir/all
 
 # Build rule for subdir invocation for target.
 src/libhygra/CMakeFiles/../../hygra-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/../../hygra-test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : src/libhygra/CMakeFiles/../../hygra-test.dir/rule
 
 # Convenience name for target.
@@ -253,7 +253,7 @@ clean: src/libhygra/CMakeFiles/../../hygra-test.dir/clean
 src/libhygra/CMakeFiles/hygra.dir/all:
 	$(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/depend
 	$(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  15
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles  15 16
 	@echo "Built target hygra"
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/all
 
@@ -263,9 +263,9 @@ all: src/libhygra/CMakeFiles/hygra.dir/all
 
 # Build rule for subdir invocation for target.
 src/libhygra/CMakeFiles/hygra.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/hygra.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/rule
 
 # Convenience name for target.

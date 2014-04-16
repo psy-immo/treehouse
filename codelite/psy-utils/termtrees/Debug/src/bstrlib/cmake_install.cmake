@@ -1,4 +1,4 @@
-# Install script for directory: /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib
+# Install script for directory: /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

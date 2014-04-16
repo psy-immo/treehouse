@@ -4,3 +4,6 @@
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o: ../src/libhygra/dihy.c
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o: ../src/libhygra/hygra.h
 
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o: ../src/libhygra/hygra.h
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o: ../src/libhygra/patf.c
+

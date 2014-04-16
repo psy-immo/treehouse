@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/hygra.dir/dihy.c.o"
+  "CMakeFiles/hygra.dir/patf.c.o"
   "libhygra.pdb"
   "libhygra.a"
 )

@@ -26,6 +26,7 @@
 #include <cprops/vector.h>
 #include <cprops/multimap.h> 
 #include <stdlib.h>
+#include <stdio.h>
 
 /*
  * LIBrary for HYperGRAph related stuff :)
@@ -33,7 +34,13 @@
  
 #ifndef __LIBHYGRA_H
 #define __LIBHYGRA_H
+
+
  
+ 
+/**
+ * DIrected HYpergraph edges
+ */
  
 typedef void *node;
  
@@ -44,14 +51,97 @@ typedef struct t_dihyperedge {
 	
  } s_dihyperedge;
  
- typedef s_dihyperedge* dihyperedge;
+typedef s_dihyperedge* dihyperedge;
  
 dihyperedge dihy_alloc(int N_sources);
 #define dihy_free free
 
 dihyperedge dihy_dup(dihyperedge e);
   
-int dihy_cmp(dihyperedge l, dihyperedge r);
+int dihy_cmp(dihyperedge l, dihyperedge r); 
+
+
+/**
+ * PArtial Term Form
+ */
+  
+typedef struct t_operation {
+	 dihyperedge signature;
+	 void *identifier;
+} s_operation;
  
+typedef s_operation* operation;
+ 
+typedef struct t_parameter_address {
+	 int op;
+	 int input;
+} s_parameter_address;
+ 
+typedef struct t_partialtermform {
+	int ops_N; // >0
+	int input_wires_N;
+	int op_wires_N; // = ops_N-1
+	/*
+	 * The first operation is always considered the output,
+	 * all other operations are wired as inputs of other operations
+	 */
+	operation *ops;
+	s_parameter_address *op_wires;
+	/*
+	 * Keep track of where the inputs are wired to
+	 */
+	s_parameter_address *input_wires;
+	
+} s_partialtermform;
+
+typedef s_partialtermform* partialtermform;
+
+typedef struct t_generators {
+	 int ops_N;
+	 s_operation ops[];
+} s_generators;
+
+typedef s_generators *generators;
+
+typedef struct t_patf_bucket {
+	generators gen;
+	/* the set of newly generated terms starts here */
+	int continue_at_index;
+	/*vector of partialtermform */
+	cp_vector *terms;	
+} s_patf_bucket;
+
+typedef s_patf_bucket *patf_bucket;
+
+typedef void (*cb_free)(void* p);
+
+generators patfg_alloc(int num);
+#define patfg_free free
+
+/* also frees the dihyperedges of all ops[i], i=0,..,ops_N-1, and optionally the indentifiers */
+void patfg_deep_free(generators g, cb_free free_individuals);
+
+patf_bucket patfb_alloc(generators g);
+void patfb_free(patf_bucket b);
+
+partialtermform patf_alloc(int num_ops, int num_free_inputs);
+#define patf_free free
+
+/**
+ * tries to plug in every generator in every (new) partial term forms input, in order to generate
+ * all possible partial terms and calculation orders
+ * (you might partially evaluate the expression by first partially evaluating the last element of
+ *  the ops array, then the second last, and so on. For instance, if b: X,X->X and a: X-> X,
+ *  you get two partialtermforms for b(a(.), b(., .)), which may be distinguished by appending
+ *  the order of partial term generation:
+ *      b0(a1(.), b2(., .))   and   b0(a2(.), b1(., .))
+ */
+int apply_generators_to_bucket(patf_bucket b); // returns: number of new partial term forms
+
+typedef int cb_fput_node(node s, FILE *stream);
+typedef int cb_fput_id(node s, FILE *stream);
+
+void fput_patf(partialtermform t, FILE *stream, cb_fput_id fput_id);
+void fput_patf_ordered(partialtermform t, FILE *stream, cb_fput_id fput_id);
  
 #endif

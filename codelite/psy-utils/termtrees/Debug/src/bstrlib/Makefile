@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees
+CMAKE_SOURCE_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug
+CMAKE_BINARY_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees/Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/progress.marks
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/progress.marks
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/clean
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/bstrlib/CMakeFiles/bstrlib.dir/rule:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/CMakeFiles/bstrlib.dir/rule
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/bstrlib/CMakeFiles/bstrlib.dir/rule
 .PHONY : src/bstrlib/CMakeFiles/bstrlib.dir/rule
 
 # Convenience name for target.
@@ -106,7 +106,7 @@ bstrlib: src/bstrlib/CMakeFiles/bstrlib.dir/rule
 
 # fast build rule for target.
 bstrlib/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/build
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/build
 .PHONY : bstrlib/fast
 
 bsafe.o: bsafe.c.o
@@ -114,7 +114,7 @@ bsafe.o: bsafe.c.o
 
 # target to build an object file
 bsafe.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.o
 .PHONY : bsafe.c.o
 
 bsafe.i: bsafe.c.i
@@ -122,7 +122,7 @@ bsafe.i: bsafe.c.i
 
 # target to preprocess a source file
 bsafe.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.i
 .PHONY : bsafe.c.i
 
 bsafe.s: bsafe.c.s
@@ -130,7 +130,7 @@ bsafe.s: bsafe.c.s
 
 # target to generate assembly for a file
 bsafe.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.s
 .PHONY : bsafe.c.s
 
 bstraux.o: bstraux.c.o
@@ -138,7 +138,7 @@ bstraux.o: bstraux.c.o
 
 # target to build an object file
 bstraux.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.o
 .PHONY : bstraux.c.o
 
 bstraux.i: bstraux.c.i
@@ -146,7 +146,7 @@ bstraux.i: bstraux.c.i
 
 # target to preprocess a source file
 bstraux.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.i
 .PHONY : bstraux.c.i
 
 bstraux.s: bstraux.c.s
@@ -154,7 +154,7 @@ bstraux.s: bstraux.c.s
 
 # target to generate assembly for a file
 bstraux.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.s
 .PHONY : bstraux.c.s
 
 bstrlib.o: bstrlib.c.o
@@ -162,7 +162,7 @@ bstrlib.o: bstrlib.c.o
 
 # target to build an object file
 bstrlib.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.o
 .PHONY : bstrlib.c.o
 
 bstrlib.i: bstrlib.c.i
@@ -170,7 +170,7 @@ bstrlib.i: bstrlib.c.i
 
 # target to preprocess a source file
 bstrlib.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.i
 .PHONY : bstrlib.c.i
 
 bstrlib.s: bstrlib.c.s
@@ -178,7 +178,7 @@ bstrlib.s: bstrlib.c.s
 
 # target to generate assembly for a file
 bstrlib.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/bstrlib/CMakeFiles/bstrlib.dir/build.make src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.s
 .PHONY : bstrlib.c.s
 
 # Help Target
@@ -210,6 +210,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

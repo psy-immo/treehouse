@@ -4,9 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.c" "/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.o"
-  "/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.c" "/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.o"
-  "/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.c" "/home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.o"
+  "/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.c" "/home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bsafe.c.o"
+  "/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.c" "/home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bstraux.c.o"
+  "/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.c" "/home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/bstrlib/CMakeFiles/bstrlib.dir/bstrlib.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

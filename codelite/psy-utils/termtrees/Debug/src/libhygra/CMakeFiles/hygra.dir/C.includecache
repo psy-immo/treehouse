@@ -6,17 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c
-hygra.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
-stdlib.h
--
-string.h
--
-assert.h
--
-
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
 cprops/heap.h
 -
 cprops/util.h
@@ -28,5 +18,17 @@ cprops/vector.h
 cprops/multimap.h
 -
 stdlib.h
+-
+stdio.h
+-
+
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c
+hygra.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+stdlib.h
+-
+string.h
+-
+assert.h
 -
 

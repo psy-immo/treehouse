@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees
+CMAKE_SOURCE_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug
+CMAKE_BINARY_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees/Debug
 
 # Include any dependencies generated for this target.
 include src/libhygra/CMakeFiles/hygra.dir/depend.make
@@ -48,17 +48,17 @@ include src/libhygra/CMakeFiles/hygra.dir/flags.make
 
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o: src/libhygra/CMakeFiles/hygra.dir/flags.make
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o: ../src/libhygra/dihy.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/libhygra/CMakeFiles/hygra.dir/dihy.c.o"
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/hygra.dir/dihy.c.o   -c /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/hygra.dir/dihy.c.o   -c /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c
 
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hygra.dir/dihy.c.i"
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c > CMakeFiles/hygra.dir/dihy.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c > CMakeFiles/hygra.dir/dihy.c.i
 
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hygra.dir/dihy.c.s"
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c -o CMakeFiles/hygra.dir/dihy.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c -o CMakeFiles/hygra.dir/dihy.c.s
 
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.requires:
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.requires
@@ -69,32 +69,58 @@ src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.provides: src/libhygra/CMakeFiles/hyg
 
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.provides.build: src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
 
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o: src/libhygra/CMakeFiles/hygra.dir/flags.make
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o: ../src/libhygra/patf.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/libhygra/CMakeFiles/hygra.dir/patf.c.o"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/hygra.dir/patf.c.o   -c /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c
+
+src/libhygra/CMakeFiles/hygra.dir/patf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hygra.dir/patf.c.i"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c > CMakeFiles/hygra.dir/patf.c.i
+
+src/libhygra/CMakeFiles/hygra.dir/patf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hygra.dir/patf.c.s"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c -o CMakeFiles/hygra.dir/patf.c.s
+
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o.requires:
+.PHONY : src/libhygra/CMakeFiles/hygra.dir/patf.c.o.requires
+
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides: src/libhygra/CMakeFiles/hygra.dir/patf.c.o.requires
+	$(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides.build
+.PHONY : src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides
+
+src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides.build: src/libhygra/CMakeFiles/hygra.dir/patf.c.o
+
 # Object files for target hygra
 hygra_OBJECTS = \
-"CMakeFiles/hygra.dir/dihy.c.o"
+"CMakeFiles/hygra.dir/dihy.c.o" \
+"CMakeFiles/hygra.dir/patf.c.o"
 
 # External object files for target hygra
 hygra_EXTERNAL_OBJECTS =
 
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
+src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/patf.c.o
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/build.make
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libhygra.a"
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -P CMakeFiles/hygra.dir/cmake_clean_target.cmake
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hygra.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -P CMakeFiles/hygra.dir/cmake_clean_target.cmake
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hygra.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/libhygra/CMakeFiles/hygra.dir/build: src/libhygra/libhygra.a
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/build
 
 src/libhygra/CMakeFiles/hygra.dir/requires: src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.requires
+src/libhygra/CMakeFiles/hygra.dir/requires: src/libhygra/CMakeFiles/hygra.dir/patf.c.o.requires
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/requires
 
 src/libhygra/CMakeFiles/hygra.dir/clean:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -P CMakeFiles/hygra.dir/cmake_clean.cmake
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && $(CMAKE_COMMAND) -P CMakeFiles/hygra.dir/cmake_clean.cmake
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/clean
 
 src/libhygra/CMakeFiles/hygra.dir/depend:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/immo/git/treehouse/codelite/psy-utils/termtrees /home/immo/git/treehouse/codelite/psy-utils/termtrees/src/libhygra /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/hygra.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/immo/treehouse/codelite/psy-utils/termtrees /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra /home/immo/treehouse/codelite/psy-utils/termtrees/Debug /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/hygra.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/depend
 

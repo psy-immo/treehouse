@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.c
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.c
 stdio.h
 -
 stdlib.h
 -
 bsafe.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.h
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bsafe.h
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.c
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.c
 stdio.h
 -
 stdlib.h
@@ -28,17 +28,17 @@ limits.h
 ctype.h
 -
 bstrlib.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
 bstraux.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.h
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstraux.h
 time.h
 -
 bstrlib.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.c
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.c
 stdio.h
 -
 stddef.h
@@ -52,11 +52,11 @@ string.h
 ctype.h
 -
 bstrlib.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
 memdbg.h
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/memdbg.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/memdbg.h
 
-/home/immo/git/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
 stdarg.h
 -
 string.h

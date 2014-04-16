@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees
+CMAKE_SOURCE_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug
+CMAKE_BINARY_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees/Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/progress.marks
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra/CMakeFiles/progress.marks
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/clean
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/libhygra/CMakeFiles/../../hygra-test.dir/rule:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/../../hygra-test.dir/rule
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/../../hygra-test.dir/rule
 .PHONY : src/libhygra/CMakeFiles/../../hygra-test.dir/rule
 
 # Convenience name for target.
@@ -106,12 +106,12 @@ src/libhygra/CMakeFiles/../../hygra-test.dir/rule:
 
 # fast build rule for target.
 ../../hygra-test/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/build
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/build
 .PHONY : ../../hygra-test/fast
 
 # Convenience name for target.
 src/libhygra/CMakeFiles/hygra.dir/rule:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/hygra.dir/rule
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/libhygra/CMakeFiles/hygra.dir/rule
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/rule
 
 # Convenience name for target.
@@ -120,7 +120,7 @@ hygra: src/libhygra/CMakeFiles/hygra.dir/rule
 
 # fast build rule for target.
 hygra/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/build
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/build
 .PHONY : hygra/fast
 
 dihy.o: dihy.c.o
@@ -128,7 +128,7 @@ dihy.o: dihy.c.o
 
 # target to build an object file
 dihy.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
 .PHONY : dihy.c.o
 
 dihy.i: dihy.c.i
@@ -136,7 +136,7 @@ dihy.i: dihy.c.i
 
 # target to preprocess a source file
 dihy.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.i
 .PHONY : dihy.c.i
 
 dihy.s: dihy.c.s
@@ -144,15 +144,39 @@ dihy.s: dihy.c.s
 
 # target to generate assembly for a file
 dihy.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.s
 .PHONY : dihy.c.s
+
+patf.o: patf.c.o
+.PHONY : patf.o
+
+# target to build an object file
+patf.c.o:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/patf.c.o
+.PHONY : patf.c.o
+
+patf.i: patf.c.i
+.PHONY : patf.i
+
+# target to preprocess a source file
+patf.c.i:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/patf.c.i
+.PHONY : patf.c.i
+
+patf.s: patf.c.s
+.PHONY : patf.s
+
+# target to generate assembly for a file
+patf.c.s:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/patf.c.s
+.PHONY : patf.c.s
 
 test.o: test.c.o
 .PHONY : test.o
 
 # target to build an object file
 test.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.o
 .PHONY : test.c.o
 
 test.i: test.c.i
@@ -160,7 +184,7 @@ test.i: test.c.i
 
 # target to preprocess a source file
 test.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.i
 .PHONY : test.c.i
 
 test.s: test.c.s
@@ -168,7 +192,7 @@ test.s: test.c.s
 
 # target to generate assembly for a file
 test.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/../../hygra-test.dir/build.make src/libhygra/CMakeFiles/../../hygra-test.dir/test.c.s
 .PHONY : test.c.s
 
 # Help Target
@@ -184,6 +208,9 @@ help:
 	@echo "... dihy.o"
 	@echo "... dihy.i"
 	@echo "... dihy.s"
+	@echo "... patf.o"
+	@echo "... patf.i"
+	@echo "... patf.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
@@ -198,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

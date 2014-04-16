@@ -23,6 +23,7 @@
       <File Name="src/libhygra/CMakeLists.txt"/>
       <File Name="src/libhygra/test.c"/>
       <File Name="src/libhygra/dihy.c"/>
+      <File Name="src/libhygra/patf.c"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <Description/>

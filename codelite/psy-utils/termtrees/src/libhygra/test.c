@@ -20,6 +20,8 @@
 #include <assert.h>
 #include "hygra.h"
 #include "../bstrlib/bstrlib.h"
+#include <stdlib.h>
+#include <time.h>
 
 void test_dihy() {
 	puts("dihy_alloc");
@@ -55,10 +57,78 @@ void test_dihy() {
 	
 }
 
+void test_patf() {
+	int i,j;
+	
+	static char* ids[] = {"a","b","c"};
+	
+	puts("patfg_alloc");
+	
+	generators g = patfg_alloc(3);
+	assert(g);
+	
+	for (i=0;i<3;++i) {
+		g->ops[i].identifier = ids[i];
+		g->ops[i].signature = dihy_alloc(i+1);
+		g->ops[i].signature->target = i;
+		
+		for (j=0;j<i+1;++j)
+			g->ops[i].signature->sources[j] = j;
+	}
+	
+	puts("patfb_alloc");
+	patf_bucket b = patfb_alloc(g);
+	
+	assert(b);
+	puts("sanity of bucket");
+	assert(cp_vector_size(b->terms) == 3);
+	assert(((partialtermform)cp_vector_element_at(b->terms,1))->input_wires_N == 2);
+	assert(((partialtermform)cp_vector_element_at(b->terms,1))->input_wires[1].op == 0);
+	assert(((partialtermform)cp_vector_element_at(b->terms,1))->input_wires[1].input == 1);
+	
+	
+	puts("apply_generators_to_bucket");
+	assert(apply_generators_to_bucket(b) == 3+2+1);
+	assert(cp_vector_size(b->terms) == 9);
+	assert(b->continue_at_index == 3);
+	
+	puts("apply_generators_to_bucket");
+	assert(apply_generators_to_bucket(b) == 12+8+4 - 6);
+	assert(b->continue_at_index == 9);
+	assert(cp_vector_size(b->terms) == 27);
+	
+	puts("bucket contents: ");
+	for (i=0;i<cp_vector_size(b->terms);++i) {
+		printf(" %3d: ",i);
+		fput_patf(cp_vector_element_at(b->terms,i),stdout,fputs);
+		printf("\n    [= ",i);
+		fput_patf_ordered(cp_vector_element_at(b->terms,i),stdout,fputs);
+		
+		puts("]");
+	}
+	
+	for (i=2;i<10;++i)
+	{
+		printf("Iteration %d\n",i);
+		apply_generators_to_bucket(b);
+		printf("Bucket size: %d\n",cp_vector_size(b->terms));
+	}
+	
+	
+	puts("patfb_free");
+	patfb_free(b);
+	
+	puts("patfg_deep_free");
+	patfg_deep_free(g,0);
+}
+
 int main() {
 	puts("libhygra test, build: " __DATE__ " " __TIME__);
 	
+	srand(time(0));
+	
 	test_dihy();
+	test_patf();
 	
     return 0;
 }

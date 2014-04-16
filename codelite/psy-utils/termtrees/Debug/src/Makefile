@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees
+CMAKE_SOURCE_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug
+CMAKE_BINARY_DIR = /home/immo/treehouse/codelite/psy-utils/termtrees/Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/src/CMakeFiles/progress.marks
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/CMakeFiles/progress.marks
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/../termtrees.dir/rule:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees.dir/rule
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees.dir/rule
 .PHONY : src/CMakeFiles/../termtrees.dir/rule
 
 # Convenience name for target.
@@ -106,12 +106,12 @@ src/CMakeFiles/../termtrees.dir/rule:
 
 # fast build rule for target.
 ../termtrees/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/build
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/build
 .PHONY : ../termtrees/fast
 
 # Convenience name for target.
 src/CMakeFiles/../termtrees-test.dir/rule:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees-test.dir/rule
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/../termtrees-test.dir/rule
 .PHONY : src/CMakeFiles/../termtrees-test.dir/rule
 
 # Convenience name for target.
@@ -120,7 +120,7 @@ src/CMakeFiles/../termtrees-test.dir/rule:
 
 # fast build rule for target.
 ../termtrees-test/fast:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/build
 .PHONY : ../termtrees-test/fast
 
 cli.o: cli.c.o
@@ -128,8 +128,8 @@ cli.o: cli.c.o
 
 # target to build an object file
 cli.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.o
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.o
 .PHONY : cli.c.o
 
 cli.i: cli.c.i
@@ -137,8 +137,8 @@ cli.i: cli.c.i
 
 # target to preprocess a source file
 cli.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.i
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.i
 .PHONY : cli.c.i
 
 cli.s: cli.c.s
@@ -146,8 +146,8 @@ cli.s: cli.c.s
 
 # target to generate assembly for a file
 cli.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.s
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/cli.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/cli.c.s
 .PHONY : cli.c.s
 
 main.o: main.c.o
@@ -155,7 +155,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -163,7 +163,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -171,7 +171,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/main.c.s
 .PHONY : main.c.s
 
 op_signature.o: op_signature.c.o
@@ -179,8 +179,8 @@ op_signature.o: op_signature.c.o
 
 # target to build an object file
 op_signature.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.o
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.o
 .PHONY : op_signature.c.o
 
 op_signature.i: op_signature.c.i
@@ -188,8 +188,8 @@ op_signature.i: op_signature.c.i
 
 # target to preprocess a source file
 op_signature.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.i
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.i
 .PHONY : op_signature.c.i
 
 op_signature.s: op_signature.c.s
@@ -197,8 +197,8 @@ op_signature.s: op_signature.c.s
 
 # target to generate assembly for a file
 op_signature.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.s
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/op_signature.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/op_signature.c.s
 .PHONY : op_signature.c.s
 
 terms.o: terms.c.o
@@ -206,8 +206,8 @@ terms.o: terms.c.o
 
 # target to build an object file
 terms.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.o
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.o
 .PHONY : terms.c.o
 
 terms.i: terms.c.i
@@ -215,8 +215,8 @@ terms.i: terms.c.i
 
 # target to preprocess a source file
 terms.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.i
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.i
 .PHONY : terms.c.i
 
 terms.s: terms.c.s
@@ -224,8 +224,8 @@ terms.s: terms.c.s
 
 # target to generate assembly for a file
 terms.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.s
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/terms.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/terms.c.s
 .PHONY : terms.c.s
 
 termtrees.o: termtrees.c.o
@@ -233,8 +233,8 @@ termtrees.o: termtrees.c.o
 
 # target to build an object file
 termtrees.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.o
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.o
 .PHONY : termtrees.c.o
 
 termtrees.i: termtrees.c.i
@@ -242,8 +242,8 @@ termtrees.i: termtrees.c.i
 
 # target to preprocess a source file
 termtrees.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.i
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.i
 .PHONY : termtrees.c.i
 
 termtrees.s: termtrees.c.s
@@ -251,8 +251,8 @@ termtrees.s: termtrees.c.s
 
 # target to generate assembly for a file
 termtrees.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.s
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees.dir/build.make src/CMakeFiles/../termtrees.dir/termtrees.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/termtrees.c.s
 .PHONY : termtrees.c.s
 
 test.o: test.c.o
@@ -260,7 +260,7 @@ test.o: test.c.o
 
 # target to build an object file
 test.c.o:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.o
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.o
 .PHONY : test.c.o
 
 test.i: test.c.i
@@ -268,7 +268,7 @@ test.i: test.c.i
 
 # target to preprocess a source file
 test.c.i:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.i
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.i
 .PHONY : test.c.i
 
 test.s: test.c.s
@@ -276,7 +276,7 @@ test.s: test.c.s
 
 # target to generate assembly for a file
 test.c.s:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.s
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/CMakeFiles/../termtrees-test.dir/build.make src/CMakeFiles/../termtrees-test.dir/test.c.s
 .PHONY : test.c.s
 
 # Help Target
@@ -318,6 +318,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/immo/git/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
