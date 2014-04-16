@@ -127,11 +127,13 @@ void test_patf() {
 	puts("patfb_free");
 	patfb_free(b);
 	
+	puts("Normal forms only.")
+	
 	puts("patfb_alloc");
 	b = patfb_alloc(g);
 	
 	
-	for (i=0;i<20;++i)
+	for (i=0;i<12;++i)
 	{
 		printf("Iteration %d\n",i+1);
 		apply_generators_to_bucket_nf(b);

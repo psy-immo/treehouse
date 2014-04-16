@@ -99,6 +99,10 @@ void patfb_free(patf_bucket b) {
 }
 
 static int apply_generators_to_bucket_nfchoice(patf_bucket b, int non_nf) {
+	/**
+	 * TODO: optimize this to use the correct lower bounds for the choice of the input wire
+	 */
+	
 	int start_index,end_index,i,count,j,k,l;
 	node input_sort;
 	partialtermform term, g_term;
