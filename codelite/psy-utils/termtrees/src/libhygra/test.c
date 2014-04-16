@@ -58,7 +58,7 @@ void test_dihy() {
 }
 
 void test_patf() {
-	int i,j;
+	int i,j,non_nf;
 	
 	static char* ids[] = {"a","b","c"};
 	
@@ -101,19 +101,49 @@ void test_patf() {
 	for (i=0;i<cp_vector_size(b->terms);++i) {
 		printf(" %3d: ",i);
 		fput_patf(cp_vector_element_at(b->terms,i),stdout,fputs);
-		printf("\n    [= ",i);
+		printf("\n    [= ");
 		fput_patf_ordered(cp_vector_element_at(b->terms,i),stdout,fputs);
-		
-		puts("]");
+		if (patf_nf(cp_vector_element_at(b->terms,i)))
+			puts("]");
+		else 
+			puts("] (non-n.f.)");
 	}
 	
-	for (i=2;i<10;++i)
+	for (i=2;i<7;++i)
 	{
-		printf("Iteration %d\n",i);
+		printf("Iteration %d\n",i+1);
 		apply_generators_to_bucket(b);
-		printf("Bucket size: %d\n",cp_vector_size(b->terms));
+		
+		non_nf = 0;
+		for (j=0;j<cp_vector_size(b->terms);++j) {
+			if (!patf_nf(cp_vector_element_at(b->terms,j)))
+				non_nf += 1;
+		}
+		printf("   %d/%d = %.2f%% non-n.f.\n",non_nf,cp_vector_size(b->terms),
+		    (float)non_nf*100.f/(float)cp_vector_size(b->terms));
 	}
 	
+	
+	puts("patfb_free");
+	patfb_free(b);
+	
+	puts("patfb_alloc");
+	b = patfb_alloc(g);
+	
+	
+	for (i=0;i<20;++i)
+	{
+		printf("Iteration %d\n",i+1);
+		apply_generators_to_bucket_nf(b);
+		
+		non_nf = 0;
+		for (j=0;j<cp_vector_size(b->terms);++j) {
+			if (!patf_nf(cp_vector_element_at(b->terms,j)))
+				non_nf += 1;
+		}
+		printf("   %d/%d = %.2f%% non-n.f.\n",non_nf,cp_vector_size(b->terms),
+		    (float)non_nf*100.f/(float)cp_vector_size(b->terms));
+	}
 	
 	puts("patfb_free");
 	patfb_free(b);

@@ -137,11 +137,21 @@ partialtermform patf_alloc(int num_ops, int num_free_inputs);
  *      b0(a1(.), b2(., .))   and   b0(a2(.), b1(., .))
  */
 int apply_generators_to_bucket(patf_bucket b); // returns: number of new partial term forms
+/**
+ * same as above, but only keep normal forms
+ */
+int apply_generators_to_bucket_nf(patf_bucket b); // returns: number of new partial term forms
 
 typedef int cb_fput_node(node s, FILE *stream);
 typedef int cb_fput_id(node s, FILE *stream);
 
 void fput_patf(partialtermform t, FILE *stream, cb_fput_id fput_id);
 void fput_patf_ordered(partialtermform t, FILE *stream, cb_fput_id fput_id);
+
+
+/*
+ * tests, whether the given partialtermform is in operation order normal form
+ */
+int patf_nf(partialtermform t);
  
 #endif

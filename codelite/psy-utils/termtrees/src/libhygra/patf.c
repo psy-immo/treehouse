@@ -98,7 +98,7 @@ void patfb_free(patf_bucket b) {
 	free(b);
 }
 
-int apply_generators_to_bucket(patf_bucket b) {
+static int apply_generators_to_bucket_nfchoice(patf_bucket b, int non_nf) {
 	int start_index,end_index,i,count,j,k,l;
 	node input_sort;
 	partialtermform term, g_term;
@@ -143,9 +143,13 @@ int apply_generators_to_bucket(patf_bucket b) {
 						g_term->input_wires[j+l].input = l;
 					}
 										
+					if (non_nf || (patf_nf(g_term))) {
+						cp_vector_add_element(b->terms, g_term);
+						count += 1;
+					} else {
+						patf_free(g_term);
+					}
 					
-					cp_vector_add_element(b->terms, g_term);
-					count += 1;
 				}
 			}
 		}
@@ -153,6 +157,14 @@ int apply_generators_to_bucket(patf_bucket b) {
 	
 	b->continue_at_index = end_index;
 	return count;
+}
+
+int apply_generators_to_bucket_nf(patf_bucket b) {
+	return apply_generators_to_bucket_nfchoice(b,0);
+}
+
+int apply_generators_to_bucket(patf_bucket b) {
+	return apply_generators_to_bucket_nfchoice(b,1);
 }
 
 static void fput_patf_op(partialtermform t, FILE* stream, cb_fput_id fput_id, int op) {
@@ -220,3 +232,32 @@ void fput_patf_ordered(partialtermform t, FILE* stream, cb_fput_id fput_id) {
 	fput_patf_op_ordered(t,stream,fput_id,0);
 }
 
+static int patf_nf_op(partialtermform t, int op) {
+	int i,j,lower_bound,nb;
+	
+	lower_bound = op;
+	
+	for (i=0;i<t->ops[op]->signature->sources_N;++i) {
+		
+		for (j=op;j<t->op_wires_N;++j) {
+			if ((t->op_wires[j].op == op) && (t->op_wires[j].input == i)) {
+				if (j+1 < lower_bound)
+					return -1;
+					
+				nb = patf_nf_op(t,j+1);
+				if (nb < 0)
+					return -1;
+					
+				if (nb > lower_bound)
+					lower_bound = nb;
+					
+			}
+		}		
+	}
+	
+	return lower_bound;	
+}
+
+int patf_nf(partialtermform t) {
+	return patf_nf_op(t,0) >= 0;
+}
