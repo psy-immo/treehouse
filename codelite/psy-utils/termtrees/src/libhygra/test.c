@@ -62,6 +62,7 @@ void test_patf() {
 	clock_t begin, end;
 	double time_spent;
 	static char* ids[] = {"a","b","c"};
+	patf_sigma s;
 	
 	puts("patfg_alloc");
 	
@@ -108,6 +109,21 @@ void test_patf() {
 			puts("]");
 		else 
 			puts("] (non-n.f.)");
+			
+		assert(patf_eform(cp_vector_element_at(b->terms,i)));
+		
+		
+		s = patfs_alloc(cp_vector_element_at(b->terms,i));
+		printf(" sigma = [");
+		for (j=0;j<s->N;++j)
+		{
+			if (j)
+				printf(", ");
+			printf("%d",s->sigma[j]);			
+		}
+		puts("]");
+		
+		free(s);
 	}
 	
 	for (i=2;i<7;++i)
@@ -135,7 +151,7 @@ void test_patf() {
 	patf_bucket b2 = patfb_alloc(g);
 	
 	
-	for (i=0;i<14;++i)
+	for (i=0;i<12;++i)
 	{
 
 		printf("Iteration %d\n",i+1);

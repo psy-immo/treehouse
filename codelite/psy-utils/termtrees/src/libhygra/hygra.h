@@ -115,6 +115,17 @@ typedef s_patf_bucket *patf_bucket;
 
 typedef void (*cb_free)(void* p);
 
+typedef struct t_patf_sigma {
+	int N;
+	int sigma[];	
+} s_patf_sigma;
+
+typedef s_patf_sigma *patf_sigma;
+
+patf_sigma patfs_alloc(partialtermform t);
+#define patfs_free free
+
+
 generators patfg_alloc(int num);
 #define patfg_free free
 
@@ -159,5 +170,21 @@ void fput_patf_ordered(partialtermform t, FILE *stream, cb_fput_id fput_id);
  * tests, whether the given partialtermform is in operation order normal form
  */
 int patf_nf(partialtermform t);
+
+/*
+ * tests, whether the given partialtermform is in evaluation order form, i.e.
+ * that the output of an operation may only be used as an input of an earlier
+ * operation.
+ * 
+ * THIS SHOULD RETURN 1 FOR ALL partialtermforms USED WITH THIS LIBRARY.
+ */
+int patf_eform(partialtermform t);
+
+/**
+ * fills the int[t->ops_N] array sigma with the operation numbers ordered such
+ * that the partialtermform where t_sigma->ops[i] = t->ops[sigma[i]] (other
+ * members altered accordingly) is in normal form.
+ */
+void patf_get_sigma(int* sigma, partialtermform t);
  
 #endif

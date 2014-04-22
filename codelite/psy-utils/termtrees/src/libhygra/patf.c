@@ -397,7 +397,9 @@ static int patf_nf_op(partialtermform t, int op) {
 	lower_bound = op;
 	
 	for (i=0;i<t->ops[op]->signature->sources_N;++i) {
-		
+		/**
+		 * since we assume that patf_eform(t)==1, we may start with j=op instead of j=0
+		 */
 		for (j=op;j<t->op_wires_N;++j) {
 			if ((t->op_wires[j].op == op) && (t->op_wires[j].input == i)) {
 				if (j+1 < lower_bound)
@@ -419,4 +421,46 @@ static int patf_nf_op(partialtermform t, int op) {
 
 int patf_nf(partialtermform t) {
 	return patf_nf_op(t,0) >= 0;
+}
+
+int patf_eform(partialtermform t) {
+	int i;
+	
+	for (i=0;i<t->op_wires_N;++i) {
+			if (t->op_wires[i].op > i)
+				return 0;
+	}
+	
+	return 1;
+}
+
+static int* patf_get_sigma_head(int* sigma, partialtermform t, int op) {
+	int i,j;
+	
+	*sigma = op;
+	sigma ++;
+
+	for (i=0;i<t->ops[op]->signature->sources_N;++i) {
+		
+		for (j=0;j<t->op_wires_N;++j) {
+			if ((t->op_wires[j].op == op) && (t->op_wires[j].input == i)) {
+				sigma = patf_get_sigma_head(sigma, t, j+1);
+				break;
+			}
+		}
+	}
+	
+	return sigma;
+}
+
+void patf_get_sigma(int* sigma, partialtermform t) {
+	patf_get_sigma_head(sigma,t,0);
+}
+
+patf_sigma patfs_alloc(partialtermform t) {
+	patf_sigma s = calloc(1,sizeof(s_patf_sigma)+sizeof(int)*t->ops_N);
+	s->N = t->ops_N;
+	patf_get_sigma(s->sigma, t);
+	
+	return s;
 }
