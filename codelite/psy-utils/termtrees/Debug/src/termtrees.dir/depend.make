@@ -3,21 +3,26 @@
 
 src/termtrees.dir/cli.c.o: ../src/bstrlib/bstrlib.h
 src/termtrees.dir/cli.c.o: ../src/cli.c
+src/termtrees.dir/cli.c.o: ../src/libhygra/hygra.h
 src/termtrees.dir/cli.c.o: ../src/termtrees.h
 
 src/termtrees.dir/main.c.o: ../src/bstrlib/bstrlib.h
+src/termtrees.dir/main.c.o: ../src/libhygra/hygra.h
 src/termtrees.dir/main.c.o: ../src/main.c
 src/termtrees.dir/main.c.o: ../src/termtrees.h
 
 src/termtrees.dir/op_signature.c.o: ../src/bstrlib/bstrlib.h
+src/termtrees.dir/op_signature.c.o: ../src/libhygra/hygra.h
 src/termtrees.dir/op_signature.c.o: ../src/op_signature.c
 src/termtrees.dir/op_signature.c.o: ../src/termtrees.h
 
 src/termtrees.dir/terms.c.o: ../src/bstrlib/bstrlib.h
+src/termtrees.dir/terms.c.o: ../src/libhygra/hygra.h
 src/termtrees.dir/terms.c.o: ../src/terms.c
 src/termtrees.dir/terms.c.o: ../src/termtrees.h
 
 src/termtrees.dir/termtrees.c.o: ../src/bstrlib/bstrlib.h
+src/termtrees.dir/termtrees.c.o: ../src/libhygra/hygra.h
 src/termtrees.dir/termtrees.c.o: ../src/termtrees.c
 src/termtrees.dir/termtrees.c.o: ../src/termtrees.h
 

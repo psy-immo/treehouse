@@ -3,6 +3,8 @@
 
 static globals *vars;
 
+#define DEFAULT_MAX_OPS 128
+
 
 globals* globals_alloc() {
 	globals *g = malloc(sizeof(globals));
@@ -22,8 +24,9 @@ globals* globals_alloc() {
 	g->op_names = cp_vector_create(1); //size in multiples of sizeof(void*)
 	assert(g->op_names);
 
-	g->terms = cp_multimap_create_by_option(COLLECTION_MODE_DEEP|COLLECTION_MODE_COPY|COLLECTION_MODE_MULTIPLE_VALUES ,
-			op_s_key, op_cmp, op_dup, free); /* TODO: CHANGE TO REFLECT THE TARGET SORT OF THE TERM ONLY */
+	g->max_op_count = DEFAULT_MAX_OPS;
+	g->show_terms = 0;
+	g->show_ops = 0;
 
 	g->f = stdout;
 	
@@ -38,8 +41,6 @@ void globals_free(globals **p) {
 
 	cp_trie_destroy(g->sorts);
 
-	cp_multimap_destroy(g->terms);
-
 	cp_multimap_destroy(g->ops);
 	
 	cp_vector_destroy_custom(g->op_names,bcstrfree);
@@ -51,7 +52,6 @@ void globals_free(globals **p) {
 }
 
 
-
 static int parse_input(char* file, globals* vars) {
 	cfg_opt_t operation_opts[] =
 		{
@@ -60,7 +60,10 @@ static int parse_input(char* file, globals* vars) {
 CFG_END() };
 
 	cfg_opt_t opts[] =
-		{ CFG_STR_LIST("sorts", "{}", CFGF_NONE),
+		{ CFG_INT("term-depth", DEFAULT_MAX_OPS, CFGF_NONE),
+		  CFG_BOOL("show-terms", 0, CFGF_NONE),
+		  CFG_BOOL("show-ops", 0, CFGF_NONE),
+		CFG_STR_LIST("sorts", "{}", CFGF_NONE),
 	CFG_SEC("op", operation_opts, CFGF_MULTI | CFGF_TITLE),
 CFG_FUNC("include", &cfg_include), CFG_END() };
 
@@ -102,6 +105,10 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 			vars->sorts_N += 1;
 		}
 	}
+	
+	vars->max_op_count = cfg_getint(cfg,"term-depth");
+	vars->show_terms = cfg_getbool(cfg,"show-terms");
+	vars->show_ops = cfg_getbool(cfg,"show-ops");
 
 	/**
 	 * the the operations to the operation list

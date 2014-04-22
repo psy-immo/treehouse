@@ -4,20 +4,25 @@
 src/termtrees-test.dir/cli.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/cli.c
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 src/termtrees-test.dir/op_signature.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/op_signature.c
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 src/termtrees-test.dir/terms.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/terms.c
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 src/termtrees-test.dir/termtrees.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.c
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 src/termtrees-test.dir/test.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/bstrlib/bstrlib.h
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/test.c

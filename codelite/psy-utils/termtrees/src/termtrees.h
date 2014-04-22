@@ -8,6 +8,8 @@
 #include <cprops/trie.h>
 #include <assert.h>
 
+#include "libhygra/hygra.h"
+
 
 #ifndef _TERMTREES_H
 #define _TERMTREES_H
@@ -67,10 +69,22 @@ typedef struct {
 	cp_multimap *ops;
 
 	cp_vector *op_names;
+	
+	int max_op_count;
+	int show_terms;
+	int show_ops;
+	
+	/**
+	 * generator data
+	 */
+	 
+	generators g;
+	
+	patf_bucket b;
 
-	/* calculations */
-
-	cp_multimap *terms;
+	/**
+	 * calculations
+	 */
 	
 	cp_vector *bstring_keep;
 
@@ -82,6 +96,7 @@ typedef struct {
 globals* globals_alloc();
 
 void globals_free(globals **p);
+
 
 
 int cli_main(int argc, char **argv);
