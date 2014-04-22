@@ -59,7 +59,8 @@ void test_dihy() {
 
 void test_patf() {
 	int i,j,non_nf;
-	
+	clock_t begin, end;
+	double time_spent;
 	static char* ids[] = {"a","b","c"};
 	
 	puts("patfg_alloc");
@@ -127,16 +128,31 @@ void test_patf() {
 	puts("patfb_free");
 	patfb_free(b);
 	
-	puts("Normal forms only.")
+	puts("Normal forms only. (Speed-test.)");
 	
 	puts("patfb_alloc");
 	b = patfb_alloc(g);
+	patf_bucket b2 = patfb_alloc(g);
 	
 	
-	for (i=0;i<12;++i)
+	for (i=0;i<14;++i)
 	{
+
 		printf("Iteration %d\n",i+1);
-		apply_generators_to_bucket_nf(b);
+		begin = clock();
+		apply_generators_to_bucket_nf2(b);
+		end = clock();
+		time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+		
+		
+		begin = clock();
+		apply_generators_to_bucket_nf(b2);
+		end = clock();
+		
+		printf("Time improval 2 vs 1: %f s\n",(double)(end - begin) / CLOCKS_PER_SEC - time_spent);
+		printf("Method 2: %f s\n",time_spent);
+		
+		printf("Method 1 vs 2: %d x %d\n",cp_vector_size(b2->terms),cp_vector_size(b->terms));
 		
 		non_nf = 0;
 		for (j=0;j<cp_vector_size(b->terms);++j) {
@@ -149,6 +165,7 @@ void test_patf() {
 	
 	puts("patfb_free");
 	patfb_free(b);
+	patfb_free(b2);
 	
 	puts("patfg_deep_free");
 	patfg_deep_free(g,0);

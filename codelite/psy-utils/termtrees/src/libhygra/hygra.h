@@ -141,6 +141,12 @@ int apply_generators_to_bucket(patf_bucket b); // returns: number of new partial
  * same as above, but only keep normal forms
  */
 int apply_generators_to_bucket_nf(patf_bucket b); // returns: number of new partial term forms
+/**
+ * this variant will generate only normal forms under the additional assumption that
+ * the patf_bucket b only contains normal forms.
+ */
+int apply_generators_to_bucket_nf2(patf_bucket b); // returns: number of new partial term forms
+
 
 typedef int cb_fput_node(node s, FILE *stream);
 typedef int cb_fput_id(node s, FILE *stream);
