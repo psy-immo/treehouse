@@ -154,6 +154,24 @@ void compute(globals *vars) {
 		 
 	 }
 	 
+	 vars->bbundles = cp_vector_create(1);
+	 
+	 N = cp_vector_size(vars->b->terms);
+ 	 for (i=0;i<N;++i) {
+			cp_vector_add_element(vars->bbundles, bundle_patf_alloc(
+			                            cp_vector_element_at(vars->b->terms,i)));
+	 }
+	 
+	 /**
+	  * list possible solutions per task
+	  */
+	  
+	  N = cp_vector_size(vars->tasks);
+	  
+	  //TODO...	  
+	  
+	  
+	 
 	 
 	 /**
 	  * kill intermediate structures 
@@ -164,6 +182,7 @@ void compute(globals *vars) {
 	  }
 	  patfb_free(vars->b);
 	  patfg_free(vars->g);
+	  cp_vector_destroy_custom(vars->bbundles, bundle_free);
 
 	fputs("Done.\n",f);
 }

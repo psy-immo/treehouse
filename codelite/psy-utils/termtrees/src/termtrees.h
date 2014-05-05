@@ -97,6 +97,8 @@ typedef struct {
 	generators g;
 	
 	patf_bucket b;
+	cp_vector *bbundles;
+	
 
 	/**
 	 * calculations
