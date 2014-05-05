@@ -23,15 +23,22 @@ globals* globals_alloc() {
 
 	g->op_names = cp_vector_create(1); //size in multiples of sizeof(void*)
 	assert(g->op_names);
+	
+	g->task_names = cp_vector_create(1); //size in multiples of sizeof(void*)
+	assert(g->task_names);
 
 	g->max_op_count = DEFAULT_MAX_OPS;
 	g->show_terms = 0;
 	g->show_ops = 0;
+	g->show_tasks = 0;
 
 	g->f = stdout;
 	
 	g->bstring_keep = cp_vector_create(1);
 	assert(g->bstring_keep);
+	
+	g->tasks = cp_vector_create(1);
+	assert(g->tasks);
 
 	return g;
 }
@@ -44,8 +51,10 @@ void globals_free(globals **p) {
 	cp_multimap_destroy(g->ops);
 	
 	cp_vector_destroy_custom(g->op_names,bcstrfree);
-
+	cp_vector_destroy_custom(g->task_names,bcstrfree);
 	cp_vector_destroy_custom(g->bstring_keep, bdestroy);
+	
+	cp_vector_destroy_custom(g->tasks, free);
 
 	free(*p);
 	*p = 0;
@@ -56,34 +65,39 @@ static int parse_input(char* file, globals* vars) {
 	cfg_opt_t operation_opts[] =
 		{
 		CFG_STR_LIST("in","{}", CFGF_NONE),
-	CFG_STR("out", 0, CFGF_NONE),
-CFG_END() };
+		CFG_STR("out", 0, CFGF_NONE),
+		CFG_END() };
 
 	cfg_opt_t task_opts[] =
 		{
 		CFG_STR_LIST("data","{}", CFGF_NONE),
-	CFG_STR("goal", 0, CFGF_NONE),
-CFG_END() };
+		CFG_STR("goal", 0, CFGF_NONE),
+		CFG_END() };
 
 
 
 	cfg_opt_t opts[] =
-		{ CFG_INT("term-depth", DEFAULT_MAX_OPS, CFGF_NONE),
-		  CFG_BOOL("show-terms", 0, CFGF_NONE),
-		  CFG_BOOL("show-ops", 0, CFGF_NONE),
-		CFG_STR_LIST("sorts", "{}", CFGF_NONE),
-	CFG_SEC("op", operation_opts, CFGF_MULTI | CFGF_TITLE),
-	CFG_SEC("task", task_opts, CFGF_MULTI | CFGF_TITLE),
-CFG_FUNC("include", &cfg_include), CFG_END() };
+		{ 	
+			CFG_INT("term-depth", DEFAULT_MAX_OPS, CFGF_NONE),
+			CFG_BOOL("show-terms", 0, CFGF_NONE),
+			CFG_BOOL("show-ops", 0, CFGF_NONE),
+			CFG_BOOL("show-tasks", 0, CFGF_NONE),			
+			CFG_STR_LIST("sorts", "{}", CFGF_NONE),
+			CFG_SEC("op", operation_opts, CFGF_MULTI | CFGF_TITLE),
+			CFG_SEC("task", task_opts, CFGF_MULTI | CFGF_TITLE),
+			CFG_FUNC("include", &cfg_include), 
+			CFG_END() };
 
 	cfg_t *cfg;
 
 	int i, j, N, err;
 
-	bstring bsortname, bopname;
+	bstring bsortname, bopname, btaskname;
 
-	char *found, *sortname, *opname;
+	char *found, *sortname, *opname, *taskname;
 	op_signature *ops = malloc(sizeof(op_signature)+sizeof(char*)*MAX_OP_INPUTS);
+	
+	task_scheme *t;
 
 	assert(ops);
 
@@ -118,6 +132,7 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 	vars->max_op_count = cfg_getint(cfg,"term-depth");
 	vars->show_terms = cfg_getbool(cfg,"show-terms");
 	vars->show_ops = cfg_getbool(cfg,"show-ops");
+	vars->show_tasks = cfg_getbool(cfg,"show-tasks");
 
 	/**
 	 * the the operations to the operation list
@@ -196,7 +211,82 @@ CFG_FUNC("include", &cfg_include), CFG_END() };
 		vars->ops_N += 1;
 
 	}
+	
+	/**
+	 * the tasks from the task list
+	 */
 
+	N = cfg_size(cfg, "task");
+	for (i = 0; i < N; i++)
+	{
+		
+		
+		cfg_t *task = cfg_getnsec(cfg, "task", i);
+		
+		t = malloc(sizeof(task_scheme)+sizeof(char*)*cfg_size(task, "data"));
+		t->data_N = cfg_size(task, "data");
+		
+		btaskname = bfromcstr(cfg_title(task));
+		cp_vector_add_element(vars->bstring_keep,btaskname);
+		taskname = bstr2cstr(btaskname,' ');
+		cp_vector_add_element(vars->task_names, taskname);
+		
+		
+		t->name = taskname;
+		
+
+		sortname = cfg_getstr(task,"goal");
+		assert(sortname);
+
+		found = cp_trie_exact_match(vars->sorts,sortname);
+		if (! found) {
+			fputs("Task ",stderr);
+			fputs(taskname,stderr);
+			fputs(" uses undeclared goal sort ",stderr);
+			fputs(sortname,stderr);
+			fputs("\n",stderr);
+			/** fix it */
+			bsortname = bfromcstr(sortname);
+			cp_vector_add_element(vars->bstring_keep,bsortname);
+			sortname = bstr2cstr(bsortname,' ');
+			
+			cp_trie_add(vars->sorts, sortname, sortname);
+			vars->sorts_N += 1;
+			found = sortname;
+		}
+		
+		t->goal = found;
+		
+		for (j=0;j<t->data_N;++j) {
+			
+			sortname = cfg_getnstr(task,"data",j);
+			assert(sortname);
+
+			found = cp_trie_exact_match(vars->sorts,sortname);
+			if (! found) {
+				fputs("Task ",stderr);
+				fputs(taskname,stderr);
+				fputs(" uses undeclared data sort ",stderr);
+				fputs(sortname,stderr);
+				fputs("\n",stderr);
+				/** fix it */
+				bsortname = bfromcstr(sortname);
+				cp_vector_add_element(vars->bstring_keep,bsortname);
+				sortname = bstr2cstr(bsortname,' ');
+				
+				cp_trie_add(vars->sorts, sortname, sortname);
+				vars->sorts_N += 1;
+				found = sortname;
+			}
+			
+			t->data[j] = found;
+	
+		}
+		
+		cp_vector_add_element(vars->tasks, t);
+		
+	}
+	
 
 
 	cfg_free(cfg);

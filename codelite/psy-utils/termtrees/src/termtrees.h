@@ -35,8 +35,19 @@ int op_cmp(void *lp, void *rp);
 /* copy an op_signature. use free(..) to release */
 void* op_dup(void* ptr);
 
-
 /**
+ * a task signature struct
+ */
+ 
+ typedef struct s_task {
+	 char *name;
+	 char *goal;
+	 int data_N;
+	 char *data[];	 
+ } task_scheme;
+
+
+/** OBSOLETE? May5/14
  * a term struct
  */
 
@@ -47,7 +58,7 @@ typedef struct s_term {
 } term;
 
 /* alloc a new term struct with N param slots */
-term* term_alloc(char* result_sort, int N);
+term* term_alloc(char* result_sort, int N); //OBSOLETE? May5/14
 
 
 
@@ -73,6 +84,11 @@ typedef struct {
 	int max_op_count;
 	int show_terms;
 	int show_ops;
+	
+	cp_vector *task_names;
+	int show_tasks;
+	
+	cp_vector *tasks;
 	
 	/**
 	 * generator data

@@ -57,11 +57,13 @@ void compute(globals *vars) {
 
 	fprintf(f,"Number of declared sorts: %d (%d)\n"
 	          "Number of declared ops: %d (%d)\n"
-			  "Max. op count: %d\n",vars->sorts_N,
+			  "Max. op count: %d\n"
+			  "Number of declared tasks: %d\n",vars->sorts_N,
 			          cp_trie_count(vars->sorts),
 					  vars->ops_N,
 					  cp_multimap_count(vars->ops),
-					  vars->max_op_count);
+					  vars->max_op_count,
+					  cp_vector_size(vars->tasks));
 		
 			
 	/**
@@ -87,6 +89,32 @@ void compute(globals *vars) {
 		 }
 			 
 			 
+	 }
+	 
+	 if (vars->show_tasks) {
+		 fprintf(f,"Declared tasks\n");
+		 N = cp_vector_size(vars->tasks);
+		 
+		 for (i=0;i<N;++i) {
+			
+		    fprintf(f," T%d ",i);
+			
+			task_scheme *task = cp_vector_element_at(vars->tasks,i);
+			
+			fputs( task->name,f);
+			fputs("\n",f);
+			for (j=0;j<task->data_N;++j) {
+				fputs("    '",f);
+				fputs(task->data[j],f);
+				fputs("'\n",f);
+			}
+			
+			fputs("         --> ",f);
+			fputs("'",f);
+			fputs(task->goal,f);
+			fputs("'",f);
+			fputs("\n",f);
+		 }
 	 }
 	 
 	 vars->b = patfb_alloc(vars->g);
