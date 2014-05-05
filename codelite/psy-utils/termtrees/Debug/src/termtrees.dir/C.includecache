@@ -16,6 +16,10 @@ limits.h
 ctype.h
 -
 
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/cli.c
+termtrees.h
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
+
 /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
 cprops/heap.h
 -
@@ -31,10 +35,6 @@ stdlib.h
 -
 stdio.h
 -
-
-/home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.c
-termtrees.h
-/home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 
 /home/immo/treehouse/codelite/psy-utils/termtrees/src/termtrees.h
 bstrlib/bstrlib.h

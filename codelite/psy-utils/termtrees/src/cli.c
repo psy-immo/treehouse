@@ -59,12 +59,21 @@ static int parse_input(char* file, globals* vars) {
 	CFG_STR("out", 0, CFGF_NONE),
 CFG_END() };
 
+	cfg_opt_t task_opts[] =
+		{
+		CFG_STR_LIST("data","{}", CFGF_NONE),
+	CFG_STR("goal", 0, CFGF_NONE),
+CFG_END() };
+
+
+
 	cfg_opt_t opts[] =
 		{ CFG_INT("term-depth", DEFAULT_MAX_OPS, CFGF_NONE),
 		  CFG_BOOL("show-terms", 0, CFGF_NONE),
 		  CFG_BOOL("show-ops", 0, CFGF_NONE),
 		CFG_STR_LIST("sorts", "{}", CFGF_NONE),
 	CFG_SEC("op", operation_opts, CFGF_MULTI | CFGF_TITLE),
+	CFG_SEC("task", task_opts, CFGF_MULTI | CFGF_TITLE),
 CFG_FUNC("include", &cfg_include), CFG_END() };
 
 	cfg_t *cfg;

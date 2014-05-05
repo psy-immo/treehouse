@@ -186,5 +186,60 @@ int patf_eform(partialtermform t);
  * members altered accordingly) is in normal form.
  */
 void patf_get_sigma(int* sigma, partialtermform t);
+
+/**
+ * 
+ * BUNDLEs -- structure that represents a multiset of nodes
+ *        which may be interpreted either as a target or
+ *        source of a quiver of arrows 
+ */
+
+
+/**
+ * represents a bundle of arrows with a common target
+ */
+typedef struct t_node_count {
+	node target;
+	int multiplicity;
+} s_node_count;
+
+/**
+ * represents a bunde of arrows with a common (abstract) source
+ * 
+ */
+typedef struct t_bundle {
+	int arrows_N;
+	s_node_count arrows[];
+} s_bundle;
+
+typedef s_bundle *bundle;
+
+bundle bundle_alloc(int N_target_nodes);
+/**
+ * allocates a new bundle that corresponds to the input nodes
+ * of the partial term form p
+ */
+bundle bundle_patf_alloc(partialtermform p);
+#define bundle_free free
+
+/**
+ * test whether a bundle is in normal form, i.e.
+ * whether every arrrows[i] points has a
+ * different target node
+ */
+int bundle_nf(bundle b);
+
+/**
+ * turns any given bundle into its normal form
+ */
+void bundle_normalize(bundle b);
+
+
+/**
+ * compare two bundles which are in normal form
+ */
+int bundle_cmp(bundle l, bundle g);
+
+ 
  
 #endif

@@ -92,16 +92,41 @@ src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides: src/libhygra/CMakeFiles/hyg
 
 src/libhygra/CMakeFiles/hygra.dir/patf.c.o.provides.build: src/libhygra/CMakeFiles/hygra.dir/patf.c.o
 
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.o: src/libhygra/CMakeFiles/hygra.dir/flags.make
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.o: ../src/libhygra/bundles.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/libhygra/CMakeFiles/hygra.dir/bundles.c.o"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/hygra.dir/bundles.c.o   -c /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/bundles.c
+
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hygra.dir/bundles.c.i"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/bundles.c > CMakeFiles/hygra.dir/bundles.c.i
+
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hygra.dir/bundles.c.s"
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug/src/libhygra && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/bundles.c -o CMakeFiles/hygra.dir/bundles.c.s
+
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.requires:
+.PHONY : src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.requires
+
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.provides: src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.requires
+	$(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.provides.build
+.PHONY : src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.provides
+
+src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.provides.build: src/libhygra/CMakeFiles/hygra.dir/bundles.c.o
+
 # Object files for target hygra
 hygra_OBJECTS = \
 "CMakeFiles/hygra.dir/dihy.c.o" \
-"CMakeFiles/hygra.dir/patf.c.o"
+"CMakeFiles/hygra.dir/patf.c.o" \
+"CMakeFiles/hygra.dir/bundles.c.o"
 
 # External object files for target hygra
 hygra_EXTERNAL_OBJECTS =
 
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/patf.c.o
+src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/bundles.c.o
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/build.make
 src/libhygra/libhygra.a: src/libhygra/CMakeFiles/hygra.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libhygra.a"
@@ -114,6 +139,7 @@ src/libhygra/CMakeFiles/hygra.dir/build: src/libhygra/libhygra.a
 
 src/libhygra/CMakeFiles/hygra.dir/requires: src/libhygra/CMakeFiles/hygra.dir/dihy.c.o.requires
 src/libhygra/CMakeFiles/hygra.dir/requires: src/libhygra/CMakeFiles/hygra.dir/patf.c.o.requires
+src/libhygra/CMakeFiles/hygra.dir/requires: src/libhygra/CMakeFiles/hygra.dir/bundles.c.o.requires
 .PHONY : src/libhygra/CMakeFiles/hygra.dir/requires
 
 src/libhygra/CMakeFiles/hygra.dir/clean:

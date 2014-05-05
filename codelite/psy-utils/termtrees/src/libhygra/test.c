@@ -151,7 +151,7 @@ void test_patf() {
 	patf_bucket b2 = patfb_alloc(g);
 	
 	
-	for (i=0;i<12;++i)
+	for (i=0;i<8;++i)
 	{
 
 		printf("Iteration %d\n",i+1);
@@ -187,13 +187,101 @@ void test_patf() {
 	patfg_deep_free(g,0);
 }
 
+void test_bundle() {
+	int i;
+	
+	puts("bundle_alloc");
+	bundle b = bundle_alloc(10);
+	bundle b2 = bundle_alloc(10);
+	bundle b3 = bundle_alloc(10);
+	bundle b4 = bundle_alloc(10);
+	bundle b5 = bundle_alloc(10);
+	
+	for (i=0;i<10;++i) {
+		b->arrows[i].multiplicity = i+1;
+		b->arrows[i].target = (node)(i%3);
+		
+		b4->arrows[i].multiplicity = i+1;
+		b4->arrows[i].target = (node)(i%4);
+		
+		b2->arrows[i].multiplicity = i+1;
+		b2->arrows[i].target = (node)(i%2);
+		
+		b5->arrows[i].multiplicity = i+1;
+		b5->arrows[i].target = (node)((i+1)%2);
+		
+		if ((i+1)%2) {
+			b3->arrows[i].multiplicity = i+2;
+		} else {
+			b3->arrows[i].multiplicity = i;
+		}
+		b3->arrows[i].target = (node)((i+1)%2);
+	}
+	
+	assert( ! bundle_nf(b));
+	
+	puts("bundle_normalize");
+	bundle_normalize(b);
+	
+	assert( bundle_nf(b));
+	assert(b->arrows_N == 3);
+	assert(b->arrows[0].target == (node)0);
+	assert(b->arrows[0].multiplicity == 22);
+	assert(b->arrows[1].target == (node)1);
+	assert(b->arrows[1].multiplicity == 15);
+	assert(b->arrows[2].target == (node)2);
+	assert(b->arrows[2].multiplicity == 18);
+	
+	assert(bundle_cmp(b,b) == 0);
+	
+	bundle_normalize(b2);
+	bundle_normalize(b3);
+	bundle_normalize(b4);
+	assert( bundle_nf(b2));
+	assert( bundle_nf(b3));
+	assert( bundle_nf(b4));
+	
+	assert(bundle_cmp(b2,b3) == 0);
+	assert(bundle_cmp(b3,b2) == 0);
+	
+	assert(bundle_cmp(b,b2) == 1);
+	assert(bundle_cmp(b,b3) == 1);
+	
+	assert(bundle_cmp(b4,b2) == 1);
+	assert(bundle_cmp(b4,b3) == 1);
+	
+	assert(bundle_cmp(b2,b) == -1);
+	assert(bundle_cmp(b3,b) == -1);
+	
+	assert(bundle_cmp(b2,b4) == -1);
+	assert(bundle_cmp(b3,b4) == -1);
+	
+	assert(bundle_cmp(b,b4) == -1);
+	assert(bundle_cmp(b4,b) == 1);
+	
+	assert(bundle_cmp(b5,b2) == 1);
+	assert(bundle_cmp(b3,b5) == -1);
+	
+	assert(bundle_cmp(b5,b3) == 1);
+	assert(bundle_cmp(b2,b5) == -1);
+	
+	puts("bundle_free");
+	bundle_free(b);
+	bundle_free(b2);
+	bundle_free(b3);
+	bundle_free(b4);
+	bundle_free(b5);
+}
+
 int main() {
 	puts("libhygra test, build: " __DATE__ " " __TIME__);
 	
 	srand(time(0));
 	
+	test_bundle();
 	test_dihy();
 	test_patf();
+	
 	
     return 0;
 }

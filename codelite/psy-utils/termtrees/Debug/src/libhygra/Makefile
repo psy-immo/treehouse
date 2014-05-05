@@ -123,6 +123,30 @@ hygra/fast:
 	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/build
 .PHONY : hygra/fast
 
+bundles.o: bundles.c.o
+.PHONY : bundles.o
+
+# target to build an object file
+bundles.c.o:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/bundles.c.o
+.PHONY : bundles.c.o
+
+bundles.i: bundles.c.i
+.PHONY : bundles.i
+
+# target to preprocess a source file
+bundles.c.i:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/bundles.c.i
+.PHONY : bundles.c.i
+
+bundles.s: bundles.c.s
+.PHONY : bundles.s
+
+# target to generate assembly for a file
+bundles.c.s:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/bundles.c.s
+.PHONY : bundles.c.s
+
 dihy.o: dihy.c.o
 .PHONY : dihy.o
 
@@ -205,6 +229,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... hygra"
 	@echo "... rebuild_cache"
+	@echo "... bundles.o"
+	@echo "... bundles.i"
+	@echo "... bundles.s"
 	@echo "... dihy.o"
 	@echo "... dihy.i"
 	@echo "... dihy.s"
