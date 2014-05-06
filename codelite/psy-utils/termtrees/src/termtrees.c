@@ -231,7 +231,7 @@ void compute(globals *vars) {
                      
                      if (vars->be_verbose) {
                          fputs("\n\n",f);
-                         for (j=0;j<t->ops_N;++j) {
+                         for (j=t->ops_N-1;j>=0;--j) {
                              fputs("       ",f);
                              int mu = t->ops[j]->identifier;
                              
@@ -252,7 +252,7 @@ void compute(globals *vars) {
 			  
 		  }
           
-          fprintf(f,"   %d schemes found\n",count);
+          fprintf(f,"   %d schemes found\n\n",count);
 	  }
 	  
 	  
