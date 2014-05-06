@@ -23,6 +23,30 @@
 #include <stdlib.h>
 #include <time.h>
 
+void test_math() {
+    puts("number_of_m_to_n_surjections(..)");
+    
+        
+    assert(number_of_m_to_n_surjections(2,2) == 2);
+    assert(number_of_m_to_n_surjections(3,2) == 6);
+    assert(number_of_m_to_n_surjections(4,2) == 14);
+    assert(number_of_m_to_n_surjections(5,2) == 30);
+    assert(number_of_m_to_n_surjections(6,2) == 62);
+    assert(number_of_m_to_n_surjections(7,2) == 126);
+    
+    assert(number_of_m_to_n_surjections(3,3) == 6);
+    assert(number_of_m_to_n_surjections(4,3) == 36);
+    assert(number_of_m_to_n_surjections(5,3) == 150);
+    assert(number_of_m_to_n_surjections(6,3) == 540);
+    assert(number_of_m_to_n_surjections(7,3) == 1806);
+    
+    assert(number_of_m_to_n_surjections(11,4) == 3498000);
+    assert(number_of_m_to_n_surjections(7,6) == 15120);
+    assert(number_of_m_to_n_surjections(9,5) == 834120);
+    assert(number_of_m_to_n_surjections(8,7) == 141120);
+    
+}
+
 void test_dihy() {
 	puts("dihy_alloc");
 	dihyperedge e = dihy_alloc(4);
@@ -237,9 +261,11 @@ void test_bundle() {
 	bundle_normalize(b2);
 	bundle_normalize(b3);
 	bundle_normalize(b4);
+    bundle_normalize(b5);
 	assert( bundle_nf(b2));
 	assert( bundle_nf(b3));
 	assert( bundle_nf(b4));
+    assert( bundle_nf(b5));
 	
 	assert(bundle_cmp(b2,b3) == 0);
 	assert(bundle_cmp(b3,b2) == 0);
@@ -264,6 +290,45 @@ void test_bundle() {
 	
 	assert(bundle_cmp(b5,b3) == 1);
 	assert(bundle_cmp(b2,b5) == -1);
+    
+    b->arrows_N = 3;
+    b2->arrows_N = 3;
+    
+    b->arrows[0].multiplicity = 1;
+    b->arrows[1].multiplicity = 1;
+    b->arrows[2].multiplicity = 1;
+    
+    b->arrows[0].target = 1;
+    b->arrows[1].target = 2;
+    b->arrows[2].target = 3;
+    
+    assert(bundle_plug_compatible(b,b));
+    
+    b2->arrows[0].multiplicity = 2;
+    b2->arrows[1].multiplicity = 1;
+    b2->arrows[2].multiplicity = 3;
+    
+    b2->arrows[0].target = 1;
+    b2->arrows[1].target = 2;
+    b2->arrows[2].target = 3;
+    
+    assert( ! bundle_plug_compatible(b,b2) );
+    assert(bundle_plug_compatible(b2,b));
+    
+    assert( bundle_number_of_compatible_plug_variants(b2,b) == 1 );
+    
+    b->arrows[2].multiplicity = 2;
+    
+    assert( bundle_number_of_compatible_plug_variants(b2,b) == 6 );
+    
+    b->arrows[0].multiplicity = 2;
+    
+    assert( bundle_number_of_compatible_plug_variants(b2,b) == 12 );
+    
+    b->arrows[2].multiplicity = 3;
+    
+    assert( bundle_number_of_compatible_plug_variants(b2,b) == 12 );
+    
 	
 	puts("bundle_free");
 	bundle_free(b);
@@ -277,6 +342,8 @@ int main() {
 	puts("libhygra test, build: " __DATE__ " " __TIME__);
 	
 	srand(time(0));
+
+    test_math();
 	
 	test_bundle();
 	test_dihy();

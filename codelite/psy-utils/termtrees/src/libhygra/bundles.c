@@ -82,6 +82,9 @@ int bundle_cmp(bundle l, bundle r) {
 	int i,j,N;
 	int cmp;
 	node target;
+    
+    assert(bundle_nf(l));
+    assert(bundle_nf(r));
 	
 	if (l->arrows_N < r->arrows_N)
 		return -1;
@@ -172,4 +175,109 @@ bundle bundle_patf_alloc(partialtermform p) {
 	bundle_normalize(b);
 	
 	return b;
+}
+
+int bundle_plug_compatible(bundle input, bundle output) {
+    assert(bundle_nf(input));
+    assert(bundle_nf(output));
+    
+    int i,j,N,M;
+    node t;
+    
+    N = input->arrows_N;
+    M = output->arrows_N;
+    
+    /**
+     * first check whether all inputs have a matching output
+     * with less or equal multiplicity
+     */
+    
+    for (i=0;i<N;++i) {
+        t = input->arrows[i].target;
+        
+        for (j=0;j<M+1;++j) {
+            if (j==M)
+                return 0;
+                
+            if (output->arrows[j].target == t) {
+                if (input->arrows[i].multiplicity < output->arrows[j].multiplicity)
+                    return 0;
+                break;
+            }
+        }
+    }
+    
+    /**
+     * now check that there are no abounding outputs
+     */
+     
+    for (j=0;j<M;++j) {
+        t = output->arrows[j].target;
+        
+        for (i=0;i<N+1;++i) {
+            if (i==N)
+                return 0;
+            if (input->arrows[i].target == t)
+                break;
+        }
+    }
+    
+    return 1;
+}
+
+int bundle_number_of_compatible_plug_variants(bundle input, bundle output) {
+    assert(bundle_nf(input));
+    assert(bundle_nf(output));
+    
+    int variants;
+    int i,j,N,M;
+    node t;
+    
+    variants = 1;
+    
+    N = input->arrows_N;
+    M = output->arrows_N;
+    
+    
+    /**
+     * check that there are no abounding outputs
+     */
+     
+    for (j=0;j<M;++j) {
+        t = output->arrows[j].target;
+        
+        for (i=0;i<N+1;++i) {
+            if (i==N)
+                return 0;
+            if (input->arrows[i].target == t)
+                break;
+        }
+    }
+    
+    /**
+     * check whether all inputs have a matching output
+     * with less or equal multiplicity, calculate variants
+     */
+    
+    for (i=0;i<N;++i) {
+        t = input->arrows[i].target;
+        
+        for (j=0;j<M+1;++j) {
+            if (j==M)
+                return 0;
+                
+            if (output->arrows[j].target == t) {
+                if (input->arrows[i].multiplicity < output->arrows[j].multiplicity)
+                    return 0;
+                    
+                variants *= number_of_m_to_n_surjections(input->arrows[i].multiplicity,
+                                                          output->arrows[j].multiplicity);
+                
+                break;
+            }
+        }
+    }
+    
+    
+    return variants;
 }

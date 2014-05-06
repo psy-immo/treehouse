@@ -1,2 +1,2 @@
-/usr/bin/ar cr libhygra.a  CMakeFiles/hygra.dir/dihy.c.o CMakeFiles/hygra.dir/patf.c.o CMakeFiles/hygra.dir/bundles.c.o
+/usr/bin/ar cr libhygra.a  CMakeFiles/hygra.dir/dihy.c.o CMakeFiles/hygra.dir/patf.c.o CMakeFiles/hygra.dir/bundles.c.o CMakeFiles/hygra.dir/math.c.o
 /usr/bin/ranlib libhygra.a

@@ -51,7 +51,7 @@ static int fputi(int i, FILE* f) {
 void compute(globals *vars) {
 	s_add_ops_callback_data add_data;
 	FILE *f = vars->f;
-	int i,N,j;
+	int i,N,j,M;
 	
 	add_data.vars = vars;
 
@@ -162,13 +162,55 @@ void compute(globals *vars) {
 			                            cp_vector_element_at(vars->b->terms,i)));
 	 }
 	 
+	 vars->tbundles = cp_vector_create(1);
+	 
+	 N = cp_vector_size(vars->tasks);
+ 	 for (i=0;i<N;++i) {
+		 task_scheme *task = cp_vector_element_at(vars->tasks,i);
+		 
+		 bundle task_bundle = bundle_alloc(task->data_N);
+		 for (j=0;j<task->data_N;++j) {
+             task_bundle->arrows[j].multiplicity = 1;
+             task_bundle->arrows[j].target = task->data[j];
+		 }
+         
+         bundle_normalize(task_bundle);
+         
+         cp_vector_add_element(vars->tbundles,task_bundle);
+	 }
+	 
 	 /**
 	  * list possible solutions per task
 	  */
 	  
-	  N = cp_vector_size(vars->tasks);
+	  fputs("Possible Solution Schemes\n",f);
 	  
-	  //TODO...	  
+	  N = cp_vector_size(vars->tasks);
+	  M = cp_vector_size(vars->bbundles);
+	  
+	  for (i=0;i<N;++i) {
+		  task_scheme *task = cp_vector_element_at(vars->tasks,i);
+          bundle outputs = cp_vector_element_at(vars->tbundles,i);
+          
+		  fprintf(f," T%d:\n",i);
+		  		  
+		  for (j=0;j<M;++j) {
+			  partialtermform p = cp_vector_element_at(vars->b->terms,j);
+			  
+			  if (p->ops[0]->signature->target != task->goal)
+				  continue;
+			  
+			  bundle inputs = cp_vector_element_at(vars->bbundles,j);
+              
+              if (bundle_plug_compatible(inputs,outputs)) {
+                  
+                  
+                  
+              }
+			  
+		  }
+	  }
+	  
 	  
 	  
 	 
@@ -183,6 +225,7 @@ void compute(globals *vars) {
 	  patfb_free(vars->b);
 	  patfg_free(vars->g);
 	  cp_vector_destroy_custom(vars->bbundles, bundle_free);
+      cp_vector_destroy_custom(vars->tbundles, bundle_free);
 
 	fputs("Done.\n",f);
 }

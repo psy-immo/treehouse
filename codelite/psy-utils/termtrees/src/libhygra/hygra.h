@@ -240,6 +240,29 @@ void bundle_normalize(bundle b);
  */
 int bundle_cmp(bundle l, bundle g);
 
- 
- 
+/**
+ * (implies that both input and output are in normal form)
+ * 
+ * test whether the input bundle is compatible with the output bundle
+ * in the following sense:
+ * 
+ * the input bundle has to have inputs for all nodes of the output bundle,
+ * and the input multiplicities are greater or equal to the output multiplicites;
+ * second, there are no input nodes that have no corresponding output node
+ */
+int bundle_plug_compatible(bundle input, bundle output);
+
+/**
+ * (implies that both input and output are in normal form)
+ * 
+ * returns the number of compatible plug variants
+ */
+int bundle_number_of_compatible_plug_variants(bundle input, bundle output);
+
+/**
+ * calculates the number of surjections from an m-set to an n-set
+ * (for positive integers only)
+ */
+int number_of_m_to_n_surjections(int m, int n);
+
 #endif

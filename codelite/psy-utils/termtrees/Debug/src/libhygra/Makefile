@@ -171,6 +171,30 @@ dihy.c.s:
 	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/dihy.c.s
 .PHONY : dihy.c.s
 
+math.o: math.c.o
+.PHONY : math.o
+
+# target to build an object file
+math.c.o:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/math.c.o
+.PHONY : math.c.o
+
+math.i: math.c.i
+.PHONY : math.i
+
+# target to preprocess a source file
+math.c.i:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/math.c.i
+.PHONY : math.c.i
+
+math.s: math.c.s
+.PHONY : math.s
+
+# target to generate assembly for a file
+math.c.s:
+	cd /home/immo/treehouse/codelite/psy-utils/termtrees/Debug && $(MAKE) -f src/libhygra/CMakeFiles/hygra.dir/build.make src/libhygra/CMakeFiles/hygra.dir/math.c.s
+.PHONY : math.c.s
+
 patf.o: patf.c.o
 .PHONY : patf.o
 
@@ -235,6 +259,9 @@ help:
 	@echo "... dihy.o"
 	@echo "... dihy.i"
 	@echo "... dihy.s"
+	@echo "... math.o"
+	@echo "... math.i"
+	@echo "... math.s"
 	@echo "... patf.o"
 	@echo "... patf.i"
 	@echo "... patf.s"

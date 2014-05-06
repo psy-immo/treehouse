@@ -7,6 +7,9 @@ src/libhygra/CMakeFiles/hygra.dir/bundles.c.o
 src/libhygra/CMakeFiles/hygra.dir/dihy.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/dihy.c
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+src/libhygra/CMakeFiles/hygra.dir/math.c.o
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
+ /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/math.c
 src/libhygra/CMakeFiles/hygra.dir/patf.c.o
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
  /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c

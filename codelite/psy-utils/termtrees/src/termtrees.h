@@ -79,16 +79,16 @@ typedef struct {
 	int ops_N;
 	cp_multimap *ops;
 
-	cp_vector *op_names;
+	cp_vector *op_names; // contents: char*
 	
 	int max_op_count;
 	int show_terms;
 	int show_ops;
 	
-	cp_vector *task_names;
+	cp_vector *task_names; // contents: char*
 	int show_tasks;
 	
-	cp_vector *tasks;
+	cp_vector *tasks; // contents: task_scheme*
 	
 	/**
 	 * generator data
@@ -97,14 +97,15 @@ typedef struct {
 	generators g;
 	
 	patf_bucket b;
-	cp_vector *bbundles;
+	cp_vector *bbundles; // contents: bundle
+	cp_vector *tbundles; // contents: bundle
 	
 
 	/**
 	 * calculations
 	 */
 	
-	cp_vector *bstring_keep;
+	cp_vector *bstring_keep; // contents: bstring
 
 	/* output */
 	FILE *f;

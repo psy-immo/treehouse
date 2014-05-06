@@ -25,6 +25,7 @@
       <File Name="src/libhygra/dihy.c"/>
       <File Name="src/libhygra/patf.c"/>
       <File Name="src/libhygra/bundles.c"/>
+      <File Name="src/libhygra/math.c"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <Description/>
