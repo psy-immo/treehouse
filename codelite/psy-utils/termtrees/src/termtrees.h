@@ -84,6 +84,7 @@ typedef struct {
 	int max_op_count;
 	int show_terms;
 	int show_ops;
+    int be_verbose;
 	
 	cp_vector *task_names; // contents: char*
 	int show_tasks;

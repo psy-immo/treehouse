@@ -51,7 +51,7 @@ static int fputi(int i, FILE* f) {
 void compute(globals *vars) {
 	s_add_ops_callback_data add_data;
 	FILE *f = vars->f;
-	int i,N,j,M;
+	int i,N,j,M,count;
 	
 	add_data.vars = vars;
 
@@ -192,7 +192,9 @@ void compute(globals *vars) {
 		  task_scheme *task = cp_vector_element_at(vars->tasks,i);
           bundle outputs = cp_vector_element_at(vars->tbundles,i);
           
-		  fprintf(f," T%d:\n",i);
+		  fprintf(f," T%d: %s\n",i,task->name);
+          
+          count = 0;
 		  		  
 		  for (j=0;j<M;++j) {
 			  partialtermform p = cp_vector_element_at(vars->b->terms,j);
@@ -206,9 +208,51 @@ void compute(globals *vars) {
                   
                   
                   
+                  partialtermform t = p;
+                  int j;
+                     
+                     fprintf(f,"  %2d ",count);
+                     fput_patf(t,f,fputi);
+                     fprintf(f,"\n         : ");
+                     
+                     for (j=0;j<t->input_wires_N;++j) {
+                         if (j!=0)
+                             fputs(",\n           ",f);
+                         fputs("'",f);
+                         fputs(t->ops[t->input_wires[j].op]->signature->sources[t->input_wires[j].input],f);
+                         fputs("'",f);
+                     }
+                     
+                     fputs("\n         --> ",f);
+                     fputs("'",f);
+                     fputs(t->ops[0]->signature->target,f);
+                     fputs("'",f);
+                     
+                     
+                     if (vars->be_verbose) {
+                         fputs("\n\n",f);
+                         for (j=0;j<t->ops_N;++j) {
+                             fputs("       ",f);
+                             int mu = t->ops[j]->identifier;
+                             
+                             fprintf(f,"µ%d '%s'",mu,cp_vector_element_at(vars->op_names,mu));
+                                                 
+                             fputs("\n",f);
+                         }
+                     }
+                     
+                     fprintf(f,"\n");
+                     fprintf(f,"       input symmetries: %d\n\n",
+                        bundle_number_of_compatible_plug_variants(inputs,outputs));
+              
+                    ++count;
               }
+              
+              
 			  
 		  }
+          
+          fprintf(f,"   %d schemes found\n",count);
 	  }
 	  
 	  

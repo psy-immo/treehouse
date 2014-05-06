@@ -31,6 +31,8 @@ globals* globals_alloc() {
 	g->show_terms = 0;
 	g->show_ops = 0;
 	g->show_tasks = 0;
+    
+    g->be_verbose = 0;
 
 	g->f = stdout;
 	
@@ -82,6 +84,7 @@ static int parse_input(char* file, globals* vars) {
 			CFG_BOOL("show-terms", 0, CFGF_NONE),
 			CFG_BOOL("show-ops", 0, CFGF_NONE),
 			CFG_BOOL("show-tasks", 0, CFGF_NONE),			
+            CFG_BOOL("show-verbose", 0, CFGF_NONE),			
 			CFG_STR_LIST("sorts", "{}", CFGF_NONE),
 			CFG_SEC("op", operation_opts, CFGF_MULTI | CFGF_TITLE),
 			CFG_SEC("task", task_opts, CFGF_MULTI | CFGF_TITLE),
@@ -133,6 +136,7 @@ static int parse_input(char* file, globals* vars) {
 	vars->show_terms = cfg_getbool(cfg,"show-terms");
 	vars->show_ops = cfg_getbool(cfg,"show-ops");
 	vars->show_tasks = cfg_getbool(cfg,"show-tasks");
+    vars->be_verbose = cfg_getbool(cfg,"show-verbose");
 
 	/**
 	 * the the operations to the operation list
