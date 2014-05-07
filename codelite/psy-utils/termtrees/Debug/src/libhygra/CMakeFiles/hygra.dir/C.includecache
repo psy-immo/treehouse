@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/bundles.c
-hygra.h
-/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
-stdlib.h
--
-string.h
--
-assert.h
--
-
 /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
 cprops/heap.h
 -
@@ -32,7 +22,7 @@ stdlib.h
 stdio.h
 -
 
-/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/math.c
+/home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/patf.c
 hygra.h
 /home/immo/treehouse/codelite/psy-utils/termtrees/src/libhygra/hygra.h
 stdlib.h
@@ -40,5 +30,7 @@ stdlib.h
 string.h
 -
 assert.h
+-
+limits.h
 -
 
