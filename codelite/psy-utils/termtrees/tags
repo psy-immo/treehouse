@@ -1,0 +1,716 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+ARCHITECTURE_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+B64_ERR	src/bstrlib/bstraux.c	374;"	d	file:
+B64_PAD	src/bstrlib/bstraux.c	373;"	d	file:
+BSSSC_BUFF_LEN	src/bstrlib/bstrlib.c	2290;"	d	file:
+BSTRAUX_INCLUDE	src/bstrlib/bstraux.h	17;"	d
+BSTRLIB_BSAFE_INCLUDE	src/bstrlib/bsafe.h	18;"	d
+BSTRLIB_INCLUDE	src/bstrlib/bstrlib.h	16;"	d
+BSTRLIB_NOVSNP	src/bstrlib/bstrlib.c	2744;"	d	file:
+BSTRLIB_NOVSNP	src/bstrlib/bstrlib.h	29;"	d
+BSTR_BS_BUFF_LENGTH_GET	src/bstrlib/bstrlib.h	35;"	d
+BSTR_ERR	src/bstrlib/bstrlib.h	33;"	d
+BSTR_OK	src/bstrlib/bstrlib.h	34;"	d
+BS_BUFF_SZ	src/bstrlib/bstrlib.c	1772;"	d	file:
+BWS_BUFF_SZ	src/bstrlib/bstraux.c	983;"	d	file:
+CFCLEN	src/bstrlib/bstrlib.c	1278;"	d	file:
+CFCLEN	src/bstrlib/bstrlib.c	1288;"	d	file:
+CMAKE_BINARY_DIR	Debug/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees\/Debug$/;"	m
+CMAKE_BINARY_DIR	Debug/src/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees\/Debug$/;"	m
+CMAKE_BINARY_DIR	Debug/src/bstrlib/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees\/Debug$/;"	m
+CMAKE_BINARY_DIR	Debug/src/libhygra/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees\/Debug$/;"	m
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees\/build$/;"	m
+CMAKE_BINARY_DIR	build/src/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees\/build$/;"	m
+CMAKE_BINARY_DIR	build/src/bstrlib/Makefile	/^CMAKE_BINARY_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees\/build$/;"	m
+CMAKE_COMMAND	Debug/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	Debug/src/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	Debug/src/bstrlib/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	Debug/src/libhygra/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/src/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/src/bstrlib/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	Debug/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	Debug/src/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	Debug/src/bstrlib/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	Debug/src/libhygra/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	build/src/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+CMAKE_SOURCE_DIR	build/src/bstrlib/Makefile	/^CMAKE_SOURCE_DIR = \/home\/immo\/git\/treehouse\/codelite\/psy-utils\/termtrees$/;"	m
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+DEFAULT_MAX_OPS	src/cli.c	6;"	d	file:
+ID_VOID_MAIN	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+ID_VOID_MAIN	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+INITIAL_STATIC_FIND_INDEX_COUNT	src/bstrlib/bstrlib.c	1552;"	d	file:
+INIT_SECURE_INPUT_LENGTH	src/bstrlib/bstraux.c	932;"	d	file:
+LONG_BITS_QTY	src/bstrlib/bstrlib.c	1275;"	d	file:
+LONG_LOG_BITS_QTY	src/bstrlib/bstrlib.c	1274;"	d	file:
+LONG_TYPE	src/bstrlib/bstrlib.c	1276;"	d	file:
+MAX_OB_LEN	src/bstrlib/bstraux.c	790;"	d	file:
+MAX_OP_INPUTS	src/termtrees.h	16;"	d
+N	src/libhygra/hygra.h	/^	int N;$/;"	m	struct:t_patf_sigma
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	179;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	179;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+RM	Debug/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	Debug/src/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	Debug/src/bstrlib/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	Debug/src/libhygra/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/src/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/src/bstrlib/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+SHELL	Debug/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	Debug/src/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	Debug/src/bstrlib/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	Debug/src/libhygra/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/src/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/src/bstrlib/Makefile	/^SHELL = \/bin\/sh$/;"	m
+START_VSNBUFF	src/bstrlib/bstrlib.c	2756;"	d	file:
+START_VSNBUFF	src/bstrlib/bstrlib.c	2772;"	d	file:
+SUFFIXES	Debug/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	Debug/src/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	Debug/src/bstrlib/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	Debug/src/libhygra/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/src/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/src/bstrlib/Makefile	/^SUFFIXES =$/;"	m
+UU_DECODE_BYTE	src/bstrlib/bstraux.c	495;"	d	file:
+UU_ENCODE_BYTE	src/bstrlib/bstraux.c	715;"	d	file:
+UU_MAX_LINELEN	src/bstrlib/bstraux.c	502;"	d	file:
+_CRT_SECURE_NO_WARNINGS	src/bstrlib/bstraux.c	2;"	d	file:
+_CRT_SECURE_NO_WARNINGS	src/bstrlib/bstrlib.c	16;"	d	file:
+_TERMTREES_H	src/termtrees.h	15;"	d
+__LIBHYGRA_H	src/libhygra/hygra.h	36;"	d
+add_ops_callback_fn	src/termtrees.c	/^static int add_ops_callback_fn(void *entry, void *client_prm) {$/;"	f	file:
+apply_generators_to_bucket	src/libhygra/patf.c	/^int apply_generators_to_bucket(patf_bucket b) {$/;"	f
+apply_generators_to_bucket_nf	src/libhygra/patf.c	/^int apply_generators_to_bucket_nf(patf_bucket b) {$/;"	f
+apply_generators_to_bucket_nf2	src/libhygra/patf.c	/^int apply_generators_to_bucket_nf2(patf_bucket b) {$/;"	f
+apply_generators_to_bucket_nfchoice	src/libhygra/patf.c	/^static int apply_generators_to_bucket_nfchoice(patf_bucket b, int non_nf) {$/;"	f	file:
+arrows	src/libhygra/hygra.h	/^	s_node_count arrows[];$/;"	m	struct:t_bundle
+arrows_N	src/libhygra/hygra.h	/^	int arrows_N;$/;"	m	struct:t_bundle
+b	src/bstrlib/bstrlib.c	/^	bstring b;$/;"	m	struct:genBstrList	file:
+b	src/termtrees.h	/^	patf_bucket b;$/;"	m	struct:__anon2
+b64ETable	src/bstrlib/bstraux.c	/^static char b64ETable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+\/";$/;"	v	file:
+bAscTime	src/bstrlib/bstraux.h	58;"	d
+bAssign	src/bstrlib/bstraux.h	31;"	d
+bBase64Decode	src/bstrlib/bstraux.h	44;"	d
+bBase64DecodeEx	src/bstrlib/bstraux.c	/^bstring bBase64DecodeEx (const_bstring b, int * boolTruncError) {$/;"	f
+bBase64Encode	src/bstrlib/bstraux.c	/^bstring bBase64Encode (const_bstring b) {$/;"	f
+bBlockCopy	src/bstrlib/bstrlib.c	67;"	d	file:
+bCTime	src/bstrlib/bstraux.h	59;"	d
+bCaselessCmp	src/bstrlib/bstraux.h	42;"	d
+bCaselessNCmp	src/bstrlib/bstraux.h	43;"	d
+bCatBlk	src/bstrlib/bstraux.h	36;"	d
+bCatCstr	src/bstrlib/bstraux.h	35;"	d
+bCatStatic	src/bstrlib/bstraux.h	37;"	d
+bFill	src/bstrlib/bstraux.c	/^int bFill (bstring b, char c, int len) {$/;"	f
+bHead	src/bstrlib/bstraux.c	/^bstring bHead (bstring b, int n) {$/;"	f
+bInsertChrs	src/bstrlib/bstraux.c	/^int bInsertChrs (bstring b, int pos, int len, unsigned char c, unsigned char fill) {$/;"	f
+bJustifyCenter	src/bstrlib/bstraux.c	/^int bJustifyCenter (bstring b, int width, int space) {$/;"	f
+bJustifyLeft	src/bstrlib/bstraux.c	/^int bJustifyLeft (bstring b, int space) {$/;"	f
+bJustifyMargin	src/bstrlib/bstraux.c	/^int bJustifyMargin (bstring b, int width, int space) {$/;"	f
+bJustifyRight	src/bstrlib/bstraux.c	/^int bJustifyRight (bstring b, int width, int space) {$/;"	f
+bLowercase	src/bstrlib/bstraux.h	41;"	d
+bNetStr2Bstr	src/bstrlib/bstraux.c	/^bstring bNetStr2Bstr (const char * buff) {$/;"	f
+bNgetc	src/bstrlib/bstrlib.h	/^typedef int (*bNgetc) (void *parm);$/;"	t
+bNread	src/bstrlib/bstrlib.h	/^typedef size_t (* bNread) (void *buff, size_t elsize, size_t nelem, void *parm);$/;"	t
+bNwrite	src/bstrlib/bstraux.h	/^typedef int (* bNwrite) (const void * buf, size_t elsize, size_t nelem, void * parm);$/;"	t
+bReplaceAll	src/bstrlib/bstraux.h	39;"	d
+bReplicate	src/bstrlib/bstraux.c	/^int bReplicate (bstring b, int n) {$/;"	f
+bReverse	src/bstrlib/bstraux.c	/^int bReverse (bstring b) {$/;"	f
+bSecureDestroy	src/bstrlib/bstraux.h	90;"	d
+bSecureInput	src/bstrlib/bstraux.c	/^bstring bSecureInput (int maxlen, int termchar, bNgetc vgetchar, void * vgcCtx) {$/;"	f
+bSecureWriteProtect	src/bstrlib/bstraux.h	97;"	d
+bSetChar	src/bstrlib/bstraux.c	/^int bSetChar (bstring b, int pos, char c) {$/;"	f
+bSetCstrChar	src/bstrlib/bstraux.c	/^int bSetCstrChar (bstring b, int pos, char c) {$/;"	f
+bStr2NetStr	src/bstrlib/bstraux.c	/^char * bStr2NetStr (const_bstring b) {$/;"	f
+bStrchr	src/bstrlib/bstraux.h	33;"	d
+bStrchrFast	src/bstrlib/bstraux.h	34;"	d
+bStream	src/bstrlib/bstrlib.c	/^struct bStream {$/;"	s	file:
+bStrfTime	src/bstrlib/bstraux.c	/^bstring bStrfTime (const char * fmt, const struct tm * timeptr) {$/;"	f
+bSubs	src/bstrlib/bstraux.h	32;"	d
+bTail	src/bstrlib/bstraux.c	/^bstring bTail (bstring b, int n) {$/;"	f
+bTrunc	src/bstrlib/bstraux.h	38;"	d
+bUppercase	src/bstrlib/bstraux.h	40;"	d
+bUuDecLine	src/bstrlib/bstraux.c	/^static int bUuDecLine (void * parm, int ofs, int len) {$/;"	f	file:
+bUuDecode	src/bstrlib/bstraux.h	45;"	d
+bUuDecodeEx	src/bstrlib/bstraux.c	/^bstring bUuDecodeEx (const_bstring src, int * badlines) {$/;"	f
+bUuEncode	src/bstrlib/bstraux.c	/^bstring bUuEncode (const_bstring src) {$/;"	f
+bUuInOut	src/bstrlib/bstraux.c	/^struct bUuInOut {$/;"	s	file:
+bYDecode	src/bstrlib/bstraux.c	/^bstring bYDecode (const_bstring src) {$/;"	f
+bYEncode	src/bstrlib/bstraux.c	/^bstring bYEncode (const_bstring src) {$/;"	f
+badlines	src/bstrlib/bstraux.c	/^	int * badlines;$/;"	m	struct:bUuInOut	file:
+balloc	src/bstrlib/bstrlib.c	/^int balloc (bstring b, int olen) {$/;"	f
+ballocmin	src/bstrlib/bstrlib.c	/^int ballocmin (bstring b, int len) {$/;"	f
+base64DecodeSymbol	src/bstrlib/bstraux.c	/^static int base64DecodeSymbol (unsigned char alpha) {$/;"	f	file:
+bassign	src/bstrlib/bstrlib.c	/^int bassign (bstring a, const_bstring b) {$/;"	f
+bassignblk	src/bstrlib/bstrlib.c	/^int bassignblk (bstring a, const void * s, int len) {$/;"	f
+bassigncstr	src/bstrlib/bstrlib.c	/^int bassigncstr (bstring a, const char * str) {$/;"	f
+bassignformat	src/bstrlib/bstrlib.c	/^int bassignformat (bstring b, const char * fmt, ...) {$/;"	f
+bassigngets	src/bstrlib/bstrlib.c	/^int bassigngets (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bassignmidstr	src/bstrlib/bstrlib.c	/^int bassignmidstr (bstring a, const_bstring b, int left, int len) {$/;"	f
+bbundles	src/termtrees.h	/^	cp_vector *bbundles; \/\/ contents: bundle$/;"	m	struct:__anon2
+bcatblk	src/bstrlib/bstrlib.c	/^int bcatblk (bstring b, const void * s, int len) {$/;"	f
+bcatcstr	src/bstrlib/bstrlib.c	/^int bcatcstr (bstring b, const char * s) {$/;"	f
+bchar	src/bstrlib/bstrlib.h	203;"	d
+bchare	src/bstrlib/bstrlib.h	202;"	d
+bconcat	src/bstrlib/bstrlib.c	/^int bconcat (bstring b0, const_bstring b1) {$/;"	f
+bconchar	src/bstrlib/bstrlib.c	/^int bconchar (bstring b, char c) {$/;"	f
+bcstrfree	src/bstrlib/bstrlib.c	/^int bcstrfree (char * s) {$/;"	f
+bdata	src/bstrlib/bstrlib.h	201;"	d
+bdatae	src/bstrlib/bstrlib.h	200;"	d
+bdataofs	src/bstrlib/bstrlib.h	199;"	d
+bdataofse	src/bstrlib/bstrlib.h	198;"	d
+bdelete	src/bstrlib/bstrlib.c	/^int bdelete (bstring b, int pos, int len) {$/;"	f
+bdestroy	src/bstrlib/bstrlib.c	/^int bdestroy (bstring b) {$/;"	f
+be_verbose	src/termtrees.h	/^    int be_verbose;$/;"	m	struct:__anon2
+bfindreplace	src/bstrlib/bstrlib.c	/^int bfindreplace (bstring b, const_bstring find, const_bstring repl, int pos) {$/;"	f
+bfindreplacecaseless	src/bstrlib/bstrlib.c	/^int bfindreplacecaseless (bstring b, const_bstring find, const_bstring repl, int pos) {$/;"	f
+bformat	src/bstrlib/bstrlib.c	/^bstring bformat (const char * fmt, ...) {$/;"	f
+bformata	src/bstrlib/bstrlib.c	/^int bformata (bstring b, const char * fmt, ...) {$/;"	f
+bfromcstr	src/bstrlib/bstrlib.c	/^bstring bfromcstr (const char * str) {$/;"	f
+bfromcstralloc	src/bstrlib/bstrlib.c	/^bstring bfromcstralloc (int mlen, const char * str) {$/;"	f
+bgets	src/bstrlib/bstrlib.c	/^bstring bgets (bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bgetsa	src/bstrlib/bstrlib.c	/^int bgetsa (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+binchr	src/bstrlib/bstrlib.c	/^int binchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrCF	src/bstrlib/bstrlib.c	/^static int binchrCF (const unsigned char * data, int len, int pos, const struct charField * cf) {$/;"	f	file:
+binchrr	src/bstrlib/bstrlib.c	/^int binchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrrCF	src/bstrlib/bstrlib.c	/^static int binchrrCF (const unsigned char * data, int pos, const struct charField * cf) {$/;"	f	file:
+binsert	src/bstrlib/bstrlib.c	/^int binsert (bstring b1, int pos, const_bstring b2, unsigned char fill) {$/;"	f
+binsertch	src/bstrlib/bstrlib.c	/^int binsertch (bstring b, int pos, int len, unsigned char fill) {$/;"	f
+binstr	src/bstrlib/bstrlib.c	/^int binstr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrcaseless	src/bstrlib/bstrlib.c	/^int binstrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrr	src/bstrlib/bstrlib.c	/^int binstrr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrrcaseless	src/bstrlib/bstrlib.c	/^int binstrrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+biseq	src/bstrlib/bstrlib.c	/^int biseq (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcaseless	src/bstrlib/bstrlib.c	/^int biseqcaseless (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcstr	src/bstrlib/bstrlib.c	/^int biseqcstr (const_bstring b, const char * s) {$/;"	f
+biseqcstrcaseless	src/bstrlib/bstrlib.c	/^int biseqcstrcaseless (const_bstring b, const char * s) {$/;"	f
+bisstemeqblk	src/bstrlib/bstrlib.c	/^int bisstemeqblk (const_bstring b0, const void * blk, int len) {$/;"	f
+bisstemeqcaselessblk	src/bstrlib/bstrlib.c	/^int bisstemeqcaselessblk (const_bstring b0, const void * blk, int len) {$/;"	f
+biswriteprotected	src/bstrlib/bstrlib.h	298;"	d
+bjoin	src/bstrlib/bstrlib.c	/^bstring bjoin (const struct bstrList * bl, const_bstring sep) {$/;"	f
+bl	src/bstrlib/bstrlib.c	/^	struct bstrList * bl;$/;"	m	struct:genBstrList	typeref:struct:genBstrList::bstrList	file:
+blength	src/bstrlib/bstrlib.h	197;"	d
+blengthe	src/bstrlib/bstrlib.h	196;"	d
+blk2bstr	src/bstrlib/bstrlib.c	/^bstring blk2bstr (const void * blk, int len) {$/;"	f
+blk2tbstr	src/bstrlib/bstrlib.h	225;"	d
+bltrimws	src/bstrlib/bstrlib.c	/^int bltrimws (bstring b) {$/;"	f
+bmid2tbstr	src/bstrlib/bstrlib.h	231;"	d
+bmidstr	src/bstrlib/bstrlib.c	/^bstring bmidstr (const_bstring b, int left, int len) {$/;"	f
+bninchr	src/bstrlib/bstrlib.c	/^int bninchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bninchrr	src/bstrlib/bstrlib.c	/^int bninchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bpattern	src/bstrlib/bstrlib.c	/^int bpattern (bstring b, int len) {$/;"	f
+bread	src/bstrlib/bstrlib.c	/^bstring bread (bNread readPtr, void * parm) {$/;"	f
+breada	src/bstrlib/bstrlib.c	/^int breada (bstring b, bNread readPtr, void * parm) {$/;"	f
+breplace	src/bstrlib/bstrlib.c	/^int breplace (bstring b1, int pos, int len, const_bstring b2, $/;"	f
+brtrimws	src/bstrlib/bstrlib.c	/^int brtrimws (bstring b) {$/;"	f
+bsFromBstr	src/bstrlib/bstraux.c	/^struct bStream * bsFromBstr (const_bstring b) {$/;"	f
+bsFromBstrRef	src/bstrlib/bstraux.c	/^static struct bStream * bsFromBstrRef (struct tagbstring * t) {$/;"	f	file:
+bsStatic	src/bstrlib/bstrlib.h	209;"	d
+bsStatic	src/bstrlib/bstrlib.h	212;"	d
+bsStaticBlkParms	src/bstrlib/bstrlib.h	216;"	d
+bsStaticMlen	src/bstrlib/bstrlib.h	206;"	d
+bsUuCtx	src/bstrlib/bstraux.c	/^struct bsUuCtx {$/;"	s	file:
+bsUuDecode	src/bstrlib/bstraux.c	/^struct bStream * bsUuDecode (struct bStream * sInp, int * badlines) {$/;"	f
+bsUuDecodePart	src/bstrlib/bstraux.c	/^static size_t bsUuDecodePart (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+bsafeShouldExit	src/bstrlib/bsafe.c	/^static int bsafeShouldExit = 1;$/;"	v	file:
+bsbufflength	src/bstrlib/bstrlib.c	/^int bsbufflength (struct bStream * s, int sz) {$/;"	f
+bscb	src/bstrlib/bstrlib.c	/^static int bscb (void * parm, int ofs, int len) {$/;"	f	file:
+bsclose	src/bstrlib/bstrlib.c	/^void * bsclose (struct bStream * s) {$/;"	f
+bseof	src/bstrlib/bstrlib.c	/^int bseof (const struct bStream * s) {$/;"	f
+bsetstr	src/bstrlib/bstrlib.c	/^int bsetstr (bstring b0, int pos, const_bstring b1, unsigned char fill) {$/;"	f
+bsopen	src/bstrlib/bstrlib.c	/^struct bStream * bsopen (bNread readPtr, void * parm) {$/;"	f
+bspeek	src/bstrlib/bstrlib.c	/^int bspeek (bstring r, const struct bStream * s) {$/;"	f
+bsplit	src/bstrlib/bstrlib.c	/^struct bstrList * bsplit (const_bstring str, unsigned char splitChar) {$/;"	f
+bsplitcb	src/bstrlib/bstrlib.c	/^int bsplitcb (const_bstring str, unsigned char splitChar, int pos,$/;"	f
+bsplits	src/bstrlib/bstrlib.c	/^struct bstrList * bsplits (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitscb	src/bstrlib/bstrlib.c	/^int bsplitscb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsplitstr	src/bstrlib/bstrlib.c	/^struct bstrList * bsplitstr (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitstrcb	src/bstrlib/bstrlib.c	/^int bsplitstrcb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsread	src/bstrlib/bstrlib.c	/^int bsread (bstring r, struct bStream * s, int n) {$/;"	f
+bsreada	src/bstrlib/bstrlib.c	/^int bsreada (bstring r, struct bStream * s, int n) {$/;"	f
+bsreadln	src/bstrlib/bstrlib.c	/^int bsreadln (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlna	src/bstrlib/bstrlib.c	/^int bsreadlna (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlns	src/bstrlib/bstrlib.c	/^int bsreadlns (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bsreadlnsa	src/bstrlib/bstrlib.c	/^int bsreadlnsa (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bssplitscb	src/bstrlib/bstrlib.c	/^int bssplitscb (struct bStream * s, const_bstring splitStr, $/;"	f
+bssplitstrcb	src/bstrlib/bstrlib.c	/^int bssplitstrcb (struct bStream * s, const_bstring splitStr, $/;"	f
+bstr2cstr	src/bstrlib/bstrlib.c	/^char * bstr2cstr (const_bstring b, char z) {$/;"	f
+bstrDeclare	src/bstrlib/bstraux.h	27;"	d
+bstrFree	src/bstrlib/bstraux.h	28;"	d
+bstrList	src/bstrlib/bstrlib.h	/^struct bstrList {$/;"	s
+bstrListAlloc	src/bstrlib/bstrlib.c	/^int bstrListAlloc (struct bstrList * sl, int msz) {$/;"	f
+bstrListAllocMin	src/bstrlib/bstrlib.c	/^int bstrListAllocMin (struct bstrList * sl, int msz) {$/;"	f
+bstrListCreate	src/bstrlib/bstrlib.c	/^struct bstrList * bstrListCreate (void) {$/;"	f
+bstrListDestroy	src/bstrlib/bstrlib.c	/^int bstrListDestroy (struct bstrList * sl) {$/;"	f
+bstr__alloc	src/bstrlib/bstrlib.c	34;"	d	file:
+bstr__free	src/bstrlib/bstrlib.c	38;"	d	file:
+bstr__memchr	src/bstrlib/bstrlib.c	62;"	d	file:
+bstr__memcmp	src/bstrlib/bstrlib.c	58;"	d	file:
+bstr__memcpy	src/bstrlib/bstrlib.c	46;"	d	file:
+bstr__memmove	src/bstrlib/bstrlib.c	50;"	d	file:
+bstr__memset	src/bstrlib/bstrlib.c	54;"	d	file:
+bstr__realloc	src/bstrlib/bstrlib.c	42;"	d	file:
+bstrchr	src/bstrlib/bstrlib.h	92;"	d
+bstrchrp	src/bstrlib/bstrlib.c	/^int bstrchrp (const_bstring b, int c, int pos) {$/;"	f
+bstrcmp	src/bstrlib/bstrlib.c	/^int bstrcmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstrcpy	src/bstrlib/bstrlib.c	/^bstring bstrcpy (const_bstring b) {$/;"	f
+bstricmp	src/bstrlib/bstrlib.c	/^int bstricmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstring	src/bstrlib/bstrlib.h	/^typedef struct tagbstring * bstring;$/;"	t	typeref:struct:tagbstring
+bstring_keep	src/termtrees.h	/^	cp_vector *bstring_keep; \/\/ contents: bstring$/;"	m	struct:__anon2
+bstrncmp	src/bstrlib/bstrlib.c	/^int bstrncmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrnicmp	src/bstrlib/bstrlib.c	/^int bstrnicmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrrchr	src/bstrlib/bstrlib.h	93;"	d
+bstrrchrp	src/bstrlib/bstrlib.c	/^int bstrrchrp (const_bstring b, int c, int pos) {$/;"	f
+bsunread	src/bstrlib/bstrlib.c	/^int bsunread (struct bStream * s, const_bstring b) {$/;"	f
+btfromblk	src/bstrlib/bstrlib.h	230;"	d
+btfromblkltrimws	src/bstrlib/bstrlib.h	255;"	d
+btfromblkrtrimws	src/bstrlib/bstrlib.h	267;"	d
+btfromblktrimws	src/bstrlib/bstrlib.h	279;"	d
+btfromcstr	src/bstrlib/bstrlib.h	220;"	d
+btolower	src/bstrlib/bstrlib.c	/^int btolower (bstring b) {$/;"	f
+btoupper	src/bstrlib/bstrlib.c	/^int btoupper (bstring b) {$/;"	f
+btrimws	src/bstrlib/bstrlib.c	/^int btrimws (bstring b) {$/;"	f
+btrunc	src/bstrlib/bstrlib.c	/^int btrunc (bstring b, int n) {$/;"	f
+buff	src/bstrlib/bstraux.c	/^    bstring buff;    \/* Buffer for underwrites                   *\/$/;"	m	struct:bwriteStream	file:
+buff	src/bstrlib/bstrlib.c	/^	bstring buff;		\/* Buffer for over-reads *\/$/;"	m	struct:bStream	file:
+buildCharField	src/bstrlib/bstrlib.c	/^static int buildCharField (struct charField * cf, const_bstring b) {$/;"	f	file:
+bundle	src/libhygra/hygra.h	/^typedef s_bundle *bundle;$/;"	t
+bundle_alloc	src/libhygra/bundles.c	/^bundle bundle_alloc(int N_target_nodes) {$/;"	f
+bundle_cmp	src/libhygra/bundles.c	/^int bundle_cmp(bundle l, bundle r) {$/;"	f
+bundle_free	src/libhygra/hygra.h	223;"	d
+bundle_nf	src/libhygra/bundles.c	/^int bundle_nf(bundle b) {$/;"	f
+bundle_normalize	src/libhygra/bundles.c	/^void bundle_normalize(bundle b) {$/;"	f
+bundle_number_of_compatible_plug_variants	src/libhygra/bundles.c	/^int bundle_number_of_compatible_plug_variants(bundle input, bundle output) {$/;"	f
+bundle_patf_alloc	src/libhygra/bundles.c	/^bundle bundle_patf_alloc(partialtermform p) {$/;"	f
+bundle_plug_compatible	src/libhygra/bundles.c	/^int bundle_plug_compatible(bundle input, bundle output) {$/;"	f
+bvcformata	src/bstrlib/bstrlib.c	/^int bvcformata (bstring b, int count, const char * fmt, va_list arg) {$/;"	f
+bvformata	src/bstrlib/bstrlib.h	138;"	d
+bwriteStream	src/bstrlib/bstraux.c	/^struct bwriteStream {$/;"	s	file:
+bwriteallow	src/bstrlib/bstrlib.h	297;"	d
+bwriteprotect	src/bstrlib/bstrlib.h	296;"	d
+bwsBuffLength	src/bstrlib/bstraux.c	/^int bwsBuffLength (struct bwriteStream * ws, int sz) {$/;"	f
+bwsClose	src/bstrlib/bstraux.c	/^void * bwsClose (struct bwriteStream * ws) {$/;"	f
+bwsIsEOF	src/bstrlib/bstraux.c	/^int bwsIsEOF (const struct bwriteStream * ws) {$/;"	f
+bwsOpen	src/bstrlib/bstraux.c	/^struct bwriteStream * bwsOpen (bNwrite writeFn, void * parm) {$/;"	f
+bwsWriteBlk	src/bstrlib/bstraux.c	/^int bwsWriteBlk (struct bwriteStream * ws, void * blk, int len) {$/;"	f
+bwsWriteBstr	src/bstrlib/bstraux.c	/^int bwsWriteBstr (struct bwriteStream * ws, const_bstring b) {$/;"	f
+bwsWriteFlush	src/bstrlib/bstraux.c	/^int bwsWriteFlush (struct bwriteStream * ws) {$/;"	f
+cb_fput_id	src/libhygra/hygra.h	/^typedef int cb_fput_id(node s, FILE *stream);$/;"	t
+cb_fput_node	src/libhygra/hygra.h	/^typedef int cb_fput_node(node s, FILE *stream);$/;"	t
+cb_free	src/libhygra/hygra.h	/^typedef void (*cb_free)(void* p);$/;"	t
+charField	src/bstrlib/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	s	file:
+charField	src/bstrlib/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	s	file:
+cli_main	src/cli.c	/^int cli_main(int argc, char **argv) {$/;"	f
+compute	src/termtrees.c	/^void compute(globals *vars) {$/;"	f
+const_bstring	src/bstrlib/bstrlib.h	/^typedef const struct tagbstring * const_bstring;$/;"	t	typeref:struct:tagbstring
+content	src/bstrlib/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	m	struct:charField	file:
+content	src/bstrlib/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	m	struct:charField	file:
+continue_at_index	src/libhygra/hygra.h	/^	int continue_at_index;$/;"	m	struct:t_patf_bucket
+cstr2bstr	src/bstrlib/bstrlib.h	41;"	d
+cstr2tbstr	src/bstrlib/bstrlib.h	219;"	d
+data	src/bstrlib/bstrlib.h	/^	unsigned char * data;$/;"	m	struct:tagbstring
+data	src/termtrees.h	/^	 char *data[];	 $/;"	m	struct:s_task
+data_N	src/termtrees.h	/^	 int data_N;$/;"	m	struct:s_task
+dihy_alloc	src/libhygra/dihy.c	/^dihyperedge dihy_alloc(int N_sources){$/;"	f
+dihy_cmp	src/libhygra/dihy.c	/^int dihy_cmp(dihyperedge l, dihyperedge r) {$/;"	f
+dihy_dup	src/libhygra/dihy.c	/^dihyperedge dihy_dup(dihyperedge e) {$/;"	f
+dihy_free	src/libhygra/hygra.h	57;"	d
+dihyperedge	src/libhygra/hygra.h	/^typedef s_dihyperedge* dihyperedge;$/;"	t
+downcase	src/bstrlib/bstrlib.c	560;"	d	file:
+dst	src/bstrlib/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+entry	src/bstrlib/bstrlib.h	/^    bstring * entry;$/;"	m	struct:bstrList
+exvsnprintf	src/bstrlib/bstrlib.c	2750;"	d	file:
+exvsnprintf	src/bstrlib/bstrlib.c	2755;"	d	file:
+exvsnprintf	src/bstrlib/bstrlib.c	2765;"	d	file:
+f	src/termtrees.h	/^	FILE *f;$/;"	m	struct:__anon2
+findreplaceengine	src/bstrlib/bstrlib.c	/^static int findreplaceengine (bstring b, const_bstring find, const_bstring repl, int pos, instr_fnptr instr) {$/;"	f	file:
+fput_patf	src/libhygra/patf.c	/^void fput_patf(partialtermform t, FILE* stream, cb_fput_id fput_id) {$/;"	f
+fput_patf_op	src/libhygra/patf.c	/^static void fput_patf_op(partialtermform t, FILE* stream, cb_fput_id fput_id, int op) {$/;"	f	file:
+fput_patf_op_ordered	src/libhygra/patf.c	/^static void fput_patf_op_ordered(partialtermform t, FILE* stream, cb_fput_id fput_id, int op) {$/;"	f	file:
+fput_patf_ordered	src/libhygra/patf.c	/^void fput_patf_ordered(partialtermform t, FILE* stream, cb_fput_id fput_id) {$/;"	f
+fputi	src/termtrees.c	/^static int fputi(int i, FILE* f) {$/;"	f	file:
+g	src/termtrees.h	/^	generators g;$/;"	m	struct:__anon2
+gen	src/libhygra/hygra.h	/^	generators gen;$/;"	m	struct:t_patf_bucket
+genBstrList	src/bstrlib/bstrlib.c	/^struct genBstrList {$/;"	s	file:
+generators	src/libhygra/hygra.h	/^typedef s_generators *generators;$/;"	t
+gets	src/bstrlib/bsafe.c	/^char * (gets) (char * buf) {$/;"	f
+globals	src/termtrees.h	/^} globals;$/;"	t	typeref:struct:__anon2
+globals_alloc	src/cli.c	/^globals* globals_alloc() {$/;"	f
+globals_free	src/cli.c	/^void globals_free(globals **p) {$/;"	f
+goal	src/termtrees.h	/^	 char *goal;$/;"	m	struct:s_task
+id	src/termtrees.h	/^	int id;$/;"	m	struct:__anon1
+identifier	src/libhygra/hygra.h	/^	 void *identifier;$/;"	m	struct:t_operation
+in	src/termtrees.h	/^	char *in[];$/;"	m	struct:__anon1
+in_N	src/termtrees.h	/^	int in_N;$/;"	m	struct:__anon1
+info_arch	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+input	src/libhygra/hygra.h	/^	 int input;$/;"	m	struct:t_parameter_address
+input_wires	src/libhygra/hygra.h	/^	s_parameter_address *input_wires;$/;"	m	struct:t_partialtermform
+input_wires_N	src/libhygra/hygra.h	/^	int input_wires_N;$/;"	m	struct:t_partialtermform
+instr_fnptr	src/bstrlib/bstrlib.c	/^typedef int (*instr_fnptr) (const_bstring s1, int pos, const_bstring s2);$/;"	t	file:
+internal_bwswriteout	src/bstrlib/bstraux.c	1018;"	d	file:
+invertCharField	src/bstrlib/bstrlib.c	/^static void invertCharField (struct charField * cf) {$/;"	f	file:
+io	src/bstrlib/bstraux.c	/^	struct bUuInOut io;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bUuInOut	file:
+isEOF	src/bstrlib/bstraux.c	/^    int isEOF;       \/* track stream's EOF state                 *\/$/;"	m	struct:bwriteStream	file:
+isEOF	src/bstrlib/bstrlib.c	/^	int isEOF;		\/* track file's EOF state *\/$/;"	m	struct:bStream	file:
+main	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	Debug/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	Debug/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	src/libhygra/test.c	/^int main() {$/;"	f
+main	src/main.c	/^int main(int argc, char **argv) {$/;"	f
+main	src/test.c	/^int main(int argc, char **argv) {$/;"	f
+maxBuffSz	src/bstrlib/bstrlib.c	/^	int maxBuffSz;$/;"	m	struct:bStream	file:
+max_op_count	src/termtrees.h	/^	int max_op_count;$/;"	m	struct:__anon2
+minBuffSz	src/bstrlib/bstraux.c	/^    int minBuffSz;$/;"	m	struct:bwriteStream	file:
+mlen	src/bstrlib/bstrlib.h	/^	int mlen;$/;"	m	struct:tagbstring
+mlen	src/bstrlib/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+multiplicity	src/libhygra/hygra.h	/^	int multiplicity;$/;"	m	struct:t_node_count
+name	src/termtrees.h	/^	 char *name;$/;"	m	struct:s_task
+nbr	src/termtrees.c	/^	int nbr;$/;"	m	struct:t_add_ops_callback_data	file:
+node	src/libhygra/hygra.h	/^typedef void *node;$/;"	t
+number_of_m_to_n_surjections	src/libhygra/math.c	/^int number_of_m_to_n_surjections(int m, int n) {$/;"	f
+op	src/libhygra/hygra.h	/^	 int op;$/;"	m	struct:t_parameter_address
+op_cmp	src/op_signature.c	/^int op_cmp(void *lp, void *rp) {$/;"	f
+op_dup	src/op_signature.c	/^void* op_dup(void* ptr) {$/;"	f
+op_names	src/termtrees.h	/^	cp_vector *op_names; \/\/ contents: char*$/;"	m	struct:__anon2
+op_s_key	src/op_signature.c	/^void *op_s_key(void *op){$/;"	f
+op_signature	src/termtrees.h	/^} op_signature;$/;"	t	typeref:struct:__anon1
+op_wires	src/libhygra/hygra.h	/^	s_parameter_address *op_wires;$/;"	m	struct:t_partialtermform
+op_wires_N	src/libhygra/hygra.h	/^	int op_wires_N; \/\/ = ops_N-1$/;"	m	struct:t_partialtermform
+operation	src/libhygra/hygra.h	/^typedef s_operation* operation;$/;"	t
+ops	src/libhygra/hygra.h	/^	 s_operation ops[];$/;"	m	struct:t_generators
+ops	src/libhygra/hygra.h	/^	operation *ops;$/;"	m	struct:t_partialtermform
+ops	src/termtrees.h	/^	cp_multimap *ops;$/;"	m	struct:__anon2
+ops_N	src/libhygra/hygra.h	/^	 int ops_N;$/;"	m	struct:t_generators
+ops_N	src/libhygra/hygra.h	/^	int ops_N; \/\/ >0$/;"	m	struct:t_partialtermform
+ops_N	src/termtrees.h	/^	int ops_N;$/;"	m	struct:__anon2
+out	src/termtrees.h	/^	char *out;$/;"	m	struct:__anon1
+param_N	src/termtrees.h	/^	int param_N;$/;"	m	struct:s_term
+params	src/termtrees.h	/^	struct s_term* params[];$/;"	m	struct:s_term	typeref:struct:s_term::s_term
+parm	src/bstrlib/bstraux.c	/^    void * parm;     \/* The stream handle for core stream        *\/$/;"	m	struct:bwriteStream	file:
+parm	src/bstrlib/bstrlib.c	/^	void * parm;		\/* The stream handle for core stream *\/$/;"	m	struct:bStream	file:
+parse_input	src/cli.c	/^static int parse_input(char* file, globals* vars) {$/;"	f	file:
+parse_opt	src/cli.c	/^static int parse_opt(int key, char *arg, struct argp_state *state) {$/;"	f	file:
+partialtermform	src/libhygra/hygra.h	/^typedef s_partialtermform* partialtermform;$/;"	t
+patf_alloc	src/libhygra/patf.c	/^partialtermform patf_alloc(int num_ops, int num_free_inputs) {$/;"	f
+patf_bucket	src/libhygra/hygra.h	/^typedef s_patf_bucket *patf_bucket;$/;"	t
+patf_eform	src/libhygra/patf.c	/^int patf_eform(partialtermform t) {$/;"	f
+patf_free	src/libhygra/hygra.h	139;"	d
+patf_get_sigma	src/libhygra/patf.c	/^void patf_get_sigma(int* sigma, partialtermform t) {$/;"	f
+patf_get_sigma_head	src/libhygra/patf.c	/^static int* patf_get_sigma_head(int* sigma, partialtermform t, int op) {$/;"	f	file:
+patf_nf	src/libhygra/patf.c	/^int patf_nf(partialtermform t) {$/;"	f
+patf_nf_op	src/libhygra/patf.c	/^static int patf_nf_op(partialtermform t, int op) {$/;"	f	file:
+patf_sigma	src/libhygra/hygra.h	/^typedef s_patf_sigma *patf_sigma;$/;"	t
+patfb_alloc	src/libhygra/patf.c	/^patf_bucket patfb_alloc(generators g) {$/;"	f
+patfb_free	src/libhygra/patf.c	/^void patfb_free(patf_bucket b) {$/;"	f
+patfg_alloc	src/libhygra/patf.c	/^generators patfg_alloc(int num) {$/;"	f
+patfg_deep_free	src/libhygra/patf.c	/^void patfg_deep_free(generators g, cb_free free_identifiers) {$/;"	f
+patfg_free	src/libhygra/hygra.h	130;"	d
+patfs_alloc	src/libhygra/patf.c	/^patf_sigma patfs_alloc(partialtermform t) {$/;"	f
+patfs_free	src/libhygra/hygra.h	126;"	d
+qty	src/bstrlib/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+readFnPtr	src/bstrlib/bstrlib.c	/^	bNread readFnPtr;	\/* fread compatible fnptr for core stream *\/$/;"	m	struct:bStream	file:
+readNothing	src/bstrlib/bstraux.c	/^static size_t readNothing (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+readRef	src/bstrlib/bstraux.c	/^static size_t readRef (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+result	src/termtrees.h	/^	char* result;$/;"	m	struct:s_term
+sInp	src/bstrlib/bstraux.c	/^	struct bStream * sInp;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bStream	file:
+s_add_ops_callback_data	src/termtrees.c	/^} s_add_ops_callback_data;$/;"	t	typeref:struct:t_add_ops_callback_data	file:
+s_bundle	src/libhygra/hygra.h	/^} s_bundle;$/;"	t	typeref:struct:t_bundle
+s_dihyperedge	src/libhygra/hygra.h	/^ } s_dihyperedge;$/;"	t	typeref:struct:t_dihyperedge
+s_generators	src/libhygra/hygra.h	/^} s_generators;$/;"	t	typeref:struct:t_generators
+s_node_count	src/libhygra/hygra.h	/^} s_node_count;$/;"	t	typeref:struct:t_node_count
+s_operation	src/libhygra/hygra.h	/^} s_operation;$/;"	t	typeref:struct:t_operation
+s_parameter_address	src/libhygra/hygra.h	/^} s_parameter_address;$/;"	t	typeref:struct:t_parameter_address
+s_partialtermform	src/libhygra/hygra.h	/^} s_partialtermform;$/;"	t	typeref:struct:t_partialtermform
+s_patf_bucket	src/libhygra/hygra.h	/^} s_patf_bucket;$/;"	t	typeref:struct:t_patf_bucket
+s_patf_sigma	src/libhygra/hygra.h	/^} s_patf_sigma;$/;"	t	typeref:struct:t_patf_sigma
+s_task	src/termtrees.h	/^ typedef struct s_task {$/;"	s
+s_term	src/termtrees.h	/^typedef struct s_term {$/;"	s
+setInCharField	src/bstrlib/bstrlib.c	1281;"	d	file:
+setInCharField	src/bstrlib/bstrlib.c	1291;"	d	file:
+show_ops	src/termtrees.h	/^	int show_ops;$/;"	m	struct:__anon2
+show_tasks	src/termtrees.h	/^	int show_tasks;$/;"	m	struct:__anon2
+show_terms	src/termtrees.h	/^	int show_terms;$/;"	m	struct:__anon2
+sigma	src/libhygra/hygra.h	/^	int sigma[];	$/;"	m	struct:t_patf_sigma
+signature	src/libhygra/hygra.h	/^	 dihyperedge signature;$/;"	m	struct:t_operation
+slen	src/bstrlib/bstrlib.h	/^	int slen;$/;"	m	struct:tagbstring
+snapUpSize	src/bstrlib/bstrlib.c	/^static int snapUpSize (int i) {$/;"	f	file:
+sorts	src/termtrees.h	/^	cp_trie *sorts;$/;"	m	struct:__anon2
+sorts_N	src/termtrees.h	/^	int sorts_N;$/;"	m	struct:__anon2
+sources	src/libhygra/hygra.h	/^	node sources[];$/;"	m	struct:t_dihyperedge
+sources_N	src/libhygra/hygra.h	/^	int sources_N;$/;"	m	struct:t_dihyperedge
+src	src/bstrlib/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+strcat	src/bstrlib/bsafe.c	/^char * strcat (char *dst, const char *src) {$/;"	f
+strcat	src/bstrlib/bsafe.h	35;"	d
+strcat	src/bstrlib/bsafe.h	37;"	d
+strcpy	src/bstrlib/bsafe.c	/^char * strcpy (char *dst, const char *src) {$/;"	f
+strcpy	src/bstrlib/bsafe.h	34;"	d
+strcpy	src/bstrlib/bsafe.h	36;"	d
+strdup	src/bstrlib/bsafe.c	/^char * (strdup) (const char *s) {$/;"	f
+strncat	src/bstrlib/bsafe.c	/^char * (strncat) (char *dst, const char *src, size_t n) {$/;"	f
+strncpy	src/bstrlib/bsafe.c	/^char * (strncpy) (char *dst, const char *src, size_t n) {$/;"	f
+strtok	src/bstrlib/bsafe.c	/^char * (strtok) (char *s1, const char *s2) {$/;"	f
+t_add_ops_callback_data	src/termtrees.c	/^typedef struct t_add_ops_callback_data {$/;"	s	file:
+t_bundle	src/libhygra/hygra.h	/^typedef struct t_bundle {$/;"	s
+t_dihyperedge	src/libhygra/hygra.h	/^typedef struct t_dihyperedge {$/;"	s
+t_generators	src/libhygra/hygra.h	/^typedef struct t_generators {$/;"	s
+t_node_count	src/libhygra/hygra.h	/^typedef struct t_node_count {$/;"	s
+t_operation	src/libhygra/hygra.h	/^typedef struct t_operation {$/;"	s
+t_parameter_address	src/libhygra/hygra.h	/^typedef struct t_parameter_address {$/;"	s
+t_partialtermform	src/libhygra/hygra.h	/^typedef struct t_partialtermform {$/;"	s
+t_patf_bucket	src/libhygra/hygra.h	/^typedef struct t_patf_bucket {$/;"	s
+t_patf_sigma	src/libhygra/hygra.h	/^typedef struct t_patf_sigma {$/;"	s
+tagbstring	src/bstrlib/bstrlib.h	/^struct tagbstring {$/;"	s
+target	src/libhygra/hygra.h	/^	node target;$/;"	m	struct:t_dihyperedge
+target	src/libhygra/hygra.h	/^	node target;$/;"	m	struct:t_node_count
+task_names	src/termtrees.h	/^	cp_vector *task_names; \/\/ contents: char*$/;"	m	struct:__anon2
+task_scheme	src/termtrees.h	/^ } task_scheme;$/;"	t	typeref:struct:s_task
+tasks	src/termtrees.h	/^	cp_vector *tasks; \/\/ contents: task_scheme*$/;"	m	struct:__anon2
+tbundles	src/termtrees.h	/^	cp_vector *tbundles; \/\/ contents: bundle$/;"	m	struct:__anon2
+term	src/termtrees.h	/^} term;$/;"	t	typeref:struct:s_term
+term_alloc	src/terms.c	/^term* term_alloc(char* result_sort, int N) {$/;"	f
+terms	src/libhygra/hygra.h	/^	cp_vector *terms;	$/;"	m	struct:t_patf_bucket
+testInCharField	src/bstrlib/bstrlib.c	1280;"	d	file:
+testInCharField	src/bstrlib/bstrlib.c	1290;"	d	file:
+test_bundle	src/libhygra/test.c	/^void test_bundle() {$/;"	f
+test_dihy	src/libhygra/test.c	/^void test_dihy() {$/;"	f
+test_math	src/libhygra/test.c	/^void test_math() {$/;"	f
+test_patf	src/libhygra/test.c	/^void test_patf() {$/;"	f
+upcase	src/bstrlib/bstrlib.c	559;"	d	file:
+vars	src/cli.c	/^static globals *vars;$/;"	v	file:
+vars	src/termtrees.c	/^	globals *vars;$/;"	m	struct:t_add_ops_callback_data	file:
+writeFn	src/bstrlib/bstraux.c	/^    bNwrite writeFn; \/* fwrite work-a-like fnptr for core stream *\/$/;"	m	struct:bwriteStream	file:
+wspace	src/bstrlib/bstrlib.c	561;"	d	file:
